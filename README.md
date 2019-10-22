@@ -1,14 +1,14 @@
 # GNU Radio Code
 
 
-To install GNU Radio on Ubuntu use the following steps:
+To install **GNU Radio** on Ubuntu use the following steps:
 
 ```bash
 sudo apt install gnuradio
 sudo apt install libcanberra-gtk-module libcanberra-gtk3-module
 ```
 
-To install Osmocom RTL2382U Driver
+To install **Osmocom RTL2382U** Driver
 
 ```bash
 git clone https://github.com/osmocom/rtl-sdr.git
@@ -20,7 +20,7 @@ sudo make install
 sudo ldconfig
 ```
 
-To install osmocom Gnu Radio Blocks from source:
+To install **Osmocom Gnu Radio Blocks** from source:
 
 ```bash
 git clone git://git.osmocom.org/gr-osmosdr
@@ -43,7 +43,7 @@ cmake ../ -DENABLE_DOXYGEN=1
 make -C docs
 ```
 
-to install the GNU Radio Source module that is provided also by Osmocom:
+to install the **Osmocom GNU Radio Source** Module:
 
 ```bash
 apt-get install gr-osmosdr
