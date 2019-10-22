@@ -20,7 +20,7 @@ sudo make install
 sudo ldconfig
 ```
 
-To install **Osmocom Gnu Radio Blocks** from source:
+To install **Osmocom GNU Radio Blocks** from source:
 
 ```bash
 git clone git://git.osmocom.org/gr-osmosdr
