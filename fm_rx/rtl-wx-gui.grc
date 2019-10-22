@@ -2064,7 +2064,7 @@ sink and limits voice BW to 10 kHz</value>
     </param>
     <param>
       <key>ref_level</key>
-      <value>-50</value>
+      <value>0</value>
     </param>
     <param>
       <key>ref_scale</key>
