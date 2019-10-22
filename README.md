@@ -35,7 +35,7 @@ sudo make install
 sudo ldconfig
 ```
 
-To Build API documentation:
+To build API documentation:
 
 ```bash
 cd build/
