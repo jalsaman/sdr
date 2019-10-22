@@ -35,7 +35,7 @@ sudo make install
 sudo ldconfig
 ```
 
-to Build API documentation:
+To Build API documentation:
 
 ```bash
 cd build/
@@ -43,7 +43,7 @@ cmake ../ -DENABLE_DOXYGEN=1
 make -C docs
 ```
 
-to install the **Osmocom GNU Radio Source** Module:
+To install the **Osmocom GNU Radio Source** Module:
 
 ```bash
 apt-get install gr-osmosdr
