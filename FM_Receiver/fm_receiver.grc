@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<?grc format='1' created='3.7.11'?>
+<?grc format='1' created='3.7.13'?>
 <flow_graph>
   <timestamp>Thu Feb 27 18:59:41 2014</timestamp>
   <block>
@@ -73,12 +73,20 @@
       <value>True</value>
     </param>
     <param>
+      <key>sizing_mode</key>
+      <value>fixed</value>
+    </param>
+    <param>
       <key>thread_safe_setters</key>
       <value></value>
     </param>
     <param>
       <key>title</key>
       <value>FM Receiver</value>
+    </param>
+    <param>
+      <key>placement</key>
+      <value>(0,0)</value>
     </param>
   </block>
   <block>
@@ -89,7 +97,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>102.7e6</value>
+      <value>94.4e6</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -113,7 +121,7 @@
     </param>
     <param>
       <key>label</key>
-      <value></value>
+      <value>FM Channel Frequency</value>
     </param>
     <param>
       <key>min_len</key>
@@ -287,7 +295,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>0.2</value>
+      <value>0.1</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -311,7 +319,7 @@
     </param>
     <param>
       <key>label</key>
-      <value></value>
+      <value>Volume</value>
     </param>
     <param>
       <key>min_len</key>
@@ -323,11 +331,11 @@
     </param>
     <param>
       <key>start</key>
-      <value>0.2</value>
+      <value>0.1</value>
     </param>
     <param>
       <key>step</key>
-      <value>0.05</value>
+      <value>0.01</value>
     </param>
     <param>
       <key>stop</key>
@@ -339,7 +347,7 @@
     </param>
     <param>
       <key>widget</key>
-      <value>dial</value>
+      <value>slider</value>
     </param>
   </block>
   <block>

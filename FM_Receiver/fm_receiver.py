@@ -4,7 +4,7 @@
 # GNU Radio Python Flow Graph
 # Title: FM Receiver
 # Author: Muthanna A. Alwahash
-# Generated: Mon Oct 21 21:53:06 2019
+# Generated: Tue Oct 22 20:37:07 2019
 ##################################################
 
 from distutils.version import StrictVersion
@@ -63,32 +63,29 @@ class fm_receiver(gr.top_block, Qt.QWidget):
         self.top_layout.addLayout(self.top_grid_layout)
 
         self.settings = Qt.QSettings("GNU Radio", "fm_receiver")
+        self.restoreGeometry(self.settings.value("geometry", type=QtCore.QByteArray))
 
-        if StrictVersion(Qt.qVersion()) < StrictVersion("5.0.0"):
-            self.restoreGeometry(self.settings.value("geometry").toByteArray())
-        else:
-            self.restoreGeometry(self.settings.value("geometry", type=QtCore.QByteArray))
 
         ##################################################
         # Variables
         ##################################################
-        self.volume = volume = 0.2
+        self.volume = volume = 0.1
         self.transition = transition = 1e6
         self.samp_rate = samp_rate = 2e6
         self.quadrature = quadrature = 500e3
         self.cutoff = cutoff = 100e3
         self.audio_dec = audio_dec = 10
-        self.FM_Frequency = FM_Frequency = 102.7e6
+        self.FM_Frequency = FM_Frequency = 94.4e6
 
         ##################################################
         # Blocks
         ##################################################
-        self._volume_range = Range(0.2, 1, 0.05, 0.2, 200)
-        self._volume_win = RangeWidget(self._volume_range, self.set_volume, "volume", "dial", float)
-        self.top_layout.addWidget(self._volume_win)
-        self._FM_Frequency_range = Range(88e6, 108e6, 100e3, 102.7e6, 200)
-        self._FM_Frequency_win = RangeWidget(self._FM_Frequency_range, self.set_FM_Frequency, "FM_Frequency", "counter_slider", float)
-        self.top_layout.addWidget(self._FM_Frequency_win)
+        self._volume_range = Range(0.1, 1, 0.01, 0.1, 200)
+        self._volume_win = RangeWidget(self._volume_range, self.set_volume, 'Volume', "slider", float)
+        self.top_grid_layout.addWidget(self._volume_win)
+        self._FM_Frequency_range = Range(88e6, 108e6, 100e3, 94.4e6, 200)
+        self._FM_Frequency_win = RangeWidget(self._FM_Frequency_range, self.set_FM_Frequency, 'FM Channel Frequency', "counter_slider", float)
+        self.top_grid_layout.addWidget(self._FM_Frequency_win)
         self.rtlsdr_source_0 = osmosdr.source( args="numchan=" + str(1) + " " + '' )
         self.rtlsdr_source_0.set_sample_rate(2e6)
         self.rtlsdr_source_0.set_center_freq(FM_Frequency, 0)
@@ -127,7 +124,7 @@ class fm_receiver(gr.top_block, Qt.QWidget):
         )
         self.qtgui_sink_x_0.set_update_time(1.0/10)
         self._qtgui_sink_x_0_win = sip.wrapinstance(self.qtgui_sink_x_0.pyqwidget(), Qt.QWidget)
-        self.top_layout.addWidget(self._qtgui_sink_x_0_win)
+        self.top_grid_layout.addWidget(self._qtgui_sink_x_0_win)
 
         self.qtgui_sink_x_0.enable_rf_freq(False)
 
@@ -141,6 +138,8 @@ class fm_receiver(gr.top_block, Qt.QWidget):
         	quad_rate=quadrature,
         	audio_decimation=audio_dec,
         )
+
+
 
         ##################################################
         # Connections
@@ -209,9 +208,6 @@ class fm_receiver(gr.top_block, Qt.QWidget):
 
 def main(top_block_cls=fm_receiver, options=None):
 
-    if StrictVersion("4.5.0") <= StrictVersion(Qt.qVersion()) < StrictVersion("5.0.0"):
-        style = gr.prefs().get_string('qtgui', 'style', 'raster')
-        Qt.QApplication.setGraphicsSystem(style)
     qapp = Qt.QApplication(sys.argv)
 
     tb = top_block_cls()
