@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<?grc format='1' created='3.7.13'?>
+<?grc format='1' created='3.7.11'?>
 <flow_graph>
   <timestamp>Mon Jan  5 06:55:44 2015</timestamp>
   <block>
@@ -73,20 +73,12 @@
       <value>True</value>
     </param>
     <param>
-      <key>sizing_mode</key>
-      <value>fixed</value>
-    </param>
-    <param>
       <key>thread_safe_setters</key>
       <value></value>
     </param>
     <param>
       <key>title</key>
       <value>RTL WBFM RX WX GUI</value>
-    </param>
-    <param>
-      <key>placement</key>
-      <value>(0,0)</value>
     </param>
   </block>
   <block>
@@ -153,7 +145,7 @@ control</value>
     <key>variable_chooser</key>
     <param>
       <key>choices</key>
-      <value>[88.5e6,94.4e6,94.9e6,98.1e6]</value>
+      <value>[94.4e6,94.9e6,98.1e6,102.7e6]</value>
     </param>
     <param>
       <key>comment</key>
@@ -190,7 +182,7 @@ to selected frequency</value>
     </param>
     <param>
       <key>labels</key>
-      <value>[88.5,94.4,94.9,98.1]</value>
+      <value>[94.4,94.9,98.1,102.7]</value>
     </param>
     <param>
       <key>notebook</key>
@@ -2012,7 +2004,7 @@ sink and limits voice BW to 10 kHz</value>
     </param>
     <param>
       <key>baseband_freq</key>
-      <value>band_segment</value>
+      <value>band_segment+var_freq</value>
     </param>
     <param>
       <key>alias</key>
@@ -2088,7 +2080,7 @@ sink and limits voice BW to 10 kHz</value>
     </param>
     <param>
       <key>win_size</key>
-      <value>1000,400</value>
+      <value></value>
     </param>
     <param>
       <key>win</key>
