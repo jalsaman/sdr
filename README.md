@@ -53,3 +53,24 @@ To install **HackRF**
 ```bash
 sudo apt install hackrf
 ```
+Building **HackRF tools from source**
+
+```bash
+git clone https://github.com/mossmann/hackrf.git
+cd hackrf/host
+mkdir build
+cd build
+cmake ..
+make
+sudo make install
+sudo ldconfig
+```
+
+To install **GQRX-SDR**
+
+```bash
+sudo apt install gqrx-sdr
+```
+
+
+
