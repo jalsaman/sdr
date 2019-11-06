@@ -4,7 +4,7 @@
 # GNU Radio Python Flow Graph
 # Title: Signal Generator and Display
 # Author: Muthanna A. Alwahash
-# Generated: Sat Oct 26 22:01:18 2019
+# Generated: Sun Oct 27 20:17:55 2019
 ##################################################
 
 from distutils.version import StrictVersion
@@ -59,8 +59,11 @@ class signal_ftt(gr.top_block, Qt.QWidget):
         self.top_layout.addLayout(self.top_grid_layout)
 
         self.settings = Qt.QSettings("GNU Radio", "signal_ftt")
-        self.restoreGeometry(self.settings.value("geometry", type=QtCore.QByteArray))
 
+        if StrictVersion(Qt.qVersion()) < StrictVersion("5.0.0"):
+            self.restoreGeometry(self.settings.value("geometry").toByteArray())
+        else:
+            self.restoreGeometry(self.settings.value("geometry", type=QtCore.QByteArray))
 
         ##################################################
         # Variables
@@ -85,24 +88,18 @@ class signal_ftt(gr.top_block, Qt.QWidget):
         self._waveform_combo_box.currentIndexChanged.connect(
         	lambda i: self.set_waveform(self._waveform_options[i]))
         self.top_grid_layout.addWidget(self._waveform_tool_bar, 0, 0, 1, 1)
-        for r in range(0, 1):
-            self.top_grid_layout.setRowStretch(r, 1)
-        for c in range(0, 1):
-            self.top_grid_layout.setColumnStretch(c, 1)
+        [self.top_grid_layout.setRowStretch(r,1) for r in range(0,1)]
+        [self.top_grid_layout.setColumnStretch(c,1) for c in range(0,1)]
         self._freq_range = Range(0, samp_rate/2, 1, 0, 200)
         self._freq_win = RangeWidget(self._freq_range, self.set_freq, 'Frequency', "counter_slider", float)
         self.top_grid_layout.addWidget(self._freq_win, 4, 0, 1, 1)
-        for r in range(4, 5):
-            self.top_grid_layout.setRowStretch(r, 1)
-        for c in range(0, 1):
-            self.top_grid_layout.setColumnStretch(c, 1)
+        [self.top_grid_layout.setRowStretch(r,1) for r in range(4,5)]
+        [self.top_grid_layout.setColumnStretch(c,1) for c in range(0,1)]
         self._amplitude_range = Range(0, 100, 1, 1, 200)
         self._amplitude_win = RangeWidget(self._amplitude_range, self.set_amplitude, 'Amplitude', "counter_slider", float)
         self.top_grid_layout.addWidget(self._amplitude_win, 4, 1, 1, 1)
-        for r in range(4, 5):
-            self.top_grid_layout.setRowStretch(r, 1)
-        for c in range(1, 2):
-            self.top_grid_layout.setColumnStretch(c, 1)
+        [self.top_grid_layout.setRowStretch(r,1) for r in range(4,5)]
+        [self.top_grid_layout.setColumnStretch(c,1) for c in range(1,2)]
         self.qtgui_waterfall_sink_x_0 = qtgui.waterfall_sink_c(
         	1024, #size
         	firdes.WIN_BLACKMAN_hARRIS, #wintype
@@ -139,10 +136,8 @@ class signal_ftt(gr.top_block, Qt.QWidget):
 
         self._qtgui_waterfall_sink_x_0_win = sip.wrapinstance(self.qtgui_waterfall_sink_x_0.pyqwidget(), Qt.QWidget)
         self.top_grid_layout.addWidget(self._qtgui_waterfall_sink_x_0_win, 1, 1, 1, 1)
-        for r in range(1, 2):
-            self.top_grid_layout.setRowStretch(r, 1)
-        for c in range(1, 2):
-            self.top_grid_layout.setColumnStretch(c, 1)
+        [self.top_grid_layout.setRowStretch(r,1) for r in range(1,2)]
+        [self.top_grid_layout.setColumnStretch(c,1) for c in range(1,2)]
         self.qtgui_time_sink_x_0 = qtgui.time_sink_c(
         	1024, #size
         	samp_rate, #samp_rate
@@ -194,10 +189,8 @@ class signal_ftt(gr.top_block, Qt.QWidget):
 
         self._qtgui_time_sink_x_0_win = sip.wrapinstance(self.qtgui_time_sink_x_0.pyqwidget(), Qt.QWidget)
         self.top_grid_layout.addWidget(self._qtgui_time_sink_x_0_win, 2, 0, 1, 1)
-        for r in range(2, 3):
-            self.top_grid_layout.setRowStretch(r, 1)
-        for c in range(0, 1):
-            self.top_grid_layout.setColumnStretch(c, 1)
+        [self.top_grid_layout.setRowStretch(r,1) for r in range(2,3)]
+        [self.top_grid_layout.setColumnStretch(c,1) for c in range(0,1)]
         self.qtgui_freq_sink_x_0 = qtgui.freq_sink_c(
         	1024, #size
         	firdes.WIN_BLACKMAN_hARRIS, #wintype
@@ -241,10 +234,8 @@ class signal_ftt(gr.top_block, Qt.QWidget):
 
         self._qtgui_freq_sink_x_0_win = sip.wrapinstance(self.qtgui_freq_sink_x_0.pyqwidget(), Qt.QWidget)
         self.top_grid_layout.addWidget(self._qtgui_freq_sink_x_0_win, 1, 0, 1, 1)
-        for r in range(1, 2):
-            self.top_grid_layout.setRowStretch(r, 1)
-        for c in range(0, 1):
-            self.top_grid_layout.setColumnStretch(c, 1)
+        [self.top_grid_layout.setRowStretch(r,1) for r in range(1,2)]
+        [self.top_grid_layout.setColumnStretch(c,1) for c in range(0,1)]
         self.qtgui_const_sink_x_0 = qtgui.const_sink_c(
         	1024, #size
         	"", #name
@@ -286,13 +277,9 @@ class signal_ftt(gr.top_block, Qt.QWidget):
 
         self._qtgui_const_sink_x_0_win = sip.wrapinstance(self.qtgui_const_sink_x_0.pyqwidget(), Qt.QWidget)
         self.top_grid_layout.addWidget(self._qtgui_const_sink_x_0_win, 2, 1, 1, 1)
-        for r in range(2, 3):
-            self.top_grid_layout.setRowStretch(r, 1)
-        for c in range(1, 2):
-            self.top_grid_layout.setColumnStretch(c, 1)
+        [self.top_grid_layout.setRowStretch(r,1) for r in range(2,3)]
+        [self.top_grid_layout.setColumnStretch(c,1) for c in range(1,2)]
         self.analog_sig_source_x_0 = analog.sig_source_c(samp_rate, waveform, freq, amplitude, 0)
-
-
 
         ##################################################
         # Connections
@@ -342,6 +329,9 @@ class signal_ftt(gr.top_block, Qt.QWidget):
 
 def main(top_block_cls=signal_ftt, options=None):
 
+    if StrictVersion("4.5.0") <= StrictVersion(Qt.qVersion()) < StrictVersion("5.0.0"):
+        style = gr.prefs().get_string('qtgui', 'style', 'raster')
+        Qt.QApplication.setGraphicsSystem(style)
     qapp = Qt.QApplication(sys.argv)
 
     tb = top_block_cls()
