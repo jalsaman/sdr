@@ -46,5 +46,10 @@ make -C docs
 To install the **Osmocom GNU Radio Source** Module:
 
 ```bash
-apt-get install gr-osmosdr
+sudo apt install gr-osmosdr
+```
+To install **HackRF**
+
+```bash
+sudo apt install hackrf
 ```
