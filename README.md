@@ -1,4 +1,4 @@
-# GNU Radio Code
+# Software Defined Radio (SDR) Code
 
 
 To install **GNU Radio** on Ubuntu use the following steps:
