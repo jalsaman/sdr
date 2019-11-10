@@ -73,4 +73,21 @@ sudo apt install gqrx-sdr
 ```
 
 
+To install **GQRX-SDR** from source
+
+```bash
+sudo apt install qt5-default
+sudo apt install libqt5svg5
+
+git clone https://github.com/csete/gqrx.git gqrx
+cd gqrx
+mkdir build
+cd build
+cmake ..
+make
+sudo make install
+sudo ldconfig
+
+gqrx --version
+```
 
