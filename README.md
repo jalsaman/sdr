@@ -98,6 +98,9 @@ sudo apt install python-usb
 sudo apt install libusb-1.0-0
 sudo apt install ipython
 
+sudo apt install python-pip
+pip install future
+
 git clone https://github.com/atlas0fd00m/rfcat.git
 
 cd rfcat
