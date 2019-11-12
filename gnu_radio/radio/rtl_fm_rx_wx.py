@@ -5,7 +5,7 @@
 # Title: FM Receiver
 # Author: Muthanna A. Attyah
 # Description: FM Receiver
-# Generated: Fri Oct 25 07:39:39 2019
+# Generated: Sun Nov 10 19:02:28 2019
 ##################################################
 
 
@@ -109,7 +109,7 @@ class rtl_fm_rx_wx(grc_wxgui.top_block_gui):
         	parent=self.GetWin(),
         	value=self.band_segment,
         	callback=self.set_band_segment,
-        	label='     Station Choice',
+        	label='Station',
         	choices=[88.2e6,94.4e6,94.9e6,102.7e6],
         	labels=[88.2,94.4,94.9,102.7],
         	style=wx.RA_HORIZONTAL,
@@ -121,7 +121,7 @@ class rtl_fm_rx_wx(grc_wxgui.top_block_gui):
         	sizer=_audio_gain_sizer,
         	value=self.audio_gain,
         	callback=self.set_audio_gain,
-        	label='     Audio Gain',
+        	label='Audio Gain',
         	converter=forms.float_converter(),
         	proportion=0,
         )
@@ -144,7 +144,7 @@ class rtl_fm_rx_wx(grc_wxgui.top_block_gui):
         	sizer=_adjust_freq_sizer,
         	value=self.adjust_freq,
         	callback=self.set_adjust_freq,
-        	label='     Frequency Tune: +/- 200KHz',
+        	label='Frequency Tune: +/- 200KHz',
         	converter=forms.float_converter(),
         	proportion=0,
         )
@@ -209,8 +209,6 @@ class rtl_fm_rx_wx(grc_wxgui.top_block_gui):
         	quad_rate=samp_rate,
         	audio_decimation=2,
         )
-
-
 
         ##################################################
         # Connections
