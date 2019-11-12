@@ -90,4 +90,18 @@ sudo ldconfig
 
 gqrx --version
 ```
+To install **RFCAT** from source
 
+```bash
+sudo apt install sdcc
+
+git clone https://github.com/atlas0fd00m/rfcat.git
+cd rfcat
+sudo python setup.py install
+```
+
+To **allow non-root dongle access**
+```bash
+sudo cp etc/udev/rules.d/20-rfcat.rules /etc/udev/rules.d
+sudo udevadm control --reload-rules
+```
