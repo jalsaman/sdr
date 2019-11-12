@@ -94,8 +94,11 @@ To install **RFCAT** from source
 
 ```bash
 sudo apt install sdcc
+sudo apt install python-usb
+sudo apt install libusb-1.0-0
 
 git clone https://github.com/atlas0fd00m/rfcat.git
+
 cd rfcat
 sudo python setup.py install
 ```
