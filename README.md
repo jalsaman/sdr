@@ -90,7 +90,7 @@ sudo ldconfig
 
 gqrx --version
 ```
-To install **RFCAT** from source
+To install **RFCAT Client** from source
 
 ```bash
 sudo apt install sdcc
@@ -100,6 +100,7 @@ sudo apt install ipython
 
 sudo apt install python-pip
 pip install future
+pip install pyside2
 
 git clone https://github.com/atlas0fd00m/rfcat.git
 
