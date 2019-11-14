@@ -1,6 +1,27 @@
 # Software Defined Radio (SDR) Code
 
 
+To add **HackRF udev rules**:
+
+
+Add the following rules to /etc/udev/rules.d in a file such as **52-hackrf.rules**
+
+```bash
+ATTR{idVendor}=="1d50", ATTR{idProduct}=="604b", SYMLINK+="hackrf-jawbreaker-%k", MODE="660", GROUP="plugdev"
+ATTR{idVendor}=="1d50", ATTR{idProduct}=="6089", SYMLINK+="hackrf-one-%k", MODE="660", GROUP="plugdev"
+ATTR{idVendor}=="1fc9", ATTR{idProduct}=="000c", SYMLINK+="hackrf-dfu-%k", MODE="660", GROUP="plugdev"
+```
+The content of the file instructs udev to look out for devices with Vendor ID and Product ID matching HackRF devices. It then sets the UNIX permissions to 660 and the group to plugdev and creates a symlink in /dev to the device.
+to reload rules
+
+After creating the rules file you can either reboot or run the command:
+
+```bash
+udevadm control --reload-rules
+```
+as root to instruct udev to reload all rule files. After replugging your HackRF board, you should be able to access the device with all utilities as a normal user. If you still can't access the device, make sure that you are a member of the **plugdev** group.
+
+
 To install **GNU Radio** on Ubuntu use the following steps:
 
 ```bash
