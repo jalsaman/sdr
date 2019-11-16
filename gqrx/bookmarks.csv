@@ -1,0 +1,19 @@
+# Tag name          ;  color
+Untagged            ; #c0c0c0
+
+# Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
+    89100000; FM 89.1                  ; WFM (stereo)        ;     160000; Untagged
+    94400000; FM 94.4                  ; WFM (stereo)        ;     160000; Untagged
+    95000000; FM 95.0                  ; WFM (stereo)        ;     160000; Untagged
+    99600000; FM 99.6                  ; WFM (stereo)        ;     160000; Untagged
+   100300000; FM 100.3                 ; WFM (stereo)        ;     240000; Untagged
+   101300000; FM 101.3                 ; WFM (stereo)        ;     240000; Untagged
+   102700000; FM 102.7                 ; WFM (stereo)        ;     240000; Untagged
+   104800000; FM 104.8                 ; WFM (stereo)        ;     240000; Untagged
+   105400000; FM 105.4                 ; WFM (stereo)        ;     240000; Untagged
+   106200000; FM 106.2                 ; WFM (stereo)        ;     240000; Untagged
+   106500000; FM 106.5                 ; WFM (stereo)        ;     240000; Untagged
+   107100000; FM 107.1                 ; WFM (stereo)        ;     240000; Untagged
+   107800000; FM 107.8                 ; WFM (stereo)        ;     240000; Untagged
+   315000000; ISM 315MHz               ; WFM (mono)          ;     160000; Untagged
+   953000000; Signal                   ; Demod Off           ;          0; Untagged
