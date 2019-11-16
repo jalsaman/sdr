@@ -1,19 +1,29 @@
 # Tag name          ;  color
-Untagged            ; #c0c0c0
+Untagged            ; #0c0c0c
+FM                  ; #00ff00
+ISM                 ; #ff0000
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
-    89100000; FM 89.1                  ; WFM (stereo)        ;     160000; Untagged
-    94400000; FM 94.4                  ; WFM (stereo)        ;     160000; Untagged
-    95000000; FM 95.0                  ; WFM (stereo)        ;     160000; Untagged
-    99600000; FM 99.6                  ; WFM (stereo)        ;     160000; Untagged
-   100300000; FM 100.3                 ; WFM (stereo)        ;     240000; Untagged
-   101300000; FM 101.3                 ; WFM (stereo)        ;     240000; Untagged
-   102700000; FM 102.7                 ; WFM (stereo)        ;     240000; Untagged
-   104800000; FM 104.8                 ; WFM (stereo)        ;     240000; Untagged
-   105400000; FM 105.4                 ; WFM (stereo)        ;     240000; Untagged
-   106200000; FM 106.2                 ; WFM (stereo)        ;     240000; Untagged
-   106500000; FM 106.5                 ; WFM (stereo)        ;     240000; Untagged
-   107100000; FM 107.1                 ; WFM (stereo)        ;     240000; Untagged
-   107800000; FM 107.8                 ; WFM (stereo)        ;     240000; Untagged
-   315000000; ISM 315MHz               ; WFM (mono)          ;     160000; Untagged
-   953000000; Signal                   ; Demod Off           ;          0; Untagged
+    89100000; FM 89.1 MHz              ; WFM (stereo)        ;     200000; FM
+    94400000; FM 94.4 MHz              ; WFM (stereo)        ;     200000; FM
+    95000000; FM 95.0 MHz              ; WFM (stereo)        ;     200000; FM
+    99600000; FM 99.6 MHz              ; WFM (stereo)        ;     200000; FM
+   100300000; FM 100.3 MHz             ; WFM (stereo)        ;     200000; FM
+   101300000; FM 101.3 MHz             ; WFM (stereo)        ;     200000; FM
+   102400000; FM 102.4 MHz             ; WFM (stereo)        ;     200000; FM
+   102700000; FM 102.7 MHz             ; WFM (stereo)        ;     200000; FM
+   104800000; FM 104.8 MHz             ; WFM (stereo)        ;     200000; FM
+   105400000; FM 105.4 MHz             ; WFM (stereo)        ;     200000; FM
+   106200000; FM 106.2 MHz             ; WFM (stereo)        ;     200000; FM
+   106500000; FM 106.5 MHz             ; WFM (stereo)        ;     200000; FM
+   107100000; FM 107.1 MHz             ; WFM (stereo)        ;     200000; FM
+   107800000; FM 107.8 MHz             ; WFM (stereo)        ;     200000; FM
+     6780000; ISM 6.78 MHz             ; WFM (mono)          ;      30000; ISM
+    13560000; ISM 13.56MHz             ; WFM (mono)          ;      14000; ISM
+    27120000; ISM 27 MHz               ; WFM (mono)          ;     326000; ISM
+    40680000; ISM 40 MHz               ; WFM (mono)          ;      40000; ISM
+    31500000; ISM 315 MHz              ; WFM (mono)          ;    1740000; ISM
+    43392000; ISM 433 MHz              ; WFM (mono)          ;    1740000; ISM
+   915000000; ISM 915 MHz              ; WFM (mono)          ;   26000000; ISM
+  2450000000; ISM 2.45 GHz             ; WFM (mono)          ;  100000000; ISM
+  5800000000; ISM 5.8 GHz              ; WFM (mono)          ;  150000000; ISM
