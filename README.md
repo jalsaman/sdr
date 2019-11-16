@@ -124,6 +124,9 @@ sudo apt install python-pip
 pip install future
 pip install pyside2
 
+python -m pip install future
+python -m pip install pyside2
+
 git clone https://github.com/atlas0fd00m/rfcat.git
 
 cd rfcat
