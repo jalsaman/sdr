@@ -22,8 +22,8 @@ ISM                 ; #ff0000
     13560000; ISM 13.56MHz             ; WFM (mono)          ;      14000; ISM
     27120000; ISM 27 MHz               ; WFM (mono)          ;     326000; ISM
     40680000; ISM 40 MHz               ; WFM (mono)          ;      40000; ISM
-    31500000; ISM 315 MHz              ; WFM (mono)          ;    1740000; ISM
-    43392000; ISM 433 MHz              ; WFM (mono)          ;    1740000; ISM
+   315000000; ISM 315 MHz              ; WFM (mono)          ;    1740000; ISM
+   433920000; ISM 433 MHz              ; WFM (mono)          ;    1740000; ISM
    915000000; ISM 915 MHz              ; WFM (mono)          ;   26000000; ISM
   2450000000; ISM 2.45 GHz             ; WFM (mono)          ;  100000000; ISM
   5800000000; ISM 5.8 GHz              ; WFM (mono)          ;  150000000; ISM
