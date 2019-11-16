@@ -132,9 +132,13 @@ git clone https://github.com/atlas0fd00m/rfcat.git
 cd rfcat
 sudo python setup.py install
 
+cd firmware
+make clean install RfCatYS1CCBootloader
+
 sudo cp etc/udev/rules.d/20-rfcat.rules /etc/udev/rules.d
 sudo usermod -G dialout -a $USER
 sudo udevadm control --reload-rules
+
 
 ```
 
