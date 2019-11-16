@@ -17,6 +17,7 @@ to reload rules
 After creating the rules file you can either reboot or run the command:
 
 ```bash
+sudo usermod -G plugdev -a $USER
 udevadm control --reload-rules
 ```
 as root to instruct udev to reload all rule files. After replugging your HackRF board, you should be able to access the device with all utilities as a normal user. If you still can't access the device, make sure that you are a member of the **plugdev** group.
@@ -129,7 +130,9 @@ cd rfcat
 sudo python setup.py install
 
 sudo cp etc/udev/rules.d/20-rfcat.rules /etc/udev/rules.d
+sudo usermod -G dialout -a $USER
 sudo udevadm control --reload-rules
+
 ```
 
 To install **Audacity**
