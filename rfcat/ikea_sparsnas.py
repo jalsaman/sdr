@@ -7,7 +7,7 @@ import sys
 import readline
 import rlcompleter
 readline.parse_and_bind("tab: complete")
-from rflib import *                           
+from rflib import *
 
 #-----------------------------------------------------------------------------
 #------------------------------ Global variables -----------------------------
@@ -36,7 +36,7 @@ def init(d):
 #-----------------------------------------------------------------------------
 def culCalcCRC(crcData, crcReg):
     CRC_POLY = 0x8005
-    
+
     for i in xrange(0,8):
         if ((((crcReg & 0x8000) >> 8) ^ (crcData & 0x80)) & 0XFFFF) :
             crcReg = (((crcReg << 1) & 0XFFFF) ^ CRC_POLY ) & 0xFFFF
@@ -77,7 +77,7 @@ print "Waiting for packet..."
 #-----------------
 while True:
     capture = ""
-    
+
     #---------------------------------
     # Wait for a packet to be captured
     #---------------------------------
@@ -122,7 +122,5 @@ while True:
                 print  pkt_crc.replace(" ","")
 
 #Check out http://console-cowboys.blogspot.se/2017/
-
-    
 
 
