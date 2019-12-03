@@ -91,6 +91,10 @@ sudo ldconfig
 To install **GQRX-SDR**
 
 ```bash
+sudo add-apt-repository -y ppa:myriadrf/drivers
+sudo add-apt-repository -y ppa:myriadrf/gnuradio
+sudo add-apt-repository -y ppa:gqrx/gqrx-sdr
+sudo apt-get update
 sudo apt install gqrx-sdr
 ```
 
