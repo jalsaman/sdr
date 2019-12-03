@@ -133,7 +133,7 @@ cd rfcat
 sudo python setup.py install
 
 cd firmware
-make clean install RfCatYS1CCBootloader
+make installys1bootloader
 
 sudo cp etc/udev/rules.d/20-rfcat.rules /etc/udev/rules.d
 sudo usermod -G dialout -a $USER
