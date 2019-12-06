@@ -2,6 +2,7 @@
 Untagged            ; #0c0c0c
 FM                  ; #00ff00
 ISM                 ; #ff0000
+ADSB                ; #0000ff
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
     89100000; FM 89.1 MHz              ; WFM (stereo)        ;     200000; FM
@@ -25,5 +26,6 @@ ISM                 ; #ff0000
    315000000; ISM 315 MHz              ; WFM (mono)          ;    1740000; ISM
    433920000; ISM 433 MHz              ; WFM (mono)          ;    1740000; ISM
    915000000; ISM 915 MHz              ; WFM (mono)          ;   26000000; ISM
+  1090000000; ADS-B 1090MHz            ; WFM (momo)          ;      50000; ADSB
   2450000000; ISM 2.45 GHz             ; WFM (mono)          ;  100000000; ISM
   5800000000; ISM 5.8 GHz              ; WFM (mono)          ;  150000000; ISM
