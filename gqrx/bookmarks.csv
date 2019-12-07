@@ -1,7 +1,7 @@
 # Tag name          ;  color
+FM                  ; #00ff00
 ADSB                ; #0000ff
 ISM                 ; #ff0000
-FM                  ; #00ff00
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
      6780000; ISM 6.78 MHz             ; Demod Off           ;      30000; ISM
@@ -24,6 +24,8 @@ FM                  ; #00ff00
     95600000; FM 95.6 MHz              ; WFM (stereo)        ;     240000; FM
     96000000; FM 96.0 MHz              ; WFM (stereo)        ;     240000; FM
     96700000; FM 96.7 MHz              ; WFM (stereo)        ;     240000; FM
+    97100000; FM 97.1 MHz              ; WFM (stereo)        ;     240000; FM
+    97400000; FM 97.4 MHz              ; WFM (stereo)        ;     240000; FM
     97600000; FM 97.6 MHz              ; WFM (stereo)        ;     240000; FM
     97800000; FM 97.8 MHz              ; WFM (stereo)        ;     240000; FM
     98400000; FM 98.4 MHz              ; WFM (stereo)        ;     240000; FM
