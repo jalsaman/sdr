@@ -14,10 +14,10 @@ FM                  ; #00ff00
     87000000; FM 87.0 MHz              ; WFM (stereo)        ;     240000; FM
     87100000; FM 87.1 MHz              ; WFM (stereo)        ;     240000; FM
     87600000; FM 87.6 MHz              ; WFM (stereo)        ;     240000; FM
-    87900000; FM 87.9 MHz - Abu Dhabi - Classic Music; WFM (stereo)        ;     240000; FM
-    88200000; FM 88.2 MHz - Abu Dhabi - Quran Al Kareem; WFM (stereo)        ;     240000; FM
-    88800000; FM 88.8 MHz - Dubai - Radio Mirchi; WFM (stereo)        ;     240000; FM
-    89100000; FM 89.1 MHz - Ajman - Radio 4; WFM (stereo)        ;     240000; FM
+    87900000; FM 87.9 MHz - Abu Dhabi - Classic Music; WFM (stereo)	;     240000; FM
+    88200000; FM 88.2 MHz - Abu Dhabi - Quran Al Kareem; WFM (stereo)	;     240000; FM
+    88800000; FM 88.8 MHz - Dubai - Radio Mirchi; WFM (stereo)		;     240000; FM
+    89100000; FM 89.1 MHz - Ajman - Radio 4; WFM (stereo)		;     240000; FM
     89400000; FM 89.4 MHz - RAK - Tamil FM; WFM (stereo)        ;     240000; FM
     89600000; FM 89.6 MHZ -            ; WFM (stereo)        ;     240000; FM
     90500000; FM 90.5 MHz - Abu Dhabi - Radio Sawa; WFM (stereo)        ;     240000; FM
@@ -38,26 +38,26 @@ FM                  ; #00ff00
     97400000; FM 97.4 MHz              ; WFM (stereo)        ;     240000; FM
     97600000; FM 97.6 MHz              ; WFM (stereo)        ;     240000; FM
     97800000; FM 97.8 MHz - Dance FM   ; WFM (stereo)        ;     240000; FM
-    98400000; FM 98.4 MHz - Abu Dhabi - AD FM; WFM (stereo)        ;     240000; FM
-    99000000; FM 99.0 MHz - Dubai - Al Arabiya; WFM (stereo)        ;     240000; FM
-    99600000; FM 99.6 MHz - Dubai - Club FM; WFM (stereo)        ;     240000; FM
+    98400000; FM 98.4 MHz - Abu Dhabi - AD FM; WFM (stereo)	;     240000; FM
+    99000000; FM 99.0 MHz - Dubai - Al Arabiya; WFM (stereo)	;     240000; FM
+    99600000; FM 99.6 MHz - Dubai - Club FM; WFM (stereo)	;     240000; FM
    100300000; FM 100.3 MHz             ; WFM (stereo)        ;     240000; FM
    100900000; FM 100.9 MHz             ; WFM (stereo)        ;     240000; FM
-   101300000; FM 101.3 MHz - Ajman - Gold FM; WFM (stereo)        ;     240000; FM
+   101300000; FM 101.3 MHz - Ajman - Gold FM; WFM (stereo)	;     240000; FM
    101600000; FM 101.6 MHz             ; WFM (stereo)        ;     240000; FM
    102000000; FM 102.0 MHz -           ; WFM (stereo)        ;     240000; FM
    102400000; FM 102.4 MHz - Suno FM   ; WFM (stereo)        ;     240000; FM
    102700000; FM 102.7 MHz             ; WFM (stereo)        ;     240000; FM
    103500000; FM 103.5 MHz             ; WFM (stereo)        ;     240000; FM
-   103800000; FM 103.8 MHz - Dubai - Dubai Eye; WFM (stereo)        ;     240000; FM
-   104400000; FM 104.4 MHz - Dubai - Virgin Dubai; WFM (stereo)        ;     240000; FM
-   104600000; FM 104.6 MHz             ; WFM (stereo)        ;     240000; FM
+   103800000; FM 103.8 MHz - Dubai - Dubai Eye; WFM (stereo)	;     240000; FM
+   104400000; FM 104.4 MHz - Dubai - Virgin Dubai; WFM (stereo)	;     240000; FM
+   104600000; FM 104.6 MHz             ; WFM (stereo)	;     240000; FM
    104800000; FM 104.8 MHz - Ajman - Channel 4 FM; WFM (stereo)        ;     240000; FM
    105400000; FM 105.4 MHz - Fujairah - Radio Spice; WFM (stereo)        ;     240000; FM
-   106200000; FM 106.2 MHz - UAQ - Big FM; WFM (stereo)        ;     240000; FM
-   106500000; FM 106.5 MHz - UAQ - Radio Gilli; WFM (stereo)        ;     240000; FM
-   107100000; FM 107.1 MHz - UAQ - Heart 107.1 FM; WFM (stereo)        ;     240000; FM
-   107400000; FM 107.4 MHz             ; WFM (stereo)        ;     240000; FM
+   106200000; FM 106.2 MHz - UAQ - Big FM; WFM (stereo)	;     240000; FM
+   106500000; FM 106.5 MHz - UAQ - Radio Gilli; WFM (stereo)	;     240000; FM
+   107100000; FM 107.1 MHz - UAQ - Heart 107.1 FM; WFM (stereo)	;     240000; FM
+   107400000; FM 107.4 MHz             ; WFM (stereo)	;     240000; FM
    107800000; FM 107.8 MHz - Ajman - Al Rabia FM; WFM (stereo)        ;     240000; FM
    108100000; FM 108.1 MHz             ; WFM (stereo)        ;     240000; FM
    145298400; VHF Radio                ; Narrow FM           ;      10000; DMR
