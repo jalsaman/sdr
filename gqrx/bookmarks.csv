@@ -1,8 +1,9 @@
 # Tag name          ;  color
-ISM                 ; #ff0000
 ADSB                ; #0000ff
 DMR                 ; #c17d11
 FM                  ; #00ff00
+ISM                 ; #ff0000
+VHF Marine          ; #c07010
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
      6780000; ISM 6.78 MHz             ; Demod Off           ;      30000; ISM
@@ -14,10 +15,10 @@ FM                  ; #00ff00
     87000000; FM 87.0 MHz              ; WFM (stereo)        ;     240000; FM
     87100000; FM 87.1 MHz              ; WFM (stereo)        ;     240000; FM
     87600000; FM 87.6 MHz              ; WFM (stereo)        ;     240000; FM
-    87900000; FM 87.9 MHz - Abu Dhabi - Classic Music; WFM (stereo)	;     240000; FM
-    88200000; FM 88.2 MHz - Abu Dhabi - Quran Al Kareem; WFM (stereo)	;     240000; FM
-    88800000; FM 88.8 MHz - Dubai - Radio Mirchi; WFM (stereo)		;     240000; FM
-    89100000; FM 89.1 MHz - Ajman - Radio 4; WFM (stereo)		;     240000; FM
+    87900000; FM 87.9 MHz - Abu Dhabi - Classic Music; WFM (stereo)        ;     240000; FM
+    88200000; FM 88.2 MHz - Abu Dhabi - Quran Al Kareem; WFM (stereo)        ;     240000; FM
+    88800000; FM 88.8 MHz - Dubai - Radio Mirchi; WFM (stereo)        ;     240000; FM
+    89100000; FM 89.1 MHz - Ajman - Radio 4; WFM (stereo)        ;     240000; FM
     89400000; FM 89.4 MHz - RAK - Tamil FM; WFM (stereo)        ;     240000; FM
     89600000; FM 89.6 MHZ -            ; WFM (stereo)        ;     240000; FM
     90500000; FM 90.5 MHz - Abu Dhabi - Radio Sawa; WFM (stereo)        ;     240000; FM
@@ -38,29 +39,143 @@ FM                  ; #00ff00
     97400000; FM 97.4 MHz              ; WFM (stereo)        ;     240000; FM
     97600000; FM 97.6 MHz              ; WFM (stereo)        ;     240000; FM
     97800000; FM 97.8 MHz - Dance FM   ; WFM (stereo)        ;     240000; FM
-    98400000; FM 98.4 MHz - Abu Dhabi - AD FM; WFM (stereo)	;     240000; FM
-    99000000; FM 99.0 MHz - Dubai - Al Arabiya; WFM (stereo)	;     240000; FM
-    99600000; FM 99.6 MHz - Dubai - Club FM; WFM (stereo)	;     240000; FM
+    98400000; FM 98.4 MHz - Abu Dhabi - AD FM; WFM (stereo)        ;     240000; FM
+    99000000; FM 99.0 MHz - Dubai - Al Arabiya; WFM (stereo)        ;     240000; FM
+    99600000; FM 99.6 MHz - Dubai - Club FM; WFM (stereo)        ;     240000; FM
    100300000; FM 100.3 MHz             ; WFM (stereo)        ;     240000; FM
    100900000; FM 100.9 MHz             ; WFM (stereo)        ;     240000; FM
-   101300000; FM 101.3 MHz - Ajman - Gold FM; WFM (stereo)	;     240000; FM
+   101300000; FM 101.3 MHz - Ajman - Gold FM; WFM (stereo)        ;     240000; FM
    101600000; FM 101.6 MHz             ; WFM (stereo)        ;     240000; FM
    102000000; FM 102.0 MHz -           ; WFM (stereo)        ;     240000; FM
    102400000; FM 102.4 MHz - Suno FM   ; WFM (stereo)        ;     240000; FM
    102700000; FM 102.7 MHz             ; WFM (stereo)        ;     240000; FM
    103500000; FM 103.5 MHz             ; WFM (stereo)        ;     240000; FM
-   103800000; FM 103.8 MHz - Dubai - Dubai Eye; WFM (stereo)	;     240000; FM
-   104400000; FM 104.4 MHz - Dubai - Virgin Dubai; WFM (stereo)	;     240000; FM
-   104600000; FM 104.6 MHz             ; WFM (stereo)	;     240000; FM
+   103800000; FM 103.8 MHz - Dubai - Dubai Eye; WFM (stereo)        ;     240000; FM
+   104400000; FM 104.4 MHz - Dubai - Virgin Dubai; WFM (stereo)        ;     240000; FM
+   104600000; FM 104.6 MHz             ; WFM (stereo)        ;     240000; FM
    104800000; FM 104.8 MHz - Ajman - Channel 4 FM; WFM (stereo)        ;     240000; FM
    105400000; FM 105.4 MHz - Fujairah - Radio Spice; WFM (stereo)        ;     240000; FM
-   106200000; FM 106.2 MHz - UAQ - Big FM; WFM (stereo)	;     240000; FM
-   106500000; FM 106.5 MHz - UAQ - Radio Gilli; WFM (stereo)	;     240000; FM
-   107100000; FM 107.1 MHz - UAQ - Heart 107.1 FM; WFM (stereo)	;     240000; FM
-   107400000; FM 107.4 MHz             ; WFM (stereo)	;     240000; FM
+   106200000; FM 106.2 MHz - UAQ - Big FM; WFM (stereo)        ;     240000; FM
+   106500000; FM 106.5 MHz - UAQ - Radio Gilli; WFM (stereo)        ;     240000; FM
+   107100000; FM 107.1 MHz - UAQ - Heart 107.1 FM; WFM (stereo)        ;     240000; FM
+   107400000; FM 107.4 MHz             ; WFM (stereo)        ;     240000; FM
    107800000; FM 107.8 MHz - Ajman - Al Rabia FM; WFM (stereo)        ;     240000; FM
    108100000; FM 108.1 MHz             ; WFM (stereo)        ;     240000; FM
    145298400; VHF Radio                ; Narrow FM           ;      10000; DMR
+   156025000; 156.025 MHz-CH60-TX      ; Narrow FM           ;      50000; VHF Marine
+   156050000; 156.050 MHz-CH1-TX       ; Narrow FM           ;      50000; VHF Marine
+   156075000; 156.075 MHz-CH61-TX      ; Narrow FM           ;      50000; VHF Marine
+   156100000; 156.100 MHz-CH2-TX       ; Narrow FM           ;      50000; VHF Marine
+   156125000; 156.125 MHz-CH62-TX      ; Narrow FM           ;      50000; VHF Marine
+   156150000; 156.150 MHz-CH3-TX       ; Narrow FM           ;      50000; VHF Marine
+   156175000; 156.175 MHz-CH63-TX      ; Narrow FM           ;      50000; VHF Marine
+   156200000; 156.200 MHz-CH4-TX       ; Narrow FM           ;      50000; VHF Marine
+   156225000; 156.225 MHz-CH64-TX      ; Narrow FM           ;      50000; VHF Marine
+   156250000; 156.250 MHz-CH5-TX       ; Narrow FM           ;      50000; VHF Marine
+   156275000; 156.275 MHz-CH65-TX      ; Narrow FM           ;      50000; VHF Marine
+   156300000; 156.300 MHz-CH6-TX       ; Narrow FM           ;      50000; VHF Marine
+   156325000; 156.325 MHz-CH66-TX      ; Narrow FM           ;      50000; VHF Marine
+   156350000; 156.350 MHz-CH7-TX       ; Narrow FM           ;      50000; VHF Marine
+   156375000; 156.375 MHz-CH67-TX      ; Narrow FM           ;      50000; VHF Marine
+   156375000; 156.375 MHz -CH67-RX     ; Narrow FM           ;      50000; VHF Marine
+   156400000; 156.400 MHz-CH8-TX       ; Narrow FM           ;      50000; VHF Marine
+   156425000; 156.425 MHz-CH68-TX      ; Narrow FM           ;      50000; VHF Marine
+   156425000; 156.425 MHz -CH68-RX     ; Narrow FM           ;      50000; VHF Marine
+   156450000; 156.450 MHz-CH9-TX       ; Narrow FM           ;      50000; VHF Marine
+   156475000; 156.475 MHz-CH69-TX      ; Narrow FM           ;      50000; VHF Marine
+   156475000; 156.475 MHz -CH69-RX     ; Narrow FM           ;      50000; VHF Marine
+   156500000; 156.500 MHz-CH10-TX      ; Narrow FM           ;      50000; VHF Marine
+   156525000; 156.525 MHz-CH70-TX      ; Narrow FM           ;      50000; VHF Marine
+   156525000; 156.525 MHz -CH70-RX     ; Narrow FM           ;      50000; VHF Marine
+   156550000; 156.550 MHz-CH11-TX      ; Narrow FM           ;      50000; VHF Marine
+   156575000; 156.575 MHz -CH71-TX     ; Narrow FM           ;      50000; VHF Marine
+   156575000; 156.575 MHz -CH71-RX     ; Narrow FM           ;      50000; VHF Marine
+   156600000; 156.600 MHz -CH12-TX     ; Narrow FM           ;      50000; VHF Marine
+   156625000; 156.625 MHz-CH72-TX      ; Narrow FM           ;      50000; VHF Marine
+   156625000; 156.625 MHz -CH72-RX     ; Narrow FM           ;      50000; VHF Marine
+   156650000; 156.650 MHz -CH13-TX     ; Narrow FM           ;      50000; VHF Marine
+   156675000; 156.675 MHz -CH73-TX     ; Narrow FM           ;      50000; VHF Marine
+   156675000; 156.675 MHz -CH73-RX     ; Narrow FM           ;      50000; VHF Marine
+   156700000; 156.700 MHz -CH14-TX     ; Narrow FM           ;      50000; VHF Marine
+   156725000; 156.725 MHz -CH74-TX     ; Narrow FM           ;      50000; VHF Marine
+   156725000; 156.725 MHz -CH74-RX     ; Narrow FM           ;      50000; VHF Marine
+   156750000; 156.750 MHz -CH15-TX     ; Narrow FM           ;      50000; VHF Marine
+   156775000; 156.775 MHz -CH75-TX     ; Narrow FM           ;      50000; VHF Marine
+   156775000; 156.775 MHz -CH75-RX     ; Narrow FM           ;      50000; VHF Marine
+   156800000; 156.800 MHz -CH16-TX     ; Narrow FM           ;      50000; VHF Marine
+   156825000; 156.825 MHz -CH76-TX     ; Narrow FM           ;      50000; VHF Marine
+   156825000; 156.825 MHz -CH76-RX     ; Narrow FM           ;      50000; VHF Marine
+   156850000; 156.850 MHz -CH17-TX     ; Narrow FM           ;      50000; VHF Marine
+   156875000; 156.875 MHz -CH77-TX     ; Narrow FM           ;      50000; VHF Marine
+   156875000; 156.875 MHz -CH77-RX     ; Narrow FM           ;      50000; VHF Marine
+   156900000; 156.900 MHz -CH18-TX     ; Narrow FM           ;      50000; VHF Marine
+   156925000; 156.925 MHz -CH78-TX     ; Narrow FM           ;      50000; VHF Marine
+   156950000; 156.950 MHz -CH19-TX     ; Narrow FM           ;      50000; VHF Marine
+   156975000; 156.975 MHz -CH79-TX     ; Narrow FM           ;      50000; VHF Marine
+   157000000; 157.000 MHz -CH20-TX     ; Narrow FM           ;      50000; VHF Marine
+   157025000; 157.025 MHz -CH80-TX     ; Narrow FM           ;      50000; VHF Marine
+   157050000; 157.050 MHz -CH21-TX     ; Narrow FM           ;      50000; VHF Marine
+   157075000; 157.075 MHz -CH81-TX     ; Narrow FM           ;      50000; VHF Marine
+   157100000; 157.100 MHz -CH22-TX     ; Narrow FM           ;      50000; VHF Marine
+   157125000; 157.125 MHz -CH82-TX     ; Narrow FM           ;      50000; VHF Marine
+   157150000; 157.150 MHz -CH23-TX     ; Narrow FM           ;      50000; VHF Marine
+   157175000; 157.175 MHz -CH83-TX     ; Narrow FM           ;      50000; VHF Marine
+   157200000; 157.200 MHz -CH24-TX     ; Narrow FM           ;      50000; VHF Marine
+   157225000; 157.225 MHz -CH84-TX     ; Narrow FM           ;      50000; VHF Marine
+   157250000; 157.250 MHz -CH25-TX     ; Narrow FM           ;      50000; VHF Marine
+   157275000; 157.275 MHz -CH85-TX     ; Narrow FM           ;      50000; VHF Marine
+   157300000; 157.300 MHz-CH26-TX      ; Narrow FM           ;      50000; VHF Marine
+   157325000; 157.325 MHz -CH86-TX     ; Narrow FM           ;      50000; VHF Marine
+   157350000; 157.350 MHz-CH27-TX      ; Narrow FM           ;      50000; VHF Marine
+   157375000; 157.375 MHz -CH87-TX     ; Narrow FM           ;      50000; VHF Marine
+   157375000; 157.375 MHz -CH87-RX     ; Narrow FM           ;      50000; VHF Marine
+   157400000; 157.400 MHz-CH28-TX      ; Narrow FM           ;      50000; VHF Marine
+   157425000; 157.425 MHz-CH88-TX      ; Narrow FM           ;      50000; VHF Marine
+   157425000; 157.425 MHz-CH88-RX      ; Narrow FM           ;      50000; VHF Marine
+   160625000; 160.625 MHz -CH60-RX     ; Narrow FM           ;      50000; VHF Marine
+   160650000; 160.650 MHz-CH1-RX       ; Narrow FM           ;      50000; VHF Marine
+   160675000; 160.675 MHz -CH61-RX     ; Narrow FM           ;      50000; VHF Marine
+   160700000; 160.700 MHz-CH2-RX       ; Narrow FM           ;      50000; VHF Marine
+   160725000; 160.725 MHz -CH62-RX     ; Narrow FM           ;      50000; VHF Marine
+   160750000; 160.750 MHz-CH3-RX       ; Narrow FM           ;      50000; VHF Marine
+   160775000; 160.775 MHz -CH63-RX     ; Narrow FM           ;      50000; VHF Marine
+   160800000; 160.800 MHz-CH4-RX       ; Narrow FM           ;      50000; VHF Marine
+   160825000; 160.825 MHz -CH64-RX     ; Narrow FM           ;      50000; VHF Marine
+   160850000; 156.850 MHz-CH5-RX       ; Narrow FM           ;      50000; VHF Marine
+   160875000; 160.875 MHz -CH65-RX     ; Narrow FM           ;      50000; VHF Marine
+   160900000; 156.300 MHz-CH6-RX       ; Narrow FM           ;      50000; VHF Marine
+   160925000; 160.925 MHz -CH66-RX     ; Narrow FM           ;      50000; VHF Marine
+   160950000; 160.950 MHz-CH7-RX       ; Narrow FM           ;      50000; VHF Marine
+   161000000; 156.400 MHz-CH8-RX       ; Narrow FM           ;      50000; VHF Marine
+   161050000; 156.450 MHz-CH9-RX       ; Narrow FM           ;      50000; VHF Marine
+   161100000; 156.500 MHz-CH10-RX      ; Narrow FM           ;      50000; VHF Marine
+   161150000; 156.550 MHz-CH11-RX      ; Narrow FM           ;      50000; VHF Marine
+   161200000; 156.600 MHz-CH12-RX      ; Narrow FM           ;      50000; VHF Marine
+   161250000; 156.650 MHz -CH13-RX     ; Narrow FM           ;      50000; VHF Marine
+   161300000; 156.700 MHz -CH14-RX     ; Narrow FM           ;      50000; VHF Marine
+   161350000; 156.750 MHz -CH15-RX     ; Narrow FM           ;      50000; VHF Marine
+   161400000; 156.800 MHz -CH16-RX     ; Narrow FM           ;      50000; VHF Marine
+   161450000; 156.850 MHz -CH17-RX     ; Narrow FM           ;      50000; VHF Marine
+   161500000; 161.500 MHz -CH18-RX     ; Narrow FM           ;      50000; VHF Marine
+   161525000; 161.525 MHz -CH78-RX     ; Narrow FM           ;      50000; VHF Marine
+   161550000; 161.550 MHz -CH19-RX     ; Narrow FM           ;      50000; VHF Marine
+   161575000; 161.575 MHz -CH79-RX     ; Narrow FM           ;      50000; VHF Marine
+   161600000; 161.600 MHz -CH20-RX     ; Narrow FM           ;      50000; VHF Marine
+   161625000; 161.625 MHz -CH80-RX     ; Narrow FM           ;      50000; VHF Marine
+   161650000; 161.650 MHz -CH21-RX     ; Narrow FM           ;      50000; VHF Marine
+   161675000; 161.675 MHz -CH81-RX     ; Narrow FM           ;      50000; VHF Marine
+   161700000; 161.700 MHz -CH22-RX     ; Narrow FM           ;      50000; VHF Marine
+   161725000; 161.725 MHz -CH82-RX     ; Narrow FM           ;      50000; VHF Marine
+   161750000; 161.750 MHz -CH23-RX     ; Narrow FM           ;      50000; VHF Marine
+   161775000; 161.775 MHz -CH83-RX     ; Narrow FM           ;      50000; VHF Marine
+   161800000; 161.800 MHz -CH24-RX     ; Narrow FM           ;      50000; VHF Marine
+   161825000; 161.825 MHz -CH84-RX     ; Narrow FM           ;      50000; VHF Marine
+   161850000; 161.850 MHz -CH25-RX     ; Narrow FM           ;      50000; VHF Marine
+   161875000; 161.875 MHz -CH85-RX     ; Narrow FM           ;      50000; VHF Marine
+   161900000; 161.900 MHz -CH26-RX     ; Narrow FM           ;      50000; VHF Marine
+   161925000; 161.925 MHz -CH86-RX     ; Narrow FM           ;      50000; VHF Marine
+   161950000; 161.950 MHz -CH27-RX     ; Narrow FM           ;      50000; VHF Marine
+   162000000; 162.000 MHz -CH28-RX     ; Narrow FM           ;      50000; VHF Marine
    315000000; ISM 315 MHz              ; Demod Off           ;    1740000; ISM
    433920000; ISM 433 MHz              ; Demod Off           ;    1740000; ISM
    915000000; ISM 915 MHz              ; Demod Off           ;   26000000; ISM
