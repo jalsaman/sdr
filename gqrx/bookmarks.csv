@@ -1,6 +1,7 @@
 # Tag name          ;  color
 ISM                 ; #ff0000
 ADSB                ; #0000ff
+DMR                 ; #c17d11
 FM                  ; #00ff00
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
@@ -29,7 +30,7 @@ FM                  ; #00ff00
     93400000; FM 93.4 MHz - Dubai - Radio Shoma; WFM (stereo)        ;     240000; FM
     93900000; FM 93.9 MHz - Dubai - Noor Dubai; WFM (stereo)        ;     240000; FM
     94400000; FM 94.4 MHz - Sharjah - Sharjah Media; WFM (stereo)        ;     240000; FM
-    95000000; FM 95.0 MHz              ; WFM (stereo)        ;     240000; FM
+    95000000; FM 95.0 MHz - Sharjah - Pulse 95; WFM (stereo)        ;     240000; FM
     95600000; FM 95.6 MHz - UAQ - Radio Hala; WFM (stereo)        ;     240000; FM
     96000000; FM 96.0 MHz              ; WFM (stereo)        ;     240000; FM
     96700000; FM 96.7 MHz - Dubai - Hit 96.7; WFM (stereo)        ;     240000; FM
@@ -59,6 +60,7 @@ FM                  ; #00ff00
    107400000; FM 107.4 MHz             ; WFM (stereo)        ;     240000; FM
    107800000; FM 107.8 MHz - Ajman - Al Rabia FM; WFM (stereo)        ;     240000; FM
    108100000; FM 108.1 MHz             ; WFM (stereo)        ;     240000; FM
+   145298400; VHF Radio                ; Narrow FM           ;      10000; DMR
    315000000; ISM 315 MHz              ; Demod Off           ;    1740000; ISM
    433920000; ISM 433 MHz              ; Demod Off           ;    1740000; ISM
    915000000; ISM 915 MHz              ; Demod Off           ;   26000000; ISM
