@@ -1,9 +1,9 @@
 # Tag name          ;  color
 ADSB                ; #0000ff
+VHF Marine          ; #c07010
 FM                  ; #00ff00
 ISM                 ; #ff0000
 HAM                 ; #fce94f
-VHF Marine          ; #c07010
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
      6780000; ISM 6.78 MHz             ; Demod Off           ;      30000; ISM
@@ -178,10 +178,10 @@ VHF Marine          ; #c07010
    161925000; CH86-RX                  ; Narrow FM           ;      50000; VHF Marine
    161950000; CH27-RX                  ; Narrow FM           ;      50000; VHF Marine
    162000000; CH28-RX                  ; Narrow FM           ;      50000; VHF Marine
-   315000000; ISM 315 MHz              ; Demod Off           ;    1740000; ISM
-   336013000; ISM 336.013 MHz          ; Narrow FM           ;      50000; ISM
-   336330000; ISM 336.330 MHz          ; Narrow FM           ;      50000; ISM
-   337226000; ISM 337.226 MHz          ; Narrow FM           ;      50000; ISM
+   315000000; ISM 315 MHz              ; Demod Off           ;      50000; ISM
+   336013000; ISM 336.013 MHz          ; Demod Off           ;      50000; ISM
+   336330000; ISM 336.330 MHz          ; Demod Off           ;      50000; ISM
+   337226000; ISM 337.226 MHz          ; Demod Off           ;      50000; ISM
    433604000; ISM 433.604 MHz          ; Demod Off           ;      50000; ISM
    433915000; ISM 433.915 MHz          ; Demod Off           ;      50000; ISM
    433920000; ISM 433.920 MHz          ; Demod Off           ;      50000; ISM
@@ -190,5 +190,5 @@ VHF Marine          ; #c07010
    915000000; ISM 915 MHz              ; Demod Off           ;      50000; ISM
    978000000; ADS-B 978 MHz            ; Demod Off           ;    1300000; ADSB
   1090000000; ADS-B 1090MHz            ; Demod Off           ;      50000; ADSB
-  2450000000; ISM 2.45 GHz             ; Demod Off           ;  100000000; ISM
-  5800000000; ISM 5.8 GHz              ; Demod Off           ;  150000000; ISM
+  2450000000; ISM 2.45 GHz             ; Demod Off           ;      50000; ISM
+  5800000000; ISM 5.8 GHz              ; Demod Off           ;      50000; ISM
