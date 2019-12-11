@@ -1,9 +1,9 @@
 # Tag name          ;  color
-ISM                 ; #ff0000
-VHF Marine          ; #c07010
 ADSB                ; #0000ff
 FM                  ; #00ff00
+ISM                 ; #ff0000
 HAM                 ; #fce94f
+VHF Marine          ; #c07010
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
      6780000; ISM 6.78 MHz             ; Demod Off           ;      30000; ISM
@@ -15,18 +15,19 @@ HAM                 ; #fce94f
     87000000; FM 87.0 MHz              ; WFM (stereo)        ;     240000; FM
     87600000; FM 87.6 MHz              ; WFM (stereo)        ;     240000; FM
     87900000; FM 87.9 MHz - Abu Dhabi - Classic Music; WFM (stereo)        ;     240000; FM
-    88200000; FM 88.2 MHz - Abu Dhabi - Quran Al Kareem; WFM (stereo)        ;     240000; FM
+    88200000; FM 88.2 MHz - Abu Dhabi - AD Quran; WFM (stereo)        ;     240000; FM
     88800000; FM 88.8 MHz - Dubai - Radio Mirchi; WFM (stereo)        ;     240000; FM
     89100000; FM 89.1 MHz - Ajman - Radio 4; WFM (stereo)        ;     240000; FM
     89400000; FM 89.4 MHz - RAK - Tamil FM; WFM (stereo)        ;     240000; FM
     89600000; FM 89.6 MHZ -            ; WFM (stereo)        ;     240000; FM
-    90500000; FM 90.5 MHz - Abu Dhabi - Radio Sawa; WFM (stereo)        ;     240000; FM
+    90500000; FM 90.5 MHz - Abu Dhabi - SKYNEWS Arabia; WFM (stereo)        ;     240000; FM
     90700000; FM 90.7 MHz - Fujairah - Rock Radio; WFM (stereo)        ;     240000; FM
     91100000; FM 91.1 MHz - Dubai - Tag 91.1; WFM (stereo)        ;     240000; FM
-    91400000; FM 91.4 MHz -            ; WFM (stereo)        ;     240000; FM
+    91400000; FM 91.4 MHz - Dubai - Quran; WFM (stereo)        ;     240000; FM
     92000000; FM 92.0 MHz - Dubai - Dubai 92; WFM (stereo)        ;     240000; FM
     92600000; FM 92.6 MHz - Fujairah - Fuj FM; WFM (stereo)        ;     240000; FM
     93000000; FM 93.0 MHz - Dubai - Radio93; WFM (stereo)        ;     240000; FM
+    93100000; FM 93.1 MHz              ; WFM (stereo)        ;     240000; FM
     93400000; FM 93.4 MHz - Dubai - Radio Shoma; WFM (stereo)        ;     240000; FM
     93900000; FM 93.9 MHz - Dubai - Noor Dubai; WFM (stereo)        ;     240000; FM
     94400000; FM 94.4 MHz - Sharjah - Sharjah Media; WFM (stereo)        ;     240000; FM
@@ -41,15 +42,17 @@ HAM                 ; #fce94f
     98400000; FM 98.4 MHz - Abu Dhabi - AD FM; WFM (stereo)        ;     240000; FM
     99000000; FM 99.0 MHz - Dubai - Al Arabiya; WFM (stereo)        ;     240000; FM
     99600000; FM 99.6 MHz - Dubai - Club FM; WFM (stereo)        ;     240000; FM
+    99900000; FM 99.9 MHz              ; WFM (stereo)        ;     240000; FM
    100300000; FM 100.3 MHz             ; WFM (stereo)        ;     240000; FM
    100900000; FM 100.9 MHz             ; WFM (stereo)        ;     240000; FM
    101300000; FM 101.3 MHz - Ajman - Gold FM; WFM (stereo)        ;     240000; FM
    101600000; FM 101.6 MHz             ; WFM (stereo)        ;     240000; FM
    102000000; FM 102.0 MHz -           ; WFM (stereo)        ;     240000; FM
    102400000; FM 102.4 MHz - Suno FM   ; WFM (stereo)        ;     240000; FM
-   102700000; FM 102.7 MHz             ; WFM (stereo)        ;     240000; FM
+   102700000; FM 102.7 MHz - Quran     ; WFM (stereo)        ;     240000; FM
    103500000; FM 103.5 MHz             ; WFM (stereo)        ;     240000; FM
    103800000; FM 103.8 MHz - Dubai - Dubai Eye; WFM (stereo)        ;     240000; FM
+   104100000; FM 104.1 MHz             ; WFM (stereo)        ;     160000; FM
    104400000; FM 104.4 MHz - Dubai - Virgin Dubai; WFM (stereo)        ;     240000; FM
    104600000; FM 104.6 MHz             ; WFM (stereo)        ;     240000; FM
    104800000; FM 104.8 MHz - Ajman - Channel 4 FM; WFM (stereo)        ;     240000; FM
@@ -59,7 +62,6 @@ HAM                 ; #fce94f
    107100000; FM 107.1 MHz - UAQ - Heart 107.1 FM; WFM (stereo)        ;     240000; FM
    107400000; FM 107.4 MHz             ; WFM (stereo)        ;     240000; FM
    107800000; FM 107.8 MHz - Ajman - Al Rabia FM; WFM (stereo)        ;     240000; FM
-   108100000; FM 108.1 MHz             ; WFM (stereo)        ;     240000; FM
    144008000; VHF HAM 1                ; Narrow FM           ;      10000; HAM
    145298400; VHF HAM 2                ; Narrow FM           ;      10000; HAM
    156025000; CH60-TX                  ; Narrow FM           ;      50000; VHF Marine
@@ -177,8 +179,15 @@ HAM                 ; #fce94f
    161950000; CH27-RX                  ; Narrow FM           ;      50000; VHF Marine
    162000000; CH28-RX                  ; Narrow FM           ;      50000; VHF Marine
    315000000; ISM 315 MHz              ; Demod Off           ;    1740000; ISM
-   433920000; ISM 433 MHz              ; Demod Off           ;    1740000; ISM
-   915000000; ISM 915 MHz              ; Demod Off           ;   26000000; ISM
+   336013000; ISM 336.013 MHz          ; Narrow FM           ;      50000; ISM
+   336330000; ISM 336.330 MHz          ; Narrow FM           ;      50000; ISM
+   337226000; ISM 337.226 MHz          ; Narrow FM           ;      50000; ISM
+   433604000; ISM 433.604 MHz          ; Demod Off           ;      50000; ISM
+   433915000; ISM 433.915 MHz          ; Demod Off           ;      50000; ISM
+   434226000; ISM 434.226 MHz          ; Demod Off           ;      50000; ISM
+   434538000; ISM 434.538 MHz          ; Demod Off           ;      50000; ISM
+   915000000; ISM 915 MHz              ; Demod Off           ;      50000; ISM
+   978000000; ADS-B 978 MHz            ; Demod Off           ;    1300000; ADSB
   1090000000; ADS-B 1090MHz            ; Demod Off           ;      50000; ADSB
   2450000000; ISM 2.45 GHz             ; Demod Off           ;  100000000; ISM
   5800000000; ISM 5.8 GHz              ; Demod Off           ;  150000000; ISM
