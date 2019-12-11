@@ -1,9 +1,9 @@
 # Tag name          ;  color
-ADSB                ; #0000ff
 ISM                 ; #ff0000
-FM                  ; #00ff00
-DMR                 ; #c17d11
 VHF Marine          ; #c07010
+ADSB                ; #0000ff
+FM                  ; #00ff00
+HAM                 ; #fce94f
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
      6780000; ISM 6.78 MHz             ; Demod Off           ;      30000; ISM
@@ -13,7 +13,6 @@ VHF Marine          ; #c07010
     85533000; NFM 85.533 MHz           ; Narrow FM           ;      10000; FM
     86800000; FM 86.8 MHz              ; WFM (stereo)        ;     240000; FM
     87000000; FM 87.0 MHz              ; WFM (stereo)        ;     240000; FM
-    87100000; FM 87.1 MHz              ; WFM (stereo)        ;     240000; FM
     87600000; FM 87.6 MHz              ; WFM (stereo)        ;     240000; FM
     87900000; FM 87.9 MHz - Abu Dhabi - Classic Music; WFM (stereo)        ;     240000; FM
     88200000; FM 88.2 MHz - Abu Dhabi - Quran Al Kareem; WFM (stereo)        ;     240000; FM
@@ -61,7 +60,8 @@ VHF Marine          ; #c07010
    107400000; FM 107.4 MHz             ; WFM (stereo)        ;     240000; FM
    107800000; FM 107.8 MHz - Ajman - Al Rabia FM; WFM (stereo)        ;     240000; FM
    108100000; FM 108.1 MHz             ; WFM (stereo)        ;     240000; FM
-   145298400; VHF Radio                ; Narrow FM           ;      10000; DMR
+   144008000; VHF HAM 1                ; Narrow FM           ;      10000; HAM
+   145298400; VHF HAM 2                ; Narrow FM           ;      10000; HAM
    156025000; CH60-TX                  ; Narrow FM           ;      50000; VHF Marine
    156050000; CH1-TX                   ; Narrow FM           ;      50000; VHF Marine
    156075000; CH61-TX                  ; Narrow FM           ;      50000; VHF Marine
