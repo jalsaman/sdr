@@ -184,6 +184,7 @@ VHF Marine          ; #c07010
    337226000; ISM 337.226 MHz          ; Narrow FM           ;      50000; ISM
    433604000; ISM 433.604 MHz          ; Demod Off           ;      50000; ISM
    433915000; ISM 433.915 MHz          ; Demod Off           ;      50000; ISM
+   433920000; ISM 433.920 MHz          ; Demod Off           ;      50000; ISM
    434226000; ISM 434.226 MHz          ; Demod Off           ;      50000; ISM
    434538000; ISM 434.538 MHz          ; Demod Off           ;      50000; ISM
    915000000; ISM 915 MHz              ; Demod Off           ;      50000; ISM
