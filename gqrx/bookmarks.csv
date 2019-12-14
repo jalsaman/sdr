@@ -1,9 +1,9 @@
 # Tag name          ;  color
 ISM                 ; #ff0000
-ADSB                ; #0000ff
-VHF Marine          ; #c07010
-HAM                 ; #fce94f
 Unknown             ; #c0c0c0
+HAM                 ; #fce94f
+VHF Marine          ; #c07010
+ADSB                ; #0000ff
 FM                  ; #00ff00
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
@@ -63,8 +63,7 @@ FM                  ; #00ff00
    107100000; FM 107.1 MHz - UAQ - Heart 107.1 FM; WFM (stereo)        ;     240000; FM
    107400000; FM 107.4 MHz             ; WFM (stereo)        ;     240000; FM
    107800000; FM 107.8 MHz - Ajman - Al Rabia FM; WFM (stereo)        ;     240000; FM
-   144008000; VHF HAM 1                ; Narrow FM           ;      10000; HAM
-   145298400; VHF HAM 2                ; Narrow FM           ;      10000; HAM
+   145298400; VHF HAM                  ; Narrow FM           ;      10000; HAM
    156025000; CH60-TX                  ; Narrow FM           ;      50000; VHF Marine
    156050000; CH1-TX                   ; Narrow FM           ;      50000; VHF Marine
    156075000; CH61-TX                  ; Narrow FM           ;      50000; VHF Marine
