@@ -1,9 +1,10 @@
 # Tag name          ;  color
-ADSB                ; #0000ff
-HAM                 ; #fce94f
-FM                  ; #00ff00
-VHF Marine          ; #c07010
 ISM                 ; #ff0000
+ADSB                ; #0000ff
+VHF Marine          ; #c07010
+HAM                 ; #fce94f
+Unknown             ; #c0c0c0
+FM                  ; #00ff00
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
      6780000; ISM 6.78 MHz             ; Demod Off           ;      30000; ISM
@@ -20,9 +21,6 @@ ISM                 ; #ff0000
     89100000; FM 89.1 MHz - Ajman - Radio 4; WFM (stereo)        ;     240000; FM
     89400000; FM 89.4 MHz - RAK - Tamil FM; WFM (stereo)        ;     240000; FM
     89600000; FM 89.6 MHZ -            ; WFM (stereo)        ;     240000; FM
-    89700000; FM 89.7                  ; WFM (stereo)        ;     240000; FM
-    89900000; FM 89.9                  ; WFM (stereo)        ;     120000; FM
-    90000000; FM 90.0 MHz              ; WFM (stereo)        ;     120000; FM
     90500000; FM 90.5 MHz - Abu Dhabi - SKYNEWS Arabia; WFM (stereo)        ;     240000; FM
     90700000; FM 90.7 MHz - Fujairah - Rock Radio; WFM (stereo)        ;     240000; FM
     91100000; FM 91.1 MHz - Dubai - Tag 91.1; WFM (stereo)        ;     240000; FM
@@ -30,14 +28,13 @@ ISM                 ; #ff0000
     92000000; FM 92.0 MHz - Dubai - Dubai 92; WFM (stereo)        ;     240000; FM
     92600000; FM 92.6 MHz - Fujairah - Fuj FM; WFM (stereo)        ;     240000; FM
     93000000; FM 93.0 MHz - Dubai - Radio93; WFM (stereo)        ;     240000; FM
+    93100000; FM 93.1 MHz              ; WFM (stereo)        ;     240000; FM
     93400000; FM 93.4 MHz - Dubai - Radio Shoma; WFM (stereo)        ;     240000; FM
     93900000; FM 93.9 MHz - Dubai - Noor Dubai; WFM (stereo)        ;     240000; FM
     94400000; FM 94.4 MHz - Sharjah - Sharjah Media; WFM (stereo)        ;     240000; FM
-    94700000; FM 94.7 MHz              ; WFM (stereo)        ;     240000; FM
     95000000; FM 95.0 MHz - Sharjah - Pulse 95; WFM (stereo)        ;     240000; FM
     95600000; FM 95.6 MHz - UAQ - Radio Hala; WFM (stereo)        ;     240000; FM
     96000000; FM 96.0 MHz              ; WFM (stereo)        ;     240000; FM
-    96200000; FM 96.2 MHz              ; WFM (stereo)        ;     240000; FM
     96700000; FM 96.7 MHz - Dubai - Hit 96.7; WFM (stereo)        ;     240000; FM
     97100000; FM 97.1 MHz - Abu Dhabi - Emarat FM; WFM (stereo)        ;     240000; FM
     97400000; FM 97.4 MHz              ; WFM (stereo)        ;     240000; FM
@@ -45,7 +42,6 @@ ISM                 ; #ff0000
     97800000; FM 97.8 MHz - Dance FM   ; WFM (stereo)        ;     240000; FM
     98400000; FM 98.4 MHz - Abu Dhabi - AD FM; WFM (stereo)        ;     240000; FM
     99000000; FM 99.0 MHz - Dubai - Al Arabiya; WFM (stereo)        ;     240000; FM
-    99300000; FM 99.3 MHz              ; WFM (mono)          ;     160000; FM
     99600000; FM 99.6 MHz - Dubai - Club FM; WFM (stereo)        ;     240000; FM
     99900000; FM 99.9 MHz              ; WFM (stereo)        ;     240000; FM
    100300000; FM 100.3 MHz             ; WFM (stereo)        ;     240000; FM
@@ -192,6 +188,7 @@ ISM                 ; #ff0000
    433920000; ISM 433.920 MHz          ; Demod Off           ;      50000; ISM
    434226000; ISM 434.226 MHz          ; Demod Off           ;      50000; ISM
    434538000; ISM 434.538 MHz          ; Demod Off           ;      50000; ISM
+   470255000; Signal                   ; Narrow FM           ;      10000; Unknown
    915000000; ISM 915 MHz              ; Demod Off           ;      50000; ISM
    978000000; ADS-B 978 MHz            ; Demod Off           ;    1300000; ADSB
   1090000000; ADS-B 1090MHz            ; Demod Off           ;      50000; ADSB
