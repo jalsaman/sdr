@@ -1,10 +1,10 @@
 # Tag name          ;  color
+HAM                 ; #fce94f
+ISM                 ; #ff0000
 FM                  ; #00ff00
 ADSB                ; #0000ff
-VHF Marine          ; #c07010
-ISM                 ; #ff0000
 Unknown             ; #c0c0c0
-HAM                 ; #fce94f
+VHF Marine          ; #c07010
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
      6780000; ISM 6.78 MHz             ; Demod Off           ;      30000; ISM
@@ -23,6 +23,7 @@ HAM                 ; #fce94f
     89100000; FM 89.1 MHz - Ajman - Radio 4; WFM (stereo)        ;     240000; FM
     89400000; FM 89.4 MHz - RAK - Tamil FM; WFM (stereo)        ;     240000; FM
     89600000; FM 89.6 MHZ -            ; WFM (stereo)        ;     240000; FM
+    89900000; FM 89.9 MHz              ; WFM (stereo)        ;     160000; FM
     90500000; FM 90.5 MHz - Abu Dhabi - SKYNEWS Arabia; WFM (stereo)        ;     240000; FM
     90700000; FM 90.7 MHz - Fujairah - Rock Radio; WFM (stereo)        ;     240000; FM
     91100000; FM 91.1 MHz - Dubai - Tag 91.1; WFM (stereo)        ;     240000; FM
