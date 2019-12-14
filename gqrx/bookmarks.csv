@@ -196,7 +196,8 @@ VHF Marine          ; #c07010
    434226000; ISM 434.226 MHz          ; Demod Off           ;      50000; ISM
    434538000; ISM 434.538 MHz          ; Demod Off           ;      50000; ISM
    450000000; HAM UHF 70cm End         ; Narrow FM           ;      10000; HAM
-   470255000; Signal                   ; Narrow FM           ;      10000; Unknown
+   470107000; Signal Start             ; Narrow FM           ;      10000; Unknown
+   477880000; Signal End               ; Narrow FM           ;      10000; Unknown
    915000000; ISM 915 MHz              ; Demod Off           ;      50000; ISM
    978000000; ADS-B 978 MHz            ; Demod Off           ;    1300000; ADSB
   1090000000; ADS-B 1090MHz            ; Demod Off           ;      50000; ADSB
