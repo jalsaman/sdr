@@ -1,18 +1,23 @@
 # Tag name          ;  color
-HAM                 ; #fce94f
 ISM                 ; #ff0000
-FM                  ; #00ff00
 ADSB                ; #0000ff
-Unknown             ; #c0c0c0
 VHF Marine          ; #c07010
+Unknown             ; #c0c0c0
+FM                  ; #00ff00
+HAM                 ; #fce94f
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
+     3800000; HF 80m Start             ; Narrow FM           ;      10000; HAM
+     4000000; HF 80m End               ; Narrow FM           ;      10000; HAM
      6780000; ISM 6.78 MHz             ; Demod Off           ;      30000; ISM
     13560000; ISM 13.56MHz - RFID      ; Demod Off           ;      14000; ISM
+    13859900; Signal                   ; Narrow FM           ;      10000; Unknown
+    14225000; HF 20m Start             ; Narrow FM           ;      10000; HAM
+    14350000; HF 20m End               ; Narrow FM           ;      10000; HAM
     27120000; ISM 27 MHz - RC          ; Demod Off           ;     326000; ISM
     40680000; ISM 40 MHz               ; Demod Off           ;      40000; ISM
-    50000000; HAM VHF 6m Start         ; Narrow FM           ;      10000; HAM
-    54000000; HAM VHF 6m End           ; Narrow FM           ;      10000; HAM
+    50000000; VHF 6m Start             ; Narrow FM           ;      10000; HAM
+    54000000; VHF 6m End               ; Narrow FM           ;      10000; HAM
     85533000; NFM 85.533 MHz           ; Narrow FM           ;      10000; FM
     86800000; FM 86.8 MHz              ; WFM (stereo)        ;     240000; FM
     87000000; FM 87.0 MHz              ; WFM (stereo)        ;     240000; FM
@@ -54,6 +59,7 @@ VHF Marine          ; #c07010
    102000000; FM 102.0 MHz -           ; WFM (stereo)        ;     240000; FM
    102400000; FM 102.4 MHz - Suno FM   ; WFM (stereo)        ;     240000; FM
    102700000; FM 102.7 MHz - Quran     ; WFM (stereo)        ;     240000; FM
+   103000000; FM 103.0 MHz             ; WFM (stereo)        ;     160000; FM
    103500000; FM 103.5 MHz             ; WFM (stereo)        ;     240000; FM
    103800000; FM 103.8 MHz - Dubai - Dubai Eye; WFM (stereo)        ;     240000; FM
    104100000; FM 104.1 MHz             ; WFM (stereo)        ;     160000; FM
@@ -66,10 +72,10 @@ VHF Marine          ; #c07010
    107100000; FM 107.1 MHz - UAQ - Heart 107.1 FM; WFM (stereo)        ;     240000; FM
    107400000; FM 107.4 MHz             ; WFM (stereo)        ;     240000; FM
    107800000; FM 107.8 MHz - Ajman - Al Rabia FM; WFM (stereo)        ;     240000; FM
-   144000000; HAM VHF 2m Start         ; Narrow FM           ;      10000; HAM
-   145298400; HAM VHF 2m               ; Narrow FM           ;      10000; HAM
-   145749300; HAM VHF 2m               ; Narrow FM           ;      10000; HAM
-   148000000; HAM VHF 2m End           ; Narrow FM           ;      10000; HAM
+   144000000; VHF 2m Start             ; Narrow FM           ;      10000; HAM
+   145298400; VHF 2m                   ; Narrow FM           ;      10000; HAM
+   145749300; VHF 2m                   ; Narrow FM           ;      10000; HAM
+   148000000; VHF 2m End               ; Narrow FM           ;      10000; HAM
    156025000; CH60-TX                  ; Narrow FM           ;      50000; VHF Marine
    156050000; CH1-TX                   ; Narrow FM           ;      50000; VHF Marine
    156075000; CH61-TX                  ; Narrow FM           ;      50000; VHF Marine
@@ -189,13 +195,13 @@ VHF Marine          ; #c07010
    336330000; ISM 336.330 MHz          ; Demod Off           ;      50000; ISM
    337226000; ISM 337.226 MHz          ; Demod Off           ;      50000; ISM
    429638100; Signal                   ; Narrow FM           ;      10000; Unknown
-   430000000; HAM UHF 70cm Start       ; Narrow FM           ;      10000; HAM
+   430000000; UHF 70cm Start           ; Narrow FM           ;      10000; HAM
    433604000; ISM 433.604 MHz          ; Demod Off           ;      50000; ISM
    433915000; ISM 433.915 MHz          ; Demod Off           ;      50000; ISM
    433920000; ISM 433.920 MHz          ; Demod Off           ;      50000; ISM
    434226000; ISM 434.226 MHz          ; Demod Off           ;      50000; ISM
    434538000; ISM 434.538 MHz          ; Demod Off           ;      50000; ISM
-   450000000; HAM UHF 70cm End         ; Narrow FM           ;      10000; HAM
+   450000000; UHF 70cm End             ; Narrow FM           ;      10000; HAM
    470107000; Signal Start             ; Narrow FM           ;      10000; Unknown
    477880000; Signal End               ; Narrow FM           ;      10000; Unknown
    915000000; ISM 915 MHz              ; Demod Off           ;      50000; ISM
