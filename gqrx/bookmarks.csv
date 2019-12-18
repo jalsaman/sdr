@@ -1,10 +1,10 @@
 # Tag name          ;  color
-ISM                 ; #ff0000
-ADSB                ; #0000ff
-VHF Marine          ; #c07010
-Unknown             ; #c0c0c0
 FM                  ; #00ff00
+ISM                 ; #ff0000
+Unknown             ; #c0c0c0
+VHF Marine          ; #c07010
 HAM                 ; #fce94f
+ADSB                ; #0000ff
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
      3800000; HF 80m Start             ; Narrow FM           ;      10000; HAM
@@ -19,9 +19,7 @@ HAM                 ; #fce94f
     50000000; VHF 6m Start             ; Narrow FM           ;      10000; HAM
     54000000; VHF 6m End               ; Narrow FM           ;      10000; HAM
     85533000; NFM 85.533 MHz           ; Narrow FM           ;      10000; FM
-    86800000; FM 86.8 MHz              ; WFM (stereo)        ;     240000; FM
-    87000000; FM 87.0 MHz              ; WFM (stereo)        ;     240000; FM
-    87600000; FM 87.6 MHz              ; WFM (stereo)        ;     240000; FM
+    87600000; FM 87.6 MHZ - Quran      ; WFM (stereo)        ;     240000; FM
     87900000; FM 87.9 MHz - Abu Dhabi - Classic Music; WFM (stereo)        ;     240000; FM
     88200000; FM 88.2 MHz - Abu Dhabi - AD Quran; WFM (stereo)        ;     240000; FM
     88800000; FM 88.8 MHz - Dubai - Radio Mirchi; WFM (stereo)        ;     240000; FM
@@ -46,7 +44,7 @@ HAM                 ; #fce94f
     96700000; FM 96.7 MHz - Dubai - Hit 96.7; WFM (stereo)        ;     240000; FM
     97100000; FM 97.1 MHz - Abu Dhabi - Emarat FM; WFM (stereo)        ;     240000; FM
     97400000; FM 97.4 MHz              ; WFM (stereo)        ;     240000; FM
-    97600000; FM 97.6 MHz              ; WFM (stereo)        ;     240000; FM
+    97600000; FM 97.6 MHz - Abu Dhabi - Zayed Quran; WFM (stereo)        ;     240000; FM
     97800000; FM 97.8 MHz - Dance FM   ; WFM (stereo)        ;     240000; FM
     98400000; FM 98.4 MHz - Abu Dhabi - AD FM; WFM (stereo)        ;     240000; FM
     99000000; FM 99.0 MHz - Dubai - Al Arabiya; WFM (stereo)        ;     240000; FM
