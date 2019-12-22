@@ -14,10 +14,14 @@
 #define RFM95_RST 4
 #define RFM95_INT 3
 
-// Defaults after init are 434.0MHz, modulation GFSK_Rb250Fd250, +13dbM
+// Defaults after init are 434.0MHz, modulation GFSK_Rb250Fd250, Power +13dbM
+// RFM_FREQ is centre Frequency in MHz. 137.0 to 1020.0
+// RFM95/96/97/98 comes in several different frequency ranges, and setting a frequency outside that range of your radio will probably not work
+
 #define RFM95_FREQ    434.0
 #define RFM95_TXPOWER 5
 #define RFM95_MOD     GFSK_Rb250Fd250
+
 
 // Message
 #define msg "123456789012345678901234567890123456789"
