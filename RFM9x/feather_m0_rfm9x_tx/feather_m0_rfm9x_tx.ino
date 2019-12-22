@@ -33,6 +33,9 @@ void setup()
 {
   pinMode(RFM95_RST, OUTPUT);
   digitalWrite(RFM95_RST, HIGH);
+  
+  pinMode(LED_BUILTIN, OUTPUT);
+  digitalWrite(LED_BUILTIN, LOW);
 
   // sending will start only when serial is connected.
   Serial.begin(115200);
@@ -45,6 +48,8 @@ void setup()
   Serial.println("Feather M0 RFM9x TX Test!");
 
   // ******************** manual reset radio ********************
+  digitalWrite(LED_BUILTIN, HIGH);
+  
   digitalWrite(RFM95_RST, LOW);
   delay(10);
   digitalWrite(RFM95_RST, HIGH);
@@ -56,6 +61,7 @@ void setup()
     Serial.println("Uncomment '#define SERIAL_DEBUG' in RH_RF95.cpp for detailed debug info");
     while (1);
   }
+
   Serial.println("RFM9x radio init OK!");
 
   // ******************** set parameters ********************
@@ -64,8 +70,11 @@ void setup()
     while (1);
   }
   Serial.print("Set Freq to: "); Serial.println(RFM95_FREQ);
-
+  
   rf95.setTxPower(RFM95_TXPOWER, false);
+  Serial.print("Set TX Power to: "); Serial.println(RFM95_TXPOWER);
+
+  digitalWrite(LED_BUILTIN, LOW);
 }
 
 
@@ -76,9 +85,15 @@ void loop()
     
   Serial.print("Sending: "); 
   Serial.println(radiopacket);
+  digitalWrite(LED_BUILTIN, HIGH);
   rf95.send((uint8_t *)radiopacket, sizeof(msg));
 
   Serial.println("Waiting for packet to complete..."); 
   rf95.waitPacketSent();
+  digitalWrite(LED_BUILTIN, LOW);
+  Serial.println("Packet completed.");
+  
+  while (Serial.available() < 1);
+  Serial.read();
 
 }
