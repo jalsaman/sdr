@@ -1,10 +1,11 @@
 // Feather M0 RFM9x TX
 // -*- mode: C++ -*-
+
 // Example sketch showing how to create a simple messaging client (transmitter)
 // with the RH_RF95 class. RH_RF95 class does not provide for addressing or
 // reliability, so you should only use RH_RF95 if you do not need the higher
 // level messaging abilities.
-// It is designed to work with the other example Feather9x_RX
+
 
 #include <SPI.h>
 #include <RH_RF95.h>
@@ -14,18 +15,26 @@
 #define RFM95_RST 4
 #define RFM95_INT 3
 
+/* Wiring for FeatherWing on Feather M0 
+#define RFM95_CS  10 // "B"
+#define RFM95_RST 11 // "A"
+#define RFM95_INT 6  // "D"
+*/
+
 // Defaults after init are 434.0MHz, modulation GFSK_Rb250Fd250, Power +13dbM
 // RFM_FREQ is centre Frequency in MHz. 137.0 to 1020.0
-// RFM95/96/97/98 comes in several different frequency ranges, and setting a frequency outside that range of your radio will probably not work
+// RFM95/96/97/98 comes in several different frequency ranges, 
+// and setting a frequency outside that range of your radio will probably not work
 
 #define RFM95_FREQ    434.0
 #define RFM95_TXPOWER 5
-#define RFM95_MOD     GFSK_Rb250Fd250
-
 
 // Message
+
 #define msg "123456789012345678901234567890123456789"
 
+char radiopacket[sizeof(msg)] = msg;
+  
 // Singleton instance of the radio driver
 RH_RF95 rf95(RFM95_CS, RFM95_INT);
 
@@ -80,10 +89,12 @@ void setup()
 
 void loop()
 {
-  
-  char radiopacket[sizeof(msg)] = msg;
-    
-  Serial.print("Sending: "); 
+
+  Serial.println("Ready to Send..."); 
+  while (Serial.available() < 1);
+  Serial.read();
+
+  Serial.print("\nSending: "); 
   Serial.println(radiopacket);
   digitalWrite(LED_BUILTIN, HIGH);
   rf95.send((uint8_t *)radiopacket, sizeof(msg));
@@ -93,7 +104,5 @@ void loop()
   digitalWrite(LED_BUILTIN, LOW);
   Serial.println("Packet completed.");
   
-  while (Serial.available() < 1);
-  Serial.read();
 
 }
