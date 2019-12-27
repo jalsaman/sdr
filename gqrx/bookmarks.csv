@@ -1,13 +1,15 @@
 # Tag name          ;  color
-FM                  ; #00ff00
-VHF                 ; #729fcf
-Unknown             ; #c0c0c0
-ADSB                ; #0000ff
 ISM                 ; #edd400
+ADSB                ; #0000ff
 VHF Marine          ; #c07010
+FM                  ; #00ff00
+Mobile              ; #eeeeec
 HAM                 ; #fce94f
+Unknown             ; #c0c0c0
+VHF                 ; #729fcf
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
+        1111; ISM 434.000 MHz          ; Demod Off           ;      50000; ISM
      3800000; HF 80m Start             ; Narrow FM           ;      10000; HAM
      4000000; HF 80m End               ; Narrow FM           ;      10000; HAM
      6780000; ISM 6.78 MHz             ; Demod Off           ;      30000; ISM
@@ -20,6 +22,8 @@ HAM                 ; #fce94f
     50000000; VHF 6m Start             ; Narrow FM           ;      10000; HAM
     54000000; VHF 6m End               ; Narrow FM           ;      10000; HAM
     85533000; NFM 85.533 MHz           ; Narrow FM           ;      10000; FM
+    86400000; FM 86.4 MHz              ; WFM (stereo)        ;     240000; FM
+    87000000; FM 87.0 MHz Sharjah      ; WFM (stereo)        ;     240000; FM
     87600000; FM 87.6 MHZ - Quran      ; WFM (stereo)        ;     240000; FM
     87900000; FM 87.9 MHz - Abu Dhabi - Classic Music; WFM (stereo)        ;     240000; FM
     88200000; FM 88.2 MHz - Abu Dhabi - AD Quran; WFM (stereo)        ;     240000; FM
@@ -190,6 +194,7 @@ HAM                 ; #fce94f
    161950000; CH27-RX                  ; Narrow FM           ;      50000; VHF Marine
    162000000; CH28-RX                  ; Narrow FM           ;      50000; VHF Marine
    315000000; ISM 315 MHz              ; Demod Off           ;      50000; ISM
+   335400000; Mobile                   ; Demod Off           ;      10000; Mobile
    336013000; ISM 336.013 MHz          ; Demod Off           ;      50000; ISM
    336330000; ISM 336.330 MHz          ; Demod Off           ;      50000; ISM
    337226000; ISM 337.226 MHz          ; Demod Off           ;      50000; ISM
@@ -219,7 +224,7 @@ HAM                 ; #fce94f
    398633000; Signal                   ; Demod Off           ;          0; Unknown
    398659000; Signal                   ; Demod Off           ;          0; Unknown
    400008000; Signal                   ; Demod Off           ;          0; Unknown
-   429638100; Signal                   ; Narrow FM           ;      10000; Unknown
+   429638100; Signal                   ; Demod Off           ;      10000; Mobile
    430000000; UHF 70cm Start           ; Narrow FM           ;      10000; HAM
    432009000; ISM 432.009 MHz          ; Demod Off           ;      50000; ISM
    432017000; ISM 432.017              ; Demod Off           ;      50000; ISM
@@ -228,7 +233,6 @@ HAM                 ; #fce94f
    433604000; ISM 433.604 MHz          ; Demod Off           ;      50000; ISM
    433915000; ISM 433.915 MHz          ; Demod Off           ;      50000; ISM
    433920000; ISM 433.920 MHz          ; Demod Off           ;      50000; ISM
-        1111; ISM 434.000 MHz          ; Demod Off           ;      50000; ISM
    434226000; ISM 434.226 MHz          ; Demod Off           ;      50000; ISM
    434538000; ISM 434.538 MHz          ; Demod Off           ;      50000; ISM
    434910000; ISM 434.910 MHz          ; Demod Off           ;      50000; ISM
@@ -238,6 +242,8 @@ HAM                 ; #fce94f
    470107000; Signal Start             ; Narrow FM           ;      10000; Unknown
    477880000; Signal End               ; Narrow FM           ;      10000; Unknown
    915000000; ISM 915 MHz              ; Demod Off           ;      50000; ISM
+   958978000; Signal                   ; Narrow FM           ;      10000; Unknown
+   958998000; Signal                   ; Narrow FM           ;      10000; Unknown
    978000000; ADS-B 978 MHz            ; Demod Off           ;    1300000; ADSB
   1090000000; ADS-B 1090MHz            ; Demod Off           ;      50000; ADSB
   2450000000; ISM 2.45 GHz             ; Demod Off           ;      50000; ISM
