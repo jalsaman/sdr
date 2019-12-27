@@ -10,16 +10,15 @@
 #include <SPI.h>
 #include <RH_RF95.h>
 
-// Wiring for Feather M0
+/* Wiring for Feather M0 with built in RFM9x
 #define RFM95_CS  8
 #define RFM95_RST 4
 #define RFM95_INT 3
-
-/* Wiring for FeatherWing on Feather M0 
+*/
+// Wiring for FeatherWing on Feather M0 
 #define RFM95_CS  10 // "B"
 #define RFM95_RST 11 // "A"
 #define RFM95_INT 6  // "D"
-*/
 
 // Defaults after init are 434.0MHz, modulation GFSK_Rb250Fd250, Power +13dbM
 // RFM_FREQ is centre Frequency in MHz. 137.0 to 1020.0
