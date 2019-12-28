@@ -1,12 +1,12 @@
 # Tag name          ;  color
-ISM                 ; #edd400
+Unknown             ; #c0c0c0
+ADSB                ; #0000ff
+HAM                 ; #fce94f
 VHF Marine          ; #c07010
 Mobile              ; #eeeeec
-ADSB                ; #0000ff
-FM                  ; #00ff00
 VHF                 ; #729fcf
-HAM                 ; #fce94f
-Unknown             ; #c0c0c0
+ISM                 ; #edd400
+FM                  ; #00ff00
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
      3800000; HF 80m Start             ; Narrow FM           ;      10000; HAM
@@ -20,9 +20,6 @@ Unknown             ; #c0c0c0
     40680000; ISM 40 MHz               ; Demod Off           ;      40000; ISM
     50000000; VHF 6m Start             ; Narrow FM           ;      10000; HAM
     54000000; VHF 6m End               ; Narrow FM           ;      10000; HAM
-    85533000; NFM 85.533 MHz           ; Narrow FM           ;      10000; FM
-    86400000; FM 86.4 MHz              ; WFM (stereo)        ;     240000; FM
-    87000000; FM 87.0 MHz - Sharjah    ; WFM (stereo)        ;     240000; FM
     87600000; FM 87.6 MHZ - Quran      ; WFM (stereo)        ;     240000; FM
     87900000; FM 87.9 MHz - Abu Dhabi - Classic Music; WFM (stereo)        ;     240000; FM
     88200000; FM 88.2 MHz - Abu Dhabi - AD Quran; WFM (stereo)        ;     240000; FM
