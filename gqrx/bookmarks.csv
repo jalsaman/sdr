@@ -1,12 +1,12 @@
 # Tag name          ;  color
-Unknown             ; #c0c0c0
+Mobile              ; #eeeeec
+FM                  ; #00ff00
 ADSB                ; #0000ff
 HAM                 ; #fce94f
 VHF Marine          ; #c07010
-Mobile              ; #eeeeec
-VHF                 ; #729fcf
 ISM                 ; #edd400
-FM                  ; #00ff00
+Unknown             ; #c0c0c0
+VHF                 ; #729fcf
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
      3800000; HF 80m Start             ; Narrow FM           ;      10000; HAM
@@ -569,6 +569,7 @@ FM                  ; #00ff00
    399334000; S                        ; Demod Off           ;      24000; Unknown
    429638100; Signal                   ; Demod Off           ;      10000; Mobile
    430000000; UHF 70cm Start           ; Narrow FM           ;      10000; HAM
+   430065000; 430.065 MHz              ; Narrow FM           ;      10000; VHF
    432009000; ISM 432.009 MHz          ; Demod Off           ;      50000; ISM
    432017000; ISM 432.017 MHz          ; Demod Off           ;      50000; ISM
    433165000; ISM 433.165 MHz          ; Demod Off           ;      50000; ISM
