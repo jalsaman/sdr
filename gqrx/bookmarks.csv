@@ -1,12 +1,13 @@
 # Tag name          ;  color
-Mobile              ; #eeeeec
-FM                  ; #00ff00
-ADSB                ; #0000ff
-HAM                 ; #fce94f
 VHF Marine          ; #c07010
-ISM                 ; #edd400
+Mobile              ; #eeeeec
 Unknown             ; #c0c0c0
+ISM                 ; #edd400
 VHF                 ; #729fcf
+ADSB                ; #0000ff
+DVB                 ; #c0c0c0
+HAM                 ; #fce94f
+FM                  ; #00ff00
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
      3800000; HF 80m Start             ; Narrow FM           ;      10000; HAM
@@ -35,13 +36,13 @@ VHF                 ; #729fcf
     92000000; FM 92.0 MHz - Dubai - Dubai 92; WFM (stereo)        ;     240000; FM
     92600000; FM 92.6 MHz - Fujairah - Fuj FM; WFM (stereo)        ;     240000; FM
     93000000; FM 93.0 MHz - Dubai - Radio93; WFM (stereo)        ;     240000; FM
-    93100000; FM 93.1 MHz              ; WFM (stereo)        ;     240000; FM
     93400000; FM 93.4 MHz - Dubai - Radio Shoma; WFM (stereo)        ;     240000; FM
     93900000; FM 93.9 MHz - Dubai - Noor Dubai; WFM (stereo)        ;     240000; FM
     94400000; FM 94.4 MHz - Sharjah - Sharjah Media; WFM (stereo)        ;     240000; FM
+    94700000; FM 94.7 MHz -            ; WFM (stereo)        ;     240000; FM
     95000000; FM 95.0 MHz - Sharjah - Pulse 95; WFM (stereo)        ;     240000; FM
     95600000; FM 95.6 MHz - UAQ - Radio Hala; WFM (stereo)        ;     240000; FM
-    96000000; FM 96.0 MHz              ; WFM (stereo)        ;     240000; FM
+    96000000; FM 96.0 MHz -            ; WFM (stereo)        ;     240000; FM
     96700000; FM 96.7 MHz - Dubai - Hit 96.7; WFM (stereo)        ;     240000; FM
     97100000; FM 97.1 MHz - Abu Dhabi - Emarat FM; WFM (stereo)        ;     240000; FM
     97400000; FM 97.4 MHz              ; WFM (stereo)        ;     240000; FM
@@ -57,7 +58,7 @@ VHF                 ; #729fcf
    101600000; FM 101.6 MHz -           ; WFM (stereo)        ;     240000; FM
    102000000; FM 102.0 MHz -           ; WFM (stereo)        ;     240000; FM
    102400000; FM 102.4 MHz - Suno FM   ; WFM (stereo)        ;     240000; FM
-   102700000; FM 102.7 MHz - Quran     ; WFM (stereo)        ;     240000; FM
+   102700000; FM 102.7 MHz - Sharjah - Quran; WFM (stereo)        ;     240000; FM
    103000000; FM 103.0 MHz -           ; WFM (stereo)        ;     160000; FM
    103500000; FM 103.5 MHz -           ; WFM (stereo)        ;     240000; FM
    103800000; FM 103.8 MHz - Dubai - Dubai Eye; WFM (stereo)        ;     240000; FM
@@ -584,8 +585,8 @@ VHF                 ; #729fcf
    435134000; VHF 435.134 MHz          ; Narrow FM           ;      50000; VHF
    435636500; Signal                   ; Narrow FM           ;       2000; VHF
    450000000; UHF 70cm End             ; Narrow FM           ;      10000; HAM
-   470107000; Signal Start             ; Narrow FM           ;      10000; Unknown
-   477880000; Signal End               ; Narrow FM           ;      10000; Unknown
+   470000000; S                        ; Demod Off           ;          0; DVB
+   477896000; S                        ; Demod Off           ;          0; DVB
    915000000; ISM 915.000 MHz          ; Demod Off           ;      50000; ISM
    958978000; Signal                   ; Narrow FM           ;      10000; Unknown
    958998000; Signal                   ; Narrow FM           ;      10000; Unknown
