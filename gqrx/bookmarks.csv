@@ -1,13 +1,14 @@
 # Tag name          ;  color
-VHF Marine          ; #c07010
-Mobile              ; #eeeeec
-Unknown             ; #c0c0c0
-ISM                 ; #edd400
-VHF                 ; #729fcf
-ADSB                ; #0000ff
-DVB                 ; #c0c0c0
 HAM                 ; #fce94f
+RC                  ; #c0c0c0
+DVB                 ; #c0c0c0
 FM                  ; #00ff00
+ADSB                ; #0000ff
+ISM                 ; #edd400
+Unknown             ; #c0c0c0
+Mobile              ; #eeeeec
+VHF Marine          ; #c07010
+VHF                 ; #729fcf
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
      3800000; HF 80m Start             ; Narrow FM           ;      10000; HAM
@@ -18,6 +19,7 @@ FM                  ; #00ff00
     14225000; HF 20m Start             ; Narrow FM           ;      10000; HAM
     14350000; HF 20m End               ; Narrow FM           ;      10000; HAM
     27120000; ISM 27 MHz - RC          ; Demod Off           ;     326000; ISM
+    38686000; RC Car                   ; WFM (stereo)        ;     240000; RC
     40680000; ISM 40 MHz               ; Demod Off           ;      40000; ISM
     50000000; VHF 6m Start             ; Narrow FM           ;      10000; HAM
     54000000; VHF 6m End               ; Narrow FM           ;      10000; HAM
@@ -43,6 +45,7 @@ FM                  ; #00ff00
     95000000; FM 95.0 MHz - Sharjah - Pulse 95; WFM (stereo)        ;     240000; FM
     95600000; FM 95.6 MHz - UAQ - Radio Hala; WFM (stereo)        ;     240000; FM
     96000000; FM 96.0 MHz -            ; WFM (stereo)        ;     240000; FM
+    96400000; FM 96.4 MHz -            ; WFM (stereo)        ;     240000; FM
     96700000; FM 96.7 MHz - Dubai - Hit 96.7; WFM (stereo)        ;     240000; FM
     97100000; FM 97.1 MHz - Abu Dhabi - Emarat FM; WFM (stereo)        ;     240000; FM
     97400000; FM 97.4 MHz              ; WFM (stereo)        ;     240000; FM
@@ -72,6 +75,7 @@ FM                  ; #00ff00
    107100000; FM 107.1 MHz - UAQ - Heart 107.1 FM; WFM (stereo)        ;     240000; FM
    107400000; FM 107.4 MHz             ; WFM (stereo)        ;     240000; FM
    107800000; FM 107.8 MHz - Ajman - Al Rabia FM; WFM (stereo)        ;     240000; FM
+   125500000; UC_0.5MHz                ; Narrow FM           ;     240000; HAM
    144000000; VHF 2m Start             ; Narrow FM           ;      10000; HAM
    145298400; VHF 2m                   ; Narrow FM           ;      10000; HAM
    145749300; VHF 2m                   ; Narrow FM           ;      10000; HAM
@@ -190,6 +194,7 @@ FM                  ; #00ff00
    161925000; 86-RX                    ; Narrow FM           ;      50000; VHF Marine
    161950000; 27-RX                    ; Narrow FM           ;      50000; VHF Marine
    162000000; 28-RX                    ; Narrow FM           ;      50000; VHF Marine
+   175000000; UC_50MHz                 ; Narrow FM           ;     240000; HAM
    315000000; ISM 315.000 MHz          ; Demod Off           ;      50000; ISM
    336013000; ISM 336.013 MHz          ; Demod Off           ;      50000; ISM
    336330000; ISM 336.330 MHz          ; Demod Off           ;      50000; ISM
