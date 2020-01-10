@@ -1,15 +1,15 @@
 # Tag name          ;  color
 AM                  ; #a0a0a0
-RC                  ; #c0c0c0
 FM                  ; #00ff00
-HAM                 ; #fce94f
-VHF                 ; #729fcf
-ADSB                ; #0000ff
-ISM                 ; #edd400
-Unknown             ; #c0c0c0
-VHF Marine          ; #c07010
-Mobile              ; #eeeeec
 DVB                 ; #c0c0c0
+VHF Marine          ; #c07010
+VHF                 ; #729fcf
+Unknown             ; #c0c0c0
+HAM                 ; #fce94f
+ISM                 ; #edd400
+Mobile              ; #eeeeec
+ADSB                ; #0000ff
+RC                  ; #c0c0c0
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
       558000; AM                       ; AM                  ;      10000; AM

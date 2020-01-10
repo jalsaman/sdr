@@ -1,4 +1,3 @@
-///////////////////////////////////////////////////////////////////
  /*  FabFm Firmware v11 
  *   
  *   Aaron Weiss, SparkFun 2012
@@ -24,14 +23,12 @@
  *   -Each click will increase/decrease station by 0.2MHz 
  *   -The LED blinks for every step
  */   
-///////////////////////////////////////////////////////////////////
 
-// Libraries needed
-// Si4703 lib: See above
+
+// Libraries needed Si4703 lib: See above
+
 #include <Si4703_Breakout.h>
-// included with Arduino
 #include <Wire.h>
-// included with Arduino
 #include <EEPROM.h>
 
 // Global Constants (defines): these quantities don't change
@@ -42,7 +39,6 @@ const int encoderPin1 = 2; // encoder pin 1
 const int encoderPin2 = 3; // encoder pin 2
 const int LED = 5; //optional LED pin
 
-// Global Variables: these quantities change
 int channel;
 int rotate;
 
@@ -57,11 +53,9 @@ const boolean UP = true;
 const boolean DOWN = false;
 volatile boolean stationDirection;
 
-// You must call this to define the pins and enable the FM radio 
-// module.
 Si4703_Breakout radio(resetPin, SDIO, SCLK);
 
-// Arduino setup function
+
 void setup()
 {
   // both pins on the rotary encoder are inputs and pulled high
@@ -102,12 +96,12 @@ void loop()
     if(stationDirection == UP)
     {
       //Serial.print("Up ");
-      channel += 2; //Channels change by 2 (975 to 973)
+      channel += 1; //Channels change by 1 (88.0 to 88.1)
     }
     else if(stationDirection == DOWN)
     {
       //Serial.print("Down ");
-      channel -= 2; //Channels change by 2 (975 to 973)
+      channel -= 1; //Channels change by 1 (88.4 to 88.3)
     }
     
     //Catch wrap conditions
