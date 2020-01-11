@@ -1,61 +1,60 @@
- /*  FabFm Firmware v11 
- *   
- *   Aaron Weiss, SparkFun 2012
- *   license: beerware
- *   
+ /*  Based on FabFm Firmware v11 from Aaron Weiss, SparkFun 2012
+ *   Muthanna Alwahash 2020
+ *   license: freeware
+ *----------------------------
  *   Description:
- *   This is example code for the FamFM radio kit. The hardware
- *   mimics an Arduino Pro (3.3V, 8MHz) and has an FTDI header 
- *   to load Arduino sketches. The hardware includes the Si4703
- *   FM radio module to find the stations along with an op-amp 
- *   and speaker for the audio. The unit has a potentiometer
- *   with a switch for power and volume control, and a rotary
- *   encoder to tune the stations. The unit displays the radio
- *   station over a serial terminal at 115200 and also saves the 
- *   station on subsequent power ups. 
- *
+ *   This is example code for the FamFM radio kit. The hardware mimics an Arduino Pro (3.3V, 8MHz)
+ *   and has an FTDI header to load Arduino sketches. The hardware includes the Si4703 FM radio 
+ *   module to find the stations along with an op-amp and speaker for the audio. The unit has a
+ *   potentiometer with a switch for power and volume control, and a rotary encoder to tune the
+ *   stations. The unit displays the radio station over a serial terminal at 115200 and also saves
+ *   the station on subsequent power ups.
+ *----------------------------
  *   The Si4703 libarary needs to be used:
  *   http://dlnmh9ip6v2uc.cloudfront.net/datasheets/BreakoutBoards/Si4703_Breakout-Arduino_1_compatible.zip
- *   
+ *----------------------------
  *   Operation:
  *   -Power switch and volume are on the left, tuner is on the right.
  *   -The board must be powered with a switch mode 9V DC wall wart.
- *   -Each click will increase/decrease station by 0.2MHz 
+ *   -Each click will increase/decrease station by 0.1MHz
  *   -The LED blinks for every step
- */   
+ *----------------------------
+ */
 
-
-// Libraries needed Si4703 lib: See above
-
+//-------------------------------------------------------------------------------------------------------------
 #include <Si4703_Breakout.h>
 #include <Wire.h>
 #include <EEPROM.h>
 
+//-------------------------------------------------------------------------------------------------------------
 // Global Constants (defines): these quantities don't change
-const int resetPin = 4; //radio reset pin
-const int SDIO = A4; //radio data pin
-const int SCLK = A5; //radio clock pin
-const int encoderPin1 = 2; // encoder pin 1
-const int encoderPin2 = 3; // encoder pin 2
-const int LED = 5; //optional LED pin
+const int resetPin    = 4;  // radio reset pin
+const int SDIO        = A4; // radio data pin
+const int SCLK        = A5; // radio clock pin
+const int encoderPin1 = 2;  // encoder pin 1
+const int encoderPin2 = 3;  // encoder pin 2
+const int LED         = 5;  // optional LED pin
 
 int channel;
+int freqMin           =875; // FM Frequency Range from 87.5 to 107.9 MHz
+int freqMax           =1079;
 int rotate;
 
 //Volatile variables are needed if used within interrupts
-volatile int lastEncoded = 0;
-volatile long encoderValue = 0;
-
+volatile int lastEncoded        = 0;
+volatile long encoderValue      = 0;
 volatile int goodEncoderValue;
-volatile boolean updateStation = false;
-
-const boolean UP = true;
-const boolean DOWN = false;
+volatile boolean updateStation  = false;
 volatile boolean stationDirection;
+
+const boolean UP    = true;
+const boolean DOWN  = false;
+
+
 
 Si4703_Breakout radio(resetPin, SDIO, SCLK);
 
-
+//-------------------------------------------------------------------------------------------------------------
 void setup()
 {
   // both pins on the rotary encoder are inputs and pulled high
@@ -69,22 +68,23 @@ void setup()
   read_channel_from_EEPROM();
   
   // start radio module
-  radio.powerOn(); // turns the module on
-  radio.setChannel(channel); // loads saved channel
-  radio.setVolume(15); //Loudest volume setting
-  digitalWrite(LED, HIGH); //turn LED ON
+  radio.powerOn();            // turns the module on
+  radio.setChannel(channel);  // loads saved channel
+  radio.setVolume(15);        //Loudest volume setting
+  digitalWrite(LED, HIGH);    //turn LED ON
   
   //start serial and print welcome screen with station number
-  Serial.begin(115200); //must use a fast baud to prevent errors
-  Serial.print("\nfab fm: ");
-  Serial.println(channel, DEC);
+  Serial.begin(115200);       //must use a fast baud to prevent errors
+  Serial.print("\Tuned to: ");
+  Serial.print(float(channel)/10,1);
+  Serial.println(" MHz");
 
-  //call updateEncoder() when any high/low changed seen
-  //on interrupt 0 (pin 2), or interrupt 1 (pin 3) 
+  //call updateEncoder() when any high/low changed seen on interrupt 0 (pin 2), or interrupt 1 (pin 3) 
   attachInterrupt(0, updateEncoder, CHANGE); 
   attachInterrupt(1, updateEncoder, CHANGE);
 }
 
+//-------------------------------------------------------------------------------------------------------------
 // Arduino main loop
 void loop()
 {
@@ -96,19 +96,21 @@ void loop()
     if(stationDirection == UP)
     {
       //Serial.print("Up ");
-      channel += 1; //Channels change by 1 (88.0 to 88.1)
+      channel += 1;         //Channels change by 1 (ex: 88.0 to 88.1)
     }
     else if(stationDirection == DOWN)
     {
       //Serial.print("Down ");
-      channel -= 1; //Channels change by 1 (88.4 to 88.3)
+      channel -= 1;         //Channels change by 1 (ex: 88.4 to 88.3)
     }
     
     //Catch wrap conditions
-    if(channel > 1079) channel = 875;
-    if(channel < 875) channel = 1079;
+    if(channel > freqMax) channel = freqMin;
+    if(channel < freqMin) channel = freqMax;
 
-    Serial.println(channel, DEC); // print channel number
+    // print channel number
+    Serial.print(float(channel)/10,1);
+    Serial.println(" MHz");
 
     radio.setChannel(channel); //Goto the new channel
     save_channel(); // save channel to EEPROM
@@ -122,6 +124,7 @@ void loop()
   // the encoder interrupt is running in the background
 }
 
+//-------------------------------------------------------------------------------------------------------------
 // NAME: save_channel() 
 // DEFINITION: splits the channel variable into two separate bytes, 
 // then loads each value into one 8-bit EEPROM location
@@ -133,6 +136,7 @@ void save_channel()
   EEPROM.write(2, lsb);
 }
 
+//-------------------------------------------------------------------------------------------------------------
 // NAME: read_channel_from_EEPROM() 
 // DEFINITION: reads the two saved 8-bit values, that defines the 
 // channel, and concatenates them together to form a 16-bit number 
@@ -144,6 +148,7 @@ void read_channel_from_EEPROM()
   channel = msb|lsb; // concatenate the lsb and msb
 }
 
+//-------------------------------------------------------------------------------------------------------------
 //This is the interrupt that reads the encoder
 //It set the updateStation flag when a new indent is found 
 //Note: The encoder used on the FabFM has a mechanical indent every four counts
