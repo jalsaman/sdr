@@ -57,6 +57,9 @@ Si4703_Breakout radio(resetPin, SDIO, SCLK);
 //-------------------------------------------------------------------------------------------------------------
 void setup()
 {
+  // start serial
+  Serial.begin(115200);
+  
   // both pins on the rotary encoder are inputs and pulled high
   pinMode(encoderPin1, INPUT_PULLUP);
   pinMode(encoderPin2, INPUT_PULLUP);
@@ -73,9 +76,9 @@ void setup()
   radio.setVolume(15);        //Loudest volume setting
   digitalWrite(LED, HIGH);    //turn LED ON
   
-  //start serial and print welcome screen with station number
-  Serial.begin(115200);       //must use a fast baud to prevent errors
-  Serial.print("\Tuned to: ");
+  // print welcome screen with station number
+  
+  Serial.print("\nWelcome...\nFM Radio Tuned to: ");
   Serial.print(float(channel)/10,1);
   Serial.println(" MHz");
 
