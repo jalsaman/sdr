@@ -1,15 +1,15 @@
 # Tag name          ;  color
+VHF                 ; #729fcf
+DVB                 ; #c0c0c0
+RC                  ; #c0c0c0
 AM                  ; #a0a0a0
 FM                  ; #00ff00
-DVB                 ; #c0c0c0
-VHF Marine          ; #c07010
-VHF                 ; #729fcf
-Unknown             ; #c0c0c0
-HAM                 ; #fce94f
 ISM                 ; #edd400
 Mobile              ; #eeeeec
 ADSB                ; #0000ff
-RC                  ; #c0c0c0
+HAM                 ; #fce94f
+VHF Marine          ; #c07010
+Unknown             ; #c0c0c0
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
       558000; AM                       ; AM                  ;      10000; AM
@@ -54,12 +54,13 @@ RC                  ; #c0c0c0
     89100000; 89.1 AJM Radio 4         ; WFM (stereo)        ;     240000; FM
     89400000; 89.4 RAK Tamil FM        ; WFM (stereo)        ;     240000; FM
     89600000; 89.6 -                   ; WFM (stereo)        ;     240000; FM
-    89900000; 89.9 -                   ; WFM (stereo)        ;     160000; FM
     90500000; 90.5 AD SkyNews Arabia   ; WFM (stereo)        ;     240000; FM
     90700000; 90.7 FUJ Rock Radio      ; WFM (stereo)        ;     240000; FM
     91100000; 91.1 DXB Tag 91.1        ; WFM (stereo)        ;     240000; FM
     91400000; 91.4 DXB Quran           ; WFM (stereo)        ;     240000; FM
     92000000; 92.0 FUJ ??              ; WFM (stereo)        ;     240000; FM
+    92200000; 92.2 AD Quran            ; WFM (stereo)        ;     160000; FM
+    92300000; 92.3 - JIO FM            ; WFM (stereo)        ;     240000; FM
     92600000; 92.6 FUJ FM              ; WFM (stereo)        ;     240000; FM
     93000000; 93.0 DXB Radio93         ; WFM (stereo)        ;     240000; FM
     93400000; 93.4 SHOMA934            ; WFM (stereo)        ;     240000; FM
@@ -69,24 +70,25 @@ RC                  ; #c0c0c0
     95000000; 95.0 SHJ Pulse95         ; WFM (stereo)        ;     240000; FM
     95600000; 95.6 UAQ Radio Hala      ; WFM (stereo)        ;     240000; FM
     96000000; 96.0 -                   ; WFM (stereo)        ;     240000; FM
-    96400000; 96.4 -                   ; WFM (stereo)        ;     240000; FM
     96700000; 96.7 DXB Hit967          ; WFM (stereo)        ;     240000; FM
     97100000; 97.1 AD Emarat FM        ; WFM (stereo)        ;     240000; FM
     97400000; 97.4 -                   ; WFM (stereo)        ;     240000; FM
     97600000; 97.6 AD Zayed Quran      ; WFM (stereo)        ;     240000; FM
     97800000; 97.8 Dance FM            ; WFM (stereo)        ;     240000; FM
+    98200000; 98.2 -                   ; WFM (stereo)        ;     240000; FM
     98400000; 98.4 AD FM               ; WFM (stereo)        ;     240000; FM
-    99000000; 99.0 DXB Arabiya         ; WFM (stereo)        ;     240000; FM
+    99100000; 99.1 DXB Arabiya         ; WFM (stereo)        ;     240000; FM
+    99300000; 99.3 -                   ; WFM (stereo)        ;     160000; FM
     99600000; 99.6 DXB Club FM         ; WFM (stereo)        ;     240000; FM
     99900000; 99.9 Star FM             ; WFM (stereo)        ;     240000; FM
    100300000; 100.3 UAQ JIO FM         ; WFM (stereo)        ;     240000; FM
    100900000; 100.9 Khalejya           ; WFM (stereo)        ;     240000; FM
    101300000; 101.3 AJM Gold FM        ; WFM (stereo)        ;     240000; FM
    101600000; 101.6 City1016           ; WFM (stereo)        ;     240000; FM
+   101900000; 101.9 -                  ; WFM (stereo)        ;     160000; FM
    102000000; 102.0 Pearl              ; WFM (stereo)        ;     240000; FM
    102400000; 102.4 Suno1024 FM        ; WFM (stereo)        ;     240000; FM
    102700000; 102.7 SHJ Quran          ; WFM (stereo)        ;     240000; FM
-   103000000; 103.0 -                  ; WFM (stereo)        ;     160000; FM
    103500000; 103.5 RAK FM             ; WFM (stereo)        ;     240000; FM
    103800000; 103.8 DXB Eye            ; WFM (stereo)        ;     240000; FM
    104100000; 104.1 Radio 1            ; WFM (stereo)        ;     160000; FM
@@ -96,8 +98,10 @@ RC                  ; #c0c0c0
    105400000; 105.4 FUJ Radio Spice    ; WFM (stereo)        ;     240000; FM
    106200000; 106.2 UAQ - Big FM       ; WFM (stereo)        ;     240000; FM
    106500000; 106.5 UAQ - Radio Gilli  ; WFM (stereo)        ;     240000; FM
+   106700000; 106.7 SHJ QURAN          ; WFM (stereo)        ;     240000; FM
    107100000; 107.1 UAQ - Heart FM     ; WFM (stereo)        ;     240000; FM
    107400000; 107.4 DXB ALOula         ; WFM (stereo)        ;     240000; FM
+   107600000; 107.6 -                  ; WFM (stereo)        ;     226000; FM
    107800000; 107.8 AJM Al Rabia FM    ; WFM (stereo)        ;     240000; FM
    144000000; HAM 2m                   ; Narrow FM           ;      10000; HAM
    156025000; 60-TX                    ; Narrow FM           ;      50000; VHF Marine
