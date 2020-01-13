@@ -1,23 +1,23 @@
-/*  Based on FabFm Firmware v11 from Aaron Weiss, SparkFun 2012
+/*  
 *   Muthanna Alwahash 2020
 *   license: freeware
-*----------------------------
-*
 */
 
 //-------------------------------------------------------------------------------------------------------------
 #include <SparkFunSi4703.h>
 #include <Wire.h>
 
-int resetPin  = 4;
+int RST       = 4;
 int SDIO      = A4;
 int SCLK      = A5;
 int STC       = 3; //???
+//int GPIO1     = ?
+//int GPIO2     = ?
 
-Si4703_Breakout radio(resetPin, SDIO, SCLK, STC);
+Si4703_Breakout radio(RST, SDIO, SCLK, STC);
 
-int channel;
-int volume;
+int channel = 876;
+int volume  = 15;
 char rdsBuffer[10];
 
 //-------------------------------------------------------------------------------------------------------------
@@ -32,9 +32,10 @@ void setup()
   Serial.println("r       Listen for RDS Data (15 sec timeout)");
   Serial.println("Send a command letter.");
   
-
+// Power On Radio and set initial channel/volume
   radio.powerOn();
-  radio.setVolume(0);
+  radio.setChannel(channel);
+  radio.setVolume(volume);
 }
 
 //-------------------------------------------------------------------------------------------------------------
@@ -92,6 +93,6 @@ void loop()
 //-------------------------------------------------------------------------------------------------------------
 void displayInfo()
 {
-   Serial.print("Channel:"); Serial.print(channel); 
+   Serial.print("\nChannel:"); Serial.print(channel); 
    Serial.print(" Volume:"); Serial.println(volume); 
 }
