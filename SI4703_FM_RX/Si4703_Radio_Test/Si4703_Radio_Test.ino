@@ -1,18 +1,29 @@
 /*  
 *   Muthanna Alwahash 2020
 *   license: freeware
+*   
+*   Connections:
+*   -----------------------
+*   Si4703  → 3.3V Pro Mini
+*   -----------------------
+*   GND     → GND
+*   3.3V    → VCC
+*   SDIO    → A4
+*   SCLK    → A5
+*   SEN     → 
+*   RST     → D4
+*   GPI01   →
+*   GPI02   → D3
 */
 
 //-------------------------------------------------------------------------------------------------------------
 #include <SparkFunSi4703.h>
 #include <Wire.h>
 
-int RST       = 4;
 int SDIO      = A4;
 int SCLK      = A5;
-int STC       = 3; //???
-//int GPIO1     = ?
-//int GPIO2     = ?
+int RST       = 4;
+int STC       = 3;
 
 Si4703_Breakout radio(RST, SDIO, SCLK, STC);
 
