@@ -1,55 +1,32 @@
-/*  
-*   Muthanna Alwahash 2020
-*   license: freeware
-*   
-*   Connections:
-*   -----------------------
-*   Si4703  → 3.3V Pro Mini
-*   -----------------------
-*   GND     → GND
-*   3.3V    → VCC
-*   SDIO    → A4
-*   SCLK    → A5
-*   SEN     → 
-*   RST     → D4
-*   GPI01   →
-*   GPI02   → D3
-*/
-
-//-------------------------------------------------------------------------------------------------------------
 #include <SparkFunSi4703.h>
 #include <Wire.h>
 
-int SDIO      = A4;
-int SCLK      = A5;
-int RST       = 4;
-int STC       = 3;
+int resetPin = 2;
+int SDIO = A4;
+int SCLK = A5;
+int STC = 3;
 
-Si4703_Breakout radio(RST, SDIO, SCLK, STC);
-
-int channel = 876;
-int volume  = 15;
+Si4703_Breakout radio(resetPin, SDIO, SCLK, STC);
+int channel;
+int volume;
 char rdsBuffer[10];
 
-//-------------------------------------------------------------------------------------------------------------
 void setup()
 {
-  Serial.begin(115200);
-  Serial.println("\nWelcom....");
-  Serial.println("-----------");  
+  Serial.begin(9600);
+  Serial.println("\n\nSi4703_Breakout Test Sketch");
+  Serial.println("===========================");  
   Serial.println("a b     Favourite stations");
   Serial.println("+ -     Volume (max 15)");
   Serial.println("u d     Seek up / down");
   Serial.println("r       Listen for RDS Data (15 sec timeout)");
-  Serial.println("Send a command letter.");
+  Serial.println("Send me a command letter.");
   
-// Power On Radio and set initial channel/volume
+
   radio.powerOn();
-  radio.setChannel(channel);
-  radio.setVolume(volume);
+  radio.setVolume(0);
 }
 
-//-------------------------------------------------------------------------------------------------------------
 void loop()
 {
   if (Serial.available())
@@ -81,13 +58,13 @@ void loop()
     } 
     else if (ch == 'a')
     {
-      channel = 876; 
+      channel = 930; // Rock FM
       radio.setChannel(channel);
       displayInfo();
     }
     else if (ch == 'b')
     {
-      channel = 1076;
+      channel = 974; // BBC R4
       radio.setChannel(channel);
       displayInfo();
     }
@@ -101,9 +78,8 @@ void loop()
   }
 }
 
-//-------------------------------------------------------------------------------------------------------------
 void displayInfo()
 {
-   Serial.print("\nChannel:"); Serial.print(channel); 
+   Serial.print("Channel:"); Serial.print(channel); 
    Serial.print(" Volume:"); Serial.println(volume); 
 }
