@@ -80,15 +80,15 @@ int       volume;               // volume value 1-15
 
 // Favourate Channels 0..9
 int       fav_0         =876;   
-int       fav_1         =879;   
-int       fav_2         =1048;  
-int       fav_3         =876;   
-int       fav_4         =1048;  
-int       fav_5         =876;   
-int       fav_6         =1048;  
-int       fav_7         =876;   
+int       fav_1         =882;   
+int       fav_2         =914;  
+int       fav_3         =922;   
+int       fav_4         =939;  
+int       fav_5         =944;   
+int       fav_6         =950;  
+int       fav_7         =976;   
 int       fav_8         =1048;  
-int       fav_9         =876;   
+int       fav_9         =1074;   
 
 
 char      rdsBuffer[10];        // Buffer to store RDS/RBDS text
@@ -337,9 +337,16 @@ void processCommand()
     write_EEPROM();             // Save volume
     printCurrentSettings();
   } 
+  else if (ch == '0')
+  {
+    channel = fav_0; 
+    radio.setChannel(channel);
+    write_EEPROM();             // Save channel to EEPROM
+    printCurrentSettings();
+  }
   else if (ch == '1')
   {
-    channel = fav_1; 
+    channel = fav_1;
     radio.setChannel(channel);
     write_EEPROM();             // Save channel to EEPROM
     printCurrentSettings();
@@ -347,6 +354,55 @@ void processCommand()
   else if (ch == '2')
   {
     channel = fav_2;
+    radio.setChannel(channel);
+    write_EEPROM();             // Save channel to EEPROM
+    printCurrentSettings();
+  }
+  else if (ch == '3')
+  {
+    channel = fav_3;
+    radio.setChannel(channel);
+    write_EEPROM();             // Save channel to EEPROM
+    printCurrentSettings();
+  }
+  else if (ch == '4')
+  {
+    channel = fav_4;
+    radio.setChannel(channel);
+    write_EEPROM();             // Save channel to EEPROM
+    printCurrentSettings();
+  }
+  else if (ch == '5')
+  {
+    channel = fav_5;
+    radio.setChannel(channel);
+    write_EEPROM();             // Save channel to EEPROM
+    printCurrentSettings();
+  }
+  else if (ch == '6')
+  {
+    channel = fav_6;
+    radio.setChannel(channel);
+    write_EEPROM();             // Save channel to EEPROM
+    printCurrentSettings();
+  }
+  else if (ch == '7')
+  {
+    channel = fav_7;
+    radio.setChannel(channel);
+    write_EEPROM();             // Save channel to EEPROM
+    printCurrentSettings();
+  }
+  else if (ch == '8')
+  {
+    channel = fav_8;
+    radio.setChannel(channel);
+    write_EEPROM();             // Save channel to EEPROM
+    printCurrentSettings();
+  }
+  else if (ch == '9')
+  {
+    channel = fav_9;
     radio.setChannel(channel);
     write_EEPROM();             // Save channel to EEPROM
     printCurrentSettings();
