@@ -36,41 +36,71 @@
  */
 
 //-------------------------------------------------------------------------------------------------------------
-#include <SparkFunSi4703.h>
-#include <Wire.h>
-#include <EEPROM.h>
+// Required Libraries
+//-------------------------------------------------------------------------------------------------------------
+#include <SparkFunSi4703.h>   // library to control Silicon Labs' Si4703 FM Radio Receiver.
+#include <Wire.h>             // Used for I2C interface.
+#include <EEPROM.h>           // To save configuration parameters such as channel and volume.
+
+
+//-------------------------------------------------------------------------------------------------------------
+// Defines
+//-------------------------------------------------------------------------------------------------------------
+// EEPROM Usage Map
+#define eeprom_chn_msb  1
+#define eeprom_chn_lsb  2
+#define eeprom_vol      3
+#define eeprom_fav_1    4
+#define eeprom_fav_2    5
+
+// FM Frequency Range
+#define freqMin         875   // FM Frequency Range from 87.5
+#define freqMax         1079  // FM Frequency Range to 107.9 MHz
 
 //-------------------------------------------------------------------------------------------------------------
 // Global Constants (defines): these quantities don't change
-
+//-------------------------------------------------------------------------------------------------------------
 const int RST         = 4;  // radio reset pin
 const int SDIO        = A4; // radio data pin
 const int SCLK        = A5; // radio clock pin
 const int STC         = 6;  // radio interrupt pin
-
 const int encoderPin1 = 2;  // encoder pin 1
 const int encoderPin2 = 3;  // encoder pin 2
-
 const int LED         = 5;  // LED pin
+const boolean UP      = true;
+const boolean DOWN    = false;
 
-int       channel;
-int       freqMin     =875; // FM Frequency Range from 87.5
-int       freqMax     =1079;// FM Frequency Range to 107.9 MHz
-int       fav_a       =876; // Favourate Channel a
-int       fav_b       =1048;// Favourate Channel b
+//-------------------------------------------------------------------------------------------------------------
+// Varliables
+//-------------------------------------------------------------------------------------------------------------
 
-int       volume      = 15; // Initial software volume is highest
-char      rdsBuffer[10];    // Buffer to store RDS/RBDS text
+// Settings
+int       channel;              // channel value
+int       volume;               // volume value 1-15
 
-//Volatile variables are needed if used within interrupts
+// Favourate Channels 0..9
+int       fav_0         =876;   
+int       fav_1         =879;   
+int       fav_2         =1048;  
+int       fav_3         =876;   
+int       fav_4         =1048;  
+int       fav_5         =876;   
+int       fav_6         =1048;  
+int       fav_7         =876;   
+int       fav_8         =1048;  
+int       fav_9         =876;   
+
+
+char      rdsBuffer[10];        // Buffer to store RDS/RBDS text
+
+//-------------------------------------------------------------------------------------------------------------
+// Volatile variables are needed if used within interrupts
+//-------------------------------------------------------------------------------------------------------------
 volatile int      lastEncoded         = 0;
 volatile long     encoderValue        = 0;
 volatile int      goodEncoderValue;
 volatile boolean  updateStation       = false;
 volatile boolean  stationDirection;
-
-const boolean UP    = true;
-const boolean DOWN  = false;
 
 //-------------------------------------------------------------------------------------------------------------
 // create radio instance
@@ -92,28 +122,19 @@ void setup()
   // LED pin is output
   pinMode(LED, OUTPUT);
   
-  // load saved station into channel variable
-  read_channel_from_EEPROM();
+  // load saved settings
+  read_EEPROM();
   
   // start radio module
   radio.powerOn();            // turns the module on
   radio.setChannel(channel);  // loads saved channel
   radio.setVolume(volume);    // volume setting
   digitalWrite(LED, HIGH);    // turn LED ON
-  
-  // print welcome screen with station number
-  
-  Serial.print("\nWelcome...\nFM Radio Tuned to: ");
-  printChannelInfo();
-
-  Serial.println("\nWelcom....");
-  Serial.println("-----------");  
-  Serial.println("a b     Favourite stations");
-  Serial.println("+ -     Volume (max 15)");
-  Serial.println("u d     Seek up / down");
-  Serial.println("r       Listen for RDS Data (15 sec timeout)");
-  Serial.println("Send a command letter.");
-
+    
+  // Display info
+  printWelcome();
+  printCurrentSettings();
+  printHelp();
 
   //call updateEncoder() when any high/low changed seen on interrupt 0 (pin 2), or interrupt 1 (pin 3) 
   attachInterrupt(0, updateEncoder, CHANGE); 
@@ -148,92 +169,48 @@ void loop()
     if(channel < freqMin) channel = freqMax;
     
     radio.setChannel(channel);  // Goto the new channel
-    save_channel();             // Save channel to EEPROM
-    printChannelInfo();         // Print channel info
+    write_EEPROM();             // Save channel to EEPROM
+    printCurrentSettings();     // Print channel info
     updateStation = false;      //Clear flag
     digitalWrite(LED, HIGH);    // When done turn LED On
   }
 
-
   // Radio control from serial interface
-  if (Serial.available())
-  {
-    char ch = Serial.read();
-    if (ch == 'u') 
-    {
-      channel = radio.seekUp();
-      save_channel();             // Save channel to EEPROM
-      printChannelInfo();
-    } 
-    else if (ch == 'd') 
-    {
-      channel = radio.seekDown();
-      save_channel();             // Save channel to EEPROM
-      printChannelInfo();
-    } 
-    else if (ch == '+') 
-    {
-      volume ++;
-      if (volume == 16) volume = 15;
-      radio.setVolume(volume);
-      printChannelInfo();
-    } 
-    else if (ch == '-') 
-    {
-      volume --;
-      if (volume < 0) volume = 0;
-      radio.setVolume(volume);
-      printChannelInfo();
-    } 
-    else if (ch == 'a')
-    {
-      channel = fav_a; 
-      radio.setChannel(channel);
-      save_channel();             // Save channel to EEPROM
-      printChannelInfo();
-    }
-    else if (ch == 'b')
-    {
-      channel = fav_b;
-      radio.setChannel(channel);
-      save_channel();             // Save channel to EEPROM
-      printChannelInfo();
-    }
-    else if (ch == 'r')
-    {
-      Serial.println("RDS listening");
-      radio.readRDS(rdsBuffer, 15000);
-      Serial.print("RDS heard:");
-      Serial.println(rdsBuffer);      
-    }
-  }
-
+  if (Serial.available()) processCommand();
+  
   // You can put any additional code here, but keep in mind, 
   // the encoder interrupt is running in the background
 }
 
 //-------------------------------------------------------------------------------------------------------------
-// Splits the channel variable into two separate bytes, 
-// then loads each value into one 8-bit EEPROM location
+// Write current settings to EEPROM
 //-------------------------------------------------------------------------------------------------------------
-void save_channel()
+void write_EEPROM()
 {
-  int msb = channel >> 8; // move channel over 8 spots to grab MSB
-  int lsb = channel & 0x00FF; // clear the MSB, leaving only the LSB
-  EEPROM.write(1, msb); // write each byte to a single 8-bit position
-  EEPROM.write(2, lsb);
+  // Save current channel value
+  int msb = channel >> 8;             // move channel over 8 spots to grab MSB
+  int lsb = channel & 0x00FF;         // clear the MSB, leaving only the LSB
+  EEPROM.write(eeprom_chn_msb, msb);  // write each byte to a single 8-bit position
+  EEPROM.write(eeprom_chn_lsb, lsb);
+
+  // Save volume
+  EEPROM.write(eeprom_vol, volume);
+  
 }
 
 //-------------------------------------------------------------------------------------------------------------
-// Reads the two saved 8-bit values, that defines the 
-// channel, and concatenates them together to form a 16-bit number
+// Read settings from EEPROM
 //-------------------------------------------------------------------------------------------------------------
-void read_channel_from_EEPROM()
+void read_EEPROM()
 {
-  int msb = EEPROM.read(1); // load the msb into one 8-bit register
-  int lsb = EEPROM.read(2); // load the lsb into one 8-bit register
-  msb = msb << 8; // shift the msb over 8 bits
-  channel = msb|lsb; // concatenate the lsb and msb
+  // Read channel value
+  int msb = EEPROM.read(eeprom_chn_msb); // load the msb into one 8-bit register
+  int lsb = EEPROM.read(eeprom_chn_lsb); // load the lsb into one 8-bit register
+  msb = msb << 8;                        // shift the msb over 8 bits
+  channel = msb|lsb;                     // concatenate the lsb and msb
+  
+  // Read Volume
+  volume = EEPROM.read(eeprom_vol);
 }
 
 //-------------------------------------------------------------------------------------------------------------
@@ -292,12 +269,101 @@ void updateEncoder()
 }
 
 //-------------------------------------------------------------------------------------------------------------
-// Display current channel and volume info.
+// Display Welcome Message.
 //-------------------------------------------------------------------------------------------------------------
-void printChannelInfo()
+void printWelcome()
 {
-   Serial.print("\nCh:");
+  Serial.println("\nWelcome...");
+}
+
+//-------------------------------------------------------------------------------------------------------------
+// Display current settings such as channel and volume.
+//-------------------------------------------------------------------------------------------------------------
+void printCurrentSettings()
+{
+   Serial.print("Ch:");
    Serial.print(float(channel)/10,1);
    Serial.print(" MHz sVOL:");
    Serial.println(volume);
+}
+
+//-------------------------------------------------------------------------------------------------------------
+// Display Help on commands.
+//-------------------------------------------------------------------------------------------------------------
+void printHelp()
+{
+  Serial.println("0..9    Favourite stations");
+  Serial.println("+ -     Volume (max 15)");
+  Serial.println("u d     Seek up / down");
+  Serial.println("r       Listen for RDS Data (15 sec timeout)");
+  Serial.println("h       print this help");
+  Serial.println("Select a command:");
+}
+
+//-------------------------------------------------------------------------------------------------------------
+// Process a command from serial terminal
+//-------------------------------------------------------------------------------------------------------------
+void processCommand()
+{
+  
+  char ch = Serial.read();
+  Serial.println(":");  // confirm command received.
+  
+  if (ch == 'u') 
+  {
+    channel = radio.seekUp();
+    write_EEPROM();             // Save channel to EEPROM
+    printCurrentSettings();
+  } 
+  else if (ch == 'd') 
+  {
+    channel = radio.seekDown();
+    write_EEPROM();             // Save channel to EEPROM
+    printCurrentSettings();
+  } 
+  else if (ch == '+') 
+  {
+    volume ++;
+    if (volume == 16) volume = 15;
+    radio.setVolume(volume);
+    write_EEPROM();             // Save volume
+    printCurrentSettings();
+  } 
+  else if (ch == '-') 
+  {
+    volume --;
+    if (volume < 0) volume = 0;
+    radio.setVolume(volume);
+    write_EEPROM();             // Save volume
+    printCurrentSettings();
+  } 
+  else if (ch == '1')
+  {
+    channel = fav_1; 
+    radio.setChannel(channel);
+    write_EEPROM();             // Save channel to EEPROM
+    printCurrentSettings();
+  }
+  else if (ch == '2')
+  {
+    channel = fav_2;
+    radio.setChannel(channel);
+    write_EEPROM();             // Save channel to EEPROM
+    printCurrentSettings();
+  }
+  else if (ch == 'r')
+  {
+    Serial.println("RDS listening");
+    radio.readRDS(rdsBuffer, 15000);
+    Serial.print("RDS heard:");
+    Serial.println(rdsBuffer);      
+  }
+  else if (ch == 'h')
+  {
+    printHelp();
+  }
+  else
+  {
+    Serial.println("Unknown command...send 'h' for help.");
+  }
 }
