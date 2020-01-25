@@ -5,21 +5,36 @@
  *   
  *   Connections:
  *   -----------------------
- *   Si4703  → 3.3V Pro Mini
+ *   Si4703  → 3.3V A.Pro Mini
  *   -----------------------
  *   GND     → GND
  *   3.3V    → VCC
- *   SDIO    → A4
- *   SCLK    → A5
+ *   SDIO    → A.Pro Mini A4
+ *   SCLK    → A.Pro Mini A5
  *   SEN     → NC * The breakout board has SEN pulled high
- *   RST     → D4
- *   GPI01   → NC * Not used
- *   GPI02   → D3
+ *   RST     → A.Pro Mini D4
+ *   GPIO1   → NC * Not used
+ *   GPIO2   → A.Pro Mini ??
  *   
+ *   
+ *   Connections:
+ *   -----------------------
+ *   3.3V A.Pro Mini
+ *   -----------------------
+ *   GND     → GND
+ *   VCC     → 3.3V
+ *   A4      → Si4703 SDIO
+ *   A5      → Si4703 SCLK
+ *   D?      → Si4703 GPIO1 
+ *   D2      → encoderPin1
+ *   D3      → encoderPin2
+ *   D4      → Si4703 RST
+ *   D5      → LED
+ *      
  *   Description:
  *   -----------------------
  *   This is example code for the FamFM radio kit. The hardware mimics an Arduino Pro (3.3V, 8MHz)
- *   and has an FTDI header to load Arduino sketches. The hardware includes the Si4703 FM radio 
+ *   and has an FTDI header to load Arduino sketches. The hardware includes the Si4703 FM radio
  *   module to find the stations along with an op-amp and speaker for the audio. The unit has a
  *   potentiometer with a switch for power and volume control, and a rotary encoder to tune the
  *   stations. The unit displays the radio station over a serial terminal at 115200 and also saves
@@ -296,7 +311,8 @@ void printHelp()
   Serial.println("+ -     Volume (max 15)");
   Serial.println("u d     Seek up / down");
   Serial.println("r       Listen for RDS Data (15 sec timeout)");
-  Serial.println("h       print this help");
+  Serial.println("i       Print current settings");
+  Serial.println("h       Print this help");
   Serial.println("Select a command:");
 }
 
@@ -413,6 +429,10 @@ void processCommand()
     radio.readRDS(rdsBuffer, 15000);
     Serial.print("RDS heard:");
     Serial.println(rdsBuffer);      
+  }
+  else if (ch == 'i')
+  {
+    printCurrentSettings();
   }
   else if (ch == 'h')
   {
