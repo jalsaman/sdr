@@ -3,6 +3,14 @@
  *   Muthanna Alwahash 2020
  *   license: freeware
  *   
+ *   Hardware used:
+ *   -----------------------   
+ *   1 x SparkFun Breadboard Power Supply Stick - 5V/3.3V (https://www.sparkfun.com/products/13032)
+ *   2 x SparkFun Mono Audio Amp Breakout - TPA2005D1     (https://www.sparkfun.com/products/11044)
+ *   1 x SparkFun FM Tuner Basic Breakout - Si4703        (https://www.sparkfun.com/products/11083)
+ *   1 x Arduino Pro Mini 328 - 3.3V/8MHz                 (https://www.sparkfun.com/products/11114)
+ *   -----------------------   
+ *   
  *   Connections:
  *   -----------------------
  *   Si4703  → 3.3V A.Pro Mini
@@ -33,17 +41,16 @@
  *      
  *   Description:
  *   -----------------------
- *   This is example code for the FamFM radio kit. The hardware mimics an Arduino Pro (3.3V, 8MHz)
- *   and has an FTDI header to load Arduino sketches. The hardware includes the Si4703 FM radio
- *   module to find the stations along with an op-amp and speaker for the audio. The unit has a
- *   potentiometer with a switch for power and volume control, and a rotary encoder to tune the
- *   stations. The unit displays the radio station over a serial terminal at 115200 and also saves
- *   the station on subsequent power ups.
+ *   This is example code can work for the FamFM radio kit and breadboard builds as per above connections. 
+ *   The used controller is Arduino Pro (3.3V, 8MHz) and has an FTDI header to load Arduino sketches.
+ *   The hardware includes the Si4703 FM radio module to find the stations along with audio amps. and speakers for the audio.
+ *   The circuit has a rotary encoder to tune the stations. 
+ *   The circuit displays the radio station over a serial terminal at 115200 and can be controled from terminal.
+ *   Also it saves the station settings on EEPROM and loads it in subsequent power ups.
  *   
  *
  *   Operation:
  *   -----------------------
- *   -Power switch and volume are on the left, tuner is on the right.
  *   -The board must be powered with a switch mode 9V DC wall wart.
  *   -Each click will increase/decrease station by 0.1MHz
  *   -The LED blinks for every step
