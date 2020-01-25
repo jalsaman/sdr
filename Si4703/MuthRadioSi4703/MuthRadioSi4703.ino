@@ -318,11 +318,61 @@ void printHelp()
   Serial.println("+ -     Volume (max 15)");
   Serial.println("u d     Seek up / down");
   Serial.println("r       Listen for RDS Data (15 sec timeout)");
-  Serial.println("i       Print current settings");
-  Serial.println("h       Print this help");
+  Serial.println("i       Prints current settings");
+  Serial.println("f       Prints Favourite stations list");
+  Serial.println("h       Prints this help");
   Serial.println("Select a command:");
 }
 
+//-------------------------------------------------------------------------------------------------------------
+// Prints Favourite Stations List
+//-------------------------------------------------------------------------------------------------------------
+void printFavouriteList()
+{
+  Serial.println("List of Favourite Stations");
+  
+  Serial.print("0 - ");
+  Serial.print(float(fav_0)/10,1);
+  Serial.println(" MHz");
+
+  Serial.print("1 - ");
+  Serial.print(float(fav_1)/10,1);
+  Serial.println(" MHz");
+
+  Serial.print("2 - ");
+  Serial.print(float(fav_2)/10,1);
+  Serial.println(" MHz");
+
+  Serial.print("3 - ");
+  Serial.print(float(fav_3)/10,1);
+  Serial.println(" MHz");
+
+
+  Serial.print("4 - ");
+  Serial.print(float(fav_4)/10,1);
+  Serial.println(" MHz");
+
+  Serial.print("5 - ");
+  Serial.print(float(fav_5)/10,1);
+  Serial.println(" MHz");
+
+  Serial.print("6 - ");
+  Serial.print(float(fav_6)/10,1);
+  Serial.println(" MHz");
+
+  Serial.print("7 - ");
+  Serial.print(float(fav_7)/10,1);
+  Serial.println(" MHz");
+
+  Serial.print("8 - ");
+  Serial.print(float(fav_8)/10,1);
+  Serial.println(" MHz");
+
+  Serial.print("9 - ");
+  Serial.print(float(fav_9)/10,1);
+  Serial.println(" MHz");
+
+}
 //-------------------------------------------------------------------------------------------------------------
 // Process a command from serial terminal
 //-------------------------------------------------------------------------------------------------------------
@@ -440,6 +490,10 @@ void processCommand()
   else if (ch == 'i')
   {
     printCurrentSettings();
+  }
+    else if (ch == 'f')
+  {
+    printFavouriteList();
   }
   else if (ch == 'h')
   {
