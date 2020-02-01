@@ -28,7 +28,7 @@ Also, if you happen to find "AN243: Using RDS/RBDS with the Si4701/03", please s
 documents that don't exist.
 
 1/20 - Picking up FM stations from a plane flying over Portugal! Sweet! 93.9MHz sounds a little soft for my tastes,s but
-it's in Porteguese.
+it's in Portuguese.
 
 ToDo:
 Display current status (from 0x0A) - done 1/20/11
@@ -48,8 +48,6 @@ cables. Too short of a cable may degrade reception.
 #define SparkFunSi4703_h
 
 #include "Arduino.h"
-
-
 
 class Si4703_Breakout
 {
