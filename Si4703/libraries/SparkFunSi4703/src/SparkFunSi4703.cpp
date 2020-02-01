@@ -3,6 +3,7 @@
 #include "Wire.h"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
+// Radio Initiliztion 
 //-----------------------------------------------------------------------------------------------------------------------------------
 Si4703_Breakout::Si4703_Breakout(int resetPin, int sdioPin, int sclkPin, int stcIntPin)
 {
@@ -23,12 +24,12 @@ void Si4703_Breakout::powerOn()
 //-----------------------------------------------------------------------------------------------------------------------------------
 void Si4703_Breakout::setChannel(int channel)
 {
-  //Freq(MHz) = 0.200(in USA) * Channel + 87.5MHz
-  //97.3 = 0.2 * Chan + 87.5
-  //9.8 / 0.2 = 49
-  int newChannel = channel * 10; //973 * 10 = 9730
-  newChannel -= 8750; //9730 - 8750 = 980
-  newChannel /= 10; //980 / 10 = 98
+  //Freq(MHz) = 0.100(in Europe) * Channel + 87.5MHz
+  //Freq(MHz) = 0.200(in USA   ) * Channel + 87.5MHz
+  
+  int newChannel = channel * 10;      // 973 * 10 = 9730
+      newChannel -= 8750;             // 9730 - 8750 = 980
+      newChannel /= 10;               // 980 / 10 = 98
 
   //These steps come from AN230 page 20 rev 0.5
   readRegisters();
