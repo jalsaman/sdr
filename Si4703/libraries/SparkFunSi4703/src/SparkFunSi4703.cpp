@@ -3,17 +3,18 @@
 #include "Wire.h"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-// Radio Initiliztion 
+// Radio Initialization 
 //-----------------------------------------------------------------------------------------------------------------------------------
 Si4703_Breakout::Si4703_Breakout(int resetPin, int sdioPin, int sclkPin, int stcIntPin)
 {
-  _resetPin = resetPin;
-  _sdioPin = sdioPin;
-  _sclkPin = sclkPin;
-  _stcIntPin = stcIntPin;
+  _resetPin   = resetPin;
+  _sdioPin    = sdioPin;
+  _sclkPin    = sclkPin;
+  _stcIntPin  = stcIntPin;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
+// Power On 
 //-----------------------------------------------------------------------------------------------------------------------------------
 void Si4703_Breakout::powerOn()
 {
@@ -53,7 +54,8 @@ void Si4703_Breakout::setChannel(int channel)
   }
 }
 
-//-----------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------
+// Seek Up
 //-----------------------------------------------------------------------------------------------------------------------------------
 int Si4703_Breakout::seekUp()
 {
@@ -61,6 +63,7 @@ int Si4703_Breakout::seekUp()
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
+// Seek Down
 //-----------------------------------------------------------------------------------------------------------------------------------
 int Si4703_Breakout::seekDown()
 {
@@ -68,6 +71,7 @@ int Si4703_Breakout::seekDown()
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
+// Set Volume
 //-----------------------------------------------------------------------------------------------------------------------------------
 void Si4703_Breakout::setVolume(int volume)
 {
@@ -80,6 +84,7 @@ void Si4703_Breakout::setVolume(int volume)
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
+// Read RDS
 //-----------------------------------------------------------------------------------------------------------------------------------
 void Si4703_Breakout::readRDS(char* buffer, long timeout)
 { 
@@ -123,9 +128,9 @@ void Si4703_Breakout::readRDS(char* buffer, long timeout)
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-//To get the Si4703 inito 2-wire mode, SEN needs to be high and SDIO needs to be low after a reset
-//The breakout board has SEN pulled high, but also has SDIO pulled high. Therefore, after a normal power up
-//The Si4703 will be in an unknown state. RST must be controlled
+// To get the Si4703 in to 2-wire mode, SEN needs to be high and SDIO needs to be low after a reset
+// The breakout board has SEN pulled high, but also has SDIO pulled high. Therefore, after a normal power up
+// The Si4703 will be in an unknown state. RST must be controlled
 //-----------------------------------------------------------------------------------------------------------------------------------
 void Si4703_Breakout::si4703_init() 
 {
@@ -157,11 +162,11 @@ void Si4703_Breakout::si4703_init()
   si4703_registers[SYSCONFIG2] &= 0xFFF0;       //Clear volume bits
   si4703_registers[SYSCONFIG2] |= 0x0001;       //Set volume to lowest
   updateRegisters();                            //Update
-  delay(110);                                   //Max powerup time, from datasheet page 13
+  delay(110);                                   //Max power up time, from datasheet page 13
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-//Read the entire register control set from 0x00 to 0x0F
+// Read the entire register control set from 0x00 to 0x0F
 //-----------------------------------------------------------------------------------------------------------------------------------
 void Si4703_Breakout::readRegisters(){
 
@@ -178,9 +183,9 @@ void Si4703_Breakout::readRegisters(){
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-//Write the current 9 control registers (0x02 to 0x07) to the Si4703
-//It's a little weird, you don't write an I2C addres
-//The Si4703 assumes you are writing to 0x02 first, then increments
+// Write the current 9 control registers (0x02 to 0x07) to the Si4703
+// It's a little weird, you don't write an I2C addres
+// The Si4703 assumes you are writing to 0x02 first, then increments
 //-----------------------------------------------------------------------------------------------------------------------------------
 byte Si4703_Breakout::updateRegisters() {
 
