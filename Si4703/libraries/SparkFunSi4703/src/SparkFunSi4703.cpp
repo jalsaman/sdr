@@ -144,10 +144,13 @@ void Si4703_Breakout::setChannel(int channel)
 //-----------------------------------------------------------------------------------------------------------------------------------
 int Si4703_Breakout::getChannel() {
   readRegisters();
-  int channel = si4703_registers[READCHAN] & 0x03FF; // Mask out everything but the lower 10 bits
-  // Freq(MHz) = 0.100(in Europe) * Channel + 87.5MHz
-  //X = 0.1 * Chan + 87.5
-  channel += 875; //98 + 875 = 973
+
+  //Freq(MHz) = 0.100(in Europe) * Channel + 87.5MHz
+  //Freq(MHz) = 0.200(in USA   ) * Channel + 87.5MHz
+
+  int channel = si4703_registers[READCHAN] & 0x03FF;  // Mask out everything but the lower 10 bits
+      channel += 875;                                 //98 + 875 = 973
+
   return(channel);
 }
 
@@ -207,12 +210,12 @@ int Si4703_Breakout::seekDown()
 //-----------------------------------------------------------------------------------------------------------------------------------
 void Si4703_Breakout::setVolume(int volume)
 {
-  readRegisters(); //Read the current register set
-  if(volume < 0) volume = 0;
-  if (volume > 15) volume = 15;
-  si4703_registers[SYSCONFIG2] &= 0xFFF0; //Clear volume bits
-  si4703_registers[SYSCONFIG2] |= volume; //Set new volume
-  updateRegisters(); //Update
+  readRegisters();                        // Read the current register set
+  if (volume < 0 ) volume = 0;            // Accepted Volume value 0-15
+  if (volume > 15) volume = 15;           // Accepted Volume value 0-15
+  si4703_registers[SYSCONFIG2] &= 0xFFF0; // Clear volume bits
+  si4703_registers[SYSCONFIG2] |= volume; // Set new volume
+  updateRegisters();                      // Update
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -249,13 +252,14 @@ void Si4703_Breakout::readRDS(char* buffer, long timeout)
         // Serial.write(Dl);
         // Serial.println();
       }
+
       delay(40); //Wait for the RDS bit to clear
     }
     
     else {
       delay(30); //From AN230, using the polling method 40ms should be sufficient amount of time between checks
     }
-    
+
   }
 
 	if (millis() >= endTime) {
