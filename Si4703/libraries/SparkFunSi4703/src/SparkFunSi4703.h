@@ -49,10 +49,10 @@ cables. Too short of a cable may degrade reception.
 
 #include "Arduino.h"
 
-class Si4703_Breakout
+class Si4703
 {
   public:
-    Si4703_Breakout(int resetPin, int sdioPin, int sclkPin, int stcIntPin);
+    Si4703(int resetPin, int sdioPin, int sclkPin, int stcIntPin);
     void 					powerOn();					// call in setup
 	void 					setChannel(int channel);  	// 3 digit channel number
 	int 					seekUp(); 					// returns the tuned channel or 0

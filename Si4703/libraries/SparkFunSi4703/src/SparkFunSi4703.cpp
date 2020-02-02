@@ -5,7 +5,7 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 // Radio Initialization 
 //-----------------------------------------------------------------------------------------------------------------------------------
-Si4703_Breakout::Si4703_Breakout(int resetPin, int sdioPin, int sclkPin, int stcIntPin)
+Si4703::Si4703(int resetPin, int sdioPin, int sclkPin, int stcIntPin)
 {
   _resetPin   = resetPin;   // Reset pin
   _sdioPin    = sdioPin;    // I2C Data IO Pin
@@ -16,7 +16,7 @@ Si4703_Breakout::Si4703_Breakout(int resetPin, int sdioPin, int sclkPin, int stc
 //-----------------------------------------------------------------------------------------------------------------------------------
 // Read the entire register control set from 0x00 to 0x0F
 //-----------------------------------------------------------------------------------------------------------------------------------
-void Si4703_Breakout::readRegisters(){
+void Si4703::readRegisters(){
 
   // Si4703 begins reading from register upper register of 0x0A and reads to 0x0F, then loops to 0x00.
   Wire.requestFrom(SI4703, 32); //We want to read the entire register set from 0x0A to 0x09 = 32 bytes.
@@ -35,7 +35,7 @@ void Si4703_Breakout::readRegisters(){
 // It's a little weird, you don't write an I2C addres
 // The Si4703 assumes you are writing to 0x02 first, then increments
 //-----------------------------------------------------------------------------------------------------------------------------------
-byte Si4703_Breakout::updateRegisters() {
+byte Si4703::updateRegisters() {
 
   Wire.beginTransmission(SI4703);
   // A write command automatically begins with register 0x02 so no need to send a write-to address
@@ -63,7 +63,7 @@ byte Si4703_Breakout::updateRegisters() {
 // The breakout board has SEN pulled high, but also has SDIO pulled high. Therefore, after a normal power up
 // The Si4703 will be in an unknown state. RST must be controlled
 //-----------------------------------------------------------------------------------------------------------------------------------
-void Si4703_Breakout::si4703_init() 
+void Si4703::si4703_init() 
 {
   pinMode(_resetPin, OUTPUT);
   pinMode(_sdioPin, OUTPUT);        // SDIO is connected to A4 for I2C
@@ -99,7 +99,7 @@ void Si4703_Breakout::si4703_init()
 //-----------------------------------------------------------------------------------------------------------------------------------
 // Power On 
 //-----------------------------------------------------------------------------------------------------------------------------------
-void Si4703_Breakout::powerOn()
+void Si4703::powerOn()
 {
     si4703_init();
 }
@@ -107,7 +107,7 @@ void Si4703_Breakout::powerOn()
 //-----------------------------------------------------------------------------------------------------------------------------------
 // Set Channel
 //-----------------------------------------------------------------------------------------------------------------------------------
-void Si4703_Breakout::setChannel(int channel)
+void Si4703::setChannel(int channel)
 {
   //Freq(MHz) = 0.100(in Europe) * Channel + 87.5MHz
   //Freq(MHz) = 0.200(in USA   ) * Channel + 87.5MHz
@@ -142,7 +142,7 @@ void Si4703_Breakout::setChannel(int channel)
 // Reads the current channel from READCHAN
 // Returns a number like 973 for 97.3MHz
 //-----------------------------------------------------------------------------------------------------------------------------------
-int Si4703_Breakout::getChannel() {
+int Si4703::getChannel() {
   readRegisters();
 
   //Freq(MHz) = 0.100(in Europe) * Channel + 87.5MHz
@@ -159,7 +159,7 @@ int Si4703_Breakout::getChannel() {
 // Returns the freq if it made it
 // Returns zero if failed
 //-----------------------------------------------------------------------------------------------------------------------------------
-int Si4703_Breakout::seek(byte seekDirection){
+int Si4703::seek(byte seekDirection){
   readRegisters();
   // Set seek mode wrap bit
   si4703_registers[POWERCFG] |= (1<<SKMODE); //Allow wrap
@@ -192,7 +192,7 @@ return getChannel();
 //----------------------------------------------------------------------------------------------------------------------------------
 // Seek Up
 //-----------------------------------------------------------------------------------------------------------------------------------
-int Si4703_Breakout::seekUp()
+int Si4703::seekUp()
 {
 	return seek(SEEK_UP);
 }
@@ -200,7 +200,7 @@ int Si4703_Breakout::seekUp()
 //-----------------------------------------------------------------------------------------------------------------------------------
 // Seek Down
 //-----------------------------------------------------------------------------------------------------------------------------------
-int Si4703_Breakout::seekDown()
+int Si4703::seekDown()
 {
 	return seek(SEEK_DOWN);
 }
@@ -208,7 +208,7 @@ int Si4703_Breakout::seekDown()
 //-----------------------------------------------------------------------------------------------------------------------------------
 // Set Volume
 //-----------------------------------------------------------------------------------------------------------------------------------
-void Si4703_Breakout::setVolume(int volume)
+void Si4703::setVolume(int volume)
 {
   readRegisters();                        // Read the current register set
   if (volume < 0 ) volume = 0;            // Accepted Volume value 0-15
@@ -221,7 +221,7 @@ void Si4703_Breakout::setVolume(int volume)
 //-----------------------------------------------------------------------------------------------------------------------------------
 // Read RDS
 //-----------------------------------------------------------------------------------------------------------------------------------
-void Si4703_Breakout::readRDS(char* buffer, long timeout)
+void Si4703::readRDS(char* buffer, long timeout)
 { 
 	long    endTime         = millis() + timeout;
   boolean completed[]     = {false, false, false, false};
