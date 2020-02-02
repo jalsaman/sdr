@@ -4,6 +4,7 @@
         "DEVICEID",
         "DMUTE",
         "GPIO",
+        "NACKs",
         "RBDS",
         "RDSA",
         "RDSB",

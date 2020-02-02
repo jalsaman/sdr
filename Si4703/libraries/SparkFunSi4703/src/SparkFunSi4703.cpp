@@ -7,10 +7,10 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 Si4703_Breakout::Si4703_Breakout(int resetPin, int sdioPin, int sclkPin, int stcIntPin)
 {
-  _resetPin   = resetPin;
-  _sdioPin    = sdioPin;
-  _sclkPin    = sclkPin;
-  _stcIntPin  = stcIntPin;
+  _resetPin   = resetPin;   // Reset pin
+  _sdioPin    = sdioPin;    // I2C Data IO Pin
+  _sclkPin    = sclkPin;    // I2C Clock Pin
+  _stcIntPin  = stcIntPin;  // Seek/Tune Complete Pin
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -22,6 +22,7 @@ void Si4703_Breakout::powerOn()
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
+// Set Channel
 //-----------------------------------------------------------------------------------------------------------------------------------
 void Si4703_Breakout::setChannel(int channel)
 {
