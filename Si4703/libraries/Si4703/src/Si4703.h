@@ -44,8 +44,8 @@ The Si4703 breakout does work with line out into a stereo or other amplifier. Be
 cables. Too short of a cable may degrade reception.
 */
 
-#ifndef SparkFunSi4703_h
-#define SparkFunSi4703_h
+#ifndef Si4703_h
+#define Si4703_h
 
 #include "Arduino.h"
 
