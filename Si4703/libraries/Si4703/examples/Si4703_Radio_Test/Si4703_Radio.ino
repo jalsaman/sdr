@@ -1,12 +1,12 @@
 #include <Si4703.h>
 #include <Wire.h>
 
-int resetPin = 2;
-int SDIO = A4;
-int SCLK = A5;
-int STC = 3;
+int resetPin  = 2;
+int SDIO      = A4;
+int SCLK      = A5;
+int STC       = 3;
 
-Si4703_Breakout radio(resetPin, SDIO, SCLK, STC);
+Si4703 radio(resetPin, SDIO, SCLK, STC);
 int channel;
 int volume;
 char rdsBuffer[10];
