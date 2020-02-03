@@ -60,9 +60,9 @@
 //-------------------------------------------------------------------------------------------------------------
 // Required Libraries
 //-------------------------------------------------------------------------------------------------------------
-#include <SparkFunSi4703.h>   // library to control Silicon Labs' Si4703 FM Radio Receiver.
-#include <Wire.h>             // Used for I2C interface.
-#include <EEPROM.h>           // To save configuration parameters such as channel and volume.
+#include <Si4703.h> // library to control Silicon Labs' Si4703 FM Radio Receiver.
+#include <Wire.h>   // Used for I2C interface.
+#include <EEPROM.h> // To save configuration parameters such as channel and volume.
 
 
 //-------------------------------------------------------------------------------------------------------------
@@ -127,7 +127,7 @@ volatile boolean  stationDirection;
 //-------------------------------------------------------------------------------------------------------------
 // create radio instance
 //-------------------------------------------------------------------------------------------------------------
-Si4703_Breakout radio(RST, SDIO, SCLK, STC);
+Si4703 radio(RST, SDIO, SCLK, STC);
 
 //-------------------------------------------------------------------------------------------------------------
 // Arduino initial Setup
