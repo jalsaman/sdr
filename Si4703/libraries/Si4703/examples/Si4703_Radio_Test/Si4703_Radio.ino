@@ -58,13 +58,13 @@ void loop()
     } 
     else if (ch == 'a')
     {
-      channel = 930; // Rock FM
+      channel = 930;
       radio.setChannel(channel);
       displayInfo();
     }
     else if (ch == 'b')
     {
-      channel = 974; // BBC R4
+      channel = 974;
       radio.setChannel(channel);
       displayInfo();
     }
