@@ -157,7 +157,7 @@ void setup()
   printWelcome();
   printCurrentSettings();
   printHelp();
-
+  
   //call updateEncoder() when any high/low changed seen on interrupt 0 (pin 2), or interrupt 1 (pin 3) 
   attachInterrupt(0, updateEncoder, CHANGE); 
   attachInterrupt(1, updateEncoder, CHANGE);
@@ -307,6 +307,7 @@ void printCurrentSettings()
    Serial.print(float(channel)/10,1);
    Serial.print(" MHz sVOL:");
    Serial.println(volume);
+   
 }
 
 //-------------------------------------------------------------------------------------------------------------
@@ -380,7 +381,6 @@ void processCommand()
 {
   
   char ch = Serial.read();
-  Serial.println(":");  // confirm command received.
   
   if (ch == 'u') 
   {
@@ -501,6 +501,9 @@ void processCommand()
   }
   else
   {
-    Serial.println("Unknown command...send 'h' for help.");
+    Serial.print("Unknown command:'");
+    Serial.print(ch);
+    Serial.print("'");
+    Serial.println(" send 'h' for help.");
   }
 }
