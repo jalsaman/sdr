@@ -45,7 +45,7 @@
  *   The used controller is Arduino Pro (3.3V, 8MHz) and has an FTDI header to load Arduino sketches.
  *   The hardware includes the Si4703 FM radio module to find the stations along with audio amps. and speakers for the audio.
  *   The circuit has a rotary encoder to tune the stations. 
- *   The circuit displays the radio station over a serial terminal at 115200 and can be controled from terminal.
+ *   The circuit displays the radio station over a serial terminal at 115200 and can be controlled from terminal.
  *   Also it saves the station settings on EEPROM and loads it in subsequent power ups.
  *   
  *
