@@ -152,7 +152,7 @@ void setup()
   radio.setChannel(channel);  // loads saved channel
   radio.setVolume(volume);    // volume setting
 
-  radio.writeGPIO(radio.GPIO1, radio.GPIO_High);
+  radio.writeGPIO(GPIO1, GPIO_High);
   
   digitalWrite(LED, HIGH);    // turn LED ON
     
