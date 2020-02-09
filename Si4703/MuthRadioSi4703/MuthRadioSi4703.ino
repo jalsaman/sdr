@@ -151,6 +151,9 @@ void setup()
   radio.powerOn();            // turns the module on
   radio.setChannel(channel);  // loads saved channel
   radio.setVolume(volume);    // volume setting
+
+  radio.writeGPIO(radio.GPIO1, radio.GPIO_High);
+  
   digitalWrite(LED, HIGH);    // turn LED ON
     
   // Display info
