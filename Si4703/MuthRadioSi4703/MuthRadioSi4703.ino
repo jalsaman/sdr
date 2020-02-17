@@ -21,11 +21,9 @@
  *   SCLK    → A.Pro Mini A5
  *   SEN     → NC * The breakout board has SEN pulled high
  *   RST     → A.Pro Mini D4
- *   GPIO1   → NC * Not used
- *   GPIO2   → A.Pro Mini ??
+ *   GPIO1   → LED2
+ *   GPIO2   → A.Pro Mini D6
  *   
- *   
- *   Connections:
  *   -----------------------
  *   3.3V A.Pro Mini
  *   -----------------------
@@ -33,12 +31,27 @@
  *   VCC     → 3.3V
  *   A4      → Si4703 SDIO
  *   A5      → Si4703 SCLK
- *   D?      → Si4703 GPIO1 
- *   D2      → encoderPin1
- *   D3      → encoderPin2
+ *   D6      → Si4703 GPIO2 
+ *   D2      → Rotary Encoder A
+ *   D3      → Rotary Encoder B
  *   D4      → Si4703 RST
- *   D5      → LED
+ *   D5      → LED1
  *      
+ *   -----------------------
+ *   Rotary Encoder
+ *   -----------------------
+ *   A  A.Pro Mini D2
+ *   B  A.Pro Mini D3
+ *   C  GND
+ *   
+ *   -----------------------
+ *   LEDs
+ *   -----------------------
+ *   LED1 A      → A.Pro Mini D5 
+ *   LED1 C      → GND
+ *   LED2 A      → Si4703 GPIO1
+ *   LED2 C      → GND
+ *   
  *   Description:
  *   -----------------------
  *   This is example code can work for the FamFM radio kit and breadboard builds as per above connections. 
