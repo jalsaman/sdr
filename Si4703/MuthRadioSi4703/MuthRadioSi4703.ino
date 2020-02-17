@@ -185,39 +185,12 @@ void setup()
 //-------------------------------------------------------------------------------------------------------------
 void loop()
 {
-  
-  // Interrupt tells us to update the station when updateStation=True
-  if(updateStation)
-  {
-    digitalWrite(LED, LOW);
-
-    if(stationDirection == UP)
-    {
-      //Serial.print("Up ");
-      channel += 1;         //Channels change by 1 (ex: 88.0 to 88.1)
-    }
-    else if(stationDirection == DOWN)
-    {
-      //Serial.print("Down ");
-      channel -= 1;         //Channels change by 1 (ex: 88.4 to 88.3)
-    }
     
-    // Catch wrap conditions
-    if(channel > freqMax) channel = freqMin;
-    if(channel < freqMin) channel = freqMax;
-    
-    radio.setChannel(channel);  // Goto the new channel
-    write_EEPROM();             // Save channel to EEPROM
-    printCurrentSettings();     // Print channel info
-    updateStation = false;      //Clear flag
-    digitalWrite(LED, HIGH);    // When done turn LED On
-  }
-
-  // Radio control from serial interface
-  if (Serial.available()) processCommand();
+  if (updateStation)      updateStationFreq();  // Interrupt tells us to update the station when updateStation=True
+  if (Serial.available()) processCommand();     // Radio control from serial interface
   
-  // You can put any additional code here, but keep in mind, 
-  // the encoder interrupt is running in the background
+  // You can put any additional code here, but keep in mind, the encoder interrupt is running in the background
+  
 }
 
 //-------------------------------------------------------------------------------------------------------------
@@ -260,11 +233,11 @@ void read_EEPROM()
 //-------------------------------------------------------------------------------------------------------------
 void updateEncoder()
 {
-  int MSB = digitalRead(encoderPin1); //MSB = most significant bit
-  int LSB = digitalRead(encoderPin2); //LSB = least significant bit
+  int MSB = digitalRead(encoderPin1);       //MSB = most significant bit
+  int LSB = digitalRead(encoderPin2);       //LSB = least significant bit
 
-  int encoded = (MSB << 1) |LSB; //converting the 2 pin value to single number
-  int sum  = (lastEncoded << 2) | encoded; //adding it to the previous encoded value
+  int encoded = (MSB << 1) |LSB;            //converting the 2 pin value to single number
+  int sum  = (lastEncoded << 2) | encoded;  //adding it to the previous encoded value
 
   if(sum == 0b1101 || sum == 0b0100 || sum == 0b0010 || sum == 0b1011)
   {
@@ -273,7 +246,7 @@ void updateEncoder()
   }
   if(sum == 0b1110 || sum == 0b0111 || sum == 0b0001 || sum == 0b1000)
   {
-    stationDirection = UP; //Clock wise
+    stationDirection = UP;  //Clock wise
     encoderValue++;
   }
 
@@ -305,6 +278,34 @@ void updateEncoder()
     updateStation = true;
   }
 }
+
+//-------------------------------------------------------------------------------------------------------------
+// Update Station Freq
+//-------------------------------------------------------------------------------------------------------------
+void updateStationFreq()
+  {
+    digitalWrite(LED, LOW);
+
+    if(stationDirection == UP)
+    {
+      channel += 1;         //Channels change by 1 (ex: 88.0 to 88.1)
+    }
+    else if(stationDirection == DOWN)
+    {
+      channel -= 1;         //Channels change by 1 (ex: 88.4 to 88.3)
+    }
+    
+    // Catch wrap conditions
+    if(channel > freqMax) channel = freqMin;
+    if(channel < freqMin) channel = freqMax;
+    
+    radio.setChannel(channel);  // Goto the new channel
+    write_EEPROM();             // Save channel to EEPROM
+    printCurrentSettings();     // Print channel info
+    updateStation = false;      //Clear flag
+
+    digitalWrite(LED, HIGH);    // When done turn LED On
+  }
 
 //-------------------------------------------------------------------------------------------------------------
 // Display Welcome Message.
@@ -415,7 +416,6 @@ void processCommand()
     volume ++;
     if (volume == 16) volume = 15;
     radio.setVolume(volume);
-    write_EEPROM();             // Save volume
     printCurrentSettings();
   } 
   else if (ch == '-') 
@@ -423,7 +423,6 @@ void processCommand()
     volume --;
     if (volume < 0) volume = 0;
     radio.setVolume(volume);
-    write_EEPROM();             // Save volume
     printCurrentSettings();
   } 
   else if (ch == '0')
