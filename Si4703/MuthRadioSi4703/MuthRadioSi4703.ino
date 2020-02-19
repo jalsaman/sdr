@@ -101,7 +101,7 @@ const int SCLK        = A5; // radio clock pin
 const int STC         = 6;  // radio interrupt pin
 const int encoderPin1 = 2;  // encoder pin 1
 const int encoderPin2 = 3;  // encoder pin 2
-const int LED         = 5;  // LED pin
+const int LED1        = 5;  // LED1 pin
 const boolean UP      = true;
 const boolean DOWN    = false;
 
@@ -150,8 +150,8 @@ void setup()
  
   Serial.begin(115200);        // start serial
 
-  pinMode(LED, OUTPUT);       // LED1 pin is output
-  digitalWrite(LED, LOW);     // turn LED1 OFF
+  pinMode(LED1, OUTPUT);       // LED1 pin is output
+  digitalWrite(LED1, LOW);     // turn LED1 OFF
 
   read_EEPROM();              // load saved settings
   radio.powerOn();            // turns the module on
@@ -165,7 +165,7 @@ void setup()
   attachInterrupt(1, updateEncoder, CHANGE);  // call updateEncoder() when any high/low changed seen on interrupt 1 (pin 3)
 
   // Show ready status
-  digitalWrite(LED, HIGH);            // turn LED1 ON
+  digitalWrite(LED1, HIGH);            // turn LED1 ON
   radio.writeGPIO(GPIO1, GPIO_High);  // turn LED2 ON
 
   // Display info
@@ -279,7 +279,7 @@ void updateEncoder()
 //-------------------------------------------------------------------------------------------------------------
 void updateStationFreq()
   {
-    digitalWrite(LED, LOW);
+    digitalWrite(LED1, LOW);
 
     if(stationDirection == UP)
     {
@@ -299,7 +299,7 @@ void updateStationFreq()
     printCurrentSettings();     // Print channel info
     updateStation = false;      //Clear flag
 
-    digitalWrite(LED, HIGH);    // When done turn LED On
+    digitalWrite(LED1, HIGH);    // When done turn LED On
   }
 
 //-------------------------------------------------------------------------------------------------------------
