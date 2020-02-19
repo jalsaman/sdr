@@ -165,7 +165,7 @@ void setup()
   attachInterrupt(1, updateEncoder, CHANGE);  // call updateEncoder() when any high/low changed seen on interrupt 1 (pin 3)
 
   // Show ready status
-  digitalWrite(LED1, HIGH);            // turn LED1 ON
+  digitalWrite(LED1, HIGH);           // turn LED1 ON
   radio.writeGPIO(GPIO1, GPIO_High);  // turn LED2 ON
 
   // Display info
@@ -210,21 +210,16 @@ void write_EEPROM()
 void read_EEPROM()
 {
   // Read channel value
-  int msb = EEPROM.read(eeprom_chn_msb); // load the msb into one 8-bit register
-  int lsb = EEPROM.read(eeprom_chn_lsb); // load the lsb into one 8-bit register
-  msb = msb << 8;                        // shift the msb over 8 bits
-  channel = msb|lsb;                     // concatenate the lsb and msb
+  int MSB = EEPROM.read(eeprom_chn_msb); // load the msb into one 8-bit register
+  int LSB = EEPROM.read(eeprom_chn_lsb); // load the lsb into one 8-bit register
+  channel = (MSB << 8)|LSB;              // concatenate the lsb and msb
   
   // Read Volume
   volume = EEPROM.read(eeprom_vol);
 }
 
 //-------------------------------------------------------------------------------------------------------------
-// This is the interrupt handler that reads the encoder. It set the updateStation flag when a new indent is found 
-// Note: The encoder used on the FabFM has a mechanical indent every four counts so most of the time, when you 
-// advance 1 click there are four interrupts but there is no guarantee the user will land neaty on an indent, 
-// so this code cleans up the read.
-// Modified from the bildr article: http://bildr.org/2012/08/rotary-encoder-arduino/
+// Interrupt handler that reads the encoder. It set the updateStation flag when a new indent is found 
 //-------------------------------------------------------------------------------------------------------------
 void updateEncoder()
 {
@@ -279,7 +274,8 @@ void updateEncoder()
 //-------------------------------------------------------------------------------------------------------------
 void updateStationFreq()
   {
-    digitalWrite(LED1, LOW);
+    digitalWrite(LED1, LOW);           // turn LED1 OFF
+    radio.writeGPIO(GPIO1, GPIO_Low);  // turn LED2 OFF
 
     if(stationDirection == UP)
     {
@@ -299,7 +295,8 @@ void updateStationFreq()
     printCurrentSettings();     // Print channel info
     updateStation = false;      //Clear flag
 
-    digitalWrite(LED1, HIGH);    // When done turn LED On
+    digitalWrite(LED1, HIGH);           // When done turn LED1 On
+    radio.writeGPIO(GPIO1, GPIO_High);  // turn LED2 ON
   }
 
 //-------------------------------------------------------------------------------------------------------------
