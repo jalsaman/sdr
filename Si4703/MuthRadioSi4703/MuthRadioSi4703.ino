@@ -147,37 +147,32 @@ Si4703 radio(RST, SDIO, SCLK, STC);
 //-------------------------------------------------------------------------------------------------------------
 void setup()
 {
-  // start serial
-  Serial.begin(115200);
-  
-  // both pins on the rotary encoder are inputs and pulled high
-  pinMode(encoderPin1, INPUT_PULLUP);
-  pinMode(encoderPin2, INPUT_PULLUP);
-  
-  // LED pin is output
-  pinMode(LED, OUTPUT);
-  
-  // load saved settings
-  read_EEPROM();
-  
-  // start radio module
+ 
+  Serial.begin(115200);        // start serial
+
+  pinMode(LED, OUTPUT);       // LED1 pin is output
+  digitalWrite(LED, LOW);     // turn LED1 OFF
+
+  read_EEPROM();              // load saved settings
   radio.powerOn();            // turns the module on
   radio.setChannel(channel);  // loads saved channel
   radio.setVolume(volume);    // volume setting
 
-  radio.writeGPIO(GPIO1, GPIO_High);
-  
-  digitalWrite(LED, HIGH);    // turn LED ON
-    
+  // Enable rotary encoder
+  pinMode(encoderPin1, INPUT_PULLUP);         // pin is input and pulled high
+  pinMode(encoderPin2, INPUT_PULLUP);         // pin is input and pulled high
+  attachInterrupt(0, updateEncoder, CHANGE);  // call updateEncoder() when any high/low changed seen on interrupt 0 (pin 2)
+  attachInterrupt(1, updateEncoder, CHANGE);  // call updateEncoder() when any high/low changed seen on interrupt 1 (pin 3)
+
+  // Show ready status
+  digitalWrite(LED, HIGH);            // turn LED1 ON
+  radio.writeGPIO(GPIO1, GPIO_High);  // turn LED2 ON
+
   // Display info
   printWelcome();
   printCurrentSettings();
   printHelp();
   
-  //call updateEncoder() when any high/low changed seen on interrupt 0 (pin 2), or interrupt 1 (pin 3) 
-  attachInterrupt(0, updateEncoder, CHANGE); 
-  attachInterrupt(1, updateEncoder, CHANGE);
-
 }
 
 //-------------------------------------------------------------------------------------------------------------
