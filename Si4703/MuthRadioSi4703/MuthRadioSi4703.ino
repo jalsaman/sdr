@@ -99,14 +99,14 @@ const int RST         = 4;  // radio reset pin
 const int SDIO        = A4; // radio data pin
 const int SCLK        = A5; // radio clock pin
 const int STC         = 6;  // radio interrupt pin
-const int encoderPin1 = 2;  // encoder pin 1
-const int encoderPin2 = 3;  // encoder pin 2
+const int rotaryPinA = 2;  // encoder pin 1
+const int rotaryPinB = 3;  // encoder pin 2
 const int LED1        = 5;  // LED1 pin
 const boolean UP      = true;
 const boolean DOWN    = false;
 
 //-------------------------------------------------------------------------------------------------------------
-// Varliables
+// Variables
 //-------------------------------------------------------------------------------------------------------------
 
 // Settings
@@ -129,13 +129,12 @@ int       fav_9         =1074;
 char      rdsBuffer[10];        // Buffer to store RDS/RBDS text
 
 //-------------------------------------------------------------------------------------------------------------
-// Volatile variables are needed if used within interrupts
+// Volatile variables for use in Rotary Encoder Interrupt Routine
 //-------------------------------------------------------------------------------------------------------------
-volatile int      lastEncoded         = 0;
-volatile long     encoderValue        = 0;
-volatile int      goodEncoderValue;
-volatile boolean  updateStation       = false;
-volatile boolean  stationDirection;
+volatile int      rotaryLast         = 0;
+volatile long     rotaryCurrent      = 0;
+volatile boolean  rotaryDirection    = UP;
+volatile boolean  rotaryUpdated      = false;
 
 //-------------------------------------------------------------------------------------------------------------
 // create radio instance
@@ -159,8 +158,8 @@ void setup()
   radio.setVolume(volume);    // volume setting
 
   // Enable rotary encoder
-  pinMode(encoderPin1, INPUT_PULLUP);         // pin is input and pulled high
-  pinMode(encoderPin2, INPUT_PULLUP);         // pin is input and pulled high
+  pinMode(rotaryPinA, INPUT_PULLUP);         // pin is input and pulled high
+  pinMode(rotaryPinB, INPUT_PULLUP);         // pin is input and pulled high
   attachInterrupt(0, updateEncoder, CHANGE);  // call updateEncoder() when any high/low changed seen on interrupt 0 (pin 2)
   attachInterrupt(1, updateEncoder, CHANGE);  // call updateEncoder() when any high/low changed seen on interrupt 1 (pin 3)
 
@@ -181,7 +180,7 @@ void setup()
 void loop()
 {
     
-  if (updateStation)      updateStationFreq();  // Interrupt tells us to update the station when updateStation=True
+  if (rotaryUpdated)      updateStationFreq();  // Interrupt tells us to update the station when updateStation=True
   if (Serial.available()) processCommand();     // Radio control from serial interface
   
   // You can put any additional code here, but keep in mind, the encoder interrupt is running in the background
@@ -223,27 +222,27 @@ void read_EEPROM()
 //-------------------------------------------------------------------------------------------------------------
 void updateEncoder()
 {
-  int MSB = digitalRead(encoderPin1);       //MSB = most significant bit
-  int LSB = digitalRead(encoderPin2);       //LSB = least significant bit
+  int MSB = digitalRead(rotaryPinA);       //MSB = most significant bit
+  int LSB = digitalRead(rotaryPinB);       //LSB = least significant bit
 
   int encoded = (MSB << 1) |LSB;            //converting the 2 pin value to single number
-  int sum  = (lastEncoded << 2) | encoded;  //adding it to the previous encoded value
+  int sum  = (rotaryLast << 2) | encoded;  //adding it to the previous encoded value
 
   if(sum == 0b1101 || sum == 0b0100 || sum == 0b0010 || sum == 0b1011)
   {
-    stationDirection = DOWN;
-    encoderValue--;
+    rotaryDirection = DOWN;
+    rotaryCurrent--;
   }
   
   if(sum == 0b1110 || sum == 0b0111 || sum == 0b0001 || sum == 0b1000)
   {
-    stationDirection = UP;
-    encoderValue++;
+    rotaryDirection = UP;
+    rotaryCurrent++;
   }
 
-  lastEncoded = encoded; //store this value for next time
+  rotaryLast = encoded; //store this value for next time
 
-  updateStation = true;
+  rotaryUpdated = true;
  
 }
 
@@ -255,11 +254,11 @@ void updateStationFreq()
     digitalWrite(LED1, LOW);           // turn LED1 OFF
     radio.writeGPIO(GPIO1, GPIO_Low);  // turn LED2 OFF
 
-    if(stationDirection == UP)
+    if(rotaryDirection == UP)
     {
       channel += 1;         //Channels change by 1 (ex: 88.0 to 88.1)
     }
-    else if(stationDirection == DOWN)
+    else if(rotaryDirection == DOWN)
     {
       channel -= 1;         //Channels change by 1 (ex: 88.4 to 88.3)
     }
@@ -271,7 +270,7 @@ void updateStationFreq()
     radio.setChannel(channel);  // Goto the new channel
     write_EEPROM();             // Save channel to EEPROM
     printCurrentSettings();     // Print channel info
-    updateStation = false;      //Clear flag
+    rotaryUpdated = false;      //Clear flag
 
     digitalWrite(LED1, HIGH);           // When done turn LED1 On
     radio.writeGPIO(GPIO1, GPIO_High);  // turn LED2 ON
