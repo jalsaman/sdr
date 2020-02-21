@@ -91,6 +91,7 @@
 // FM Frequency Range
 #define freqMin         875   // FM Frequency Range from 87.5
 #define freqMax         1079  // FM Frequency Range to 107.9 MHz
+#define freqStep        1     // FM Frequency Step
 
 //-------------------------------------------------------------------------------------------------------------
 // Global Constants (defines): these quantities don't change
@@ -244,7 +245,7 @@ void updateRotary()
 }
 
 //-------------------------------------------------------------------------------------------------------------
-// Update Station Freq
+// Update Channel Freq
 //-------------------------------------------------------------------------------------------------------------
 void updateChannel()
   {
@@ -253,11 +254,11 @@ void updateChannel()
 
     if(rotaryDirection == UP)
     {
-      channel += 1;         //Channels change by 1 (ex: 88.0 to 88.1)
+      channel += freqStep;             //Channels change by 1 (ex: 88.0 to 88.1)
     }
     else if(rotaryDirection == DOWN)
     {
-      channel -= 1;         //Channels change by 1 (ex: 88.4 to 88.3)
+      channel -= freqStep;             //Channels change by 1 (ex: 88.4 to 88.3)
     }
     
     // Catch wrap conditions
@@ -304,6 +305,7 @@ void printHelp()
   Serial.println("r       Listen for RDS Data (15 sec timeout)");
   Serial.println("i       Prints current settings");
   Serial.println("f       Prints Favourite stations list");
+  Serial.println("m       Mute Volume");
   Serial.println("h       Prints this help");
   Serial.println("Select a command:");
 }
@@ -367,15 +369,23 @@ void processCommand()
   
   if (ch == 'u') 
   {
+    digitalWrite(LED1, LOW);           // turn LED1 OFF
+    radio.writeGPIO(GPIO1, GPIO_Low);  // turn LED2 OFF
     channel = radio.seekUp();
-    write_EEPROM();             // Save channel to EEPROM
+    write_EEPROM();                    // Save channel to EEPROM
     printCurrentSettings();
+    digitalWrite(LED1, HIGH);          // When done turn LED1 On
+    radio.writeGPIO(GPIO1, GPIO_High); // turn LED2 ON
   } 
   else if (ch == 'd') 
   {
+    digitalWrite(LED1, LOW);           // turn LED1 OFF
+    radio.writeGPIO(GPIO1, GPIO_Low);  // turn LED2 OFF
     channel = radio.seekDown();
-    write_EEPROM();             // Save channel to EEPROM
+    write_EEPROM();                    // Save channel to EEPROM
     printCurrentSettings();
+    digitalWrite(LED1, HIGH);          // When done turn LED1 On
+    radio.writeGPIO(GPIO1, GPIO_High); // turn LED2 ON
   } 
   else if (ch == '+') 
   {
@@ -475,6 +485,12 @@ void processCommand()
     else if (ch == 'f')
   {
     printFavouriteList();
+  }
+  else if (ch == 'm')
+  {
+    volume = 0;
+    radio.setVolume(volume);
+    printCurrentSettings();
   }
   else if (ch == 'h')
   {
