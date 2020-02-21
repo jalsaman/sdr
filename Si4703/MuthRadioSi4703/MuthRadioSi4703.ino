@@ -132,7 +132,6 @@ char      rdsBuffer[10];        // Buffer to store RDS/RBDS text
 // Volatile variables for use in Rotary Encoder Interrupt Routine
 //-------------------------------------------------------------------------------------------------------------
 volatile int      rotaryLast      = 0b00;
-volatile long     rotaryValue     = 0;
 volatile boolean  rotaryDirection = UP;
 volatile boolean  rotaryUpdated   = false;
 
@@ -180,7 +179,7 @@ void setup()
 void loop()
 {
     
-  if (rotaryUpdated)      updateStationFreq();  // Interrupt tells us to update the station when updateStation=True
+  if (rotaryUpdated)      updateChannel();  // Interrupt tells us to update the station when updateStation=True
   if (Serial.available()) processCommand();     // Radio control from serial interface
   
   // You can put any additional code here, but keep in mind, the encoder interrupt is running in the background
@@ -222,22 +221,20 @@ void read_EEPROM()
 //-------------------------------------------------------------------------------------------------------------
 void updateEncoder()
 {
-  int MSB = digitalRead(rotaryPinA);       //MSB = most significant bit
-  int LSB = digitalRead(rotaryPinB);       //LSB = least significant bit
+  int pinA = digitalRead(rotaryPinA);       //MSB = most significant bit
+  int pinB = digitalRead(rotaryPinB);       //LSB = least significant bit
 
-  int rotaryCurrent = (MSB << 1) |LSB;              // converting the 2 pins values to single number
+  int rotaryCurrent = (pinA << 1) |pinB;              // converting the 2 pins values to single number
   int pattern = (rotaryLast << 2) | rotaryCurrent;  // adding it to the previous encoded value
 
   if(pattern == 0b1101 || pattern == 0b0100 || pattern == 0b0010 || pattern == 0b1011)
   {
     rotaryDirection = DOWN;
-    rotaryValue--;
   }
   
   if(pattern == 0b1110 || pattern == 0b0111 || pattern == 0b0001 || pattern == 0b1000)
   {
     rotaryDirection = UP;
-    rotaryValue++;
   }
 
   rotaryLast = rotaryCurrent; //store this value for next time
@@ -249,7 +246,7 @@ void updateEncoder()
 //-------------------------------------------------------------------------------------------------------------
 // Update Station Freq
 //-------------------------------------------------------------------------------------------------------------
-void updateStationFreq()
+void updateChannel()
   {
     digitalWrite(LED1, LOW);           // turn LED1 OFF
     radio.writeGPIO(GPIO1, GPIO_Low);  // turn LED2 OFF
