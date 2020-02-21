@@ -99,9 +99,9 @@ const int RST         = 4;  // radio reset pin
 const int SDIO        = A4; // radio data pin
 const int SCLK        = A5; // radio clock pin
 const int STC         = 6;  // radio interrupt pin
-const int rotaryPinA = 2;  // encoder pin 1
-const int rotaryPinB = 3;  // encoder pin 2
 const int LED1        = 5;  // LED1 pin
+const int rotaryPinA  = 2;  // encoder pin A
+const int rotaryPinB  = 3;  // encoder pin B. Note that rotaryPinC is connected to GND
 const boolean UP      = true;
 const boolean DOWN    = false;
 
@@ -146,10 +146,10 @@ Si4703 radio(RST, SDIO, SCLK, STC);
 void setup()
 {
  
-  Serial.begin(115200);        // start serial
+  Serial.begin(115200);       // start serial
 
-  pinMode(LED1, OUTPUT);       // LED1 pin is output
-  digitalWrite(LED1, LOW);     // turn LED1 OFF
+  pinMode(LED1, OUTPUT);      // LED1 pin is output
+  digitalWrite(LED1, LOW);    // turn LED1 OFF
 
   read_EEPROM();              // load saved settings
   radio.powerOn();            // turns the module on
@@ -159,15 +159,15 @@ void setup()
   // Enable rotary encoder
   pinMode(rotaryPinA, INPUT_PULLUP);         // pin is input and pulled high
   pinMode(rotaryPinB, INPUT_PULLUP);         // pin is input and pulled high
-  attachInterrupt(0, updateEncoder, CHANGE);  // call updateEncoder() when any high/low changed seen on interrupt 0 (pin 2)
-  attachInterrupt(1, updateEncoder, CHANGE);  // call updateEncoder() when any high/low changed seen on interrupt 1 (pin 3)
+  attachInterrupt(0, updateRotary, CHANGE);  // call updateEncoder() when any high/low changed seen on interrupt 0 (pin 2)
+  attachInterrupt(1, updateRotary, CHANGE);  // call updateEncoder() when any high/low changed seen on interrupt 1 (pin 3)
 
   // Show ready status
   digitalWrite(LED1, HIGH);           // turn LED1 ON
   radio.writeGPIO(GPIO1, GPIO_High);  // turn LED2 ON
 
   // Display info
-   printWelcome();
+  printWelcome();
   printCurrentSettings();
   printHelp();
   
@@ -219,28 +219,28 @@ void read_EEPROM()
 //-------------------------------------------------------------------------------------------------------------
 // Interrupt handler that reads the encoder. It set the updateStation flag when a new indent is found 
 //-------------------------------------------------------------------------------------------------------------
-void updateEncoder()
+void updateRotary()
 {
-  int pinA = digitalRead(rotaryPinA);       //MSB = most significant bit
-  int pinB = digitalRead(rotaryPinB);       //LSB = least significant bit
+  int pinA = digitalRead(rotaryPinA); // read current value of Pin A
+  int pinB = digitalRead(rotaryPinB); // read current value of Pin B
 
-  int rotaryCurrent = (pinA << 1) |pinB;              // converting the 2 pins values to single number
+  int rotaryCurrent = (pinA << 1) |pinB;            // converting the 2 pins values to single number
   int pattern = (rotaryLast << 2) | rotaryCurrent;  // adding it to the previous encoded value
 
   if(pattern == 0b1101 || pattern == 0b0100 || pattern == 0b0010 || pattern == 0b1011)
   {
     rotaryDirection = DOWN;
+    rotaryUpdated   = true;
   }
   
   if(pattern == 0b1110 || pattern == 0b0111 || pattern == 0b0001 || pattern == 0b1000)
   {
     rotaryDirection = UP;
+    rotaryUpdated   = true;
   }
+  
+  rotaryLast = rotaryCurrent; //store current rotary AB values for next time
 
-  rotaryLast = rotaryCurrent; //store this value for next time
-
-  rotaryUpdated = true;
- 
 }
 
 //-------------------------------------------------------------------------------------------------------------
