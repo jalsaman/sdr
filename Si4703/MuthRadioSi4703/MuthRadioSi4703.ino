@@ -131,10 +131,10 @@ char      rdsBuffer[10];        // Buffer to store RDS/RBDS text
 //-------------------------------------------------------------------------------------------------------------
 // Volatile variables for use in Rotary Encoder Interrupt Routine
 //-------------------------------------------------------------------------------------------------------------
-volatile int      rotaryLast         = 0;
-volatile long     rotaryCurrent      = 0;
-volatile boolean  rotaryDirection    = UP;
-volatile boolean  rotaryUpdated      = false;
+volatile int      rotaryLast      = 0b00;
+volatile long     rotaryValue     = 0;
+volatile boolean  rotaryDirection = UP;
+volatile boolean  rotaryUpdated   = false;
 
 //-------------------------------------------------------------------------------------------------------------
 // create radio instance
@@ -225,22 +225,22 @@ void updateEncoder()
   int MSB = digitalRead(rotaryPinA);       //MSB = most significant bit
   int LSB = digitalRead(rotaryPinB);       //LSB = least significant bit
 
-  int encoded = (MSB << 1) |LSB;            //converting the 2 pin value to single number
-  int sum  = (rotaryLast << 2) | encoded;  //adding it to the previous encoded value
+  int rotaryCurrent = (MSB << 1) |LSB;              // converting the 2 pins values to single number
+  int pattern = (rotaryLast << 2) | rotaryCurrent;  // adding it to the previous encoded value
 
-  if(sum == 0b1101 || sum == 0b0100 || sum == 0b0010 || sum == 0b1011)
+  if(pattern == 0b1101 || pattern == 0b0100 || pattern == 0b0010 || pattern == 0b1011)
   {
     rotaryDirection = DOWN;
-    rotaryCurrent--;
+    rotaryValue--;
   }
   
-  if(sum == 0b1110 || sum == 0b0111 || sum == 0b0001 || sum == 0b1000)
+  if(pattern == 0b1110 || pattern == 0b0111 || pattern == 0b0001 || pattern == 0b1000)
   {
     rotaryDirection = UP;
-    rotaryCurrent++;
+    rotaryValue++;
   }
 
-  rotaryLast = encoded; //store this value for next time
+  rotaryLast = rotaryCurrent; //store this value for next time
 
   rotaryUpdated = true;
  
