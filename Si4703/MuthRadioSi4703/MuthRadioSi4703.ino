@@ -169,7 +169,7 @@ void setup()
   radio.writeGPIO(GPIO1, GPIO_High);  // turn LED2 ON
 
   // Display info
-  printWelcome();
+   printWelcome();
   printCurrentSettings();
   printHelp();
   
@@ -231,42 +231,20 @@ void updateEncoder()
 
   if(sum == 0b1101 || sum == 0b0100 || sum == 0b0010 || sum == 0b1011)
   {
-    stationDirection = DOWN; //Counter clock wise
+    stationDirection = DOWN;
     encoderValue--;
   }
+  
   if(sum == 0b1110 || sum == 0b0111 || sum == 0b0001 || sum == 0b1000)
   {
-    stationDirection = UP;  //Clock wise
+    stationDirection = UP;
     encoderValue++;
   }
 
   lastEncoded = encoded; //store this value for next time
 
-  //Wait until we are more than 3 ticks from previous used value
-  if(abs(goodEncoderValue - encoderValue) > 3)
-  {
-    //The user can sometimes miss an indent by a count or two
-    //This logic tries to correct for that
-    //Remember, interrupts are happening in the background so encoderValue can change 
-    //throughout this code
-
-    if(encoderValue % 4 == 0) //Then we are on a good indent
-    {
-      goodEncoderValue = encoderValue; //Remember this good setting
-    }
-    else if( abs(goodEncoderValue - encoderValue) == 3) //The encoder is one short
-    {
-      if(encoderValue < 0) goodEncoderValue = encoderValue - 1; //Remember this good setting
-      if(encoderValue > 0) goodEncoderValue = encoderValue + 1; //Remember this good setting
-    }
-    else if( abs(goodEncoderValue - encoderValue) == 5) //The encoder is one too long
-    {
-      if(encoderValue < 0) goodEncoderValue = encoderValue + 1; //Remember this good setting
-      if(encoderValue > 0) goodEncoderValue = encoderValue - 1; //Remember this good setting
-    }
-
-    updateStation = true;
-  }
+  updateStation = true;
+ 
 }
 
 //-------------------------------------------------------------------------------------------------------------
