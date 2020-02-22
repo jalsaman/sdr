@@ -111,8 +111,9 @@ const boolean DOWN    = false;
 //-------------------------------------------------------------------------------------------------------------
 
 // Settings
-int       channel;              // channel value
-int       volume;               // volume value 1-15
+int       channel =944; // channel value
+int       volume  =10;  // volume value 1-15
+int       mute    =0;   // mute value volume=0
 
 // Favourate Channels 0..9
 int       fav_0         =876;   
@@ -305,7 +306,7 @@ void printHelp()
   Serial.println("r       Listen for RDS Data (15 sec timeout)");
   Serial.println("i       Prints current settings");
   Serial.println("f       Prints Favourite stations list");
-  Serial.println("m       Mute Volume");
+  Serial.println("m       Mute/Unmute sound");
   Serial.println("h       Prints this help");
   Serial.println("Select a command:");
 }
@@ -366,6 +367,7 @@ void processCommand()
 {
   
   char ch = Serial.read();
+  Serial.println(ch);
   
   if (ch == 'u') 
   {
@@ -488,7 +490,10 @@ void processCommand()
   }
   else if (ch == 'm')
   {
-    volume = 0;
+    int temp  = volume; //Swap values of volume and mute for mute/unmute
+    volume    = mute;
+    mute      = temp;
+    
     radio.setVolume(volume);
     printCurrentSettings();
   }
