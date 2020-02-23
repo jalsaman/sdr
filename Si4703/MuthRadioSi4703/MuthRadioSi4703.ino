@@ -281,8 +281,16 @@ void updateChannel()
 void printWelcome()
 {
   Serial.println("\nWelcome...");
+  
   Serial.print("Device ID:");
-  Serial.println(radio.getDeviceID(),HEX);
+  Serial.println(radio.getDeviceID().bytes,HEX);
+  
+  Serial.print("PN:");
+  Serial.println(radio.getDeviceID().bits.PN,HEX);
+  
+  Serial.print("MFGID:");
+  Serial.println(radio.getDeviceID().bits.MFGID,HEX);
+
   Serial.print("Chip ID:");
   Serial.println(radio.getChipID(),HEX);
   Serial.println("-----------------------");
