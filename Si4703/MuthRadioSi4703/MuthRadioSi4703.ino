@@ -290,7 +290,7 @@ void printWelcome()
 void printCurrentSettings()
 {
    Serial.print("Ch:");
-   Serial.print(float(channel)/10,1);
+   Serial.print(float(channel)/1000,1);
    Serial.print(" MHz sVOL:");
    Serial.println(volume);
    
