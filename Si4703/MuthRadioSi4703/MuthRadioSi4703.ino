@@ -194,8 +194,9 @@ void loop()
 void write_EEPROM()
 {
   // Save current channel value
-  int msb = channel >> 8;             // move channel over 8 spots to grab MSB
-  int lsb = channel & 0x00FF;         // clear the MSB, leaving only the LSB
+  int chan = radio.getChannel();      // get the current channel
+  int msb = chan >> 8;                // move channel over 8 spots to grab MSB
+  int lsb = chan & 0x00FF;            // clear the MSB, leaving only the LSB
   EEPROM.write(eeprom_chn_msb, msb);  // write each byte to a single 8-bit position
   EEPROM.write(eeprom_chn_lsb, lsb);
 
@@ -255,19 +256,13 @@ void updateChannel()
 
     if(rotaryDirection == UP)
     {
-      channel += freqStep;             //Channels change by 1 (ex: 88.0 to 88.1)
+      radio.incChannel();
     }
     else if(rotaryDirection == DOWN)
     {
-      channel -= freqStep;             //Channels change by 1 (ex: 88.4 to 88.3)
+      radio.decChannel();
     }
     
-    // Catch wrap conditions
-    if(channel > freqMax) channel = freqMin;
-    if(channel < freqMin) channel = freqMax;
-    
-    radio.setChannel(channel);  // Goto the new channel
-    write_EEPROM();             // Save channel to EEPROM
     printCurrentSettings();     // Print channel info
     rotaryUpdated = false;      //Clear flag
 
@@ -290,7 +285,7 @@ void printWelcome()
 void printCurrentSettings()
 {
    Serial.print("Ch:");
-   Serial.print(float(channel)/1000,1);
+   Serial.print(float(radio.getChannel())/10,2);
    Serial.print(" MHz sVOL:");
    Serial.println(volume);
    
@@ -303,7 +298,8 @@ void printHelp()
 {
   Serial.println("0..9    Favourite stations");
   Serial.println("+ -     Volume (max 15)");
-  Serial.println("u d     Seek up / down");
+  Serial.println("n l     Channel Seek next / last");
+  Serial.println("u d     Frequency up / down");
   Serial.println("r       Listen for RDS Data (15 sec timeout)");
   Serial.println("i       Prints current settings");
   Serial.println("f       Prints Favourite stations list");
@@ -334,7 +330,6 @@ void printFavouriteList()
   Serial.print("3 - ");
   Serial.print(float(fav_3)/10,1);
   Serial.println(" MHz");
-
 
   Serial.print("4 - ");
   Serial.print(float(fav_4)/10,1);
@@ -370,7 +365,7 @@ void processCommand()
   char ch = Serial.read();
   Serial.println(ch);
   
-  if (ch == 'u') 
+  if (ch == 'n') 
   {
     digitalWrite(LED1, LOW);           // turn LED1 OFF
     radio.writeGPIO(GPIO1, GPIO_Low);  // turn LED2 OFF
@@ -380,11 +375,31 @@ void processCommand()
     digitalWrite(LED1, HIGH);          // When done turn LED1 On
     radio.writeGPIO(GPIO1, GPIO_High); // turn LED2 ON
   } 
-  else if (ch == 'd') 
+  else if (ch == 'l') 
   {
     digitalWrite(LED1, LOW);           // turn LED1 OFF
     radio.writeGPIO(GPIO1, GPIO_Low);  // turn LED2 OFF
     channel = radio.seekDown();
+    write_EEPROM();                    // Save channel to EEPROM
+    printCurrentSettings();
+    digitalWrite(LED1, HIGH);          // When done turn LED1 On
+    radio.writeGPIO(GPIO1, GPIO_High); // turn LED2 ON
+  } 
+  else if (ch == 'u') 
+  {
+    digitalWrite(LED1, LOW);           // turn LED1 OFF
+    radio.writeGPIO(GPIO1, GPIO_Low);  // turn LED2 OFF
+    channel = radio.incChannel();
+    write_EEPROM();                    // Save channel to EEPROM
+    printCurrentSettings();
+    digitalWrite(LED1, HIGH);          // When done turn LED1 On
+    radio.writeGPIO(GPIO1, GPIO_High); // turn LED2 ON
+  } 
+  else if (ch == 'd') 
+  {
+    digitalWrite(LED1, LOW);           // turn LED1 OFF
+    radio.writeGPIO(GPIO1, GPIO_Low);  // turn LED2 OFF
+    channel = radio.decChannel();
     write_EEPROM();                    // Save channel to EEPROM
     printCurrentSettings();
     digitalWrite(LED1, HIGH);          // When done turn LED1 On
@@ -491,7 +506,7 @@ void processCommand()
   }
   else if (ch == 'm')
   {
-    int temp  = volume; //Swap values of volume and mute for mute/unmute
+    int temp  = volume; //Swap values of volume and mute for mute/un-mute
     volume    = mute;
     mute      = temp;
     
