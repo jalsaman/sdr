@@ -1,15 +1,14 @@
 # Tag name          ;  color
 FM                  ; #00ff00
-VHF                 ; #729fcf
-DVB                 ; #c0c0c0
-Mobile              ; #eeeeec
-ISM                 ; #edd400
-HAM                 ; #fce94f
-VHF Marine          ; #c07010
-RC                  ; #c0c0c0
 AM                  ; #a0a0a0
-Unknown             ; #c0c0c0
+RC                  ; #c0c0c0
+ISM                 ; #edd400
+Mobile              ; #eeeeec
+VHF Marine          ; #c07010
+VHF                 ; #729fcf
 ADSB                ; #0000ff
+DVB                 ; #c0c0c0
+HAM                 ; #fce94f
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
       558000; AM                       ; AM                  ;      10000; AM
@@ -40,7 +39,6 @@ ADSB                ; #0000ff
      6780000; ISM 6.78 MHz             ; Demod Off           ;      30000; ISM
      7000000; HAM 40m                  ; Narrow FM           ;      10000; HAM
     13560000; ISM 13.56MHz - RFID      ; Demod Off           ;      14000; ISM
-    13859900; Signal                   ; Narrow FM           ;      10000; Unknown
     14000000; HAM 20m                  ; Narrow FM           ;      10000; HAM
     21000000; HAM 15m                  ; Narrow FM           ;      10000; HAM
     27120000; ISM 27 MHz - RC          ; Demod Off           ;     326000; ISM
@@ -55,7 +53,7 @@ ADSB                ; #0000ff
     89400000; 89.4 RAK Tamil FM        ; WFM (stereo)        ;     240000; FM
     89600000; 89.6 Music               ; WFM (stereo)        ;     240000; FM
     90500000; 90.5 AD SkyNews Arabia   ; WFM (stereo)        ;     240000; FM
-    90700000; 90.7 FUJ Rock Radio      ; WFM (stereo)        ;     240000; FM
+    90800000; 90.8 FUJ Rock Radio      ; WFM (stereo)        ;     240000; FM
     91100000; 91.1 DXB Tag 91.1        ; WFM (stereo)        ;     240000; FM
     91400000; 91.4 DXB Quran           ; WFM (stereo)        ;     240000; FM
     91600000; 91.6                     ; WFM (stereo)        ;     240000; FM
@@ -103,7 +101,7 @@ ADSB                ; #0000ff
    105400000; 105.4 FUJ Radio Spice    ; WFM (stereo)        ;     240000; FM
    106200000; 106.2 UAQ - Big FM       ; WFM (stereo)        ;     240000; FM
    106500000; 106.5 UAQ - Radio Gilli  ; WFM (stereo)        ;     240000; FM
-   107100000; 107.1 UAQ - Heart FM     ; WFM (stereo)        ;     240000; FM
+   107100000; 107.1 UAQ - LUV 1071     ; WFM (stereo)        ;     240000; FM
    107400000; 107.4 DXB ALOula         ; WFM (stereo)        ;     240000; FM
    107600000; 107.6 ClubFM             ; WFM (stereo)        ;     226000; FM
    107800000; 107.8 AJM Al Rabia FM    ; WFM (stereo)        ;     240000; FM
@@ -226,380 +224,6 @@ ADSB                ; #0000ff
    336013000; ISM 336.013 MHz          ; Demod Off           ;      50000; ISM
    336330000; ISM 336.330 MHz          ; Demod Off           ;      50000; ISM
    337226000; ISM 337.226 MHz          ; Demod Off           ;      50000; ISM
-   390009000; S                        ; Demod Off           ;      24000; Unknown
-   390034000; S                        ; Demod Off           ;      24000; Unknown
-   390059000; S                        ; Demod Off           ;      24000; Unknown
-   390084000; S                        ; Demod Off           ;      24000; Unknown
-   390109000; S                        ; Demod Off           ;      24000; Unknown
-   390134000; S                        ; Demod Off           ;      24000; Unknown
-   390159000; S                        ; Demod Off           ;      24000; Unknown
-   390184000; S                        ; Demod Off           ;      24000; Unknown
-   390209000; S                        ; Demod Off           ;      24000; Unknown
-   390234000; S                        ; Demod Off           ;      24000; Unknown
-   390259000; S                        ; Demod Off           ;      24000; Unknown
-   390284000; S                        ; Demod Off           ;      24000; Unknown
-   390309000; S                        ; Demod Off           ;      24000; Unknown
-   390334000; S                        ; Demod Off           ;      24000; Unknown
-   390359000; S                        ; Demod Off           ;      24000; Unknown
-   390384000; S                        ; Demod Off           ;      24000; Unknown
-   390409000; S                        ; Demod Off           ;      24000; Unknown
-   390434000; S                        ; Demod Off           ;      24000; Unknown
-   390459000; S                        ; Demod Off           ;      24000; Unknown
-   390484000; S                        ; Demod Off           ;      24000; Unknown
-   390509000; S                        ; Demod Off           ;      24000; Unknown
-   390534000; S                        ; Demod Off           ;      24000; Unknown
-   390559000; S                        ; Demod Off           ;      24000; Unknown
-   390584000; S                        ; Demod Off           ;      24000; Unknown
-   390609000; S                        ; Demod Off           ;      24000; Unknown
-   390634000; S                        ; Demod Off           ;      24000; Unknown
-   390659000; S                        ; Demod Off           ;      24000; Unknown
-   390684000; S                        ; Demod Off           ;      24000; Unknown
-   390709000; S                        ; Demod Off           ;      24000; Unknown
-   390734000; S                        ; Demod Off           ;      24000; Unknown
-   390759000; S                        ; Demod Off           ;      24000; Unknown
-   390784000; S                        ; Demod Off           ;      24000; Unknown
-   390809000; S                        ; Demod Off           ;      24000; Unknown
-   390834000; S                        ; Demod Off           ;      24000; Unknown
-   390859000; S                        ; Demod Off           ;      24000; Unknown
-   390884000; S                        ; Demod Off           ;      24000; Unknown
-   390909000; S                        ; Demod Off           ;      24000; Unknown
-   390934000; S                        ; Demod Off           ;      24000; Unknown
-   390959000; S                        ; Demod Off           ;      24000; Unknown
-   390984000; S                        ; Demod Off           ;      24000; Unknown
-   391009000; S                        ; Demod Off           ;      24000; Unknown
-   391034000; S                        ; Demod Off           ;      24000; Unknown
-   391059000; S                        ; Demod Off           ;      24000; Unknown
-   391084000; S                        ; Demod Off           ;      24000; Unknown
-   391109000; S                        ; Demod Off           ;      24000; Unknown
-   391134000; S                        ; Demod Off           ;      24000; Unknown
-   391159000; S                        ; Demod Off           ;      24000; Unknown
-   391184000; S                        ; Demod Off           ;      24000; Unknown
-   391209000; S                        ; Demod Off           ;      24000; Unknown
-   391234000; S                        ; Demod Off           ;      24000; Unknown
-   391259000; S                        ; Demod Off           ;      24000; Unknown
-   391284000; S                        ; Demod Off           ;      24000; Unknown
-   391309000; S                        ; Demod Off           ;      24000; Unknown
-   391334000; S                        ; Demod Off           ;      24000; Unknown
-   391359000; S                        ; Demod Off           ;      24000; Unknown
-   391384000; S                        ; Demod Off           ;      24000; Unknown
-   391409000; S                        ; Demod Off           ;      24000; Unknown
-   391434000; S                        ; Demod Off           ;      24000; Unknown
-   391459000; S                        ; Demod Off           ;      24000; Unknown
-   391484000; S                        ; Demod Off           ;      24000; Unknown
-   391509000; S                        ; Demod Off           ;      24000; Unknown
-   391534000; S                        ; Demod Off           ;      24000; Unknown
-   391559000; S                        ; Demod Off           ;      24000; Unknown
-   391584000; S                        ; Demod Off           ;      24000; Unknown
-   391609000; S                        ; Demod Off           ;      24000; Unknown
-   391634000; S                        ; Demod Off           ;      24000; Unknown
-   391659000; S                        ; Demod Off           ;      24000; Unknown
-   391684000; S                        ; Demod Off           ;      24000; Unknown
-   391709000; S                        ; Demod Off           ;      24000; Unknown
-   391734000; S                        ; Demod Off           ;      24000; Unknown
-   391759000; S                        ; Demod Off           ;      24000; Unknown
-   391784000; S                        ; Demod Off           ;      24000; Unknown
-   391809000; S                        ; Demod Off           ;      24000; Unknown
-   391834000; S                        ; Demod Off           ;      24000; Unknown
-   391859000; S                        ; Demod Off           ;      24000; Unknown
-   391884000; S                        ; Demod Off           ;      24000; Unknown
-   391909000; S                        ; Demod Off           ;      24000; Unknown
-   391934000; S                        ; Demod Off           ;      24000; Unknown
-   391959000; S                        ; Demod Off           ;      24000; Unknown
-   391984000; S                        ; Demod Off           ;      24000; Unknown
-   392009000; S                        ; Demod Off           ;      24000; Unknown
-   392034000; S                        ; Demod Off           ;      24000; Unknown
-   392059000; S                        ; Demod Off           ;      24000; Unknown
-   392084000; S                        ; Demod Off           ;      24000; Unknown
-   392109000; S                        ; Demod Off           ;      24000; Unknown
-   392134000; S                        ; Demod Off           ;      24000; Unknown
-   392159000; S                        ; Demod Off           ;      24000; Unknown
-   392184000; S                        ; Demod Off           ;      24000; Unknown
-   392209000; S                        ; Demod Off           ;      24000; Unknown
-   392234000; S                        ; Demod Off           ;      24000; Unknown
-   392259000; S                        ; Demod Off           ;      24000; Unknown
-   392284000; S                        ; Demod Off           ;      24000; Unknown
-   392309000; S                        ; Demod Off           ;      24000; Unknown
-   392334000; S                        ; Demod Off           ;      24000; Unknown
-   392359000; S                        ; Demod Off           ;      24000; Unknown
-   392384000; S                        ; Demod Off           ;      24000; Unknown
-   392409000; S                        ; Demod Off           ;      24000; Unknown
-   392434000; S                        ; Demod Off           ;      24000; Unknown
-   392459000; S                        ; Demod Off           ;      24000; Unknown
-   392484000; S                        ; Demod Off           ;      24000; Unknown
-   392509000; S                        ; Demod Off           ;      24000; Unknown
-   392534000; S                        ; Demod Off           ;      24000; Unknown
-   392559000; S                        ; Demod Off           ;      24000; Unknown
-   392584000; S                        ; Demod Off           ;      24000; Unknown
-   392609000; S                        ; Demod Off           ;      24000; Unknown
-   392634000; S                        ; Demod Off           ;      24000; Unknown
-   392659000; S                        ; Demod Off           ;      24000; Unknown
-   392684000; S                        ; Demod Off           ;      24000; Unknown
-   392709000; S                        ; Demod Off           ;      24000; Unknown
-   392734000; S                        ; Demod Off           ;      24000; Unknown
-   392759000; S                        ; Demod Off           ;      24000; Unknown
-   392784000; S                        ; Demod Off           ;      24000; Unknown
-   392809000; S                        ; Demod Off           ;      24000; Unknown
-   392834000; S                        ; Demod Off           ;      24000; Unknown
-   392859000; S                        ; Demod Off           ;      24000; Unknown
-   392884000; S                        ; Demod Off           ;      24000; Unknown
-   392909000; S                        ; Demod Off           ;      24000; Unknown
-   392934000; S                        ; Demod Off           ;      24000; Unknown
-   392959000; S                        ; Demod Off           ;      24000; Unknown
-   392984000; S                        ; Demod Off           ;      24000; Unknown
-   393009000; S                        ; Demod Off           ;      24000; Unknown
-   393034000; S                        ; Demod Off           ;      24000; Unknown
-   393059000; S                        ; Demod Off           ;      24000; Unknown
-   393084000; S                        ; Demod Off           ;      24000; Unknown
-   393109000; S                        ; Demod Off           ;      24000; Unknown
-   393134000; S                        ; Demod Off           ;      24000; Unknown
-   393159000; S                        ; Demod Off           ;      24000; Unknown
-   393184000; S                        ; Demod Off           ;      24000; Unknown
-   393209000; S                        ; Demod Off           ;      24000; Unknown
-   393234000; S                        ; Demod Off           ;      24000; Unknown
-   393259000; S                        ; Demod Off           ;      24000; Unknown
-   393284000; S                        ; Demod Off           ;      24000; Unknown
-   393309000; S                        ; Demod Off           ;      24000; Unknown
-   393334000; S                        ; Demod Off           ;      24000; Unknown
-   393359000; S                        ; Demod Off           ;      24000; Unknown
-   393384000; S                        ; Demod Off           ;      24000; Unknown
-   393409000; S                        ; Demod Off           ;      24000; Unknown
-   393434000; S                        ; Demod Off           ;      24000; Unknown
-   393459000; S                        ; Demod Off           ;      24000; Unknown
-   393484000; S                        ; Demod Off           ;      24000; Unknown
-   393509000; S                        ; Demod Off           ;      24000; Unknown
-   393534000; S                        ; Demod Off           ;      24000; Unknown
-   393559000; S                        ; Demod Off           ;      24000; Unknown
-   393584000; S                        ; Demod Off           ;      24000; Unknown
-   393609000; S                        ; Demod Off           ;      24000; Unknown
-   393634000; S                        ; Demod Off           ;      24000; Unknown
-   393659000; S                        ; Demod Off           ;      24000; Unknown
-   393684000; S                        ; Demod Off           ;      24000; Unknown
-   393709000; S                        ; Demod Off           ;      24000; Unknown
-   393734000; S                        ; Demod Off           ;      24000; Unknown
-   393759000; S                        ; Demod Off           ;      24000; Unknown
-   393784000; S                        ; Demod Off           ;      24000; Unknown
-   393809000; S                        ; Demod Off           ;      24000; Unknown
-   393834000; S                        ; Demod Off           ;      24000; Unknown
-   393859000; S                        ; Demod Off           ;      24000; Unknown
-   393884000; S                        ; Demod Off           ;      24000; Unknown
-   393909000; S                        ; Demod Off           ;      24000; Unknown
-   393934000; S                        ; Demod Off           ;      24000; Unknown
-   393959000; S                        ; Demod Off           ;      24000; Unknown
-   393984000; S                        ; Demod Off           ;      24000; Unknown
-   394009000; S                        ; Demod Off           ;      24000; Unknown
-   394034000; S                        ; Demod Off           ;      24000; Unknown
-   394059000; S                        ; Demod Off           ;      24000; Unknown
-   394084000; S                        ; Demod Off           ;      24000; Unknown
-   394109000; S                        ; Demod Off           ;      24000; Unknown
-   394134000; S                        ; Demod Off           ;      24000; Unknown
-   394159000; S                        ; Demod Off           ;      24000; Unknown
-   394184000; S                        ; Demod Off           ;      24000; Unknown
-   394209000; S                        ; Demod Off           ;      24000; Unknown
-   394234000; S                        ; Demod Off           ;      24000; Unknown
-   394259000; S                        ; Demod Off           ;      24000; Unknown
-   394284000; S                        ; Demod Off           ;      24000; Unknown
-   394309000; S                        ; Demod Off           ;      24000; Unknown
-   394334000; S                        ; Demod Off           ;      24000; Unknown
-   394359000; S                        ; Demod Off           ;      24000; Unknown
-   394384000; S                        ; Demod Off           ;      24000; Unknown
-   394409000; S                        ; Demod Off           ;      24000; Unknown
-   394434000; S                        ; Demod Off           ;      24000; Unknown
-   394459000; S                        ; Demod Off           ;      24000; Unknown
-   394484000; S                        ; Demod Off           ;      24000; Unknown
-   394509000; S                        ; Demod Off           ;      24000; Unknown
-   394534000; S                        ; Demod Off           ;      24000; Unknown
-   394559000; S                        ; Demod Off           ;      24000; Unknown
-   394584000; S                        ; Demod Off           ;      24000; Unknown
-   394609000; S                        ; Demod Off           ;      24000; Unknown
-   394634000; S                        ; Demod Off           ;      24000; Unknown
-   394659000; S                        ; Demod Off           ;      24000; Unknown
-   394684000; S                        ; Demod Off           ;      24000; Unknown
-   394709000; S                        ; Demod Off           ;      24000; Unknown
-   394734000; S                        ; Demod Off           ;      24000; Unknown
-   394759000; S                        ; Demod Off           ;      24000; Unknown
-   394784000; S                        ; Demod Off           ;      24000; Unknown
-   394809000; S                        ; Demod Off           ;      24000; Unknown
-   394834000; S                        ; Demod Off           ;      24000; Unknown
-   394859000; S                        ; Demod Off           ;      24000; Unknown
-   394884000; S                        ; Demod Off           ;      24000; Unknown
-   394909000; S                        ; Demod Off           ;      24000; Unknown
-   394934000; S                        ; Demod Off           ;      24000; Unknown
-   394959000; S                        ; Demod Off           ;      24000; Unknown
-   394984000; S                        ; Demod Off           ;      24000; Unknown
-   395009000; S                        ; Demod Off           ;      24000; Unknown
-   395034000; S                        ; Demod Off           ;      24000; Unknown
-   395059000; S                        ; Demod Off           ;      24000; Unknown
-   395084000; S                        ; Demod Off           ;      24000; Unknown
-   395109000; S                        ; Demod Off           ;      24000; Unknown
-   395134000; S                        ; Demod Off           ;      24000; Unknown
-   395159000; S                        ; Demod Off           ;      24000; Unknown
-   395184000; S                        ; Demod Off           ;      24000; Unknown
-   395209000; S                        ; Demod Off           ;      24000; Unknown
-   395234000; S                        ; Demod Off           ;      24000; Unknown
-   395259000; S                        ; Demod Off           ;      24000; Unknown
-   395284000; S                        ; Demod Off           ;      24000; Unknown
-   395309000; S                        ; Demod Off           ;      24000; Unknown
-   395334000; S                        ; Demod Off           ;      24000; Unknown
-   395359000; S                        ; Demod Off           ;      24000; Unknown
-   395384000; S                        ; Demod Off           ;      24000; Unknown
-   395409000; S                        ; Demod Off           ;      24000; Unknown
-   395434000; S                        ; Demod Off           ;      24000; Unknown
-   395459000; S                        ; Demod Off           ;      24000; Unknown
-   395484000; S                        ; Demod Off           ;      24000; Unknown
-   395509000; S                        ; Demod Off           ;      24000; Unknown
-   395534000; S                        ; Demod Off           ;      24000; Unknown
-   395559000; S                        ; Demod Off           ;      24000; Unknown
-   395584000; S                        ; Demod Off           ;      24000; Unknown
-   395609000; S                        ; Demod Off           ;      24000; Unknown
-   395634000; S                        ; Demod Off           ;      24000; Unknown
-   395659000; S                        ; Demod Off           ;      24000; Unknown
-   395684000; S                        ; Demod Off           ;      24000; Unknown
-   395709000; S                        ; Demod Off           ;      24000; Unknown
-   395734000; S                        ; Demod Off           ;      24000; Unknown
-   395759000; S                        ; Demod Off           ;      24000; Unknown
-   395784000; S                        ; Demod Off           ;      24000; Unknown
-   395809000; S                        ; Demod Off           ;      24000; Unknown
-   395834000; S                        ; Demod Off           ;      24000; Unknown
-   395859000; S                        ; Demod Off           ;      24000; Unknown
-   395884000; S                        ; Demod Off           ;      24000; Unknown
-   395909000; S                        ; Demod Off           ;      24000; Unknown
-   395934000; S                        ; Demod Off           ;      24000; Unknown
-   395959000; S                        ; Demod Off           ;      24000; Unknown
-   395984000; S                        ; Demod Off           ;      24000; Unknown
-   396009000; S                        ; Demod Off           ;      24000; Unknown
-   396034000; S                        ; Demod Off           ;      24000; Unknown
-   396059000; S                        ; Demod Off           ;      24000; Unknown
-   396084000; S                        ; Demod Off           ;      24000; Unknown
-   396109000; S                        ; Demod Off           ;      24000; Unknown
-   396134000; S                        ; Demod Off           ;      24000; Unknown
-   396159000; S                        ; Demod Off           ;      24000; Unknown
-   396184000; S                        ; Demod Off           ;      24000; Unknown
-   396209000; S                        ; Demod Off           ;      24000; Unknown
-   396234000; S                        ; Demod Off           ;      24000; Unknown
-   396259000; S                        ; Demod Off           ;      24000; Unknown
-   396284000; S                        ; Demod Off           ;      24000; Unknown
-   396309000; S                        ; Demod Off           ;      24000; Unknown
-   396334000; S                        ; Demod Off           ;      24000; Unknown
-   396359000; S                        ; Demod Off           ;      24000; Unknown
-   396384000; S                        ; Demod Off           ;      24000; Unknown
-   396409000; S                        ; Demod Off           ;      24000; Unknown
-   396434000; S                        ; Demod Off           ;      24000; Unknown
-   396459000; S                        ; Demod Off           ;      24000; Unknown
-   396484000; S                        ; Demod Off           ;      24000; Unknown
-   396509000; S                        ; Demod Off           ;      24000; Unknown
-   396534000; S                        ; Demod Off           ;      24000; Unknown
-   396559000; S                        ; Demod Off           ;      24000; Unknown
-   396584000; S                        ; Demod Off           ;      24000; Unknown
-   396609000; S                        ; Demod Off           ;      24000; Unknown
-   396634000; S                        ; Demod Off           ;      24000; Unknown
-   396659000; S                        ; Demod Off           ;      24000; Unknown
-   396684000; S                        ; Demod Off           ;      24000; Unknown
-   396709000; S                        ; Demod Off           ;      24000; Unknown
-   396734000; S                        ; Demod Off           ;      24000; Unknown
-   396759000; S                        ; Demod Off           ;      24000; Unknown
-   396784000; S                        ; Demod Off           ;      24000; Unknown
-   396809000; S                        ; Demod Off           ;      24000; Unknown
-   396834000; S                        ; Demod Off           ;      24000; Unknown
-   396859000; S                        ; Demod Off           ;      24000; Unknown
-   396884000; S                        ; Demod Off           ;      24000; Unknown
-   396909000; S                        ; Demod Off           ;      24000; Unknown
-   396934000; S                        ; Demod Off           ;      24000; Unknown
-   396959000; S                        ; Demod Off           ;      24000; Unknown
-   396984000; S                        ; Demod Off           ;      24000; Unknown
-   397009000; S                        ; Demod Off           ;      24000; Unknown
-   397034000; S                        ; Demod Off           ;      24000; Unknown
-   397059000; S                        ; Demod Off           ;      24000; Unknown
-   397084000; S                        ; Demod Off           ;      24000; Unknown
-   397109000; S                        ; Demod Off           ;      24000; Unknown
-   397134000; S                        ; Demod Off           ;      24000; Unknown
-   397159000; S                        ; Demod Off           ;      24000; Unknown
-   397184000; S                        ; Demod Off           ;      24000; Unknown
-   397209000; S                        ; Demod Off           ;      24000; Unknown
-   397234000; S                        ; Demod Off           ;      24000; Unknown
-   397259000; S                        ; Demod Off           ;      24000; Unknown
-   397284000; S                        ; Demod Off           ;      24000; Unknown
-   397309000; S                        ; Demod Off           ;      24000; Unknown
-   397334000; S                        ; Demod Off           ;      24000; Unknown
-   397359000; S                        ; Demod Off           ;      24000; Unknown
-   397384000; S                        ; Demod Off           ;      24000; Unknown
-   397409000; S                        ; Demod Off           ;      24000; Unknown
-   397434000; S                        ; Demod Off           ;      24000; Unknown
-   397459000; S                        ; Demod Off           ;      24000; Unknown
-   397484000; S                        ; Demod Off           ;      24000; Unknown
-   397509000; S                        ; Demod Off           ;      24000; Unknown
-   397534000; S                        ; Demod Off           ;      24000; Unknown
-   397559000; S                        ; Demod Off           ;      24000; Unknown
-   397584000; S                        ; Demod Off           ;      24000; Unknown
-   397609000; S                        ; Demod Off           ;      24000; Unknown
-   397634000; S                        ; Demod Off           ;      24000; Unknown
-   397659000; S                        ; Demod Off           ;      24000; Unknown
-   397684000; S                        ; Demod Off           ;      24000; Unknown
-   397709000; S                        ; Demod Off           ;      24000; Unknown
-   397734000; S                        ; Demod Off           ;      24000; Unknown
-   397759000; S                        ; Demod Off           ;      24000; Unknown
-   397784000; S                        ; Demod Off           ;      24000; Unknown
-   397809000; S                        ; Demod Off           ;      24000; Unknown
-   397834000; S                        ; Demod Off           ;      24000; Unknown
-   397859000; S                        ; Demod Off           ;      24000; Unknown
-   397884000; S                        ; Demod Off           ;      24000; Unknown
-   397909000; S                        ; Demod Off           ;      24000; Unknown
-   397934000; S                        ; Demod Off           ;      24000; Unknown
-   397959000; S                        ; Demod Off           ;      24000; Unknown
-   397984000; S                        ; Demod Off           ;      24000; Unknown
-   398009000; S                        ; Demod Off           ;      24000; Unknown
-   398034000; S                        ; Demod Off           ;      24000; Unknown
-   398059000; S                        ; Demod Off           ;      24000; Unknown
-   398084000; S                        ; Demod Off           ;      24000; Unknown
-   398109000; S                        ; Demod Off           ;      24000; Unknown
-   398134000; S                        ; Demod Off           ;      24000; Unknown
-   398159000; S                        ; Demod Off           ;      24000; Unknown
-   398184000; S                        ; Demod Off           ;      24000; Unknown
-   398209000; S                        ; Demod Off           ;      24000; Unknown
-   398234000; S                        ; Demod Off           ;      24000; Unknown
-   398259000; S                        ; Demod Off           ;      24000; Unknown
-   398284000; S                        ; Demod Off           ;      24000; Unknown
-   398309000; S                        ; Demod Off           ;      24000; Unknown
-   398334000; S                        ; Demod Off           ;      24000; Unknown
-   398359000; S                        ; Demod Off           ;      24000; Unknown
-   398384000; S                        ; Demod Off           ;      24000; Unknown
-   398409000; S                        ; Demod Off           ;      24000; Unknown
-   398434000; S                        ; Demod Off           ;      24000; Unknown
-   398459000; S                        ; Demod Off           ;      24000; Unknown
-   398484000; S                        ; Demod Off           ;      24000; Unknown
-   398509000; S                        ; Demod Off           ;      24000; Unknown
-   398534000; S                        ; Demod Off           ;      24000; Unknown
-   398559000; S                        ; Demod Off           ;      24000; Unknown
-   398584000; S                        ; Demod Off           ;      24000; Unknown
-   398609000; S                        ; Demod Off           ;      24000; Unknown
-   398634000; S                        ; Demod Off           ;      24000; Unknown
-   398659000; S                        ; Demod Off           ;      24000; Unknown
-   398684000; S                        ; Demod Off           ;      24000; Unknown
-   398709000; S                        ; Demod Off           ;      24000; Unknown
-   398734000; S                        ; Demod Off           ;      24000; Unknown
-   398759000; S                        ; Demod Off           ;      24000; Unknown
-   398784000; S                        ; Demod Off           ;      24000; Unknown
-   398809000; S                        ; Demod Off           ;      24000; Unknown
-   398834000; S                        ; Demod Off           ;      24000; Unknown
-   398859000; S                        ; Demod Off           ;      24000; Unknown
-   398884000; S                        ; Demod Off           ;      24000; Unknown
-   398909000; S                        ; Demod Off           ;      24000; Unknown
-   398934000; S                        ; Demod Off           ;      24000; Unknown
-   398959000; S                        ; Demod Off           ;      24000; Unknown
-   398984000; S                        ; Demod Off           ;      24000; Unknown
-   399009000; S                        ; Demod Off           ;      24000; Unknown
-   399034000; S                        ; Demod Off           ;      24000; Unknown
-   399059000; S                        ; Demod Off           ;      24000; Unknown
-   399084000; S                        ; Demod Off           ;      24000; Unknown
-   399109000; S                        ; Demod Off           ;      24000; Unknown
-   399134000; S                        ; Demod Off           ;      24000; Unknown
-   399159000; S                        ; Demod Off           ;      24000; Unknown
-   399184000; S                        ; Demod Off           ;      24000; Unknown
-   399209000; S                        ; Demod Off           ;      24000; Unknown
-   399234000; S                        ; Demod Off           ;      24000; Unknown
-   399259000; S                        ; Demod Off           ;      24000; Unknown
-   399284000; S                        ; Demod Off           ;      24000; Unknown
-   399309000; S                        ; Demod Off           ;      24000; Unknown
-   399334000; S                        ; Demod Off           ;      24000; Unknown
    429638100; Signal                   ; Demod Off           ;      10000; Mobile
    430000000; HAM 70cm                 ; Narrow FM           ;      10000; HAM
    430065000; 430.065 MHz              ; Narrow FM           ;      10000; VHF
@@ -619,8 +243,6 @@ ADSB                ; #0000ff
    470000000; S                        ; Demod Off           ;          0; DVB
    477896000; S                        ; Demod Off           ;          0; DVB
    915000000; ISM 915.000 MHz          ; Demod Off           ;      50000; ISM
-   958978000; Signal                   ; Narrow FM           ;      10000; Unknown
-   958998000; Signal                   ; Narrow FM           ;      10000; Unknown
    978000000; ADS-B 978.0 MHz          ; Demod Off           ;    1300000; ADSB
   1090000000; ADS-B 1090.0 MHz         ; Demod Off           ;      50000; ADSB
   2450000000; ISM 2.45 GHz             ; Demod Off           ;      50000; ISM
