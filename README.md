@@ -153,3 +153,9 @@ To install **Audacity**
 sudo apt install audacity
 ```
 
+
+To install **inspectrum**
+
+```bash
+sudo apt install inspectrum
+```
