@@ -13,9 +13,10 @@ d.setFreq(frequancy)
 d.setMdmModulation(modulation)
 d.setMdmDRate(datarate)
 
-d.setMaxPower()
-d.lowball()
+d.setMaxPower() # Maximum Power
+d.lowball()	# Configures the radio to use the lowest level of filtering.
 #-------------------------------------------------------------------------------
 
 print "Starting Reception..."
+d.RFlisten()
 
