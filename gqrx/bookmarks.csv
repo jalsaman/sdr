@@ -1,14 +1,15 @@
 # Tag name          ;  color
-FM                  ; #00ff00
 AM                  ; #a0a0a0
-RC                  ; #c0c0c0
 ISM                 ; #edd400
-Mobile              ; #eeeeec
-VHF Marine          ; #c07010
-VHF                 ; #729fcf
 ADSB                ; #0000ff
-DVB                 ; #c0c0c0
+RC                  ; #c0c0c0
+FM                  ; #00ff00
+UHF                 ; #c0c0c0
+VHF                 ; #729fcf
 HAM                 ; #fce94f
+Mobile              ; #eeeeec
+DVB                 ; #c0c0c0
+VHF Marine          ; #c07010
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
       558000; AM                       ; AM                  ;      10000; AM
@@ -106,6 +107,7 @@ HAM                 ; #fce94f
    107600000; 107.6 ClubFM             ; WFM (stereo)        ;     226000; FM
    107800000; 107.8 AJM Al Rabia FM    ; WFM (stereo)        ;     240000; FM
    144000000; HAM 2m                   ; Narrow FM           ;      10000; HAM
+   145687000; AbuDhabi Rept            ; LSB                 ;       2700; VHF
    156025000; 60-TX                    ; Narrow FM           ;      50000; VHF Marine
    156050000; 01-TX                    ; Narrow FM           ;      50000; VHF Marine
    156075000; 61-TX                    ; Narrow FM           ;      50000; VHF Marine
@@ -240,6 +242,7 @@ HAM                 ; #fce94f
    434910000; ISM 434.910 MHz          ; Demod Off           ;      50000; ISM
    435134000; VHF 435.134 MHz          ; Narrow FM           ;      50000; VHF
    435636500; Signal                   ; Narrow FM           ;       2000; VHF
+   436703000; Norbi Sat                ; Demod Off           ;          0; UHF
    470000000; S                        ; Demod Off           ;          0; DVB
    477896000; S                        ; Demod Off           ;          0; DVB
    915000000; ISM 915.000 MHz          ; Demod Off           ;      50000; ISM
