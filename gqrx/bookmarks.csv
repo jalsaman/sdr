@@ -1,16 +1,15 @@
 # Tag name          ;  color
-Mobile              ; #eeeeec
-Untagged            ; #c0c0c0
-ISM                 ; #edd400
-VHF Marine          ; #c07010
-UHF                 ; #c0c0c0
 HAM                 ; #fce94f
-RC                  ; #c0c0c0
-ADSB                ; #0000ff
+VHF Marine          ; #c07010
 VHF                 ; #729fcf
-FM                  ; #00ff00
-AM                  ; #a0a0a0
 DVB                 ; #c0c0c0
+RC                  ; #c0c0c0
+FM                  ; #00ff00
+Mobile              ; #eeeeec
+AM                  ; #a0a0a0
+ADSB                ; #0000ff
+UHF                 ; #c0c0c0
+ISM                 ; #edd400
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
       558000; AM                       ; AM                  ;      10000; AM
@@ -110,11 +109,11 @@ DVB                 ; #c0c0c0
    144000000; HAM 2m                   ; LSB                 ;      10000; HAM
    144800000; APRS                     ; LSB                 ;       2700; HAM
    144992000; H_VHF_1                  ; AM                  ;       5000; HAM
-   145550000; FUJ_FM_RPT               ; Narrow FM           ;      10000; Untagged
-   145675000; RAK_FM_RPT               ; WFM (stereo)        ;      10000; HAM
+   145550000; FUJ_FM_RPT               ; Narrow FM           ;      10000; HAM
+   145675000; RAK_FM_RPT               ; Narrow FM           ;      10000; HAM
    145687500; SHJ_EARS_DMR             ; LSB                 ;       2700; HAM
    145725000; AHD_FM_RPT               ; Narrow FM           ;      10000; HAM
-   145750000; SHJ_FM_RPT               ; WFM (stereo)        ;      10000; HAM
+   145750000; SHJ_FM_RPT               ; Narrow FM           ;      10000; HAM
    145787500; SHJ_EARS_D*YSF           ; LSB                 ;       2700; HAM
    148080000; H VHF 2                  ; AM                  ;      10000; HAM
    156025000; 60-TX                    ; Narrow FM           ;      50000; VHF Marine
