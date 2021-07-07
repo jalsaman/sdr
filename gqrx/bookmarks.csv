@@ -1,16 +1,16 @@
 # Tag name          ;  color
-RC                  ; #c0c0c0
-HAM                 ; #fce94f
-UHF                 ; #c0c0c0
-VHF Marine          ; #c07010
-ADSB                ; #0000ff
-VHF                 ; #729fcf
 FM                  ; #00ff00
-DVB                 ; #c0c0c0
-SAT                 ; #c0c0c0
-Tetra               ; #c0c0c0
-ISM                 ; #edd400
 AM                  ; #a0a0a0
+ISM                 ; #edd400
+VHF                 ; #729fcf
+SAT                 ; #c0c0c0
+VHF Marine          ; #c07010
+UHF                 ; #c0c0c0
+Tetra               ; #c0c0c0
+DVB                 ; #c0c0c0
+HAM                 ; #fce94f
+RC                  ; #c0c0c0
+ADSB                ; #0000ff
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
       558000; AM                       ; AM                  ;      10000; AM
@@ -109,7 +109,9 @@ AM                  ; #a0a0a0
    107800000; 107.8 AJM Al Rabia FM    ; WFM (stereo)        ;     240000; FM
    144000000; HAM 2m                   ; LSB                 ;      10000; HAM
    144800000; APRS                     ; LSB                 ;       2700; HAM
-   144992000; H_VHF_1                  ; AM                  ;       5000; HAM
+   145000000; Ch                       ; Narrow FM           ;      32000; HAM,VHF
+   145300000; Ch                       ; Narrow FM           ;      20600; HAM,VHF
+   145325000; Ch                       ; Narrow FM           ;      20000; HAM,VHF
    145550000; FUJ_FM_RPT               ; Narrow FM           ;      10000; HAM
    145675000; RAK_FM_RPT               ; WFM (stereo)        ;      10000; HAM
    145687500; SHJ_EARS_DMR             ; LSB                 ;       2700; HAM
