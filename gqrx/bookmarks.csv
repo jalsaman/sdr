@@ -1,16 +1,17 @@
 # Tag name          ;  color
-ADSB                ; #0000ff
-AM                  ; #a0a0a0
-ISM                 ; #edd400
-UHF                 ; #c0c0c0
 VHF                 ; #729fcf
-Tetra               ; #c0c0c0
-DVB                 ; #c0c0c0
 RC                  ; #c0c0c0
+AM                  ; #a0a0a0
+UHF                 ; #c0c0c0
+GPS                 ; #c0c0c0
+SAT                 ; #c0c0c0
 VHF Marine          ; #c07010
 HAM                 ; #fce94f
+ISM                 ; #edd400
+DVB                 ; #c0c0c0
 FM                  ; #00ff00
-SAT                 ; #c0c0c0
+Tetra               ; #c0c0c0
+ADSB                ; #0000ff
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
       558000; AM                       ; AM                  ;      10000; AM
@@ -126,112 +127,109 @@ SAT                 ; #c0c0c0
    146275100; Ch                       ; Narrow FM           ;      20600; HAM,VHF
    146300000; Ch                       ; Narrow FM           ;      20600; HAM,VHF
    148080000; H VHF 2                  ; AM                  ;      10000; HAM
-
    156025000; Maritime Start           ; Narrow FM           ;      50000; VHF Marine
-   156025000; T                    ; Narrow FM           ;      50000; VHF Marine
-   156050000; T                    ; Narrow FM           ;      50000; VHF Marine
-   156075000; T                    ; Narrow FM           ;      50000; VHF Marine
-   156100000; T                    ; Narrow FM           ;      50000; VHF Marine
-   156125000; T                    ; Narrow FM           ;      50000; VHF Marine
-   156150000; T                    ; Narrow FM           ;      50000; VHF Marine
-   156175000; T                    ; Narrow FM           ;      50000; VHF Marine
-   156200000; T                    ; Narrow FM           ;      50000; VHF Marine
-   156225000; T                    ; Narrow FM           ;      50000; VHF Marine
-   156250000; T                    ; Narrow FM           ;      50000; VHF Marine
-   156275000; T                    ; Narrow FM           ;      50000; VHF Marine
-   156300000; T                    ; Narrow FM           ;      50000; VHF Marine
-   156325000; T                    ; Narrow FM           ;      50000; VHF Marine
-   156350000; T                    ; Narrow FM           ;      50000; VHF Marine
-   156375000; T                    ; Narrow FM           ;      50000; VHF Marine
-   156400000; T                    ; Narrow FM           ;      50000; VHF Marine
-   156425000; T                    ; Narrow FM           ;      50000; VHF Marine
-   156450000; T                    ; Narrow FM           ;      50000; VHF Marine
-   156475000; T                    ; Narrow FM           ;      50000; VHF Marine
-   156500000; T                    ; Narrow FM           ;      50000; VHF Marine
-   156525000; T                    ; Narrow FM           ;      50000; VHF Marine
-   156550000; T                    ; Narrow FM           ;      50000; VHF Marine
-   156575000; T                    ; Narrow FM           ;      50000; VHF Marine
-   156600000; T                    ; Narrow FM           ;      50000; VHF Marine
-   156625000; T                    ; Narrow FM           ;      50000; VHF Marine
-   156650000; T                    ; Narrow FM           ;      50000; VHF Marine
-   156675000; T                    ; Narrow FM           ;      50000; VHF Marine
-   156700000; T                    ; Narrow FM           ;      50000; VHF Marine
-   156725000; T                    ; Narrow FM           ;      50000; VHF Marine
-   156750000; T                    ; Narrow FM           ;      50000; VHF Marine
-   156775000; T                    ; Narrow FM           ;      50000; VHF Marine
-   156800000; T                    ; Narrow FM           ;      50000; VHF Marine
-   156825000; T                    ; Narrow FM           ;      50000; VHF Marine
-   156850000; T                    ; Narrow FM           ;      50000; VHF Marine
-   156875000; T                    ; Narrow FM           ;      50000; VHF Marine
-   156900000; T                    ; Narrow FM           ;      50000; VHF Marine
-   156925000; T                    ; Narrow FM           ;      50000; VHF Marine
-   156950000; T                    ; Narrow FM           ;      50000; VHF Marine
-   156975000; T                    ; Narrow FM           ;      50000; VHF Marine
-   157000000; T                    ; Narrow FM           ;      50000; VHF Marine
-   157025000; T                    ; Narrow FM           ;      50000; VHF Marine
-   157050000; T                    ; Narrow FM           ;      50000; VHF Marine
-   157075000; T                    ; Narrow FM           ;      50000; VHF Marine
-   157100000; T                    ; Narrow FM           ;      50000; VHF Marine
-   157125000; T                    ; Narrow FM           ;      50000; VHF Marine
-   157150000; T                    ; Narrow FM           ;      50000; VHF Marine
-   157175000; T                    ; Narrow FM           ;      50000; VHF Marine
-   157200000; T                    ; Narrow FM           ;      50000; VHF Marine
-   157225000; T                    ; Narrow FM           ;      50000; VHF Marine
-   157250000; T                    ; Narrow FM           ;      50000; VHF Marine
-   157275000; T                    ; Narrow FM           ;      50000; VHF Marine
-   157300000; T                    ; Narrow FM           ;      50000; VHF Marine
-   157325000; T                    ; Narrow FM           ;      50000; VHF Marine
-   157350000; T                    ; Narrow FM           ;      50000; VHF Marine
-   157375000; T                    ; Narrow FM           ;      50000; VHF Marine
-   157400000; T                    ; Narrow FM           ;      50000; VHF Marine
-   157425000; T                    ; Narrow FM           ;      50000; VHF Marine
-
-   160625000; R                    ; Narrow FM           ;      50000; VHF Marine
-   160650000; R                    ; Narrow FM           ;      50000; VHF Marine
-   160675000; R                    ; Narrow FM           ;      50000; VHF Marine
-   160700000; R                    ; Narrow FM           ;      50000; VHF Marine
-   160725000; R                    ; Narrow FM           ;      50000; VHF Marine
-   160750000; R                    ; Narrow FM           ;      50000; VHF Marine
-   160775000; R                    ; Narrow FM           ;      50000; VHF Marine
-   160800000; R                    ; Narrow FM           ;      50000; VHF Marine
-   160825000; R                    ; Narrow FM           ;      50000; VHF Marine
-   160850000; R                    ; Narrow FM           ;      50000; VHF Marine
-   160875000; R                    ; Narrow FM           ;      50000; VHF Marine
-   160900000; R                    ; Narrow FM           ;      50000; VHF Marine
-   160925000; R                    ; Narrow FM           ;      50000; VHF Marine
-   160950000; R                    ; Narrow FM           ;      50000; VHF Marine
-   161000000; R                    ; Narrow FM           ;      50000; VHF Marine
-   161050000; R                    ; Narrow FM           ;      50000; VHF Marine
-   161100000; R                    ; Narrow FM           ;      50000; VHF Marine
-   161150000; R                    ; Narrow FM           ;      50000; VHF Marine
-   161200000; R                    ; Narrow FM           ;      50000; VHF Marine
-   161250000; R                    ; Narrow FM           ;      50000; VHF Marine
-   161300000; R                    ; Narrow FM           ;      50000; VHF Marine
-   161350000; R                    ; Narrow FM           ;      50000; VHF Marine
-   161400000; R                    ; Narrow FM           ;      50000; VHF Marine
-   161450000; R                    ; Narrow FM           ;      50000; VHF Marine
-   161500000; R                    ; Narrow FM           ;      50000; VHF Marine
-   161525000; R                    ; Narrow FM           ;      50000; VHF Marine
-   161550000; R                    ; Narrow FM           ;      50000; VHF Marine
-   161575000; R                    ; Narrow FM           ;      50000; VHF Marine
-   161600000; R                    ; Narrow FM           ;      50000; VHF Marine
-   161625000; R                    ; Narrow FM           ;      50000; VHF Marine
-   161650000; R                    ; Narrow FM           ;      50000; VHF Marine
-   161675000; R                    ; Narrow FM           ;      50000; VHF Marine
-   161700000; R                    ; Narrow FM           ;      50000; VHF Marine
-   161725000; R                    ; Narrow FM           ;      50000; VHF Marine
-   161750000; R                    ; Narrow FM           ;      50000; VHF Marine
-   161775000; R                    ; Narrow FM           ;      50000; VHF Marine
-   161800000; R                    ; Narrow FM           ;      50000; VHF Marine
-   161825000; R                    ; Narrow FM           ;      50000; VHF Marine
-   161850000; R                    ; Narrow FM           ;      50000; VHF Marine
-   161875000; R                    ; Narrow FM           ;      50000; VHF Marine
-   161900000; R                    ; Narrow FM           ;      50000; VHF Marine
-   161925000; R                    ; Narrow FM           ;      50000; VHF Marine
-   161950000; R                    ; Narrow FM           ;      50000; VHF Marine
-   162000000; R                    ; Narrow FM           ;      50000; VHF Marine
-   162000000; Maritime End           ; Narrow FM           ;      50000; VHF Marine
-
+   156025000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156050000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156075000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156100000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156125000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156150000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156175000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156200000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156225000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156250000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156275000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156300000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156325000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156350000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156375000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156400000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156425000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156450000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156475000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156500000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156525000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156550000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156575000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156600000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156625000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156650000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156675000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156700000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156725000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156750000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156775000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156800000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156825000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156850000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156875000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156900000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156925000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156950000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156975000; T                        ; Narrow FM           ;      50000; VHF Marine
+   157000000; T                        ; Narrow FM           ;      50000; VHF Marine
+   157025000; T                        ; Narrow FM           ;      50000; VHF Marine
+   157050000; T                        ; Narrow FM           ;      50000; VHF Marine
+   157075000; T                        ; Narrow FM           ;      50000; VHF Marine
+   157100000; T                        ; Narrow FM           ;      50000; VHF Marine
+   157125000; T                        ; Narrow FM           ;      50000; VHF Marine
+   157150000; T                        ; Narrow FM           ;      50000; VHF Marine
+   157175000; T                        ; Narrow FM           ;      50000; VHF Marine
+   157200000; T                        ; Narrow FM           ;      50000; VHF Marine
+   157225000; T                        ; Narrow FM           ;      50000; VHF Marine
+   157250000; T                        ; Narrow FM           ;      50000; VHF Marine
+   157275000; T                        ; Narrow FM           ;      50000; VHF Marine
+   157300000; T                        ; Narrow FM           ;      50000; VHF Marine
+   157325000; T                        ; Narrow FM           ;      50000; VHF Marine
+   157350000; T                        ; Narrow FM           ;      50000; VHF Marine
+   157375000; T                        ; Narrow FM           ;      50000; VHF Marine
+   157400000; T                        ; Narrow FM           ;      50000; VHF Marine
+   157425000; T                        ; Narrow FM           ;      50000; VHF Marine
+   160625000; R                        ; Narrow FM           ;      50000; VHF Marine
+   160650000; R                        ; Narrow FM           ;      50000; VHF Marine
+   160675000; R                        ; Narrow FM           ;      50000; VHF Marine
+   160700000; R                        ; Narrow FM           ;      50000; VHF Marine
+   160725000; R                        ; Narrow FM           ;      50000; VHF Marine
+   160750000; R                        ; Narrow FM           ;      50000; VHF Marine
+   160775000; R                        ; Narrow FM           ;      50000; VHF Marine
+   160800000; R                        ; Narrow FM           ;      50000; VHF Marine
+   160825000; R                        ; Narrow FM           ;      50000; VHF Marine
+   160850000; R                        ; Narrow FM           ;      50000; VHF Marine
+   160875000; R                        ; Narrow FM           ;      50000; VHF Marine
+   160900000; R                        ; Narrow FM           ;      50000; VHF Marine
+   160925000; R                        ; Narrow FM           ;      50000; VHF Marine
+   160950000; R                        ; Narrow FM           ;      50000; VHF Marine
+   161000000; R                        ; Narrow FM           ;      50000; VHF Marine
+   161050000; R                        ; Narrow FM           ;      50000; VHF Marine
+   161100000; R                        ; Narrow FM           ;      50000; VHF Marine
+   161150000; R                        ; Narrow FM           ;      50000; VHF Marine
+   161200000; R                        ; Narrow FM           ;      50000; VHF Marine
+   161250000; R                        ; Narrow FM           ;      50000; VHF Marine
+   161300000; R                        ; Narrow FM           ;      50000; VHF Marine
+   161350000; R                        ; Narrow FM           ;      50000; VHF Marine
+   161400000; R                        ; Narrow FM           ;      50000; VHF Marine
+   161450000; R                        ; Narrow FM           ;      50000; VHF Marine
+   161500000; R                        ; Narrow FM           ;      50000; VHF Marine
+   161525000; R                        ; Narrow FM           ;      50000; VHF Marine
+   161550000; R                        ; Narrow FM           ;      50000; VHF Marine
+   161575000; R                        ; Narrow FM           ;      50000; VHF Marine
+   161600000; R                        ; Narrow FM           ;      50000; VHF Marine
+   161625000; R                        ; Narrow FM           ;      50000; VHF Marine
+   161650000; R                        ; Narrow FM           ;      50000; VHF Marine
+   161675000; R                        ; Narrow FM           ;      50000; VHF Marine
+   161700000; R                        ; Narrow FM           ;      50000; VHF Marine
+   161725000; R                        ; Narrow FM           ;      50000; VHF Marine
+   161750000; R                        ; Narrow FM           ;      50000; VHF Marine
+   161775000; R                        ; Narrow FM           ;      50000; VHF Marine
+   161800000; R                        ; Narrow FM           ;      50000; VHF Marine
+   161825000; R                        ; Narrow FM           ;      50000; VHF Marine
+   161850000; R                        ; Narrow FM           ;      50000; VHF Marine
+   161875000; R                        ; Narrow FM           ;      50000; VHF Marine
+   161900000; R                        ; Narrow FM           ;      50000; VHF Marine
+   161925000; R                        ; Narrow FM           ;      50000; VHF Marine
+   161950000; R                        ; Narrow FM           ;      50000; VHF Marine
+   162000000; R                        ; Narrow FM           ;      50000; VHF Marine
+   162000000; Maritime End             ; Narrow FM           ;      50000; VHF Marine
    315000000; ISM 315.000 MHz          ; Demod Off           ;      50000; ISM
    336013000; ISM 336.013 MHz          ; Demod Off           ;      50000; ISM
    336330000; ISM 336.330 MHz          ; Demod Off           ;      50000; ISM
@@ -1061,5 +1059,10 @@ SAT                 ; #c0c0c0
    915000000; ISM 915.000 MHz          ; Demod Off           ;      50000; ISM
    978000000; ADS-B 978.0 MHz          ; Demod Off           ;    1300000; ADSB
   1090000000; ADS-B 1090.0 MHz         ; Demod Off           ;      50000; ADSB
+  1542000000; Inmarsat L-B             ; Narrow FM           ;      20600; SAT
+  1550000000; Inmarsat                 ; Narrow FM           ;      10000; SAT
+  1575420000; GPS                      ; Narrow FM           ;      10000; GPS
+  1620000000; Iridium                  ; Narrow FM           ;      10000; SAT
+  1688000000; GOES                     ; Narrow FM           ;      20600; SAT
   2450000000; ISM 2.45 GHz             ; Demod Off           ;      50000; ISM
   5800000000; ISM 5.8 GHz              ; Demod Off           ;      50000; ISM
