@@ -1,17 +1,18 @@
 # Tag name          ;  color
-VHF                 ; #729fcf
-RC                  ; #c0c0c0
 AM                  ; #a0a0a0
-UHF                 ; #c0c0c0
-GPS                 ; #c0c0c0
-SAT                 ; #c0c0c0
-VHF Marine          ; #c07010
 HAM                 ; #fce94f
-ISM                 ; #edd400
-DVB                 ; #c0c0c0
-FM                  ; #00ff00
 Tetra               ; #c0c0c0
 ADSB                ; #0000ff
+SAT                 ; #c0c0c0
+Untagged            ; #c0c0c0
+UHF                 ; #c0c0c0
+VHF Marine          ; #c07010
+DVB                 ; #c0c0c0
+VHF                 ; #729fcf
+RC                  ; #c0c0c0
+GPS                 ; #c0c0c0
+FM                  ; #00ff00
+ISM                 ; #edd400
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
       558000; AM                       ; AM                  ;      10000; AM
@@ -1053,16 +1054,34 @@ ADSB                ; #0000ff
    434910000; ISM 434.910 MHz          ; Demod Off           ;      50000; ISM
    435134000; VHF 435.134 MHz          ; Narrow FM           ;      50000; VHF
    435636500; Signal                   ; Narrow FM           ;       2000; VHF
-   436703000; Norbi Sat                ; Demod Off           ;          0; UHF
+   436703000; Norbi                    ; Demod Off           ;          0; SAT
    470000000; S                        ; Demod Off           ;          0; DVB
    477896000; S                        ; Demod Off           ;          0; DVB
    915000000; ISM 915.000 MHz          ; Demod Off           ;      50000; ISM
    978000000; ADS-B 978.0 MHz          ; Demod Off           ;    1300000; ADSB
   1090000000; ADS-B 1090.0 MHz         ; Demod Off           ;      50000; ADSB
+  1176450000; GPS L5                   ; Narrow FM           ;      10000; GPS
+  1176450000; Galileo E5a              ; Narrow FM           ;      10000; Galileo
+  1176450000; IRNSS L5                 ; Narrow FM           ;       2000; IRNSS
+  1202250000; GLONASS L3               ; Narrow FM           ;       2000; GLONASS
+  1207140000; Galileo E5b              ; Narrow FM           ;      10000; Galileo
+  1209600500; Signal                   ; Narrow FM           ;       2000; Untagged
+  1224000000; Signal                   ; Narrow FM           ;       2000; Untagged
+  1227600000; GPS L2                   ; Narrow FM           ;       2000; GPS
+  1240000000; GLONASS L2               ; Narrow FM           ;      10000; GLONASS
+  1260000000; GLONASS L2               ; Narrow FM           ;      10000; GLONASS
+  1278750000; Galileo E6               ; Narrow FM           ;      10000; Galileo
+  1379913300; GPS L4                   ; Narrow FM           ;       2000; GPS
+  1381050000; GPS L3                   ; Narrow FM           ;       2000; GPS
   1542000000; Inmarsat L-B             ; Narrow FM           ;      20600; SAT
   1550000000; Inmarsat                 ; Narrow FM           ;      10000; SAT
-  1575420000; GPS                      ; Narrow FM           ;      10000; GPS
+  1575420000; GPS L1                   ; Narrow FM           ;      10000; GPS
+  1575420000; Galileo E1               ; Narrow FM           ;      10000; Galileo
+  1602560000; GLONASS L1               ; Narrow FM           ;      10000; GLONASS
+  1612800100; Signal                   ; Narrow FM           ;       2000; Untagged
+  1615500000; GLONASS L1               ; Narrow FM           ;      10000; GLONASS
   1620000000; Iridium                  ; Narrow FM           ;      10000; SAT
   1688000000; GOES                     ; Narrow FM           ;      20600; SAT
   2450000000; ISM 2.45 GHz             ; Demod Off           ;      50000; ISM
+  2492080000; IRNSS S                  ; Narrow FM           ;       2000; IRNSS
   5800000000; ISM 5.8 GHz              ; Demod Off           ;      50000; ISM
