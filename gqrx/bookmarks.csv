@@ -1,18 +1,20 @@
 # Tag name          ;  color
 AM                  ; #a0a0a0
-HAM                 ; #fce94f
-Tetra               ; #c0c0c0
-ADSB                ; #0000ff
-SAT                 ; #c0c0c0
-Untagged            ; #c0c0c0
-UHF                 ; #c0c0c0
-VHF Marine          ; #c07010
-DVB                 ; #c0c0c0
-VHF                 ; #729fcf
-RC                  ; #c0c0c0
-GPS                 ; #c0c0c0
-FM                  ; #00ff00
 ISM                 ; #edd400
+VHF Marine          ; #c07010
+GPS                 ; #c0c0c0
+SAT                 ; #c0c0c0
+Galileo             ; #c0c0c0
+IRNSS               ; #c0c0c0
+ADSB                ; #0000ff
+VHF                 ; #729fcf
+Tetra               ; #c0c0c0
+GLONASS             ; #c0c0c0
+RC                  ; #c0c0c0
+HAM                 ; #fce94f
+Untagged            ; #c0c0c0
+FM                  ; #00ff00
+DVB                 ; #c0c0c0
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
       558000; AM                       ; AM                  ;      10000; AM
@@ -109,6 +111,8 @@ ISM                 ; #edd400
    107400000; 107.4 DXB ALOula         ; WFM (stereo)        ;     240000; FM
    107600000; 107.6 ClubFM             ; WFM (stereo)        ;     226000; FM
    107800000; 107.8 AJM Al Rabia FM    ; WFM (stereo)        ;     240000; FM
+   137100000; NOAA 19                  ; Narrow FM           ;      20600; SAT
+   137915000; NOAA 18                  ; Narrow FM           ;      20600; SAT
    144000000; 2m Start                 ; LSB                 ;      10000; HAM
    144800000; APRS                     ; LSB                 ;       2700; HAM
    145000000; Ch                       ; Narrow FM           ;      32000; HAM,VHF
