@@ -1,20 +1,20 @@
 # Tag name          ;  color
-AM                  ; #a0a0a0
-ISM                 ; #edd400
-VHF Marine          ; #c07010
-GPS                 ; #c0c0c0
-SAT                 ; #c0c0c0
-Galileo             ; #c0c0c0
-IRNSS               ; #c0c0c0
-ADSB                ; #0000ff
 VHF                 ; #729fcf
-Tetra               ; #c0c0c0
-GLONASS             ; #c0c0c0
-RC                  ; #c0c0c0
-HAM                 ; #fce94f
 Untagged            ; #c0c0c0
-FM                  ; #00ff00
+AM                  ; #a0a0a0
 DVB                 ; #c0c0c0
+IRNSS               ; #c0c0c0
+GLONASS             ; #c0c0c0
+SAT                 ; #c0c0c0
+GPS                 ; #c0c0c0
+Galileo             ; #c0c0c0
+VHF Marine          ; #c07010
+ISM                 ; #edd400
+HAM                 ; #fce94f
+FM                  ; #00ff00
+Tetra               ; #c0c0c0
+ADSB                ; #0000ff
+RC                  ; #c0c0c0
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
       558000; AM                       ; AM                  ;      10000; AM
@@ -114,24 +114,27 @@ DVB                 ; #c0c0c0
    137100000; NOAA 19                  ; Narrow FM           ;      20600; SAT
    137915000; NOAA 18                  ; Narrow FM           ;      20600; SAT
    144000000; 2m Start                 ; LSB                 ;      10000; HAM
+   144300000; Ch                       ; Narrow FM           ;      20600; HAM
    144800000; APRS                     ; LSB                 ;       2700; HAM
    145000000; Ch                       ; Narrow FM           ;      32000; HAM,VHF
    145150000; Ch                       ; Narrow FM           ;      16200; HAM,VHF
    145300000; Ch                       ; Narrow FM           ;      20600; HAM,VHF
    145325000; Ch                       ; Narrow FM           ;      20000; HAM,VHF
    145550000; FUJ_FM_RPT               ; Narrow FM           ;      10000; HAM
+   145600000; Ch                       ; Narrow FM           ;      20600; HAM
    145675000; RAK_FM_RPT               ; WFM (stereo)        ;      10000; HAM
    145687500; SHJ_EARS_DMR             ; LSB                 ;       2700; HAM
    145725000; AHD_FM_RPT               ; Narrow FM           ;      10000; HAM
    145750000; SHJ_FM_RPT               ; WFM (stereo)        ;      10000; HAM
-   145787500; SHJ_EARS_D*YSF           ; LSB                 ;       2700; HAM
-   145800000; ISS SSTV                 ; Demod Off           ;       5000; SAT
+   145787500; SHJ_EARS_D*YSF           ; LSB                 ;       2700; HAM,VHF
+   145800000; ISS SSTV                 ; Demod Off           ;       5000; SAT,VHF
+   145900800; Ch                       ; Narrow FM           ;      20600; HAM,VHF
    146000000; 2m End                   ; Narrow FM           ;       2000; HAM,VHF
    146225500; Ch                       ; Narrow FM           ;      10000; HAM,VHF
    146240400; Ch                       ; Narrow FM           ;       2000; HAM,VHF
    146275100; Ch                       ; Narrow FM           ;      20600; HAM,VHF
    146300000; Ch                       ; Narrow FM           ;      20600; HAM,VHF
-   148080000; H VHF 2                  ; AM                  ;      10000; HAM
+   148080000; Ch                       ; Narrow FM           ;      10000; HAM,VHF
    156025000; Maritime Start           ; Narrow FM           ;      50000; VHF Marine
    156025000; T                        ; Narrow FM           ;      50000; VHF Marine
    156050000; T                        ; Narrow FM           ;      50000; VHF Marine
@@ -233,8 +236,10 @@ DVB                 ; #c0c0c0
    161900000; R                        ; Narrow FM           ;      50000; VHF Marine
    161925000; R                        ; Narrow FM           ;      50000; VHF Marine
    161950000; R                        ; Narrow FM           ;      50000; VHF Marine
+   161975000; AIS		       ; Narrow FM	     ;      50000; VHF Marine
    162000000; R                        ; Narrow FM           ;      50000; VHF Marine
    162000000; Maritime End             ; Narrow FM           ;      50000; VHF Marine
+   162025000; AIS		       ; Narrow FM	     ;      50000; VHF Marine
    315000000; ISM 315.000 MHz          ; Demod Off           ;      50000; ISM
    336013000; ISM 336.013 MHz          ; Demod Off           ;      50000; ISM
    336330000; ISM 336.330 MHz          ; Demod Off           ;      50000; ISM
