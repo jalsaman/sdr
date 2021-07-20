@@ -1,0 +1,54 @@
+Edge tuning disabled.
+DC filter enabled.
+RTL AGC disabled.
+Internal AIS decoder enabled.
+Buffer size: 163.84 mS
+Downsample factor: 64
+Low pass: 25000 Hz
+Output: 48000 Hz
+Found 1 device(s):
+  0:  Realtek, RTL2838UHIDIR, SN: 00000001
+
+Using device 0: Generic RTL2832U OEM
+Detached kernel driver
+Found Rafael Micro R820T tuner
+Log NMEA sentences to console ON
+AIS data will be sent to 127.0.0.1 port 10110
+Tuner gain set to automatic.
+Tuned to 162000000 Hz.
+Sampling at 1600000 S/s.
+Allocating 12 zero-copy buffers
+!AIVDM,1,1,,B,170gRj?P003u4;`>MJjv4?v:20S8,0*01
+!AIVDM,1,1,,A,35?0rh50003pTUj>3Ov=7Sr80Dg:,0*16
+!AIVDM,1,1,,B,16BP9W0P00SuAh>>NGVusgv:2<7H,0*32
+!AIVDM,1,1,,A,13ku9LPviwSsc08>SGiWAEj880Rh,0*4C
+!AIVDM,1,1,,A,170Bvb?wP0Stu78>M4g2`pj:0<<P,0*01
+!AIVDM,1,1,,B,14`deg8P00Su36P>M3f;1Ov<20SI,0*0C
+!AIVDM,1,1,,B,170qWD?P?w<tSF0l4Q@>4?wp0p3W,0*64
+!AIVDM,1,1,,B,15?>qB001dSpeVT>rfK;baFd0L<P,0*69
+!AIVDM,1,1,,A,155HAr1000Stu1l>MUbP000620RS,0*73
+!AIVDM,1,1,,B,171:600P00Su3>t>MEa>4?v<2@3r,0*0A
+!AIVDM,1,1,,A,10;iQCgP00Stvwr>M7qs9?v>2<F3,0*77
+!AIVDM,1,1,,A,155LCf<0003tumN>MJTqoPJ>0840,0*38
+!AIVDM,1,1,,B,1815I>@01O3p2gN>`EMehiV>0H40,0*2F
+!AIVDM,1,1,,A,38QdE70Oie3sJpt>HualjD8>00f0,0*67
+!AIVDM,1,1,,B,18L5Cd002C3sHav>NLUoUn280845,0*22
+!AIVDM,1,1,,A,18Ifnj002DSrtd2?4SkJk8b:0H49,0*76
+!AIVDM,1,1,,B,18156>0P00StuW0>MEAv4?v<20S8,0*5C
+!AIVDM,1,1,,A,16?Um9O000Su0Ij>Ln8k5qn>0D<P,0*16
+!AIVDM,1,1,,A,1718kv80003uChh>KKMdJr0@0D1G,0*64
+!AIVDM,1,1,,A,38I2Bm50003ttNp>MGS6hpl@0DNr,0*5C
+!AIVDM,1,1,,A,17Ww548001Su<Bf>WIfp5@n<084D,0*5F
+!AIVDM,1,1,,B,13P=s4@00qSsnJd>TeD5EDD@04B<,0*5D
+!AIVDM,1,1,,A,1815?w@02:SrmoP>uus3SRp:0<;J,0*20
+!AIVDM,1,1,,A,4@4IGlivEr2S541uvd?5jAQ00000,0*5A
+!AIVDM,1,1,,A,170RNn2P00StuQP>M>6GU?v>2`7U,0*7D
+!AIVDM,1,1,,A,15`1kj0P00Su440>MJJv4?v>284d,0*18
+!AIVDM,1,1,,B,38QdE70Oie3sJr@>HuRTkD:B00hh,0*70
+!AIVDM,1,1,,B,1815@p04@@St3Vp>DSfCLSR:084r,0*1B
+!AIVDM,1,1,,A,17f6Gc00003u3Dt>SArSKGR>2PSp,0*3D
+!AIVDM,1,1,,B,171:263P003tttT>M@E;=?vB24B<,0*5F
+!AIVDM,1,1,,A,13Ik5;0004SVbT@?QePAQllf04B<,0*28
+Signal caught, exiting!
+!AIVDM,1,1,,A,13Ik5;0004SVbT@?QePAQllf04B<,0*28
+Reattached kernel driver
