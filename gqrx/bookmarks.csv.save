@@ -1,20 +1,20 @@
 # Tag name          ;  color
-AM                  ; #a0a0a0
-GPS                 ; #ce5c00
-Marine              ; #c07010
 VHF                 ; #204a87
 Galileo             ; #c0c0c0
+HAM                 ; #fce94f
+GPS                 ; #ce5c00
+DVB                 ; #f57900
+AM                  ; #a0a0a0
+FM                  ; #00ff00
+Tetra               ; #14a08c
+Untagged            ; #888a85
 GLONASS             ; #c17d11
+RC                  ; #729fcf
 SAT                 ; #0000ff
 IRNSS               ; #a08c14
-Untagged            ; #888a85
-RC                  ; #729fcf
-ADSB                ; #75507b
 ISM                 ; #edd400
-FM                  ; #00ff00
-HAM                 ; #fce94f
-Tetra               ; #14a08c
-DVB                 ; #f57900
+Marine              ; #c07010
+ADSB                ; #75507b
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
       558000; AM                       ; AM                  ;      10000; AM
@@ -112,8 +112,7 @@ DVB                 ; #f57900
    107600000; 107.6 ClubFM             ; WFM (stereo)        ;     226000; FM
    107800000; 107.8 AJM Al Rabia FM    ; WFM (stereo)        ;     240000; FM
    137100000; NOAA 19                  ; Narrow FM           ;      20600; SAT
-   137620000; NOAA 15                  ; Narrow FM           ;      20600; SAT
-   137912500; NOAA 18                  ; Narrow FM           ;      20000; SAT
+   137915000; NOAA 18                  ; Narrow FM           ;      20600; SAT
    144000000; 2m Start                 ; LSB                 ;      10000; HAM
    144300000; Ch                       ; Narrow FM           ;      20600; HAM
    144800000; APRS                     ; LSB                 ;       2700; HAM
@@ -128,7 +127,7 @@ DVB                 ; #f57900
    145725000; AHD_FM_RPT               ; Narrow FM           ;      10000; HAM
    145750000; SHJ_FM_RPT               ; WFM (stereo)        ;      10000; HAM
    145787500; SHJ_EARS_D*YSF           ; LSB                 ;       2700; HAM,VHF
-   145800000; ISS SSTV                 ; Demod Off           ;       5000; SAT
+   145800000; ISS SSTV                 ; Demod Off           ;       5000; SAT,VHF
    145900800; Ch                       ; Narrow FM           ;      20600; HAM,VHF
    146000000; 2m End                   ; Narrow FM           ;       2000; HAM,VHF
    146225500; Ch                       ; Narrow FM           ;      10000; HAM,VHF
@@ -1068,7 +1067,7 @@ DVB                 ; #f57900
    434910000; ISM 434.910 MHz          ; Demod Off           ;      50000; ISM
    435134000; VHF 435.134 MHz          ; Narrow FM           ;      50000; VHF
    435636500; Signal                   ; Narrow FM           ;       2000; VHF
-   436703000; Norbi                    ; Demod Off           ;       2000; SAT
+   436703000; Norbi                    ; Demod Off           ;          0; SAT
    470000000; S                        ; Demod Off           ;          0; DVB
    477896000; S                        ; Demod Off           ;          0; DVB
    915000000; ISM 915.000 MHz          ; Demod Off           ;      50000; ISM
