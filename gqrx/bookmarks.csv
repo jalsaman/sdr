@@ -1,20 +1,20 @@
 # Tag name          ;  color
-VHF                 ; #729fcf
-Untagged            ; #c0c0c0
-AM                  ; #a0a0a0
-DVB                 ; #c0c0c0
-IRNSS               ; #c0c0c0
 GLONASS             ; #c0c0c0
-SAT                 ; #c0c0c0
-GPS                 ; #c0c0c0
+VHF                 ; #729fcf
+DVB                 ; #c0c0c0
 Galileo             ; #c0c0c0
-VHF Marine          ; #c07010
+Tetra               ; #c0c0c0
+RC                  ; #c0c0c0
+IRNSS               ; #c0c0c0
+AM                  ; #a0a0a0
+SAT                 ; #c0c0c0
+Untagged            ; #c0c0c0
 ISM                 ; #edd400
+GPS                 ; #c0c0c0
+ADSB                ; #0000ff
 HAM                 ; #fce94f
 FM                  ; #00ff00
-Tetra               ; #c0c0c0
-ADSB                ; #0000ff
-RC                  ; #c0c0c0
+VHF Marine          ; #c07010
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
       558000; AM                       ; AM                  ;      10000; AM
@@ -136,7 +136,6 @@ RC                  ; #c0c0c0
    146300000; Ch                       ; Narrow FM           ;      20600; HAM,VHF
    148080000; Ch                       ; Narrow FM           ;      10000; HAM,VHF
    156025000; Maritime Start           ; Narrow FM           ;      50000; VHF Marine
-   156025000; T                        ; Narrow FM           ;      50000; VHF Marine
    156050000; T                        ; Narrow FM           ;      50000; VHF Marine
    156075000; T                        ; Narrow FM           ;      50000; VHF Marine
    156100000; T                        ; Narrow FM           ;      50000; VHF Marine
@@ -157,17 +156,17 @@ RC                  ; #c0c0c0
    156475000; T                        ; Narrow FM           ;      50000; VHF Marine
    156500000; T                        ; Narrow FM           ;      50000; VHF Marine
    156525000; T                        ; Narrow FM           ;      50000; VHF Marine
-   156550000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156550000; 11                       ; Narrow FM           ;      50000; VHF Marine
    156575000; T                        ; Narrow FM           ;      50000; VHF Marine
    156600000; T                        ; Narrow FM           ;      50000; VHF Marine
    156625000; T                        ; Narrow FM           ;      50000; VHF Marine
-   156650000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156650000; 13                       ; Narrow FM           ;      50000; VHF Marine
    156675000; T                        ; Narrow FM           ;      50000; VHF Marine
    156700000; T                        ; Narrow FM           ;      50000; VHF Marine
    156725000; T                        ; Narrow FM           ;      50000; VHF Marine
    156750000; T                        ; Narrow FM           ;      50000; VHF Marine
    156775000; T                        ; Narrow FM           ;      50000; VHF Marine
-   156800000; T                        ; Narrow FM           ;      50000; VHF Marine
+   156800000; 16                       ; Narrow FM           ;      50000; VHF Marine
    156825000; T                        ; Narrow FM           ;      50000; VHF Marine
    156850000; T                        ; Narrow FM           ;      50000; VHF Marine
    156875000; T                        ; Narrow FM           ;      50000; VHF Marine
@@ -236,10 +235,17 @@ RC                  ; #c0c0c0
    161900000; R                        ; Narrow FM           ;      50000; VHF Marine
    161925000; R                        ; Narrow FM           ;      50000; VHF Marine
    161950000; R                        ; Narrow FM           ;      50000; VHF Marine
-   161975000; AIS		       ; Narrow FM	     ;      50000; VHF Marine
+   161975000; AIS                      ; Narrow FM           ;      50000; VHF Marine
    162000000; R                        ; Narrow FM           ;      50000; VHF Marine
    162000000; Maritime End             ; Narrow FM           ;      50000; VHF Marine
-   162025000; AIS		       ; Narrow FM	     ;      50000; VHF Marine
+   162025000; AIS                      ; Narrow FM           ;      50000; VHF Marine
+   162400000; WX2                      ; Narrow FM           ;      50000; VHF Marine
+   162425000; WX4                      ; Narrow FM           ;      50000; VHF Marine
+   162450000; WX5                      ; Narrow FM           ;      50000; VHF Marine
+   162475000; WX3                      ; Narrow FM           ;      50000; VHF Marine
+   162500000; WX6                      ; Narrow FM           ;      50000; VHF Marine
+   162525000; WX7                      ; Narrow FM           ;      50000; VHF Marine
+   162550000; NOAA WX1                 ; Narrow FM           ;      50000; VHF Marine
    315000000; ISM 315.000 MHz          ; Demod Off           ;      50000; ISM
    336013000; ISM 336.013 MHz          ; Demod Off           ;      50000; ISM
    336330000; ISM 336.330 MHz          ; Demod Off           ;      50000; ISM
