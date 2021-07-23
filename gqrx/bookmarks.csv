@@ -1,27 +1,27 @@
 # Tag name          ;  color
+GLONASS             ; #c17d11
+FM                  ; #00ff00
+Airband             ; #c0c0c0
+HAM20m              ; #c0c0c0
+HAM70cm             ; #c0c0c0
+Marine              ; #c07010
+VHF                 ; #204a87
+IRNSS               ; #a08c14
+Tetra               ; #14a08c
 HAM10m              ; #c0c0c0
-SAT                 ; #73d216
 GPS                 ; #ce5c00
 HAM2m               ; #c0c0c0
-Untagged            ; #888a85
-HAM70cm             ; #c0c0c0
-DVB                 ; #f57900
-IRNSS               ; #a08c14
 RC                  ; #729fcf
-Galileo             ; #c0c0c0
-GLONASS             ; #c17d11
-HAM20m              ; #c0c0c0
-Airband             ; #c0c0c0
-Marine              ; #c07010
-Tetra               ; #14a08c
-HAM15m              ; #c0c0c0
-HAM40m              ; #c0c0c0
-HAM80m              ; #c0c0c0
-FM                  ; #00ff00
-VHF                 ; #204a87
-ISM                 ; #edd400
-AM                  ; #a0a0a0
+DVB                 ; #f57900
 ADSB                ; #75507b
+Untagged            ; #888a85
+HAM15m              ; #c0c0c0
+Galileo             ; #c0c0c0
+HAM40m              ; #c0c0c0
+ISM                 ; #edd400
+HAM80m              ; #c0c0c0
+SAT                 ; #73d216
+AM                  ; #a0a0a0
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
       558000; AM                       ; AM                  ;      10000; AM
@@ -1083,30 +1083,32 @@ ADSB                ; #75507b
    137500000; C                        ; USB                 ;       8000; SAT
    137620000; NOAA 15                  ; Narrow FM           ;      20600; SAT
    137660000; C                        ; USB                 ;       3900; SAT
+   137700000; C                        ; USB                 ;       3500; SAT
    137800000; C                        ; USB                 ;       8000; SAT
    137912500; NOAA 18                  ; Narrow FM           ;      20000; SAT
-   144000000; 2m Start                 ; LSB                 ;      10000; HAM2m
-   144300000; Ch                       ; Narrow FM           ;      20600; HAM2m
+   144000000; C                        ; Narrow FM           ;      10000; HAM2m
+   144300000; C                        ; Narrow FM           ;      10000; HAM2m
+   144550000; C                        ; Narrow FM           ;      10000; HAM2m
    144800000; APRS                     ; LSB                 ;       2700; HAM2m
-   145000000; Ch                       ; Narrow FM           ;      32000; HAM2m
-   145150000; Ch                       ; Narrow FM           ;      16200; HAM2m
-   145300000; Ch                       ; Narrow FM           ;      20600; HAM2m
-   145325000; Ch                       ; Narrow FM           ;      20000; HAM2m
+   145000000; C                        ; Narrow FM           ;      32000; HAM2m
+   145150000; C                        ; Narrow FM           ;      16200; HAM2m
+   145300000; C                        ; Narrow FM           ;      20600; HAM2m
+   145325000; C                        ; Narrow FM           ;      20000; HAM2m
    145550000; FUJ_FM_RPT               ; Narrow FM           ;      10000; HAM2m
-   145600000; Ch                       ; Narrow FM           ;      20600; HAM2m
+   145600000; C                        ; Narrow FM           ;      20600; HAM2m
    145675000; RAK_FM_RPT               ; WFM (stereo)        ;      10000; HAM2m
    145687500; SHJ_EARS_DMR             ; LSB                 ;       2700; HAM2m
    145725000; AHD_FM_RPT               ; Narrow FM           ;      10000; HAM2m
    145750000; SHJ_FM_RPT               ; WFM (stereo)        ;      10000; HAM2m
    145787500; SHJ_EARS_D*YSF           ; LSB                 ;       2700; HAM2m
    145800000; ISS SSTV                 ; Demod Off           ;       5000; SAT
-   145900800; Ch                       ; Narrow FM           ;      20600; HAM2m
-   146000000; 2m End                   ; Narrow FM           ;       2000; HAM2m
-   146225500; Ch                       ; Narrow FM           ;      10000; HAM2m
-   146240400; Ch                       ; Narrow FM           ;       2000; HAM2m
-   146275100; Ch                       ; Narrow FM           ;      20600; HAM2m
-   146300000; Ch                       ; Narrow FM           ;      20600; HAM2m
-   148080000; Ch                       ; Narrow FM           ;      10000; HAM2m
+   145900800; C                        ; Narrow FM           ;      20600; HAM2m
+   146000000; C                        ; Narrow FM           ;       2000; HAM2m
+   146225500; C                        ; Narrow FM           ;      10000; HAM2m
+   146240400; C                        ; Narrow FM           ;       2000; HAM2m
+   146275100; C                        ; Narrow FM           ;      20600; HAM2m
+   146300000; C                        ; Narrow FM           ;      20600; HAM2m
+   148080000; C                        ; Narrow FM           ;      10000; HAM2m
    156025000; 60T                      ; Narrow FM           ;      25000; Marine
    156037500; 260T                     ; Narrow FM           ;      12500; Marine
    156050000; 1T                       ; Narrow FM           ;      25000; Marine
