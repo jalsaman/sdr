@@ -1,27 +1,27 @@
 # Tag name          ;  color
-GLONASS             ; #c17d11
-FM                  ; #00ff00
-Airband             ; #c0c0c0
-HAM20m              ; #c0c0c0
+Untagged            ; #888a85
 HAM70cm             ; #c0c0c0
+HAM10m              ; #c0c0c0
+Tetra               ; #14a08c
 Marine              ; #c07010
 VHF                 ; #204a87
-IRNSS               ; #a08c14
-Tetra               ; #14a08c
-HAM10m              ; #c0c0c0
-GPS                 ; #ce5c00
-HAM2m               ; #c0c0c0
-RC                  ; #729fcf
-DVB                 ; #f57900
-ADSB                ; #75507b
-Untagged            ; #888a85
-HAM15m              ; #c0c0c0
-Galileo             ; #c0c0c0
-HAM40m              ; #c0c0c0
 ISM                 ; #edd400
+RC                  ; #729fcf
+Galileo             ; #c0c0c0
+IRNSS               ; #a08c14
+DVB                 ; #f57900
+Airband             ; #ce5c00
+HAM2m               ; #f57900
+GPS                 ; #ce5c00
 HAM80m              ; #c0c0c0
-SAT                 ; #73d216
+HAM40m              ; #c0c0c0
+HAM15m              ; #c0c0c0
 AM                  ; #a0a0a0
+FM                  ; #00ff00
+ADSB                ; #75507b
+HAM20m              ; #c0c0c0
+SAT                 ; #73d216
+GLONASS             ; #c17d11
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
       558000; AM                       ; AM                  ;      10000; AM
@@ -458,7 +458,7 @@ AM                  ; #a0a0a0
    121425000; 138                      ; AM                  ;       8330; Airband
    121450000; 139                      ; AM                  ;       8330; Airband
    121475000; 140                      ; AM                  ;       8330; Airband
-   121500000; 141                      ; AM                  ;       8330; Airband
+   121500000; 141 Emr                  ; AM                  ;       8330; Airband
    121525000; 142                      ; AM                  ;       8330; Airband
    121550000; 143                      ; AM                  ;       8330; Airband
    121575000; 144                      ; AM                  ;       8330; Airband
@@ -1085,7 +1085,7 @@ AM                  ; #a0a0a0
    137660000; C                        ; USB                 ;       3900; SAT
    137700000; C                        ; USB                 ;       3500; SAT
    137800000; C                        ; USB                 ;       8000; SAT
-   137912500; NOAA 18                  ; Narrow FM           ;      20000; SAT
+   137912500; NOAA 18                  ; WFM (stereo)        ;      34000; SAT
    144000000; C                        ; Narrow FM           ;      10000; HAM2m
    144300000; C                        ; Narrow FM           ;      10000; HAM2m
    144550000; C                        ; Narrow FM           ;      10000; HAM2m
@@ -1108,7 +1108,7 @@ AM                  ; #a0a0a0
    146240400; C                        ; Narrow FM           ;       2000; HAM2m
    146275100; C                        ; Narrow FM           ;      20600; HAM2m
    146300000; C                        ; Narrow FM           ;      20600; HAM2m
-   148080000; C                        ; Narrow FM           ;      10000; HAM2m
+   148000000; C                        ; Narrow FM           ;      10000; HAM2m
    156025000; 60T                      ; Narrow FM           ;      25000; Marine
    156037500; 260T                     ; Narrow FM           ;      12500; Marine
    156050000; 1T                       ; Narrow FM           ;      25000; Marine
