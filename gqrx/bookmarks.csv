@@ -1,27 +1,27 @@
 # Tag name          ;  color
-Untagged            ; #888a85
-HAM70cm             ; #c0c0c0
-HAM10m              ; #c0c0c0
-Tetra               ; #14a08c
-Marine              ; #c07010
-VHF                 ; #204a87
-ISM                 ; #edd400
-RC                  ; #729fcf
-Galileo             ; #c0c0c0
-IRNSS               ; #a08c14
-DVB                 ; #f57900
-Airband             ; #ce5c00
-HAM2m               ; #f57900
-GPS                 ; #ce5c00
 HAM80m              ; #c0c0c0
-HAM40m              ; #c0c0c0
-HAM15m              ; #c0c0c0
-AM                  ; #a0a0a0
-FM                  ; #00ff00
-ADSB                ; #75507b
-HAM20m              ; #c0c0c0
-SAT                 ; #73d216
+HAM70cm             ; #c0c0c0
 GLONASS             ; #c17d11
+Marine              ; #c07010
+RC                  ; #729fcf
+DVB                 ; #f57900
+HAM20m              ; #c0c0c0
+HAM10m              ; #c0c0c0
+HAM2m               ; #f57900
+Airband             ; #ce5c00
+HAM15m              ; #c0c0c0
+IRNSS               ; #a08c14
+Untagged            ; #888a85
+ISM                 ; #edd400
+Galileo             ; #c0c0c0
+GPS                 ; #ce5c00
+VHF                 ; #204a87
+AM                  ; #a0a0a0
+ADSB                ; #75507b
+Tetra               ; #14a08c
+SAT                 ; #73d216
+HAM40m              ; #c0c0c0
+FM                  ; #00ff00
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
       558000; AM                       ; AM                  ;      10000; AM
@@ -332,7 +332,7 @@ GLONASS             ; #c17d11
    118275000; 12                       ; AM                  ;       8330; Airband
    118300000; 13                       ; AM                  ;       8330; Airband
    118325000; 14                       ; AM                  ;       8330; Airband
-   118350000; 15                       ; AM                  ;       8330; Airband
+   118350000; 15 DXB                   ; AM                  ;       8330; Airband
    118375000; 16                       ; AM                  ;       8330; Airband
    118400000; 17                       ; AM                  ;       8330; Airband
    118425000; 18                       ; AM                  ;       8330; Airband
@@ -464,7 +464,7 @@ GLONASS             ; #c17d11
    121575000; 144                      ; AM                  ;       8330; Airband
    121600000; 145                      ; AM                  ;       8330; Airband
    121625000; 146                      ; AM                  ;       8330; Airband
-   121650000; 147                      ; AM                  ;       8330; Airband
+   121650000; 147 DXB                  ; AM                  ;       8330; Airband
    121675000; 148                      ; AM                  ;       8330; Airband
    121700000; 149                      ; AM                  ;       8330; Airband
    121725000; 150 DAPI                 ; AM                  ;       8330; Airband
@@ -473,7 +473,7 @@ GLONASS             ; #c17d11
    121800000; 153                      ; AM                  ;       8330; Airband
    121825000; 154                      ; AM                  ;       8330; Airband
    121850000; 155                      ; AM                  ;       8330; Airband
-   121875000; 156                      ; AM                  ;       8330; Airband
+   121875000; 156 SHJ                  ; AM                  ;       8330; Airband
    121900000; 157                      ; AM                  ;       8330; Airband
    121925000; 158                      ; AM                  ;       8330; Airband
    121950000; 159                      ; AM                  ;       8330; Airband
