@@ -1,0 +1,19 @@
+Dire Wolf version 1.6
+Includes optional support for:  cm108-ptt
+
+Reading config file direwolf.conf
+Audio device for both receive and transmit: default  (channel 0)
+Channel 0: 1200 baud, AFSK 1200 & 2200 Hz, E+, 44100 sample rate.
+Note: PTT not configured for channel 0. (Ignore this if using VOX.)
+Ready to accept AGW client application 0 on port 8000 ...
+Ready to accept KISS TCP client application 0 on port 8001 ...
+
+Digipeater A68AN-10 audio level = 23(12/9)   [NONE]   ||||||||_
+[0.3] A65FH-10>APDW16,A68AN-10*,WIDE2-2,NOGATE:}A62A>APDG02,TCPIP,A65FH-10*:!2515.88ND05534.60E&RNG0012 2m Voice 145.78750MHz -1.0000MHz
+Third Party Header, motorcycle, DireWolf, WB2OSZ
+
+A68AN-10 audio level = 24(12/9)   [NONE]   _|||||___
+[0.3] A68AN-10>APDW15,WIDE1-1,WIDE2-1:!2431.46N/05426.12E#PHG5180New York University Abu Dhabi
+Position, DIGI (white center), DireWolf, WB2OSZ, 25 W height=20 8dBi omni
+N 24 31.4600, E 054 26.1200
+New York University Abu Dhabi
