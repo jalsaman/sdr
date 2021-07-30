@@ -1,27 +1,27 @@
 # Tag name          ;  color
-HAM20m              ; #c0c0c0
-Galileo             ; #c0c0c0
-HAM40m              ; #c0c0c0
-HAM80m              ; #c0c0c0
-Marine              ; #c07010
-VHF                 ; #204a87
-FM                  ; #00ff00
-HAM10m              ; #c0c0c0
-HAM70cm             ; #c0c0c0
-HAM2m               ; #f57900
 RC                  ; #729fcf
-IRNSS               ; #a08c14
-Tetra               ; #14a08c
-GPS                 ; #ce5c00
+HAM2m               ; #f57900
 GLONASS             ; #c17d11
-Airband             ; #ce5c00
-HAM15m              ; #c0c0c0
-AM                  ; #a0a0a0
-ISM                 ; #edd400
 ADSB                ; #75507b
+AM                  ; #a0a0a0
+Tetra               ; #14a08c
+HAM70cm             ; #c0c0c0
+DVB                 ; #f57900
+HAM80m              ; #c0c0c0
+Galileo             ; #c0c0c0
+Marine              ; #c07010
+Airband             ; #ce5c00
+HAM20m              ; #c0c0c0
+ISM                 ; #edd400
 Untagged            ; #888a85
 SAT                 ; #73d216
-DVB                 ; #f57900
+HAM40m              ; #c0c0c0
+GPS                 ; #ce5c00
+VHF                 ; #204a87
+HAM15m              ; #c0c0c0
+FM                  ; #00ff00
+IRNSS               ; #a08c14
+HAM10m              ; #c0c0c0
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
       558000; AM                       ; AM                  ;      10000; AM
@@ -1116,6 +1116,10 @@ DVB                 ; #f57900
    144675000; C                        ; Narrow FM           ;      25000; HAM2m
    144700000; C                        ; Narrow FM           ;      25000; HAM2m
    144800000; APRS                     ; LSB                 ;       2700; HAM2m
+   144900000; C                        ; Narrow FM           ;      25000; HAM2m
+   144925000; C                        ; Narrow FM           ;      25000; HAM2m
+   144950000; C                        ; Narrow FM           ;      25000; HAM2m
+   144975000; C                        ; Narrow FM           ;      25000; HAM2m
    145000000; C                        ; Narrow FM           ;      25000; HAM2m
    145025000; C                        ; Narrow FM           ;      25000; HAM2m
    145050000; C                        ; Narrow FM           ;      25000; HAM2m
@@ -1131,14 +1135,28 @@ DVB                 ; #f57900
    145300000; C                        ; Narrow FM           ;      25000; HAM2m
    145325000; C                        ; Narrow FM           ;      25000; HAM2m
    145350000; C                        ; Narrow FM           ;      25000; HAM2m
+   145375000; C                        ; Narrow FM           ;      25000; HAM2m
+   145400000; C                        ; Narrow FM           ;      25000; HAM2m
+   145425000; C                        ; Narrow FM           ;      25000; HAM2m
+   145450000; C                        ; Narrow FM           ;      25000; HAM2m
    145550000; FUJ_FM_RPT               ; Narrow FM           ;      10000; HAM2m
+   145575000; C                        ; Narrow FM           ;      25000; HAM2m
    145600000; C                        ; Narrow FM           ;      20600; HAM2m
+   145625000; C                        ; Narrow FM           ;      25000; HAM2m
+   145650000; C                        ; Narrow FM           ;      25000; HAM2m
    145675000; RAK_FM_RPT               ; WFM (stereo)        ;      10000; HAM2m
    145687500; SHJ_EARS_DMR             ; LSB                 ;       2700; HAM2m
+   145700000; C                        ; Narrow FM           ;      25000; HAM2m
    145725000; AHD_FM_RPT               ; Narrow FM           ;      10000; HAM2m
+   145725000; C                        ; Narrow FM           ;      25000; HAM2m
    145750000; SHJ_FM_RPT               ; WFM (stereo)        ;      10000; HAM2m
+   145775000; C                        ; Narrow FM           ;      25000; HAM2m
    145787500; SHJ_EARS_D*YSF           ; LSB                 ;       2700; HAM2m
    145800000; ISS SSTV                 ; Demod Off           ;       5000; SAT
+   145825000; C                        ; Narrow FM           ;      25000; HAM2m
+   145850000; C                        ; Narrow FM           ;      25000; HAM2m
+   145875000; C                        ; Narrow FM           ;      25000; HAM2m
+   145900000; C                        ; Narrow FM           ;      25000; HAM2m
    146000000; C                        ; Narrow FM           ;      25000; HAM2m
    146025000; C                        ; Narrow FM           ;      25000; HAM2m
    146050000; C                        ; Narrow FM           ;      25000; HAM2m
@@ -1156,9 +1174,18 @@ DVB                 ; #f57900
    146350000; C                        ; Narrow FM           ;      25000; HAM2m
    146375000; C                        ; Narrow FM           ;      25000; HAM2m
    146400000; C                        ; Narrow FM           ;      25000; HAM2m
+   146425000; C                        ; Narrow FM           ;      25000; HAM2m
+   146450000; C                        ; Narrow FM           ;      25000; HAM2m
+   146475000; C                        ; Narrow FM           ;      25000; HAM2m
    146500000; C                        ; Narrow FM           ;      25000; HAM2m
+   146525000; C                        ; Narrow FM           ;      25000; HAM2m
    146550000; C                        ; Narrow FM           ;      25000; HAM2m
+   146575000; C                        ; Narrow FM           ;      25000; HAM2m
    146600000; C                        ; Narrow FM           ;      25000; HAM2m
+   146625000; C                        ; Narrow FM           ;      25000; HAM2m
+   146650000; C                        ; Narrow FM           ;      25000; HAM2m
+   146675000; C                        ; Narrow FM           ;      25000; HAM2m
+   146700000; C                        ; Narrow FM           ;      25000; HAM2m
    146800000; C                        ; Narrow FM           ;      12500; HAM2m
    147400000; C                        ; Narrow FM           ;      12500; HAM2m
    147425000; C                        ; Narrow FM           ;      12500; HAM2m
