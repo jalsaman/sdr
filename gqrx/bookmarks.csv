@@ -1,27 +1,27 @@
 # Tag name          ;  color
-Marine              ; #c07010
-IRNSS               ; #a08c14
-VHF                 ; #204a87
-Galileo             ; #c0c0c0
-HAM2m               ; #f57900
-ISM                 ; #edd400
-FM                  ; #00ff00
-HAM70cm             ; #c0c0c0
-Airband             ; #ce5c00
-DVB                 ; #f57900
-AM                  ; #a0a0a0
-SAT                 ; #73d216
-ADSB                ; #75507b
-HAM80m              ; #c0c0c0
-RC                  ; #729fcf
-HAM20m              ; #c0c0c0
-GLONASS             ; #c17d11
-Tetra               ; #14a08c
-GPS                 ; #ce5c00
-Untagged            ; #888a85
-HAM15m              ; #c0c0c0
 HAM10m              ; #c0c0c0
+GLONASS             ; #c17d11
+ISM                 ; #edd400
+ADSB                ; #75507b
+Untagged            ; #888a85
+HAM2m               ; #f57900
+SAT                 ; #73d216
+Tetra               ; #14a08c
+HAM20m              ; #c0c0c0
+HAM70cm             ; #c0c0c0
+RC                  ; #729fcf
+VHF                 ; #204a87
+FM                  ; #00ff00
+Galileo             ; #c0c0c0
 HAM40m              ; #c0c0c0
+AM                  ; #a0a0a0
+IRNSS               ; #a08c14
+DVB                 ; #f57900
+Airband             ; #ce5c00
+GPS                 ; #ce5c00
+HAM80m              ; #c0c0c0
+HAM15m              ; #c0c0c0
+Marine              ; #c07010
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
       558000; AM                       ; AM                  ;      10000; AM
@@ -52,7 +52,9 @@ HAM40m              ; #c0c0c0
      6780000; ISM 6.78 MHz             ; Demod Off           ;      30000; ISM
      7000000; HAM 40m                  ; Narrow FM           ;      10000; HAM40m
     13560000; ISM 13.56MHz - RFID      ; Demod Off           ;      14000; ISM
-    14000000; HAM 20m                  ; Narrow FM           ;      10000; HAM20m
+    14000000; C                        ; Narrow FM           ;      10000; HAM20m
+    14074000; C                        ; Narrow FM           ;      10000; HAM20m
+    18100000; C                        ; Narrow FM           ;      10000; HAM20m
     21000000; HAM 15m                  ; Narrow FM           ;      10000; HAM15m
     27120000; ISM 27 MHz - RC          ; Demod Off           ;     326000; ISM
     28000000; HAM 10m                  ; Narrow FM           ;      10000; HAM10m
