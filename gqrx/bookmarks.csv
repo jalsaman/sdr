@@ -1,27 +1,27 @@
 # Tag name          ;  color
-HAM10m              ; #c0c0c0
-GLONASS             ; #c17d11
-ISM                 ; #edd400
-ADSB                ; #75507b
-Untagged            ; #888a85
-HAM2m               ; #f57900
-SAT                 ; #73d216
-Tetra               ; #14a08c
+Galileo             ; #c0c0c0
 HAM20m              ; #c0c0c0
 HAM70cm             ; #c0c0c0
 RC                  ; #729fcf
-VHF                 ; #204a87
-FM                  ; #00ff00
-Galileo             ; #c0c0c0
+ISM                 ; #edd400
 HAM40m              ; #c0c0c0
-AM                  ; #a0a0a0
-IRNSS               ; #a08c14
-DVB                 ; #f57900
-Airband             ; #ce5c00
-GPS                 ; #ce5c00
+ADSB                ; #75507b
+Untagged            ; #888a85
+FM                  ; #00ff00
 HAM80m              ; #c0c0c0
-HAM15m              ; #c0c0c0
+SAT                 ; #73d216
+HAM10m              ; #c0c0c0
+HAM60m              ; #c0c0c0
 Marine              ; #c07010
+AM                  ; #a0a0a0
+GLONASS             ; #c17d11
+DVB                 ; #f57900
+GPS                 ; #ce5c00
+Airband             ; #ce5c00
+HAM2m               ; #f57900
+IRNSS               ; #a08c14
+HAM15m              ; #c0c0c0
+Tetra               ; #14a08c
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
       558000; AM                       ; AM                  ;      10000; AM
@@ -48,7 +48,12 @@ Marine              ; #c07010
      1242000; AM                       ; AM                  ;      10000; AM
      1440000; AM                       ; AM                  ;      10000; AM
      1476000; RAK Radio Asia           ; AM                  ;      10000; AM
-     3750000; HAM 80m                  ; Narrow FM           ;      10000; HAM80m
+     3750000; C                        ; Narrow FM           ;      10000; HAM80m
+     5332000; C                        ; Narrow FM           ;      10000; HAM60m
+     5348000; C                        ; Narrow FM           ;      10000; HAM60m
+     5358000; C                        ; Narrow FM           ;      10000; HAM60m
+     5373000; C                        ; Narrow FM           ;      10000; HAM60m
+     5405000; C                        ; Narrow FM           ;      10000; HAM60m
      6780000; ISM 6.78 MHz             ; Demod Off           ;      30000; ISM
      7000000; HAM 40m                  ; Narrow FM           ;      10000; HAM40m
     13560000; ISM 13.56MHz - RFID      ; Demod Off           ;      14000; ISM
@@ -2204,7 +2209,6 @@ Marine              ; #c07010
    429975000; 400                      ; Demod Off           ;      24000; Tetra
    430000000; TETRA                    ; Demod Off           ;      24000; Tetra
    430000000; HAM 70cm                 ; Narrow FM           ;      10000; HAM70cm
-   430065000; 430.065 MHz              ; Narrow FM           ;      10000; VHF
    432009000; ISM 432.009 MHz          ; Demod Off           ;      50000; ISM
    432017000; ISM 432.017 MHz          ; Demod Off           ;      50000; ISM
    433165000; ISM 433.165 MHz          ; Demod Off           ;      50000; ISM
@@ -2216,8 +2220,6 @@ Marine              ; #c07010
    434226000; ISM 434.226 MHz          ; Demod Off           ;      50000; ISM
    434538000; ISM 434.538 MHz          ; Demod Off           ;      50000; ISM
    434910000; ISM 434.910 MHz          ; Demod Off           ;      50000; ISM
-   435134000; VHF 435.134 MHz          ; Narrow FM           ;      50000; VHF
-   435636500; Signal                   ; Narrow FM           ;       2000; VHF
    436703000; Norbi                    ; Demod Off           ;       2000; SAT
    470000000; S                        ; Demod Off           ;          0; DVB
    477896000; S                        ; Demod Off           ;          0; DVB
