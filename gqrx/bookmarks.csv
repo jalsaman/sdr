@@ -1,27 +1,28 @@
 # Tag name          ;  color
-Galileo             ; #c0c0c0
-HAM20m              ; #c0c0c0
-HAM70cm             ; #c0c0c0
 RC                  ; #729fcf
-ISM                 ; #edd400
-HAM40m              ; #c0c0c0
-ADSB                ; #75507b
-Untagged            ; #888a85
-FM                  ; #00ff00
-HAM80m              ; #c0c0c0
-SAT                 ; #73d216
-HAM10m              ; #c0c0c0
+HAM70cm             ; #c0c0c0
 HAM60m              ; #c0c0c0
-Marine              ; #c07010
-AM                  ; #a0a0a0
-GLONASS             ; #c17d11
-DVB                 ; #f57900
-GPS                 ; #ce5c00
-Airband             ; #ce5c00
-HAM2m               ; #f57900
 IRNSS               ; #a08c14
+ADSB                ; #75507b
+GPS                 ; #ce5c00
+HAM20m              ; #c0c0c0
+Airband             ; #ce5c00
+Untagged            ; #888a85
+GLONASS             ; #c17d11
+HAM40m              ; #c0c0c0
+AM                  ; #a0a0a0
+Marine              ; #c07010
 HAM15m              ; #c0c0c0
+HAM80m              ; #c0c0c0
+NOAA                ; #c0c0c0
+SAT                 ; #73d216
+DVB                 ; #f57900
+ISM                 ; #edd400
 Tetra               ; #14a08c
+Galileo             ; #c0c0c0
+FM                  ; #00ff00
+HAM2m               ; #f57900
+HAM10m              ; #c0c0c0
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
       558000; AM                       ; AM                  ;      10000; AM
@@ -1206,6 +1207,11 @@ Tetra               ; #14a08c
    147625000; C                        ; Narrow FM           ;      25000; HAM2m
    147650000; C                        ; Narrow FM           ;      25000; HAM2m
    148000000; C                        ; Narrow FM           ;      10000; HAM2m
+   155500000; L1                       ; Narrow FM           ;      25000; Marine
+   155525000; L2                       ; Narrow FM           ;      25000; Marine
+   155625000; F1                       ; Narrow FM           ;      25000; Marine
+   155725000; F2                       ; Narrow FM           ;      25000; Marine
+   155825000; F3                       ; Narrow FM           ;      25000; Marine
    156025000; 60T                      ; Narrow FM           ;      25000; Marine
    156037500; 260T                     ; Narrow FM           ;      12500; Marine
    156050000; 1T                       ; Narrow FM           ;      25000; Marine
@@ -1361,6 +1367,7 @@ Tetra               ; #14a08c
    161625000; 80R                      ; Narrow FM           ;      25000; Marine
    161637500; 280R                     ; Narrow FM           ;      12500; Marine
    161650000; 21R                      ; Narrow FM           ;      25000; Marine
+   161650000; WX8                      ; Narrow FM           ;      25000; NOAA
    161662500; 221R                     ; Narrow FM           ;      12500; Marine
    161675000; 81R                      ; Narrow FM           ;      25000; Marine
    161687500; 281R                     ; Narrow FM           ;      12500; Marine
@@ -1371,6 +1378,7 @@ Tetra               ; #14a08c
    161750000; 23R                      ; Narrow FM           ;      25000; Marine
    161762500; 223R                     ; Narrow FM           ;      12500; Marine
    161775000; 83R                      ; Narrow FM           ;      25000; Marine
+   161775000; WX9                      ; Narrow FM           ;      25000; NOAA
    161787500; 283R                     ; Narrow FM           ;      12500; Marine
    161800000; 24R                      ; Narrow FM           ;      25000; Marine
    161812500; 224R                     ; Narrow FM           ;      12500; Marine
@@ -1393,13 +1401,14 @@ Tetra               ; #14a08c
    162000000; 88R                      ; Narrow FM           ;      25000; Marine
    162012500; 228R                     ; Narrow FM           ;      12500; Marine
    162025000; AIS2                     ; Narrow FM           ;      25000; Marine
-   162400000; WX2                      ; Narrow FM           ;      25000; Marine
-   162425000; WX4                      ; Narrow FM           ;      25000; Marine
-   162450000; WX5                      ; Narrow FM           ;      25000; Marine
-   162475000; WX3                      ; Narrow FM           ;      25000; Marine
-   162500000; WX6                      ; Narrow FM           ;      25000; Marine
-   162525000; WX7                      ; Narrow FM           ;      25000; Marine
-   162550000; WX1                      ; Narrow FM           ;      25000; Marine
+   162400000; WX2                      ; Narrow FM           ;      25000; NOAA
+   162425000; WX4                      ; Narrow FM           ;      25000; NOAA
+   162450000; WX5                      ; Narrow FM           ;      25000; NOAA
+   162475000; WX3                      ; Narrow FM           ;      25000; NOAA
+   162500000; WX6                      ; Narrow FM           ;      25000; NOAA
+   162525000; WX7                      ; Narrow FM           ;      25000; NOAA
+   162550000; WX1                      ; Narrow FM           ;      25000; NOAA
+   163275000; WX10                     ; Narrow FM           ;      25000; NOAA
    315000000; ISM 315.000 MHz          ; Demod Off           ;      50000; ISM
    336013000; ISM 336.013 MHz          ; Demod Off           ;      50000; ISM
    336330000; ISM 336.330 MHz          ; Demod Off           ;      50000; ISM
