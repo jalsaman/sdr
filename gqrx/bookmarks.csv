@@ -1,28 +1,28 @@
 # Tag name          ;  color
-RC                  ; #729fcf
-HAM70cm             ; #c0c0c0
-HAM60m              ; #c0c0c0
-IRNSS               ; #a08c14
-ADSB                ; #75507b
-GPS                 ; #ce5c00
-HAM20m              ; #c0c0c0
-Airband             ; #ce5c00
-Untagged            ; #888a85
-GLONASS             ; #c17d11
-HAM40m              ; #c0c0c0
-AM                  ; #a0a0a0
-Marine              ; #c07010
-HAM15m              ; #c0c0c0
-HAM80m              ; #c0c0c0
-NOAA                ; #c0c0c0
-SAT                 ; #73d216
 DVB                 ; #f57900
-ISM                 ; #edd400
+SAT                 ; #73d216
+GPS                 ; #ce5c00
+IRNSS               ; #a08c14
+HAM60m              ; #c0c0c0
+HAM70cm             ; #c0c0c0
 Tetra               ; #14a08c
-Galileo             ; #c0c0c0
-FM                  ; #00ff00
+AM                  ; #a0a0a0
 HAM2m               ; #f57900
+NOAA                ; #c0c0c0
+RC                  ; #729fcf
+FM                  ; #00ff00
+HAM40m              ; #c0c0c0
+GLONASS             ; #c17d11
+ISM                 ; #edd400
+Galileo             ; #c0c0c0
+HAM80m              ; #c0c0c0
+HAM15m              ; #c0c0c0
+Airband             ; #ce5c00
+ADSB                ; #75507b
+HAM20m              ; #c0c0c0
 HAM10m              ; #c0c0c0
+Marine              ; #c07010
+Untagged            ; #888a85
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
       558000; AM                       ; AM                  ;      10000; AM
@@ -69,7 +69,8 @@ HAM10m              ; #c0c0c0
     87600000; 87.6 RAKQuran            ; WFM (stereo)        ;     240000; FM
     87900000; 87.9 AD Classic Music    ; WFM (stereo)        ;     240000; FM
     88200000; 88.2 AD Quran            ; WFM (stereo)        ;     240000; FM
-    88800000; 88.8 DXB Radio Mirchi    ; WFM (stereo)        ;     240000; FM
+    88500000; 88.5 Business            ; WFM (stereo)        ;     240000; FM
+    88800000; 88.8 DXB Kadak FM        ; WFM (stereo)        ;     240000; FM
     89100000; 89.1 AJM Radio 4         ; WFM (stereo)        ;     240000; FM
     89400000; 89.4 RAK Tamil FM        ; WFM (stereo)        ;     240000; FM
     89600000; 89.6 Music               ; WFM (stereo)        ;     240000; FM
@@ -84,15 +85,18 @@ HAM10m              ; #c0c0c0
     92600000; 92.6 FUJ FM              ; WFM (stereo)        ;     240000; FM
     93000000; 93.0 DXB Radio93         ; WFM (stereo)        ;     240000; FM
     93400000; 93.4 SHOMA934            ; WFM (stereo)        ;     240000; FM
+    93700000; 93.7 -                   ; WFM (stereo)        ;     240000; FM
     93900000; 93.9 DXB NOOR            ; WFM (stereo)        ;     240000; FM
     94400000; 94.4 SHJ Sharjah         ; WFM (stereo)        ;     240000; FM
     94700000; 94.7 Radio Asia          ; WFM (stereo)        ;     240000; FM
     95000000; 95.0 SHJ Pulse95         ; WFM (stereo)        ;     240000; FM
+    95300000; 95.3                     ; WFM (stereo)        ;     240000; FM
     95600000; 95.6 UAQ Radio Hala      ; WFM (stereo)        ;     240000; FM
-    96000000; 96.0 -                   ; WFM (stereo)        ;     240000; FM
+    96100000; 96.1                     ; WFM (stereo)        ;     240000; FM
+    96500000; 96.5                     ; WFM (stereo)        ;     240000; FM
     96700000; 96.7 DXB Hit967          ; WFM (stereo)        ;     240000; FM
     97100000; 97.1 AD Emarat FM        ; WFM (stereo)        ;     240000; FM
-    97400000; 97.4 -                   ; WFM (stereo)        ;     240000; FM
+    97300000; 97.3                     ; WFM (stereo)        ;     240000; FM
     97600000; 97.6 AD Zayed Quran      ; WFM (stereo)        ;     240000; FM
     97800000; 97.8 Dance FM            ; WFM (stereo)        ;     240000; FM
     98200000; 98.2 -                   ; WFM (stereo)        ;     240000; FM
@@ -101,10 +105,9 @@ HAM10m              ; #c0c0c0
     99300000; 99.3 -                   ; WFM (stereo)        ;     240000; FM
     99600000; 99.6 DXB Club FM         ; WFM (stereo)        ;     240000; FM
     99900000; 99.9 Star FM             ; WFM (stereo)        ;     240000; FM
-   100300000; 100.3 UAQ JIO FM         ; WFM (stereo)        ;     240000; FM
+   100300000; 100.3 UAQ TALK1003       ; WFM (stereo)        ;     240000; FM
    100600000; 100.6                    ; WFM (stereo)        ;     240000; FM
    100900000; 100.9 Khalejya           ; WFM (stereo)        ;     240000; FM
-   101000000; 101.0                    ; WFM (stereo)        ;     240000; FM
    101300000; 101.3 AJM Gold FM        ; WFM (stereo)        ;     240000; FM
    101600000; 101.6 City1016           ; WFM (stereo)        ;     240000; FM
    101900000; 101.9 -                  ; WFM (stereo)        ;     240000; FM
@@ -1087,13 +1090,13 @@ HAM10m              ; #c0c0c0
    136950000; 759                      ; AM                  ;       8330; Airband
    136975000; 760                      ; AM                  ;       8330; Airband
    137050000; C                        ; USB                 ;       8000; SAT
-   137100000; NOAA 19                  ; Narrow FM           ;      20600; SAT
+   137100000; NOAA 19                  ; Narrow FM           ;      20600; NOAA
    137500000; C                        ; USB                 ;       8000; SAT
-   137620000; NOAA 15                  ; Narrow FM           ;      20600; SAT
+   137620000; NOAA 15                  ; Narrow FM           ;      20600; NOAA
    137660000; C                        ; USB                 ;       3900; SAT
    137700000; C                        ; USB                 ;       3500; SAT
    137800000; C                        ; USB                 ;       8000; SAT
-   137912500; NOAA 18                  ; WFM (stereo)        ;      34000; SAT
+   137912500; NOAA 18                  ; WFM (stereo)        ;      34000; NOAA
    144000000; C                        ; Narrow FM           ;      25000; HAM2m
    144025000; C                        ; Narrow FM           ;      25000; HAM2m
    144050000; C                        ; Narrow FM           ;      25000; HAM2m
