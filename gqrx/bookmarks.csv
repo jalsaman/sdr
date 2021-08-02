@@ -1,28 +1,28 @@
 # Tag name          ;  color
-DVB                 ; #f57900
+HAM80m              ; #c0c0c0
+HAM10m              ; #c0c0c0
 SAT                 ; #73d216
-GPS                 ; #ce5c00
-IRNSS               ; #a08c14
-HAM60m              ; #c0c0c0
-HAM70cm             ; #c0c0c0
-Tetra               ; #14a08c
-AM                  ; #a0a0a0
-HAM2m               ; #f57900
-NOAA                ; #c0c0c0
-RC                  ; #729fcf
-FM                  ; #00ff00
 HAM40m              ; #c0c0c0
+ADSB                ; #75507b
 GLONASS             ; #c17d11
+DVB                 ; #f57900
+GPS                 ; #ce5c00
+NOAA                ; #c0c0c0
+AM                  ; #a0a0a0
+FM                  ; #00ff00
+Marine              ; #c07010
+HAM60m              ; #c0c0c0
+IRNSS               ; #a08c14
+HAM15m              ; #c0c0c0
+HAM20m              ; #c0c0c0
+Tetra               ; #14a08c
+Airband             ; #ce5c00
 ISM                 ; #edd400
 Galileo             ; #c0c0c0
-HAM80m              ; #c0c0c0
-HAM15m              ; #c0c0c0
-Airband             ; #ce5c00
-ADSB                ; #75507b
-HAM20m              ; #c0c0c0
-HAM10m              ; #c0c0c0
-Marine              ; #c07010
 Untagged            ; #888a85
+RC                  ; #729fcf
+HAM2m               ; #f57900
+HAM70cm             ; #c0c0c0
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
       558000; AM                       ; AM                  ;      10000; AM
@@ -2220,7 +2220,8 @@ Untagged            ; #888a85
    429950000; 399                      ; Demod Off           ;      24000; Tetra
    429975000; 400                      ; Demod Off           ;      24000; Tetra
    430000000; TETRA                    ; Demod Off           ;      24000; Tetra
-   430000000; HAM 70cm                 ; Narrow FM           ;      10000; HAM70cm
+   430000000; C                        ; Narrow FM           ;      10000; HAM70cm
+   431550000; C                        ; Narrow FM           ;      10000; HAM70cm
    432009000; ISM 432.009 MHz          ; Demod Off           ;      50000; ISM
    432017000; ISM 432.017 MHz          ; Demod Off           ;      50000; ISM
    433165000; ISM 433.165 MHz          ; Demod Off           ;      50000; ISM
@@ -2231,6 +2232,7 @@ Untagged            ; #888a85
    434000000; ISM 434.000 MHz          ; Demod Off           ;      50000; ISM
    434226000; ISM 434.226 MHz          ; Demod Off           ;      50000; ISM
    434538000; ISM 434.538 MHz          ; Demod Off           ;      50000; ISM
+   434825000; C                        ; Narrow FM           ;      10000; HAM70cm
    434910000; ISM 434.910 MHz          ; Demod Off           ;      50000; ISM
    436703000; Norbi                    ; Demod Off           ;       2000; SAT
    470000000; S                        ; Demod Off           ;          0; DVB
