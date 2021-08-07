@@ -1,28 +1,29 @@
 # Tag name          ;  color
-FM                  ; #00ff00
-AM                  ; #a0a0a0
-HAM40m              ; #c0c0c0
-Tetra               ; #14a08c
-Galileo             ; #c0c0c0
-IRNSS               ; #a08c14
-SAT                 ; #73d216
+DVB                 ; #f57900
+ADSB                ; #75507b
+HAM20m              ; #c0c0c0
+VHF Const           ; #c0c0c0
 GPS                 ; #ce5c00
-HAM80m              ; #c0c0c0
-Marine              ; #c07010
+HAM40m              ; #c0c0c0
 Untagged            ; #888a85
 ISM                 ; #edd400
-DVB                 ; #f57900
-HAM2m               ; #f57900
-HAM15m              ; #c0c0c0
-HAM10m              ; #c0c0c0
-NOAA                ; #c0c0c0
-Airband             ; #ce5c00
 RC                  ; #729fcf
-HAM20m              ; #c0c0c0
-ADSB                ; #75507b
-HAM60m              ; #c0c0c0
-HAM70cm             ; #c0c0c0
 GLONASS             ; #c17d11
+HAM10m              ; #c0c0c0
+Tetra               ; #14a08c
+HAM15m              ; #c0c0c0
+NOAA                ; #c0c0c0
+HAM2m               ; #f57900
+HAM80m              ; #c0c0c0
+IRNSS               ; #a08c14
+FM                  ; #00ff00
+Galileo             ; #c0c0c0
+SAT                 ; #73d216
+HAM60m              ; #c0c0c0
+AM                  ; #a0a0a0
+Marine              ; #c07010
+HAM70cm             ; #c0c0c0
+Airband             ; #ce5c00
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
       539000; C                        ; AM                  ;      10000; AM
@@ -2244,6 +2245,14 @@ GLONASS             ; #c17d11
    429975000; 400                      ; Demod Off           ;      24000; Tetra
    430000000; TETRA                    ; Demod Off           ;      24000; Tetra
    430000000; C                        ; Narrow FM           ;      10000; HAM70cm
+   430045000; C                        ; Narrow FM           ;      10000; VHF Const
+   430057000; C                        ; Narrow FM           ;      10000; VHF Const
+   430070000; C                        ; Narrow FM           ;      10000; VHF Const
+   430082000; C                        ; Narrow FM           ;      10000; VHF Const
+   430095000; C                        ; Narrow FM           ;      10000; VHF Const
+   430108000; C                        ; Narrow FM           ;      10000; VHF Const
+   430120000; C                        ; Narrow FM           ;      10000; VHF Const
+   430182100; C                        ; Narrow FM           ;      10000; VHF Const
    431550000; C                        ; Narrow FM           ;      10000; HAM70cm
    431727000; C                        ; Narrow FM           ;      10000; HAM70cm
    432009000; ISM 432.009 MHz          ; Demod Off           ;      50000; ISM
