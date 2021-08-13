@@ -41,7 +41,7 @@ blocks:
     min_len: '200'
     orient: Qt.Horizontal
     rangeType: float
-    start: 88e6
+    start: 87e6
     step: 100e3
     stop: 108e6
     value: 94.4e6
@@ -50,7 +50,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [8, 612.0]
+    coordinate: [96, 452.0]
     rotation: 0
     state: enabled
 - name: audio_dec

@@ -115,7 +115,7 @@ class rtl_fm_rx_qt(gr.top_block, Qt.QWidget):
         self.osmosdr_source_0.set_bb_gain(20, 0)
         self.osmosdr_source_0.set_antenna('', 0)
         self.osmosdr_source_0.set_bandwidth(0, 0)
-        self._FM_Frequency_range = Range(88e6, 108e6, 100e3, 94.4e6, 200)
+        self._FM_Frequency_range = Range(87e6, 108e6, 100e3, 94.4e6, 200)
         self._FM_Frequency_win = RangeWidget(self._FM_Frequency_range, self.set_FM_Frequency, 'FM Channel Frequency', "counter_slider", float)
         self.top_layout.addWidget(self._FM_Frequency_win)
 
@@ -142,8 +142,8 @@ class rtl_fm_rx_qt(gr.top_block, Qt.QWidget):
 
     def set_samp_rate(self, samp_rate):
         self.samp_rate = samp_rate
-        self.qtgui_sink_x_0.set_frequency_range(0, self.samp_rate)
         self.osmosdr_source_0.set_sample_rate(self.samp_rate)
+        self.qtgui_sink_x_0.set_frequency_range(0, self.samp_rate)
 
     def get_quadrature(self):
         return self.quadrature
