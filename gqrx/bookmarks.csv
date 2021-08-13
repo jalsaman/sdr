@@ -1,29 +1,30 @@
 # Tag name          ;  color
-NOAA                ; #c0c0c0
-HAM70cm             ; #c0c0c0
-AM                  ; #a0a0a0
-ISM                 ; #edd400
-HAM40m              ; #c0c0c0
-HAM80m              ; #c0c0c0
-HAM2m               ; #f57900
-ADSB                ; #75507b
-GLONASS             ; #c17d11
-HAM15m              ; #c0c0c0
-Galileo             ; #c0c0c0
-Tetra               ; #14a08c
-FM                  ; #00ff00
-RC                  ; #729fcf
-WalkiTalki          ; #3465a4
-HAM20m              ; #c0c0c0
-HAM10m              ; #c0c0c0
-Untagged            ; #888a85
-SAT                 ; #73d216
-GPS                 ; #ce5c00
-Airband             ; #ce5c00
-DVB                 ; #f57900
 Marine              ; #c07010
 HAM60m              ; #c0c0c0
+SAT                 ; #73d216
 IRNSS               ; #a08c14
+HAM40m              ; #c0c0c0
+Airband             ; #ce5c00
+WalkiTalki_UHF      ; #c0c0c0
+HAM15m              ; #c0c0c0
+AM                  ; #a0a0a0
+GLONASS             ; #c17d11
+NOAA                ; #c0c0c0
+Tetra               ; #14a08c
+ISM                 ; #edd400
+HAM70cm             ; #c0c0c0
+ADSB                ; #75507b
+DVB                 ; #f57900
+HAM20m              ; #c0c0c0
+GPS                 ; #ce5c00
+WalkiTalki_VHF      ; #c0c0c0
+RC                  ; #729fcf
+Untagged            ; #888a85
+HAM80m              ; #c0c0c0
+HAM10m              ; #c0c0c0
+HAM2m               ; #f57900
+Galileo             ; #c0c0c0
+FM                  ; #00ff00
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
       539000; C                        ; AM                  ;      10000; AM
@@ -1234,6 +1235,8 @@ IRNSS               ; #a08c14
    147625000; C                        ; Narrow FM           ;      25000; HAM2m
    147650000; C                        ; Narrow FM           ;      25000; HAM2m
    148000000; C                        ; Narrow FM           ;      10000; HAM2m
+   148082000; C                        ; Narrow FM           ;      10000; WalkiTalki_VHF
+   148100000; C                        ; Narrow FM           ;      10000; WalkiTalki_VHF
    155500000; L1                       ; Narrow FM           ;      25000; Marine
    155525000; L2                       ; Narrow FM           ;      25000; Marine
    155625000; F1                       ; Narrow FM           ;      25000; Marine
@@ -2245,23 +2248,23 @@ IRNSS               ; #a08c14
    429975000; 400                      ; Demod Off           ;      24000; Tetra
    430000000; TETRA                    ; Demod Off           ;      24000; Tetra
    430000000; C                        ; Narrow FM           ;      10000; HAM70cm
-   430045000; C                        ; Narrow FM           ;      10000; WalkiTalki
-   430057000; C                        ; Narrow FM           ;      10000; WalkiTalki
-   430070000; C                        ; Narrow FM           ;      10000; WalkiTalki
-   430082000; C                        ; Narrow FM           ;      10000; WalkiTalki
-   430095000; C                        ; Narrow FM           ;      10000; WalkiTalki
-   430108000; C                        ; Narrow FM           ;      10000; WalkiTalki
-   430120000; C                        ; Narrow FM           ;      10000; WalkiTalki
-   430182100; C                        ; Narrow FM           ;      10000; WalkiTalki
-   430294000; C                        ; Narrow FM           ;      10000; WalkiTalki
-   430326000; C                        ; Narrow FM           ;      10000; WalkiTalki
-   430338000; C                        ; Narrow FM           ;      10000; WalkiTalki
-   430345000; C                        ; Narrow FM           ;      10000; WalkiTalki
-   430445000; C                        ; Narrow FM           ;      10000; WalkiTalki
-   430495000; C                        ; Narrow FM           ;      10000; WalkiTalki
-   430570000; C                        ; Narrow FM           ;      10000; WalkiTalki
-   430657000; C                        ; Narrow FM           ;      10000; WalkiTalki
-   430707000; C                        ; Narrow FM           ;      10000; WalkiTalki
+   430045000; C                        ; Narrow FM           ;      10000; WalkiTalki_UHF
+   430057000; C                        ; Narrow FM           ;      10000; WalkiTalki_UHF
+   430070000; C                        ; Narrow FM           ;      10000; WalkiTalki_UHF
+   430082000; C                        ; Narrow FM           ;      10000; WalkiTalki_UHF
+   430095000; C                        ; Narrow FM           ;      10000; WalkiTalki_UHF
+   430108000; C                        ; Narrow FM           ;      10000; WalkiTalki_UHF
+   430120000; C                        ; Narrow FM           ;      10000; WalkiTalki_UHF
+   430182100; C                        ; Narrow FM           ;      10000; WalkiTalki_UHF
+   430294000; C                        ; Narrow FM           ;      10000; WalkiTalki_UHF
+   430326000; C                        ; Narrow FM           ;      10000; WalkiTalki_UHF
+   430338000; C                        ; Narrow FM           ;      10000; WalkiTalki_UHF
+   430345000; C                        ; Narrow FM           ;      10000; WalkiTalki_UHF
+   430445000; C                        ; Narrow FM           ;      10000; WalkiTalki_UHF
+   430495000; C                        ; Narrow FM           ;      10000; WalkiTalki_UHF
+   430570000; C                        ; Narrow FM           ;      10000; WalkiTalki_UHF
+   430657000; C                        ; Narrow FM           ;      10000; WalkiTalki_UHF
+   430707000; C                        ; Narrow FM           ;      10000; WalkiTalki_UHF
    431550000; C                        ; Narrow FM           ;      10000; HAM70cm
    431727000; C                        ; Narrow FM           ;      10000; HAM70cm
    432009000; ISM 432.009 MHz          ; Demod Off           ;      50000; ISM
