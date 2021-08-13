@@ -7,7 +7,7 @@
 # GNU Radio Python Flow Graph
 # Title: FM Receiver
 # Author: Muthanna A. Alwahash
-# GNU Radio version: 3.9.2.0
+# GNU Radio version: 3.8.3.1
 
 from distutils.version import StrictVersion
 
@@ -26,25 +26,21 @@ from gnuradio import qtgui
 from gnuradio.filter import firdes
 import sip
 from gnuradio import gr
-from gnuradio.fft import window
 import sys
 import signal
 from argparse import ArgumentParser
 from gnuradio.eng_arg import eng_float, intx
 from gnuradio import eng_notation
 from gnuradio.qtgui import Range, RangeWidget
-from PyQt5 import QtCore
 import osmosdr
 import time
-
-
 
 from gnuradio import qtgui
 
 class rtl_fm_rx_qt(gr.top_block, Qt.QWidget):
 
     def __init__(self):
-        gr.top_block.__init__(self, "FM Receiver", catch_exceptions=True)
+        gr.top_block.__init__(self, "FM Receiver")
         Qt.QWidget.__init__(self)
         self.setWindowTitle("FM Receiver")
         qtgui.util.check_set_qss()
@@ -87,32 +83,16 @@ class rtl_fm_rx_qt(gr.top_block, Qt.QWidget):
         ##################################################
         # Blocks
         ##################################################
-        self._FM_Frequency_range = Range(88e6, 108e6, 100e3, 94.4e6, 200)
-        self._FM_Frequency_win = RangeWidget(self._FM_Frequency_range, self.set_FM_Frequency, 'FM Channel Frequency', "counter_slider", float, QtCore.Qt.Horizontal)
-        self.top_layout.addWidget(self._FM_Frequency_win)
-        self.rtlsdr_source_0 = osmosdr.source(
-            args="numchan=" + str(1) + " " + ''
-        )
-        self.rtlsdr_source_0.set_time_unknown_pps(osmosdr.time_spec_t())
-        self.rtlsdr_source_0.set_sample_rate(2e6)
-        self.rtlsdr_source_0.set_center_freq(FM_Frequency, 0)
-        self.rtlsdr_source_0.set_freq_corr(0, 0)
-        self.rtlsdr_source_0.set_gain(10, 0)
-        self.rtlsdr_source_0.set_if_gain(20, 0)
-        self.rtlsdr_source_0.set_bb_gain(20, 0)
-        self.rtlsdr_source_0.set_antenna('', 0)
-        self.rtlsdr_source_0.set_bandwidth(0, 0)
         self.qtgui_sink_x_0 = qtgui.sink_c(
             1024, #fftsize
-            window.WIN_BLACKMAN_hARRIS, #wintype
+            firdes.WIN_HAMMING, #wintype
             0, #fc
             samp_rate, #bw
             "", #name
             True, #plotfreq
             True, #plotwaterfall
             True, #plottime
-            True, #plotconst
-            None # parent
+            True #plotconst
         )
         self.qtgui_sink_x_0.set_update_time(1.0/10)
         self._qtgui_sink_x_0_win = sip.wrapinstance(self.qtgui_sink_x_0.pyqwidget(), Qt.QWidget)
@@ -120,21 +100,35 @@ class rtl_fm_rx_qt(gr.top_block, Qt.QWidget):
         self.qtgui_sink_x_0.enable_rf_freq(False)
 
         self.top_layout.addWidget(self._qtgui_sink_x_0_win)
-
+        self.osmosdr_source_0 = osmosdr.source(
+            args="numchan=" + str(1) + " " + ""
+        )
+        self.osmosdr_source_0.set_time_unknown_pps(osmosdr.time_spec_t())
+        self.osmosdr_source_0.set_sample_rate(samp_rate)
+        self.osmosdr_source_0.set_center_freq(100e6, 0)
+        self.osmosdr_source_0.set_freq_corr(0, 0)
+        self.osmosdr_source_0.set_dc_offset_mode(0, 0)
+        self.osmosdr_source_0.set_iq_balance_mode(0, 0)
+        self.osmosdr_source_0.set_gain_mode(False, 0)
+        self.osmosdr_source_0.set_gain(10, 0)
+        self.osmosdr_source_0.set_if_gain(20, 0)
+        self.osmosdr_source_0.set_bb_gain(20, 0)
+        self.osmosdr_source_0.set_antenna('', 0)
+        self.osmosdr_source_0.set_bandwidth(0, 0)
+        self._FM_Frequency_range = Range(88e6, 108e6, 100e3, 94.4e6, 200)
+        self._FM_Frequency_win = RangeWidget(self._FM_Frequency_range, self.set_FM_Frequency, 'FM Channel Frequency', "counter_slider", float)
+        self.top_layout.addWidget(self._FM_Frequency_win)
 
 
         ##################################################
         # Connections
         ##################################################
-        self.connect((self.rtlsdr_source_0, 0), (self.qtgui_sink_x_0, 0))
+        self.connect((self.osmosdr_source_0, 0), (self.qtgui_sink_x_0, 0))
 
 
     def closeEvent(self, event):
         self.settings = Qt.QSettings("GNU Radio", "rtl_fm_rx_qt")
         self.settings.setValue("geometry", self.saveGeometry())
-        self.stop()
-        self.wait()
-
         event.accept()
 
     def get_transition(self):
@@ -149,6 +143,7 @@ class rtl_fm_rx_qt(gr.top_block, Qt.QWidget):
     def set_samp_rate(self, samp_rate):
         self.samp_rate = samp_rate
         self.qtgui_sink_x_0.set_frequency_range(0, self.samp_rate)
+        self.osmosdr_source_0.set_sample_rate(self.samp_rate)
 
     def get_quadrature(self):
         return self.quadrature
@@ -173,7 +168,7 @@ class rtl_fm_rx_qt(gr.top_block, Qt.QWidget):
 
     def set_FM_Frequency(self, FM_Frequency):
         self.FM_Frequency = FM_Frequency
-        self.rtlsdr_source_0.set_center_freq(self.FM_Frequency, 0)
+
 
 
 
@@ -192,9 +187,6 @@ def main(top_block_cls=rtl_fm_rx_qt, options=None):
     tb.show()
 
     def sig_handler(sig=None, frame=None):
-        tb.stop()
-        tb.wait()
-
         Qt.QApplication.quit()
 
     signal.signal(signal.SIGINT, sig_handler)
@@ -204,6 +196,11 @@ def main(top_block_cls=rtl_fm_rx_qt, options=None):
     timer.start(500)
     timer.timeout.connect(lambda: None)
 
+    def quitting():
+        tb.stop()
+        tb.wait()
+
+    qapp.aboutToQuit.connect(quitting)
     qapp.exec_()
 
 if __name__ == '__main__':

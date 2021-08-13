@@ -1,7 +1,6 @@
 options:
   parameters:
     author: Muthanna A. Alwahash
-    catch_exceptions: 'True'
     category: Custom
     cmake_opt: ''
     comment: ''
@@ -23,6 +22,7 @@ options:
     sizing_mode: fixed
     thread_safe_setters: ''
     title: FM Receiver
+    window_size: (1000,1000)
   states:
     bus_sink: false
     bus_source: false
@@ -39,7 +39,7 @@ blocks:
     gui_hint: ''
     label: FM Channel Frequency
     min_len: '200'
-    orient: QtCore.Qt.Horizontal
+    orient: Qt.Horizontal
     rangeType: float
     start: 88e6
     step: 100e3
@@ -50,7 +50,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [8, 436]
+    coordinate: [8, 612.0]
     rotation: 0
     state: enabled
 - name: audio_dec
@@ -62,7 +62,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [592, 316]
+    coordinate: [400, 12.0]
     rotation: 0
     state: enabled
 - name: cutoff
@@ -74,7 +74,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [416, 348]
+    coordinate: [304, 12.0]
     rotation: 0
     state: enabled
 - name: quadrature
@@ -86,7 +86,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [240, 332]
+    coordinate: [200, 12.0]
     rotation: 0
     state: enabled
 - name: samp_rate
@@ -98,7 +98,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [8, 372]
+    coordinate: [592, 12.0]
     rotation: 0
     state: enabled
 - name: transition
@@ -110,40 +110,11 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [416, 412]
+    coordinate: [496, 12.0]
     rotation: 0
     state: enabled
-- name: qtgui_sink_x_0
-  id: qtgui_sink_x
-  parameters:
-    affinity: ''
-    alias: ''
-    bw: samp_rate
-    comment: ''
-    fc: '0'
-    fftsize: '1024'
-    gui_hint: ''
-    maxoutbuf: '0'
-    minoutbuf: '0'
-    name: '""'
-    plotconst: 'True'
-    plotfreq: 'True'
-    plottime: 'True'
-    plotwaterfall: 'True'
-    rate: '10'
-    showports: 'True'
-    showrf: 'False'
-    type: complex
-    wintype: window.WIN_BLACKMAN_hARRIS
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [1216, 252.0]
-    rotation: 0
-    state: enabled
-- name: rtlsdr_source_0
-  id: rtlsdr_source
+- name: osmosdr_source_0
+  id: osmosdr_source
   parameters:
     affinity: ''
     alias: ''
@@ -179,7 +150,7 @@ blocks:
     ant7: ''
     ant8: ''
     ant9: ''
-    args: ''
+    args: '""'
     bb_gain0: '20'
     bb_gain1: '20'
     bb_gain10: '20'
@@ -317,7 +288,7 @@ blocks:
     dc_offset_mode7: '0'
     dc_offset_mode8: '0'
     dc_offset_mode9: '0'
-    freq0: FM_Frequency
+    freq0: 100e6
     freq1: 100e6
     freq10: 100e6
     freq11: 100e6
@@ -481,7 +452,7 @@ blocks:
     minoutbuf: '0'
     nchan: '1'
     num_mboards: '1'
-    sample_rate: 2e6
+    sample_rate: samp_rate
     sync: sync
     time_source0: ''
     time_source1: ''
@@ -496,12 +467,41 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [8, 188]
+    coordinate: [72, 204.0]
+    rotation: 0
+    state: true
+- name: qtgui_sink_x_0
+  id: qtgui_sink_x
+  parameters:
+    affinity: ''
+    alias: ''
+    bw: samp_rate
+    comment: ''
+    fc: '0'
+    fftsize: '1024'
+    gui_hint: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    name: '""'
+    plotconst: 'True'
+    plotfreq: 'True'
+    plottime: 'True'
+    plotwaterfall: 'True'
+    rate: '10'
+    showports: 'True'
+    showrf: 'False'
+    type: complex
+    wintype: firdes.WIN_HAMMING
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [488, 268.0]
     rotation: 0
     state: enabled
 
 connections:
-- [rtlsdr_source_0, '0', qtgui_sink_x_0, '0']
+- [osmosdr_source_0, '0', qtgui_sink_x_0, '0']
 
 metadata:
   file_format: 1
