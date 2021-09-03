@@ -1,30 +1,30 @@
 # Tag name          ;  color
-Marine              ; #c07010
-HAM60m              ; #c0c0c0
-SAT                 ; #73d216
-IRNSS               ; #a08c14
-HAM40m              ; #c0c0c0
-Airband             ; #ce5c00
-WalkiTalki_UHF      ; #c0c0c0
-HAM15m              ; #c0c0c0
-AM                  ; #a0a0a0
+WalkiTalki_VHF      ; #c0c0c0
 GLONASS             ; #c17d11
+HAM40m              ; #c0c0c0
+WalkiTalki_UHF      ; #c0c0c0
+Galileo             ; #c0c0c0
 NOAA                ; #c0c0c0
-Tetra               ; #14a08c
-ISM                 ; #edd400
+Airband             ; #ce5c00
 HAM70cm             ; #c0c0c0
-ADSB                ; #75507b
+GPS                 ; #ce5c00
+Tetra               ; #14a08c
+RC                  ; #729fcf
+AM                  ; #a0a0a0
 DVB                 ; #f57900
 HAM20m              ; #c0c0c0
-GPS                 ; #ce5c00
-WalkiTalki_VHF      ; #c0c0c0
-RC                  ; #729fcf
-Untagged            ; #888a85
-HAM80m              ; #c0c0c0
-HAM10m              ; #c0c0c0
-HAM2m               ; #f57900
-Galileo             ; #c0c0c0
+HAM60m              ; #c0c0c0
 FM                  ; #00ff00
+ISM                 ; #edd400
+HAM2m               ; #f57900
+Marine              ; #c07010
+ADSB                ; #75507b
+HAM15m              ; #c0c0c0
+HAM10m              ; #c0c0c0
+SAT                 ; #73d216
+IRNSS               ; #a08c14
+HAM80m              ; #c0c0c0
+Untagged            ; #888a85
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
       539000; C                        ; AM                  ;      10000; AM
@@ -95,11 +95,11 @@ FM                  ; #00ff00
     87600000; 87.6 RAKQuran            ; WFM (stereo)        ;     240000; FM
     87900000; 87.9 AD Classic Music    ; WFM (stereo)        ;     240000; FM
     88200000; 88.2 AD Quran            ; WFM (stereo)        ;     240000; FM
-    88500000; 88.5 Business            ; WFM (stereo)        ;     240000; FM
     88800000; 88.8 DXB Kadak FM        ; WFM (stereo)        ;     240000; FM
     89100000; 89.1 AJM Radio 4         ; WFM (stereo)        ;     240000; FM
     89400000; 89.4 RAK Tamil FM        ; WFM (stereo)        ;     240000; FM
     89600000; 89.6 Music               ; WFM (stereo)        ;     240000; FM
+    90300000; 90.3                     ; WFM (stereo)        ;     240000; FM
     90500000; 90.5 AD SkyNews Arabia   ; WFM (stereo)        ;     240000; FM
     90800000; 90.8 FUJ Rock Radio      ; WFM (stereo)        ;     240000; FM
     91100000; 91.1 DXB Tag 91.1        ; WFM (stereo)        ;     240000; FM
@@ -126,10 +126,11 @@ FM                  ; #00ff00
     97800000; 97.8 Dance FM            ; WFM (stereo)        ;     240000; FM
     98200000; 98.2 -                   ; WFM (stereo)        ;     240000; FM
     98400000; 98.4 AD FM               ; WFM (stereo)        ;     240000; FM
-    99100000; 99.1 DXB Arabiya         ; WFM (stereo)        ;     240000; FM
+    99000000; 99.0                     ; WFM (stereo)        ;     240000; FM
     99300000; 99.3 -                   ; WFM (stereo)        ;     240000; FM
     99600000; 99.6 DXB Club FM         ; WFM (stereo)        ;     240000; FM
     99900000; 99.9 Star FM             ; WFM (stereo)        ;     240000; FM
+   100100000; 100.1                    ; WFM (stereo)        ;     240000; FM
    100300000; 100.3 UAQ TALK1003       ; WFM (stereo)        ;     240000; FM
    100600000; 100.6                    ; WFM (stereo)        ;     240000; FM
    100900000; 100.9 Khalejya           ; WFM (stereo)        ;     240000; FM
