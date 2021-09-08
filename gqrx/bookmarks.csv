@@ -1,37 +1,41 @@
 # Tag name          ;  color
+ISM                 ; #edd400
+RC                  ; #729fcf
+HAM20m              ; #c0c0c0
+CW                  ; #00ff00
+HAM2m               ; #f57900
+HAM70cm             ; #c0c0c0
+MW                  ; #0056e6
+HAM80m              ; #c0c0c0
+ADSB                ; #75507b
+AM                  ; #a0a0a0
+HAM10m              ; #c0c0c0
+Airband             ; #ce5c00
+Galileo             ; #c0c0c0
+HAM15m              ; #c0c0c0
+WalkiTalki_VHF      ; #c0c0c0
 SAT                 ; #73d216
+HAM60m              ; #c0c0c0
+Marine              ; #c07010
+Tetra               ; #14a08c
+GLONASS             ; #c17d11
 DVB                 ; #f57900
 GPS                 ; #ce5c00
 HAM40m              ; #c0c0c0
-AM                  ; #a0a0a0
-HAM15m              ; #c0c0c0
+Untagged            ; #888a85
+IRNSS               ; #a08c14
+FM                  ; #00ff00
 NOAA                ; #c0c0c0
 WalkiTalki_UHF      ; #c0c0c0
-IRNSS               ; #a08c14
-Tetra               ; #14a08c
-Galileo             ; #c0c0c0
-ADSB                ; #75507b
-FM                  ; #00ff00
-HAM70cm             ; #c0c0c0
-HAM60m              ; #c0c0c0
-RC                  ; #729fcf
-Airband             ; #ce5c00
-HAM20m              ; #c0c0c0
-WalkiTalki_VHF      ; #c0c0c0
-ISM                 ; #edd400
-GLONASS             ; #c17d11
-CW                  ; #00ff00
-HAM2m               ; #f57900
-Untagged            ; #888a85
-Marine              ; #c07010
-HAM80m              ; #c0c0c0
-HAM10m              ; #c0c0c0
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
-      540000; Kwait                    ; AM                  ;      10000; AM
-      558000; C                        ; AM                  ;      10000; AM
-      576000; C                        ; AM                  ;      10000; AM
-      585000; C                        ; AM                  ;      10000; AM
+      531000; C                        ; AM                  ;      10000; MW
+      540000; Kwait                    ; AM                  ;      10000; MW
+      549000; C                        ; AM                  ;      10000; MW
+      558000; C                        ; AM                  ;      10000; MW
+      567000; C                        ; AM                  ;      10000; MW
+      576000; C                        ; AM                  ;      10000; MW
+      585000; C                        ; AM                  ;      10000; MW
       594000; C                        ; AM                  ;      10000; AM
       603000; C                        ; AM                  ;      10000; AM
       630000; C                        ; AM                  ;      10000; AM
