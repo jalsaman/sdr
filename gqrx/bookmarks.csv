@@ -1,37 +1,38 @@
 # Tag name          ;  color
-ADSB                ; #75507b
-CW                  ; #00ff00
-IRNSS               ; #a08c14
-Galileo             ; #c0c0c0
-WalkiTalki_VHF      ; #c0c0c0
-FM                  ; #00ff00
-HAM20m              ; #c0c0c0
-RC                  ; #729fcf
-HAM40m              ; #c0c0c0
-Tetra               ; #14a08c
-Airband             ; #ce5c00
+SAT                 ; #73d216
+DVB                 ; #f57900
 GPS                 ; #ce5c00
-ISM                 ; #edd400
-WalkiTalki_UHF      ; #c0c0c0
+HAM40m              ; #c0c0c0
+AM                  ; #a0a0a0
 HAM15m              ; #c0c0c0
 NOAA                ; #c0c0c0
-HAM80m              ; #c0c0c0
-SAT                 ; #73d216
-HAM2m               ; #f57900
-DVB                 ; #f57900
-HAM60m              ; #c0c0c0
-GLONASS             ; #c17d11
-HAM10m              ; #c0c0c0
-Marine              ; #c07010
+WalkiTalki_UHF      ; #c0c0c0
+IRNSS               ; #a08c14
+Tetra               ; #14a08c
+Galileo             ; #c0c0c0
+ADSB                ; #75507b
+FM                  ; #00ff00
 HAM70cm             ; #c0c0c0
-AM                  ; #a0a0a0
+HAM60m              ; #c0c0c0
+RC                  ; #729fcf
+Airband             ; #ce5c00
+HAM20m              ; #c0c0c0
+WalkiTalki_VHF      ; #c0c0c0
+ISM                 ; #edd400
+GLONASS             ; #c17d11
+CW                  ; #00ff00
+HAM2m               ; #f57900
 Untagged            ; #888a85
+Marine              ; #c07010
+HAM80m              ; #c0c0c0
+HAM10m              ; #c0c0c0
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
       540000; Kwait                    ; AM                  ;      10000; AM
       558000; C                        ; AM                  ;      10000; AM
       576000; C                        ; AM                  ;      10000; AM
       585000; C                        ; AM                  ;      10000; AM
+      594000; C                        ; AM                  ;      10000; AM
       603000; C                        ; AM                  ;      10000; AM
       630000; C                        ; AM                  ;      10000; AM
       639000; C                        ; AM                  ;      10000; AM
@@ -205,17 +206,20 @@ Untagged            ; #888a85
     12130000; C                        ; AM                  ;      10000; AM
     13420000; C                        ; AM                  ;      10000; AM
     13560000; ISM 13.56MHz - RFID      ; Demod Off           ;      14000; ISM
+    13610000; C                        ; AM                  ;      10000; AM
     13640000; C                        ; AM                  ;      10000; AM
     13670000; C                        ; AM                  ;      10000; AM
     13750000; C                        ; AM                  ;      10000; AM
     13760000; C                        ; AM                  ;      10000; AM
     13770000; C                        ; AM                  ;      10000; AM
+    13780000; C                        ; AM                  ;      10000; AM
     13790000; C                        ; AM                  ;      10000; AM
     13810000; C                        ; AM                  ;      10000; AM
     13860000; C                        ; AM                  ;      10000; AM
     13870000; C                        ; AM                  ;      10000; AM
     14000000; C                        ; Narrow FM           ;      10000; HAM20m
     14074000; C                        ; Narrow FM           ;      10000; HAM20m
+    14545000; C                        ; AM                  ;      10000; AM
     15030000; C                        ; AM                  ;      10000; AM
     15090000; C                        ; AM                  ;      10000; AM
     15110000; C                        ; AM                  ;      10000; AM
@@ -248,6 +252,7 @@ Untagged            ; #888a85
     17640000; C                        ; AM                  ;      10000; AM
     17650000; C                        ; AM                  ;      10000; AM
     17660000; C                        ; AM                  ;      10000; AM
+    17680000; C                        ; AM                  ;      10000; AM
     17690000; C                        ; AM                  ;      10000; AM
     17720000; C                        ; AM                  ;      10000; AM
     17730000; C                        ; AM                  ;      10000; AM
@@ -256,6 +261,8 @@ Untagged            ; #888a85
     17855000; C                        ; AM                  ;      10000; AM
     17880000; C                        ; AM                  ;      10000; AM
     18100000; C                        ; Narrow FM           ;      10000; HAM20m
+    18900000; C                        ; AM                  ;      10000; AM
+    18970000; C                        ; AM                  ;      10000; AM
     21000000; HAM 15m                  ; Narrow FM           ;      10000; HAM15m
     21505000; C                        ; AM                  ;      10000; AM
     27120000; ISM 27 MHz - RC          ; Demod Off           ;     326000; ISM
@@ -265,10 +272,12 @@ Untagged            ; #888a85
     87600000; 87.6 RAKQuran            ; WFM (stereo)        ;     240000; FM
     87900000; 87.9 AD Classic Music    ; WFM (stereo)        ;     240000; FM
     88200000; 88.2 AD Quran            ; WFM (stereo)        ;     240000; FM
+    88400000; 88.4                     ; WFM (stereo)        ;     240000; FM
     88800000; 88.8 DXB Kadak FM        ; WFM (stereo)        ;     240000; FM
     89100000; 89.1 AJM Radio 4         ; WFM (stereo)        ;     240000; FM
     89400000; 89.4 RAK Tamil FM        ; WFM (stereo)        ;     240000; FM
     89600000; 89.6 Music               ; WFM (stereo)        ;     240000; FM
+    90000000; 90.0                     ; WFM (stereo)        ;     240000; FM
     90300000; 90.3                     ; WFM (stereo)        ;     240000; FM
     90500000; 90.5 AD SkyNews Arabia   ; WFM (stereo)        ;     240000; FM
     90800000; 90.8 FUJ Rock Radio      ; WFM (stereo)        ;     240000; FM
@@ -280,7 +289,7 @@ Untagged            ; #888a85
     92600000; 92.6 FUJ FM              ; WFM (stereo)        ;     240000; FM
     93000000; 93.0 DXB Radio93         ; WFM (stereo)        ;     240000; FM
     93400000; 93.4 SHOMA934            ; WFM (stereo)        ;     240000; FM
-    93700000; 93.7 -                   ; WFM (stereo)        ;     240000; FM
+    93700000; 93.7                     ; WFM (stereo)        ;     240000; FM
     93900000; 93.9 DXB NOOR            ; WFM (stereo)        ;     240000; FM
     94400000; 94.4 SHJ Sharjah         ; WFM (stereo)        ;     240000; FM
     94700000; 94.7 Radio Asia          ; WFM (stereo)        ;     240000; FM
@@ -294,10 +303,10 @@ Untagged            ; #888a85
     97300000; 97.3                     ; WFM (stereo)        ;     240000; FM
     97600000; 97.6 AD Zayed Quran      ; WFM (stereo)        ;     240000; FM
     97800000; 97.8 Dance FM            ; WFM (stereo)        ;     240000; FM
-    98200000; 98.2 -                   ; WFM (stereo)        ;     240000; FM
+    98200000; 98.2                     ; WFM (stereo)        ;     240000; FM
     98400000; 98.4 AD FM               ; WFM (stereo)        ;     240000; FM
     99000000; 99.0                     ; WFM (stereo)        ;     240000; FM
-    99300000; 99.3 -                   ; WFM (stereo)        ;     240000; FM
+    99300000; 99.3                     ; WFM (stereo)        ;     240000; FM
     99600000; 99.6 DXB Club FM         ; WFM (stereo)        ;     240000; FM
     99900000; 99.9 Star FM             ; WFM (stereo)        ;     240000; FM
    100100000; 100.1                    ; WFM (stereo)        ;     240000; FM
@@ -306,7 +315,6 @@ Untagged            ; #888a85
    100900000; 100.9 Khalejya           ; WFM (stereo)        ;     240000; FM
    101300000; 101.3 AJM Gold FM        ; WFM (stereo)        ;     240000; FM
    101600000; 101.6 City1016           ; WFM (stereo)        ;     240000; FM
-   101900000; 101.9 -                  ; WFM (stereo)        ;     240000; FM
    102000000; 102.0 Pearl              ; WFM (stereo)        ;     240000; FM
    102400000; 102.4 Suno1024 FM        ; WFM (stereo)        ;     240000; FM
    102700000; 102.7 SHJ Quran          ; WFM (stereo)        ;     240000; FM
@@ -316,9 +324,10 @@ Untagged            ; #888a85
    103800000; 103.8 DXB Eye            ; WFM (stereo)        ;     240000; FM
    104100000; 104.1 Radio 1            ; WFM (stereo)        ;     240000; FM
    104400000; 104.4 DXB Virgin         ; WFM (stereo)        ;     240000; FM
-   104600000; 104.6 AD SkyNews Arabia  ; WFM (stereo)        ;     240000; FM
+   104600000; 104.6 AD SEHA            ; WFM (stereo)        ;     240000; FM
    104800000; 104.8 AJM Channel 4      ; WFM (stereo)        ;     240000; FM
-   105400000; 105.4 FUJ Radio Spice    ; WFM (stereo)        ;     240000; FM
+   105100000; 105.1                    ; WFM (stereo)        ;     240000; FM
+   105400000; 105.4 Vibe FM            ; WFM (stereo)        ;     240000; FM
    106200000; 106.2 UAQ - Big FM       ; WFM (stereo)        ;     240000; FM
    106500000; 106.5 UAQ - Radio Gilli  ; WFM (stereo)        ;     240000; FM
    107100000; 107.1 UAQ - LUV 1071     ; WFM (stereo)        ;     240000; FM
