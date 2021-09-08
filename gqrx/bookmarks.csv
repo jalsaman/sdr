@@ -1,33 +1,40 @@
 # Tag name          ;  color
-Airband             ; #ce5c00
-HAM20m              ; #c0c0c0
-GPS                 ; #ce5c00
 MW                  ; #0056e6
-WalkiTalki_UHF      ; #c0c0c0
-Marine              ; #c07010
-HAM60m              ; #c0c0c0
-Galileo             ; #c0c0c0
+49m                 ; #fcaf3e
+GLONASS             ; #c17d11
+SAT                 ; #73d216
+75m                 ; #204a87
+Airband             ; #ce5c00
 HAM70cm             ; #c0c0c0
+HAM80m              ; #c0c0c0
+Galileo             ; #c0c0c0
+120m                ; #73d216
+HAM10m              ; #c0c0c0
+WalkiTalki_UHF      ; #c0c0c0
+HAM20m              ; #c0c0c0
+ISM                 ; #edd400
+Marine              ; #c07010
+Untagged            ; #888a85
+60m                 ; #ce5c00
 IRNSS               ; #a08c14
 FM                  ; #00ff00
-Untagged            ; #888a85
-HAM10m              ; #c0c0c0
-GLONASS             ; #c17d11
 HAM15m              ; #c0c0c0
-SAT                 ; #73d216
-ISM                 ; #edd400
-ADSB                ; #75507b
-HAM40m              ; #c0c0c0
-CW                  ; #00ff00
-WalkiTalki_VHF      ; #c0c0c0
-NOAA                ; #c0c0c0
-HAM80m              ; #c0c0c0
-31m                 ; #ef2929
 DVB                 ; #f57900
+CW                  ; #00ff00
 AM                  ; #a0a0a0
-Tetra               ; #14a08c
-RC                  ; #729fcf
 HAM2m               ; #f57900
+NOAA                ; #c0c0c0
+90m                 ; #c17d11
+11m                 ; #ad7fa8
+RC                  ; #729fcf
+WalkiTalki_VHF      ; #c0c0c0
+HAM60m              ; #c0c0c0
+ADSB                ; #75507b
+31m                 ; #ef2929
+GPS                 ; #ce5c00
+HAM40m              ; #c0c0c0
+Tetra               ; #14a08c
+WWV Time            ; #4e9a06
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
       531000; C                        ; AM                  ;      10000; MW
@@ -150,16 +157,25 @@ HAM2m               ; #f57900
      1584000; C                        ; AM                  ;      10000; MW
      1593000; C                        ; AM                  ;      10000; MW
      1602000; C                        ; AM                  ;      10000; MW
-     2475000; C                        ; AM                  ;      10000; AM
+     2300000; C                        ; AM                  ;       5000; 120m
+     2475000; C                        ; AM                  ;       5000; 120m
+     2495000; C                        ; AM                  ;       5000; 120m
+     2500000; C                        ; AM                  ;       5000; WWV Time
      2680000; 4XZ                      ; CW-L                ;        500; CW
+     3200000; C                        ; AM                  ;       5000; 90m
+     3400000; C                        ; AM                  ;       5000; 90m
      3750000; C                        ; Narrow FM           ;      10000; HAM80m
+     3900000; C                        ; AM                  ;       5000; 75m
+     4000000; C                        ; AM                  ;       5000; 75m
      4331000; 4XZ                      ; CW-L                ;        500; CW
      4450000; C                        ; AM                  ;      10000; AM
-     4750000; C                        ; AM                  ;      10000; AM
-     4820000; C                        ; AM                  ;      10000; Untagged
-     4905000; C                        ; AM                  ;      10000; AM
-     4920000; C                        ; AM                  ;      10000; AM
-     4950000; C                        ; AM                  ;      10000; AM
+     4750000; C                        ; AM                  ;       5000; 60m
+     4820000; C                        ; AM                  ;       5000; 60m
+     4905000; C                        ; AM                  ;       5000; 60m
+     4920000; C                        ; AM                  ;       5000; 60m
+     4950000; C                        ; AM                  ;       5000; 60m
+     4995000; C                        ; AM                  ;       5000; 60m
+     5000000; C                        ; AM                  ;       5000; WWV Time
      5332000; C                        ; Narrow FM           ;      10000; HAM60m
      5348000; C                        ; Narrow FM           ;      10000; HAM60m
      5358000; C                        ; Narrow FM           ;      10000; HAM60m
@@ -167,13 +183,15 @@ HAM2m               ; #f57900
      5405000; C                        ; Narrow FM           ;      10000; HAM60m
      5860000; C                        ; AM                  ;      10000; AM
      5890000; C                        ; AM                  ;      10000; AM
-     5960000; C                        ; AM                  ;      10000; AM
-     5985000; C                        ; AM                  ;      10000; AM
-     6025000; C                        ; AM                  ;      10000; AM
-     6100000; C                        ; AM                  ;      10000; AM
-     6165000; C                        ; AM                  ;      10000; AM
-     6175000; C                        ; AM                  ;      10000; AM
-     6190000; C                        ; AM                  ;      10000; AM
+     5900000; C                        ; AM                  ;       5000; 49m
+     5960000; C                        ; AM                  ;       5000; 49m
+     5985000; C                        ; AM                  ;       5000; 49m
+     6025000; C                        ; AM                  ;       5000; 49m
+     6100000; C                        ; AM                  ;       5000; 49m
+     6165000; C                        ; AM                  ;       5000; 49m
+     6175000; C                        ; AM                  ;       5000; 49m
+     6190000; C                        ; AM                  ;       5000; 49m
+     6200000;                          ; AM                  ;       5000; 49m
      6321000; C                        ; CW-L                ;        500; CW
      6607000; 4XZ                      ; CW-L                ;        500; CW
      6780000; ISM 6.78 MHz             ; Demod Off           ;      30000; ISM
@@ -306,6 +324,7 @@ HAM2m               ; #f57900
      9920000; C                        ; AM                  ;      10000; AM
      9930000; C                        ; AM                  ;      10000; AM
      9965000; C                        ; AM                  ;      10000; AM
+    10000000; C                        ; AM                  ;       5000; WWV Time
     10160000; C                        ; CW-L                ;        500; CW
     11530000; C                        ; AM                  ;      10000; Untagged
     11570000; C                        ; AM                  ;      10000; AM
@@ -359,6 +378,7 @@ HAM2m               ; #f57900
     14000000; C                        ; Narrow FM           ;      10000; HAM20m
     14074000; C                        ; Narrow FM           ;      10000; HAM20m
     14545000; C                        ; AM                  ;      10000; AM
+    15000000; C                        ; AM                  ;       5000; WWV Time
     15030000; C                        ; AM                  ;      10000; AM
     15090000; C                        ; AM                  ;      10000; AM
     15110000; C                        ; AM                  ;      10000; AM
@@ -402,8 +422,12 @@ HAM2m               ; #f57900
     18100000; C                        ; Narrow FM           ;      10000; HAM20m
     18900000; C                        ; AM                  ;      10000; AM
     18970000; C                        ; AM                  ;      10000; AM
+    20000000; C                        ; AM                  ;       5000; WWV Time
     21000000; HAM 15m                  ; Narrow FM           ;      10000; HAM15m
     21505000; C                        ; AM                  ;      10000; AM
+    25000000; C                        ; AM                  ;       5000; WWV Time
+    25670000; C                        ; AM                  ;       5000; 11m
+    26100000; C                        ; AM                  ;       5000; 11m
     27120000; ISM 27 MHz - RC          ; Demod Off           ;     326000; ISM
     28000000; HAM 10m                  ; Narrow FM           ;      10000; HAM10m
     38686000; RC Car                   ; Demod Off           ;     240000; RC
