@@ -1,31 +1,31 @@
 # Tag name          ;  color
-WalkiTalki_VHF      ; #c0c0c0
-AM                  ; #a0a0a0
-Galileo             ; #c0c0c0
-RC                  ; #729fcf
-HAM20m              ; #c0c0c0
-IRNSS               ; #a08c14
-Tetra               ; #14a08c
 ADSB                ; #75507b
 CW                  ; #00ff00
-HAM10m              ; #c0c0c0
-HAM70cm             ; #c0c0c0
-GLONASS             ; #c17d11
-ISM                 ; #edd400
-Untagged            ; #888a85
-Marine              ; #c07010
-HAM2m               ; #f57900
-HAM60m              ; #c0c0c0
+IRNSS               ; #a08c14
+Galileo             ; #c0c0c0
+WalkiTalki_VHF      ; #c0c0c0
+FM                  ; #00ff00
+HAM20m              ; #c0c0c0
+RC                  ; #729fcf
+HAM40m              ; #c0c0c0
+Tetra               ; #14a08c
 Airband             ; #ce5c00
-DVB                 ; #f57900
 GPS                 ; #ce5c00
+ISM                 ; #edd400
 WalkiTalki_UHF      ; #c0c0c0
+HAM15m              ; #c0c0c0
 NOAA                ; #c0c0c0
 HAM80m              ; #c0c0c0
 SAT                 ; #73d216
-HAM15m              ; #c0c0c0
-HAM40m              ; #c0c0c0
-FM                  ; #00ff00
+HAM2m               ; #f57900
+DVB                 ; #f57900
+HAM60m              ; #c0c0c0
+GLONASS             ; #c17d11
+HAM10m              ; #c0c0c0
+Marine              ; #c07010
+HAM70cm             ; #c0c0c0
+AM                  ; #a0a0a0
+Untagged            ; #888a85
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
       540000; Kwait                    ; AM                  ;      10000; AM
@@ -81,6 +81,7 @@ FM                  ; #00ff00
      1548000; C                        ; AM                  ;      10000; AM
      1557000; C                        ; AM                  ;      10000; AM
      1584000; C                        ; AM                  ;      10000; AM
+     2475000; C                        ; AM                  ;      10000; AM
      2680000; 4XZ                      ; CW-L                ;        500; CW
      3750000; C                        ; Narrow FM           ;      10000; HAM80m
      4331000; 4XZ                      ; CW-L                ;        500; CW
@@ -154,7 +155,10 @@ FM                  ; #00ff00
      9760000; C                        ; AM                  ;      10000; AM
      9770000; C                        ; AM                  ;      10000; AM
      9805000; C                        ; AM                  ;      10000; AM
+     9840000; C                        ; AM                  ;      10000; AM
+     9850000; C                        ; AM                  ;      10000; AM
      9860000; C                        ; AM                  ;      10000; AM
+     9880000; C                        ; AM                  ;      10000; AM
      9885000; C                        ; AM                  ;      10000; AM
      9890000; C                        ; AM                  ;      10000; AM
      9900000; C                        ; AM                  ;      10000; AM
@@ -162,6 +166,7 @@ FM                  ; #00ff00
      9920000; C                        ; AM                  ;      10000; AM
      9930000; C                        ; AM                  ;      10000; AM
      9965000; C                        ; AM                  ;      10000; AM
+    10160000; C                        ; CW-L                ;        500; CW
     11530000; C                        ; AM                  ;      10000; Untagged
     11570000; C                        ; AM                  ;      10000; AM
     11575000; C                        ; AM                  ;      10000; AM
@@ -202,6 +207,7 @@ FM                  ; #00ff00
     13560000; ISM 13.56MHz - RFID      ; Demod Off           ;      14000; ISM
     13640000; C                        ; AM                  ;      10000; AM
     13670000; C                        ; AM                  ;      10000; AM
+    13750000; C                        ; AM                  ;      10000; AM
     13760000; C                        ; AM                  ;      10000; AM
     13770000; C                        ; AM                  ;      10000; AM
     13790000; C                        ; AM                  ;      10000; AM
@@ -211,21 +217,42 @@ FM                  ; #00ff00
     14000000; C                        ; Narrow FM           ;      10000; HAM20m
     14074000; C                        ; Narrow FM           ;      10000; HAM20m
     15030000; C                        ; AM                  ;      10000; AM
+    15090000; C                        ; AM                  ;      10000; AM
+    15110000; C                        ; AM                  ;      10000; AM
     15125000; C                        ; AM                  ;      10000; AM
     15275000; C                        ; AM                  ;      10000; AM
     15310000; C                        ; AM                  ;      10000; AM
+    15350000; C                        ; AM                  ;      10000; AM
+    15365000; C                        ; AM                  ;      10000; AM
+    15410000; C                        ; AM                  ;      10000; AM
+    15445000; C                        ; AM                  ;      10000; AM
     15460000; C                        ; AM                  ;      10000; AM
     15490000; C                        ; AM                  ;      10000; AM
     15520000; C                        ; AM                  ;      10000; AM
+    15540000; C                        ; AM                  ;      10000; AM
     15565000; C                        ; AM                  ;      10000; AM
+    15570000; C                        ; AM                  ;      10000; AM
     15620000; C                        ; AM                  ;      10000; AM
     15640000; C                        ; AM                  ;      10000; AM
     15660000; C                        ; AM                  ;      10000; AM
+    15750000; C                        ; AM                  ;      10000; AM
+    17485000; C                        ; AM                  ;      10000; AM
+    17510000; C                        ; AM                  ;      10000; AM
     17530000; C                        ; AM                  ;      10000; AM
+    17540000; C                        ; AM                  ;      10000; AM
     17560000; C                        ; AM                  ;      10000; AM
     17570000; C                        ; AM                  ;      10000; AM
+    17580000; C                        ; AM                  ;      10000; AM
+    17605000; C                        ; AM                  ;      10000; AM
+    17615000; C                        ; AM                  ;      10000; AM
     17640000; C                        ; AM                  ;      10000; AM
     17650000; C                        ; AM                  ;      10000; AM
+    17660000; C                        ; AM                  ;      10000; AM
+    17690000; C                        ; AM                  ;      10000; AM
+    17720000; C                        ; AM                  ;      10000; AM
+    17730000; C                        ; AM                  ;      10000; AM
+    17740000; C                        ; AM                  ;      10000; AM
+    17790000; C                        ; CW-L                ;        500; AM
     17855000; C                        ; AM                  ;      10000; AM
     17880000; C                        ; AM                  ;      10000; AM
     18100000; C                        ; Narrow FM           ;      10000; HAM20m
