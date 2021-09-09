@@ -1,62 +1,69 @@
 # Tag name          ;  color
+Tetra               ; #14a08c
+GPS                 ; #ce5c00
+16m                 ; #4e9a06
+CW                  ; #00ff00
+HAM2m               ; #f57900
+RC                  ; #729fcf
+41m                 ; #3465a4
+HAM60m              ; #c0c0c0
+75m                 ; #204a87
+HAM630m             ; #fce94f
+HAM15m              ; #c0c0c0
+ULF                 ; #3465a4
+19m                 ; #c4a000
 WalkiTalki_UHF      ; #c0c0c0
+FM                  ; #00ff00
+WWV Time            ; #4e9a06
+SLF                 ; #8f5902
+HAM80m              ; #c0c0c0
+AM                  ; #a40000
 ISM                 ; #edd400
 Marine              ; #c07010
+25m                 ; #edd400
+HAM2200m            ; #c0c0c0
 13m                 ; #204a87
-FM                  ; #00ff00
-SLF                 ; #8f5902
 15m                 ; #edd400
-DVB                 ; #f57900
-HAM80m              ; #c0c0c0
-HAM10m              ; #c0c0c0
-49m                 ; #fcaf3e
-31m                 ; #75507b
-MW                  ; #0056e6
-HAM60m              ; #c0c0c0
-ULF                 ; #3465a4
-HAM70cm             ; #c0c0c0
-75m                 ; #204a87
-HAM20m              ; #c0c0c0
-16m                 ; #4e9a06
 120m                ; #73d216
-41m                 ; #3465a4
+Airband             ; #ce5c00
+ELF                 ; #ef2929
+NOAA                ; #cc0000
+HAM40m              ; #c0c0c0
+HAM70cm             ; #c0c0c0
+DVB                 ; #f57900
+60m                 ; #ce5c00
+GLONASS             ; #c17d11
+SAT                 ; #73d216
+49m                 ; #fcaf3e
+90m                 ; #c17d11
+HAM160m             ; #c0c0c0
+HAM10m              ; #c0c0c0
+ADSB                ; #75507b
+IRNSS               ; #a08c14
+MW                  ; #0056e6
+Galileo             ; #8f5902
+22m                 ; #ad7fa8
+HAM20m              ; #c0c0c0
+LF                  ; #8ae234
+Untagged            ; #888a85
+31m                 ; #75507b
 WalkiTalki_VHF      ; #c0c0c0
 11m                 ; #ad7fa8
-NOAA                ; #cc0000
-AM                  ; #a40000
-GLONASS             ; #c17d11
-22m                 ; #ad7fa8
-HAM40m              ; #c0c0c0
-ELF                 ; #ef2929
-Tetra               ; #14a08c
-WWV Time            ; #4e9a06
-19m                 ; #c4a000
-IRNSS               ; #a08c14
-60m                 ; #ce5c00
-HAM2m               ; #f57900
-ADSB                ; #75507b
-CW                  ; #00ff00
-SAT                 ; #73d216
-Galileo             ; #8f5902
-Untagged            ; #888a85
-LF                  ; #8ae234
-90m                 ; #c17d11
-Airband             ; #ce5c00
-RC                  ; #729fcf
-GPS                 ; #ce5c00
-25m                 ; #edd400
-HAM15m              ; #c0c0c0
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
-           0; B                        ; AM                  ;          0; Untagged
-           3;                          ; AM                  ;          1; ELF
-          29;                          ; AM                  ;          1; ELF
-          30;                          ; AM                  ;          1; SLF
-         299;                          ; AM                  ;          1; SLF
-         300;                          ; AM                  ;          1; ULF
-        3000;                          ; AM                  ;          1; ULF
-       30000;                          ; AM                  ;          1; LF
-      300000;                          ; AM                  ;          1; LF
+           0; B                        ; Demod Off           ;          0; Untagged
+           3;                          ; AM                  ;          0; ELF
+          29;                          ; AM                  ;          0; ELF
+          30;                          ; AM                  ;          0; SLF
+         299;                          ; AM                  ;          0; SLF
+         300;                          ; AM                  ;          0; ULF
+        3000;                          ; AM                  ;          0; ULF
+       30000;                          ; AM                  ;          0; LF
+      135700;                          ; Narrow FM           ;          0; HAM2200m
+      137800;                          ; Narrow FM           ;          0; HAM2200m
+      300000;                          ; AM                  ;          0; LF
+      472000;                          ; Narrow FM           ;          0; HAM630m
+      479000;                          ; Narrow FM           ;          0; HAM630m
       531000;                          ; AM                  ;      10000; MW
       540000; Kuwait                   ; AM                  ;      10000; MW
       549000;                          ; AM                  ;      10000; MW
@@ -177,6 +184,8 @@ HAM15m              ; #c0c0c0
      1584000;                          ; AM                  ;      10000; MW
      1593000;                          ; AM                  ;      10000; MW
      1602000;                          ; AM                  ;      10000; MW
+     1800000;                          ; Narrow FM           ;          0; HAM160m
+     2000000;                          ; Narrow FM           ;          0; HAM160m
      2300000;                          ; AM                  ;       5000; 120m
      2475000;                          ; AM                  ;       5000; 120m
      2495000;                          ; AM                  ;       5000; 120m
