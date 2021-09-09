@@ -220,7 +220,6 @@ HAM40m              ; #c0c0c0
      5373000; *                        ; Narrow FM           ;      10000; HAM60m
      5405000; E                        ; Narrow FM           ;      10000; HAM60m
      5860000; *                        ; AM                  ;       5000; AM
-     5860000; *                        ; AM                  ;       5000; AM
      5890000; *                        ; AM                  ;       5000; AM
      5900000; S                        ; AM                  ;       5000; 49m
      5960000; *                        ; AM                  ;       5000; 49m
@@ -372,7 +371,6 @@ HAM40m              ; #c0c0c0
     11530000; *                        ; AM                  ;       5000; AM
     11570000; *                        ; AM                  ;       5000; AM
     11575000; *                        ; AM                  ;       5000; AM
-    11600000; *                        ; AM                  ;       5000; AM
     11600000; *                        ; AM                  ;       5000; 25m
     11610000; *                        ; AM                  ;       5000; 25m
     11630000; *                        ; AM                  ;       5000; 25m
@@ -393,7 +391,6 @@ HAM40m              ; #c0c0c0
     11880000; *                        ; AM                  ;       5000; 25m
     11890000; *                        ; AM                  ;       5000; 25m
     11900000; *                        ; AM                  ;       5000; 25m
-    11910000; *                        ; AM                  ;       5000; 25m
     11910000; *                        ; AM                  ;       5000; 25m
     11925000; *                        ; AM                  ;       5000; 25m
     11940000; *                        ; AM                  ;       5000; 25m
@@ -424,7 +421,6 @@ HAM40m              ; #c0c0c0
     13790000; *                        ; AM                  ;       5000; 22m
     13810000; *                        ; AM                  ;       5000; 22m
     13860000; *                        ; AM                  ;       5000; 22m
-    13870000; *                        ; AM                  ;       5000; 22m
     13870000; E                        ; AM                  ;       5000; 22m
     14000000; S                        ; Narrow FM           ;      10000; HAM20m
     14074000; E                        ; Narrow FM           ;      10000; HAM20m
@@ -506,10 +502,9 @@ HAM40m              ; #c0c0c0
     17890000; *                        ; AM                  ;       5000; 16m
     17900000; E                        ; AM                  ;       5000; 16m
     18100000; *                        ; Narrow FM           ;      10000; HAM20m
-    18900000; *                        ; AM                  ;       5000; AM
-    18900000; *                        ; AM                  ;       5000; 15m
+    18900000; S                        ; AM                  ;       5000; 15m
     18970000; *                        ; AM                  ;       5000; 15m
-    19020000; *                        ; AM                  ;       5000; 15m
+    19020000; E                        ; AM                  ;       5000; 15m
     20000000; *                        ; AM                  ;       5000; WWV Time
     21000000; *                        ; Narrow FM           ;      10000; HAM15m
     21450000; S                        ; AM                  ;       5000; 13m
@@ -1760,7 +1755,6 @@ HAM40m              ; #c0c0c0
    145687500; SHJ_DMR                  ; LSB                 ;       2700; HAM2m
    145700000;                          ; Narrow FM           ;      25000; HAM2m
    145725000; AUH                      ; Narrow FM           ;      10000; HAM2m
-   145725000;                          ; Narrow FM           ;      25000; HAM2m
    145750000; SHJ                      ; WFM (stereo)        ;      10000; HAM2m
    145775000;                          ; Narrow FM           ;      25000; HAM2m
    145787500; SHJ_D*YSF                ; LSB                 ;       2700; HAM2m
@@ -1878,13 +1872,11 @@ HAM40m              ; #c0c0c0
    156737500; 274B                     ; Narrow FM           ;      12500; Marine
    156750000; 15B                      ; Narrow FM           ;      25000; Marine
    156762500; 215B                     ; Narrow FM           ;      12500; Marine
-   156775000; 75B                      ; Narrow FM           ;      25000; Marine
-   156775000; AIS-LR1                  ; Narrow FM           ;      25000; Marine
+   156775000; 75B AIS-LR1              ; Narrow FM           ;      25000; Marine
    156787500; 275B                     ; Narrow FM           ;      12500; Marine
    156800000; 16B                      ; Narrow FM           ;      25000; Marine
    156812500; 216B                     ; Narrow FM           ;      12500; Marine
-   156825000; 76B                      ; Narrow FM           ;      25000; Marine
-   156825000; AIS-LR2                  ; Narrow FM           ;      25000; Marine
+   156825000; 76B AIS-LR2              ; Narrow FM           ;      25000; Marine
    156837500; 276B                     ; Narrow FM           ;      12500; Marine
    156850000; 17B                      ; Narrow FM           ;      25000; Marine
    156862500; 217B                     ; Narrow FM           ;      12500; Marine
@@ -1972,8 +1964,7 @@ HAM40m              ; #c0c0c0
    161612500; 220R                     ; Narrow FM           ;      12500; Marine
    161625000; 80R                      ; Narrow FM           ;      25000; Marine
    161637500; 280R                     ; Narrow FM           ;      12500; Marine
-   161650000; 21R                      ; Narrow FM           ;      25000; Marine
-   161650000; WX8                      ; Narrow FM           ;      25000; NOAA
+   161650000; WX8 21R                  ; Narrow FM           ;      25000; NOAA
    161662500; 221R                     ; Narrow FM           ;      12500; Marine
    161675000; 81R                      ; Narrow FM           ;      25000; Marine
    161687500; 281R                     ; Narrow FM           ;      12500; Marine
@@ -1983,8 +1974,7 @@ HAM40m              ; #c0c0c0
    161737500; 282R                     ; Narrow FM           ;      12500; Marine
    161750000; 23R                      ; Narrow FM           ;      25000; Marine
    161762500; 223R                     ; Narrow FM           ;      12500; Marine
-   161775000; 83R                      ; Narrow FM           ;      25000; Marine
-   161775000; WX9                      ; Narrow FM           ;      25000; NOAA
+   161775000; WX9 83R                  ; Narrow FM           ;      25000; NOAA
    161787500; 283R                     ; Narrow FM           ;      12500; Marine
    161800000; 24R                      ; Narrow FM           ;      25000; Marine
    161812500; 224R                     ; Narrow FM           ;      12500; Marine
@@ -2000,11 +1990,9 @@ HAM40m              ; #c0c0c0
    161937500; 286R                     ; Narrow FM           ;      12500; Marine
    161950000; 27R                      ; Narrow FM           ;      25000; Marine
    161962500; 227R                     ; Narrow FM           ;      12500; Marine
-   161975000; 87R                      ; Narrow FM           ;      25000; Marine
-   161975000; AIS1                     ; Narrow FM           ;      25000; Marine
+   161975000; AIS1 87R                 ; Narrow FM           ;      25000; Marine
    161987500; 287R                     ; Narrow FM           ;      12500; Marine
-   162000000; 28R                      ; Narrow FM           ;      25000; Marine
-   162000000; 88R                      ; Narrow FM           ;      25000; Marine
+   162000000; 88R 28R                  ; Narrow FM           ;      25000; Marine
    162012500; 228R                     ; Narrow FM           ;      12500; Marine
    162025000; AIS2                     ; Narrow FM           ;      25000; Marine
    162400000; WX2                      ; Narrow FM           ;      25000; NOAA
@@ -2019,8 +2007,7 @@ HAM40m              ; #c0c0c0
    336013000; ISM 336.013 MHz          ; Demod Off           ;      50000; ISM
    336330000; ISM 336.330 MHz          ; Demod Off           ;      50000; ISM
    337226000; ISM 337.226 MHz          ; Demod Off           ;      50000; ISM
-   390000000; TETRA                    ; Demod Off           ;      24000; Tetra
-   390000000; 1                        ; Demod Off           ;      24000; Tetra
+   390000000; S                        ; Demod Off           ;      24000; Tetra
    390025000; 2                        ; Demod Off           ;      24000; Tetra
    390050000; 3                        ; Demod Off           ;      24000; Tetra
    390075000; 4                        ; Demod Off           ;      24000; Tetra
@@ -2420,9 +2407,8 @@ HAM40m              ; #c0c0c0
    399925000; 398                      ; Demod Off           ;      24000; Tetra
    399950000; 399                      ; Demod Off           ;      24000; Tetra
    399975000; 400                      ; Demod Off           ;      24000; Tetra
-   400000000; TETRA                    ; Demod Off           ;      24000; Tetra
-   420000000; TETRA                    ; Demod Off           ;      24000; Tetra
-   420000000; 1                        ; Demod Off           ;      24000; Tetra
+   400000000; E                        ; Demod Off           ;      24000; Tetra
+   420000000; S                        ; Demod Off           ;      24000; Tetra
    420025000; 2                        ; Demod Off           ;      24000; Tetra
    420050000; 3                        ; Demod Off           ;      24000; Tetra
    420075000; 4                        ; Demod Off           ;      24000; Tetra
@@ -2821,8 +2807,7 @@ HAM40m              ; #c0c0c0
    429900000; 397                      ; Demod Off           ;      24000; Tetra
    429925000; 398                      ; Demod Off           ;      24000; Tetra
    429950000; 399                      ; Demod Off           ;      24000; Tetra
-   429975000; 400                      ; Demod Off           ;      24000; Tetra
-   430000000; TETRA                    ; Demod Off           ;      24000; Tetra
+   429975000; E                        ; Demod Off           ;      24000; Tetra
    430000000;                          ; Narrow FM           ;      10000; HAM70cm
    430045000;                          ; Narrow FM           ;      10000; WalkiTalki_UHF
    430057000;                          ; Narrow FM           ;      10000; WalkiTalki_UHF
