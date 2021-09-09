@@ -1,58 +1,57 @@
 # Tag name          ;  color
-13m                 ; #204a87
-16m                 ; #4e9a06
-NOAA                ; #cc0000
-ULF                 ; #3465a4
-IRNSS               ; #a08c14
-HAM630m             ; #fce94f
-SAT                 ; #73d216
-ADSB                ; #75507b
-HAM2200m            ; #c0c0c0
 31m                 ; #75507b
-VLF                 ; #c0c0c0
-LF                  ; #8ae234
-HAM80m              ; #c0c0c0
-ELF                 ; #ef2929
-Tetra               ; #14a08c
-HAM160m             ; #c0c0c0
-Airband             ; #ce5c00
-Galileo             ; #8f5902
-22m                 ; #ad7fa8
-90m                 ; #c17d11
-49m                 ; #fcaf3e
-Marine              ; #c07010
-WalkiTalki_UHF      ; #c0c0c0
-DVB                 ; #f57900
-11m                 ; #ad7fa8
-15m                 ; #edd400
-GLONASS             ; #c17d11
-RC                  ; #729fcf
-HAM60m              ; #c0c0c0
-HAM20m              ; #c0c0c0
-120m                ; #73d216
-19m                 ; #c4a000
-Untagged            ; #888a85
-ISM                 ; #edd400
-SLF                 ; #8f5902
-HAM70cm             ; #c0c0c0
-HAM15m              ; #c0c0c0
-AM                  ; #a40000
 GPS                 ; #ce5c00
-HAM2m               ; #f57900
 75m                 ; #204a87
-41m                 ; #3465a4
-WWV Time            ; #4e9a06
+19m                 ; #c4a000
+WalkiTalki_UHF      ; #c0c0c0
+HAM70cm             ; #c0c0c0
+Galileo             ; #8f5902
+HAM2200m            ; #c0c0c0
+HAM60m              ; #c0c0c0
+15m                 ; #edd400
+Tetra               ; #14a08c
 MW                  ; #0056e6
-FM                  ; #00ff00
-CW                  ; #00ff00
-HAM10m              ; #c0c0c0
-25m                 ; #edd400
 60m                 ; #ce5c00
+DVB                 ; #f57900
+HAM20m              ; #c0c0c0
+WWV Time            ; #4e9a06
+Airband             ; #ce5c00
+IRNSS               ; #a08c14
+HAM15m              ; #c0c0c0
+ADSB                ; #75507b
+Untagged            ; #888a85
+90m                 ; #c17d11
+FM                  ; #00ff00
+NOAA                ; #cc0000
+120m                ; #73d216
+HAM80m              ; #c0c0c0
 WalkiTalki_VHF      ; #c0c0c0
+25m                 ; #edd400
+HAM10m              ; #c0c0c0
+HAM2m               ; #f57900
+16m                 ; #4e9a06
+HAM630m             ; #fce94f
+ULF                 ; #3465a4
+Marine              ; #c07010
+ELF                 ; #ef2929
+11m                 ; #ad7fa8
+SAT                 ; #73d216
+ISM                 ; #edd400
+22m                 ; #ad7fa8
 HAM40m              ; #c0c0c0
+41m                 ; #3465a4
+SLF                 ; #8f5902
+LF                  ; #8ae234
+49m                 ; #fcaf3e
+CW                  ; #00ff00
+HAM160m             ; #c0c0c0
+VLF                 ; #c0c0c0
+AM                  ; #a40000
+13m                 ; #204a87
+RC                  ; #729fcf
+GLONASS             ; #c17d11
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
-           0; B                        ; Demod Off           ;          0; Untagged
            3; S                        ; AM                  ;          0; ELF
           29; E                        ; AM                  ;          0; ELF
           30; S                        ; AM                  ;          0; SLF
@@ -565,7 +564,7 @@ HAM40m              ; #c0c0c0
     91700000; *                        ; WFM (stereo)        ;     200000; FM
     91800000; *                        ; WFM (stereo)        ;     200000; FM
     91900000; *                        ; WFM (stereo)        ;     200000; FM
-    92000000; FUJ                      ; WFM (stereo)        ;     200000; FM
+    92000000; Dubai92                  ; WFM (stereo)        ;     200000; FM
     92100000; *                        ; WFM (stereo)        ;     200000; FM
     92200000; *                        ; WFM (stereo)        ;     200000; FM
     92300000; *                        ; WFM (stereo)        ;     200000; FM
@@ -589,7 +588,7 @@ HAM40m              ; #c0c0c0
     94100000; *                        ; WFM (stereo)        ;     200000; FM
     94200000; *                        ; WFM (stereo)        ;     200000; FM
     94300000; *                        ; WFM (stereo)        ;     200000; FM
-    94400000; SHJ Sharjah              ; WFM (stereo)        ;     200000; FM
+    94400000; Sharjah                  ; WFM (stereo)        ;     200000; FM
     94500000; *                        ; WFM (stereo)        ;     200000; FM
     94600000; *                        ; WFM (stereo)        ;     200000; FM
     94700000; Radio Asia               ; WFM (stereo)        ;     200000; FM
