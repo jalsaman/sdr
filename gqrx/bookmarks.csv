@@ -1,64 +1,64 @@
 # Tag name          ;  color
-60m                 ; #ce5c00
-HAM4m               ; #729fcf
-HAM160m             ; #729fcf
-VLF                 ; #c0c0c0
-NOAA                ; #cc0000
-HAM70cm             ; #729fcf
-CW                  ; #00ff00
-90m                 ; #c17d11
-HAM2200m            ; #729fcf
-WalkiTalki_UHF      ; #8ae234
-120m                ; #73d216
-13m                 ; #204a87
-SAT                 ; #73d216
-HAM1.25m            ; #729fcf
-AM                  ; #ff5a5a
-IRNSS               ; #a08c14
-ELF                 ; #ef2929
-HAM13cm             ; #729fcf
-Tetra               ; #14a08c
-LF                  ; #8ae234
-GLONASS             ; #c17d11
-HAM40m              ; #729fcf
-HAM30m              ; #729fcf
-22m                 ; #ad7fa8
-HAM15m              ; #729fcf
-16m                 ; #4e9a06
-49m                 ; #fcaf3e
-Untagged            ; #888a85
-11m                 ; #ad7fa8
-HAM23cm             ; #729fcf
 Marine              ; #c07010
-HAM630m             ; #729fcf
-75m                 ; #204a87
-HAM20m              ; #729fcf
-WWV Time            ; #4e9a06
-RC                  ; #729fcf
-HAM33cm             ; #729fcf
-ADSB                ; #75507b
-HAM80m              ; #729fcf
-HAM6m               ; #729fcf
-Galileo             ; #8f5902
-DVB                 ; #f57900
-31m                 ; #75507b
-WalkiTalki_VHF      ; #8ae234
-SLF                 ; #8f5902
-ISM                 ; #edd400
-FM                  ; #00ff00
-HAM10m              ; #729fcf
-15m                 ; #edd400
+AM                  ; #ff5a5a
 41m                 ; #8ae234
-HAM2m               ; #729fcf
-ULF                 ; #3465a4
-HAM12m              ; #729fcf
-MW                  ; #0056e6
-Airband             ; #ce5c00
+31m                 ; #75507b
+Untagged            ; #888a85
+HAM23cm             ; #729fcf
 GPS                 ; #ce5c00
-HAM60m              ; #729fcf
-25m                 ; #edd400
-HAM17m              ; #729fcf
+WWV Time            ; #4e9a06
+120m                ; #73d216
+HAM33cm             ; #729fcf
 19m                 ; #c4a000
+DVB                 ; #f57900
+Tetra               ; #14a08c
+22m                 ; #ad7fa8
+FM                  ; #00ff00
+HAM60m              ; #729fcf
+13m                 ; #204a87
+11m                 ; #ad7fa8
+HAM6m               ; #729fcf
+49m                 ; #fcaf3e
+Airband             ; #ce5c00
+HAM15m              ; #729fcf
+LF                  ; #8ae234
+WalkiTalki_UHF      ; #8ae234
+HAM10m              ; #729fcf
+HAM40m              ; #729fcf
+75m                 ; #204a87
+15m                 ; #edd400
+GLONASS             ; #c17d11
+IRNSS               ; #a08c14
+VLF                 ; #c0c0c0
+HAM12m              ; #729fcf
+SAT                 ; #73d216
+Galileo             ; #8f5902
+HAM80m              ; #729fcf
+MW                  ; #0056e6
+ELF                 ; #ef2929
+HAM2200m            ; #729fcf
+NOAA                ; #cc0000
+HAM630m             ; #729fcf
+HAM70cm             ; #729fcf
+HAM30m              ; #729fcf
+ADSB                ; #75507b
+90m                 ; #c17d11
+ISM                 ; #edd400
+HAM160m             ; #729fcf
+HAM17m              ; #729fcf
+HAM1.25m            ; #729fcf
+ULF                 ; #3465a4
+25m                 ; #edd400
+HAM2m               ; #729fcf
+60m                 ; #ce5c00
+16m                 ; #4e9a06
+RC                  ; #729fcf
+CW                  ; #00ff00
+HAM13cm             ; #729fcf
+SLF                 ; #8f5902
+WalkiTalki_VHF      ; #8ae234
+HAM4m               ; #729fcf
+HAM20m              ; #729fcf
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
            3; S                        ; AM                  ;          0; ELF
@@ -81,7 +81,7 @@ HAM17m              ; #729fcf
       472000; S                        ; Narrow FM           ;          0; HAM630m
       479000; E                        ; Narrow FM           ;          0; HAM630m
       500000; *                        ; Narrow FM           ;      10000; CW
-      531000; *                        ; AM                  ;      10000; MW
+      531000; S                        ; AM                  ;      10000; MW
       540000; Kuwait                   ; AM                  ;      10000; MW
       549000; *                        ; AM                  ;      10000; MW
       558000; *                        ; AM                  ;      10000; MW
@@ -200,13 +200,13 @@ HAM17m              ; #729fcf
      1575000; *                        ; AM                  ;      10000; MW
      1584000; *                        ; AM                  ;      10000; MW
      1593000; *                        ; AM                  ;      10000; MW
-     1602000; *                        ; AM                  ;      10000; MW
+     1602000; E                        ; AM                  ;      10000; MW
      1800000; S                        ; Narrow FM           ;          0; HAM160m
      2000000; E                        ; Narrow FM           ;          0; HAM160m
      2182000; *                        ; AM                  ;       5000; Marine
-     2300000; *                        ; AM                  ;       5000; 120m
+     2300000; S                        ; AM                  ;       5000; 120m
      2475000; *                        ; AM                  ;       5000; 120m
-     2495000; *                        ; AM                  ;       5000; 120m
+     2495000; E                        ; AM                  ;       5000; 120m
      2500000; *                        ; AM                  ;       5000; WWV Time
      2680000; 4XZ                      ; CW-L                ;        500; CW
      3200000; S                        ; AM                  ;       5000; 90m
@@ -2957,35 +2957,35 @@ HAM17m              ; #729fcf
    429950000; 399                      ; Demod Off           ;      24000; Tetra
    429975000; E                        ; Demod Off           ;      24000; Tetra
    430000000; *                        ; Narrow FM           ;      10000; HAM70cm
-   430045000;                          ; Narrow FM           ;      10000; WalkiTalki_UHF
-   430057000;                          ; Narrow FM           ;      10000; WalkiTalki_UHF
-   430070000;                          ; Narrow FM           ;      10000; WalkiTalki_UHF
-   430082000;                          ; Narrow FM           ;      10000; WalkiTalki_UHF
-   430095000;                          ; Narrow FM           ;      10000; WalkiTalki_UHF
-   430108000;                          ; Narrow FM           ;      10000; WalkiTalki_UHF
-   430120000;                          ; Narrow FM           ;      10000; WalkiTalki_UHF
-   430182100;                          ; Narrow FM           ;      10000; WalkiTalki_UHF
-   430294000;                          ; Narrow FM           ;      10000; WalkiTalki_UHF
-   430326000;                          ; Narrow FM           ;      10000; WalkiTalki_UHF
-   430338000;                          ; Narrow FM           ;      10000; WalkiTalki_UHF
-   430345000;                          ; Narrow FM           ;      10000; WalkiTalki_UHF
-   430445000;                          ; Narrow FM           ;      10000; WalkiTalki_UHF
-   430495000;                          ; Narrow FM           ;      10000; WalkiTalki_UHF
-   430570000;                          ; Narrow FM           ;      10000; WalkiTalki_UHF
-   430657000;                          ; Narrow FM           ;      10000; WalkiTalki_UHF
-   430707000;                          ; Narrow FM           ;      10000; WalkiTalki_UHF
+   430045000; *                        ; Narrow FM           ;      10000; WalkiTalki_UHF
+   430057000; *                        ; Narrow FM           ;      10000; WalkiTalki_UHF
+   430070000; *                        ; Narrow FM           ;      10000; WalkiTalki_UHF
+   430082000; *                        ; Narrow FM           ;      10000; WalkiTalki_UHF
+   430095000; *                        ; Narrow FM           ;      10000; WalkiTalki_UHF
+   430108000; *                        ; Narrow FM           ;      10000; WalkiTalki_UHF
+   430120000; *                        ; Narrow FM           ;      10000; WalkiTalki_UHF
+   430182100; *                        ; Narrow FM           ;      10000; WalkiTalki_UHF
+   430294000; *                        ; Narrow FM           ;      10000; WalkiTalki_UHF
+   430326000; *                        ; Narrow FM           ;      10000; WalkiTalki_UHF
+   430338000; *                        ; Narrow FM           ;      10000; WalkiTalki_UHF
+   430345000; *                        ; Narrow FM           ;      10000; WalkiTalki_UHF
+   430445000; *                        ; Narrow FM           ;      10000; WalkiTalki_UHF
+   430495000; *                        ; Narrow FM           ;      10000; WalkiTalki_UHF
+   430570000; *                        ; Narrow FM           ;      10000; WalkiTalki_UHF
+   430657000; *                        ; Narrow FM           ;      10000; WalkiTalki_UHF
+   430707000; *                        ; Narrow FM           ;      10000; WalkiTalki_UHF
    431550000; *                        ; Narrow FM           ;      10000; HAM70cm
    431727000; *                        ; Narrow FM           ;      10000; HAM70cm
-   433050000;                          ; Demod Off           ;          0; ISM
-   433165000;                          ; Demod Off           ;      50000; ISM
-   433335000;                          ; Demod Off           ;      50000; ISM
-   433604000;                          ; Demod Off           ;      50000; ISM
-   433915000;                          ; Demod Off           ;      50000; ISM
-   433920000;                          ; Demod Off           ;      50000; ISM
-   434000000;                          ; Demod Off           ;      50000; ISM
-   434226000;                          ; Demod Off           ;      50000; ISM
-   434538000;                          ; Demod Off           ;      50000; ISM
-   434790000;                          ; Demod Off           ;          0; ISM
+   433050000; *                        ; Demod Off           ;          0; ISM
+   433165000; *                        ; Demod Off           ;      50000; ISM
+   433335000; *                        ; Demod Off           ;      50000; ISM
+   433604000; *                        ; Demod Off           ;      50000; ISM
+   433915000; *                        ; Demod Off           ;      50000; ISM
+   433920000; *                        ; Demod Off           ;      50000; ISM
+   434000000; *                        ; Demod Off           ;      50000; ISM
+   434226000; *                        ; Demod Off           ;      50000; ISM
+   434538000; *                        ; Demod Off           ;      50000; ISM
+   434790000; *                        ; Demod Off           ;          0; ISM
    434825000; *                        ; Narrow FM           ;      10000; HAM70cm
    435126400; *                        ; Narrow FM           ;      10000; HAM70cm
    435725000; *                        ; Narrow FM           ;      10000; HAM70cm
@@ -2993,10 +2993,10 @@ HAM17m              ; #729fcf
    450000000; E                        ; Narrow FM           ;      10000; HAM70cm
    470000000; S                        ; Demod Off           ;          0; DVB
    477896000; S                        ; Demod Off           ;          0; DVB
-   902000000;                          ; Demod Off           ;          0; ISM
+   902000000; *                        ; Demod Off           ;          0; ISM
    902000000; S                        ; Narrow FM           ;      10000; HAM33cm
-   915000000;                          ; Demod Off           ;      50000; ISM
-   928000000;                          ; Demod Off           ;          0; ISM
+   915000000; *                        ; Demod Off           ;      50000; ISM
+   928000000; *                        ; Demod Off           ;          0; ISM
    928000000; E                        ; Narrow FM           ;      10000; HAM33cm
    978000000; ADS-B 978.0 MHz          ; Demod Off           ;    1300000; ADSB
   1090000000; ADS-B 1090.0 MHz         ; Demod Off           ;      50000; ADSB
@@ -3029,10 +3029,10 @@ HAM17m              ; #729fcf
   1688000000; GOES                     ; Narrow FM           ;      20600; SAT
   2300000000; S                        ; Narrow FM           ;      10000; HAM13cm
   2310000000; E                        ; Narrow FM           ;      10000; HAM13cm
-  2400000000;                          ; Demod Off           ;          0; ISM
-  2450000000;                          ; Demod Off           ;      50000; ISM
+  2400000000; *                        ; Demod Off           ;          0; ISM
+  2450000000; *                        ; Demod Off           ;      50000; ISM
   2492080000; IRNSS S                  ; Narrow FM           ;       2000; IRNSS
-  2500000000;                          ; Demod Off           ;          0; ISM
-  5725000000;                          ; Demod Off           ;          0; ISM
-  5800000000;                          ; Demod Off           ;      50000; ISM
-  5875000000;                          ; Demod Off           ;          0; ISM
+  2500000000; *                        ; Demod Off           ;          0; ISM
+  5725000000; *                        ; Demod Off           ;          0; ISM
+  5800000000; *                        ; Demod Off           ;      50000; ISM
+  5875000000; *                        ; Demod Off           ;          0; ISM
