@@ -1,64 +1,64 @@
 # Tag name          ;  color
-Marine              ; #c07010
-AM                  ; #ff5a5a
-41m                 ; #8ae234
-31m                 ; #75507b
-Untagged            ; #888a85
-HAM23cm             ; #729fcf
-GPS                 ; #ce5c00
-WWV Time            ; #4e9a06
-120m                ; #73d216
-HAM33cm             ; #729fcf
-19m                 ; #c4a000
-DVB                 ; #f57900
-Tetra               ; #14a08c
-22m                 ; #ad7fa8
-FM                  ; #00ff00
-HAM60m              ; #729fcf
-13m                 ; #204a87
-11m                 ; #ad7fa8
-HAM6m               ; #729fcf
-49m                 ; #fcaf3e
-Airband             ; #ce5c00
-HAM15m              ; #729fcf
-LF                  ; #8ae234
-WalkiTalki_UHF      ; #8ae234
-HAM10m              ; #729fcf
-HAM40m              ; #729fcf
-75m                 ; #204a87
-15m                 ; #edd400
-GLONASS             ; #c17d11
-IRNSS               ; #a08c14
-VLF                 ; #c0c0c0
-HAM12m              ; #729fcf
-SAT                 ; #73d216
-Galileo             ; #8f5902
-HAM80m              ; #729fcf
-MW                  ; #0056e6
-ELF                 ; #ef2929
-HAM2200m            ; #729fcf
-NOAA                ; #cc0000
-HAM630m             ; #729fcf
-HAM70cm             ; #729fcf
-HAM30m              ; #729fcf
-ADSB                ; #75507b
-90m                 ; #c17d11
-ISM                 ; #edd400
-HAM160m             ; #729fcf
-HAM17m              ; #729fcf
-HAM1.25m            ; #729fcf
-ULF                 ; #3465a4
-25m                 ; #edd400
-HAM2m               ; #729fcf
 60m                 ; #ce5c00
-16m                 ; #4e9a06
 RC                  ; #729fcf
-CW                  ; #00ff00
-HAM13cm             ; #729fcf
-SLF                 ; #8f5902
-WalkiTalki_VHF      ; #8ae234
 HAM4m               ; #729fcf
+HAM1.25m            ; #729fcf
+HAM15m              ; #729fcf
+HAM33cm             ; #729fcf
+VLF                 ; #c0c0c0
+Marine              ; #c07010
+41m                 ; #8ae234
+LF                  ; #8ae234
+SAT                 ; #73d216
+13m                 ; #204a87
+FM                  ; #00ff00
 HAM20m              ; #729fcf
+90m                 ; #c17d11
+AM                  ; #ff5a5a
+Untagged            ; #888a85
+31m                 ; #75507b
+HAM6m               ; #729fcf
+HAM10m              ; #729fcf
+ISM                 ; #edd400
+Tetra               ; #14a08c
+GPS                 ; #ce5c00
+HAM160m             ; #729fcf
+HAM23cm             ; #729fcf
+15m                 ; #edd400
+11m                 ; #ad7fa8
+WalkiTalki_VHF      ; #8ae234
+CW                  ; #00ff00
+49m                 ; #fcaf3e
+HAM60m              ; #729fcf
+NOAA                ; #cc0000
+HAM80m              ; #729fcf
+WWV Time            ; #4e9a06
+GLONASS             ; #c17d11
+HAM13cm             ; #729fcf
+22m                 ; #ad7fa8
+19m                 ; #c4a000
+SLF                 ; #8f5902
+HAM30m              ; #729fcf
+HAM70cm             ; #729fcf
+ELF                 ; #ef2929
+WalkiTalki_UHF      ; #8ae234
+HAM17m              ; #729fcf
+75m                 ; #204a87
+Airband             ; #ce5c00
+120m                ; #73d216
+25m                 ; #edd400
+HAM12m              ; #729fcf
+HAM630m             ; #729fcf
+HAM2m               ; #729fcf
+HAM40m              ; #729fcf
+Galileo             ; #8f5902
+ULF                 ; #3465a4
+ADSB                ; #75507b
+IRNSS               ; #a08c14
+16m                 ; #4e9a06
+MW                  ; #0056e6
+HAM2200m            ; #729fcf
+DVB                 ; #f57900
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
            3; S                        ; AM                  ;          0; ELF
@@ -2976,7 +2976,7 @@ HAM20m              ; #729fcf
    430707000; *                        ; Narrow FM           ;      10000; WalkiTalki_UHF
    431550000; *                        ; Narrow FM           ;      10000; HAM70cm
    431727000; *                        ; Narrow FM           ;      10000; HAM70cm
-   433050000; *                        ; Demod Off           ;          0; ISM
+   433050000; S                        ; Demod Off           ;          0; ISM
    433165000; *                        ; Demod Off           ;      50000; ISM
    433335000; *                        ; Demod Off           ;      50000; ISM
    433604000; *                        ; Demod Off           ;      50000; ISM
@@ -2985,7 +2985,7 @@ HAM20m              ; #729fcf
    434000000; *                        ; Demod Off           ;      50000; ISM
    434226000; *                        ; Demod Off           ;      50000; ISM
    434538000; *                        ; Demod Off           ;      50000; ISM
-   434790000; *                        ; Demod Off           ;          0; ISM
+   434790000; E                        ; Demod Off           ;          0; ISM
    434825000; *                        ; Narrow FM           ;      10000; HAM70cm
    435126400; *                        ; Narrow FM           ;      10000; HAM70cm
    435725000; *                        ; Narrow FM           ;      10000; HAM70cm
@@ -2993,10 +2993,10 @@ HAM20m              ; #729fcf
    450000000; E                        ; Narrow FM           ;      10000; HAM70cm
    470000000; S                        ; Demod Off           ;          0; DVB
    477896000; S                        ; Demod Off           ;          0; DVB
-   902000000; *                        ; Demod Off           ;          0; ISM
+   902000000; S                        ; Demod Off           ;          0; ISM
    902000000; S                        ; Narrow FM           ;      10000; HAM33cm
    915000000; *                        ; Demod Off           ;      50000; ISM
-   928000000; *                        ; Demod Off           ;          0; ISM
+   928000000; E                        ; Demod Off           ;          0; ISM
    928000000; E                        ; Narrow FM           ;      10000; HAM33cm
    978000000; ADS-B 978.0 MHz          ; Demod Off           ;    1300000; ADSB
   1090000000; ADS-B 1090.0 MHz         ; Demod Off           ;      50000; ADSB
@@ -3029,10 +3029,10 @@ HAM20m              ; #729fcf
   1688000000; GOES                     ; Narrow FM           ;      20600; SAT
   2300000000; S                        ; Narrow FM           ;      10000; HAM13cm
   2310000000; E                        ; Narrow FM           ;      10000; HAM13cm
-  2400000000; *                        ; Demod Off           ;          0; ISM
+  2400000000; S                        ; Demod Off           ;          0; ISM
   2450000000; *                        ; Demod Off           ;      50000; ISM
   2492080000; IRNSS S                  ; Narrow FM           ;       2000; IRNSS
-  2500000000; *                        ; Demod Off           ;          0; ISM
-  5725000000; *                        ; Demod Off           ;          0; ISM
+  2500000000; E                        ; Demod Off           ;          0; ISM
+  5725000000; S                        ; Demod Off           ;          0; ISM
   5800000000; *                        ; Demod Off           ;      50000; ISM
-  5875000000; *                        ; Demod Off           ;          0; ISM
+  5875000000; E                        ; Demod Off           ;          0; ISM
