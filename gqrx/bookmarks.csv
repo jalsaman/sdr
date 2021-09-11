@@ -1,64 +1,64 @@
 # Tag name          ;  color
-60m                 ; #ce5c00
-RC                  ; #729fcf
-HAM4m               ; #729fcf
-HAM1.25m            ; #729fcf
-HAM15m              ; #729fcf
-HAM33cm             ; #729fcf
-VLF                 ; #c0c0c0
-Marine              ; #c07010
-41m                 ; #8ae234
-LF                  ; #8ae234
-SAT                 ; #73d216
-13m                 ; #204a87
-FM                  ; #00ff00
-HAM20m              ; #729fcf
-90m                 ; #c17d11
-AM                  ; #ff5a5a
-Untagged            ; #888a85
-31m                 ; #75507b
-HAM6m               ; #729fcf
-HAM10m              ; #729fcf
-ISM                 ; #edd400
-Tetra               ; #14a08c
 GPS                 ; #ce5c00
-HAM160m             ; #729fcf
-HAM23cm             ; #729fcf
-15m                 ; #edd400
-11m                 ; #ad7fa8
-WalkiTalki_VHF      ; #8ae234
-CW                  ; #00ff00
-49m                 ; #fcaf3e
-HAM60m              ; #729fcf
-NOAA                ; #cc0000
-HAM80m              ; #729fcf
-WWV Time            ; #4e9a06
-GLONASS             ; #c17d11
-HAM13cm             ; #729fcf
-22m                 ; #ad7fa8
-19m                 ; #c4a000
-SLF                 ; #8f5902
-HAM30m              ; #729fcf
-HAM70cm             ; #729fcf
-ELF                 ; #ef2929
-WalkiTalki_UHF      ; #8ae234
-HAM17m              ; #729fcf
-75m                 ; #204a87
-Airband             ; #ce5c00
-120m                ; #73d216
 25m                 ; #edd400
-HAM12m              ; #729fcf
-HAM630m             ; #729fcf
-HAM2m               ; #729fcf
-HAM40m              ; #729fcf
-Galileo             ; #8f5902
-ULF                 ; #3465a4
-ADSB                ; #75507b
-IRNSS               ; #a08c14
-16m                 ; #4e9a06
-MW                  ; #0056e6
+HAM10m              ; #729fcf
+FM                  ; #00ff00
 HAM2200m            ; #729fcf
+HAM17m              ; #729fcf
+ADSB                ; #75507b
+HAM40m              ; #729fcf
+90m                 ; #c17d11
+WalkiTalki_VHF      ; #8ae234
+ISM                 ; #edd400
+HAM30m              ; #729fcf
+WWV Time            ; #4e9a06
+60m                 ; #ce5c00
+HAM80m              ; #729fcf
+ULF                 ; #3465a4
+120m                ; #73d216
+HAM2m               ; #729fcf
 DVB                 ; #f57900
+HAM70cm             ; #729fcf
+HAM160m             ; #729fcf
+Airband             ; #ce5c00
+RC                  ; #729fcf
+HAM630m             ; #729fcf
+Marine              ; #c07010
+19m                 ; #c4a000
+Tetra               ; #14a08c
+31m                 ; #75507b
+41m                 ; #8ae234
+AM                  ; #ff5a5a
+HAM12m              ; #729fcf
+11m                 ; #ad7fa8
+HAM20m              ; #729fcf
+13m                 ; #204a87
+SLF                 ; #8f5902
+HAM4m               ; #729fcf
+GLONASS             ; #c17d11
+22m                 ; #ad7fa8
+LF                  ; #8ae234
+HAM33cm             ; #729fcf
+ELF                 ; #ef2929
+15m                 ; #edd400
+IRNSS               ; #a08c14
+SAT                 ; #73d216
+HAM1.25m            ; #729fcf
+75m                 ; #204a87
+WalkiTalki_UHF      ; #8ae234
+Galileo             ; #8f5902
+49m                 ; #fcaf3e
+VLF                 ; #c0c0c0
+CW                  ; #00ff00
+HAM6m               ; #729fcf
+NOAA                ; #cc0000
+HAM60m              ; #729fcf
+Untagged            ; #888a85
+HAM23cm             ; #729fcf
+MW                  ; #0056e6
+16m                 ; #4e9a06
+HAM15m              ; #729fcf
+HAM13cm             ; #729fcf
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
            3; S                        ; AM                  ;          0; ELF
@@ -202,6 +202,7 @@ DVB                 ; #f57900
      1593000; *                        ; AM                  ;      10000; MW
      1602000; E                        ; AM                  ;      10000; MW
      1800000; S                        ; Narrow FM           ;          0; HAM160m
+     1838000; PSK31                    ; AM                  ;      10000; HAM160m
      2000000; E                        ; Narrow FM           ;          0; HAM160m
      2182000; *                        ; AM                  ;       5000; Marine
      2300000; S                        ; AM                  ;       5000; 120m
@@ -212,6 +213,7 @@ DVB                 ; #f57900
      3200000; S                        ; AM                  ;       5000; 90m
      3400000; E                        ; AM                  ;       5000; 90m
      3500000; S                        ; Narrow FM           ;      10000; HAM80m
+     3580000; PSK31                    ; AM                  ;      10000; HAM80m
      3750000; *                        ; Narrow FM           ;      10000; HAM80m
      3900000; S                        ; AM                  ;       5000; 75m
      4000000; E                        ; AM                  ;       5000; 75m
@@ -266,6 +268,7 @@ DVB                 ; #f57900
      6765000; S                        ; Demod Off           ;          0; ISM
      6795000; E                        ; Demod Off           ;          0; ISM
      7000000; S                        ; Narrow FM           ;      10000; HAM40m
+     7070000; PSK31                    ; USB                 ;       5000; HAM40m
      7110000; *                        ; Narrow FM           ;       5000; HAM40m
      7160000; *                        ; Narrow FM           ;      10000; HAM40m
      7200000; S                        ; AM                  ;       5000; 41m
@@ -413,6 +416,7 @@ DVB                 ; #f57900
      9965000; *                        ; AM                  ;       5000; AM
     10000000; *                        ; AM                  ;       5000; WWV Time
     10100000; S                        ; AM                  ;       5000; HAM30m
+    10140000; PSK31                    ; AM                  ;      10000; HAM30m
     10150000; E                        ; AM                  ;       5000; HAM30m
     10160000; *                        ; CW-L                ;        500; CW
     11530000; *                        ; AM                  ;       5000; AM
@@ -484,8 +488,9 @@ DVB                 ; #f57900
     13870000; E                        ; AM                  ;       5000; 22m
     14000000; S                        ; Narrow FM           ;      10000; HAM20m
     14060000; *                        ; Narrow FM           ;      10000; HAM20m
-    14070000; PSK31                    ; Narrow FM           ;      10000; HAM20m
+    14070000; PSK31                    ; Narrow FM           ;       3000; HAM20m
     14074000; *                        ; Narrow FM           ;      10000; HAM20m
+    14090000; *                        ; CW-L                ;       2020; HAM20m
     14230000; SSTV                     ; Narrow FM           ;      10000; HAM20m
     14350000; E                        ; Narrow FM           ;      10000; HAM20m
     14545000; *                        ; AM                  ;       5000; AM
@@ -500,6 +505,7 @@ DVB                 ; #f57900
     15135000; *                        ; AM                  ;       5000; 19m
     15140000; *                        ; AM                  ;       5000; 19m
     15150000; *                        ; AM                  ;       5000; 19m
+    15165000; *                        ; AM                  ;       5000; 19m
     15170000; *                        ; AM                  ;       5000; 19m
     15195000; *                        ; AM                  ;       5000; 19m
     15205000; *                        ; AM                  ;       5000; 19m
@@ -519,20 +525,27 @@ DVB                 ; #f57900
     15380000; *                        ; AM                  ;       5000; 19m
     15390000; *                        ; AM                  ;       5000; 19m
     15410000; *                        ; AM                  ;       5000; 19m
+    15420000; *                        ; AM                  ;       5000; 19m
     15435000; *                        ; AM                  ;       5000; 19m
+    15440000; *                        ; AM                  ;       5000; 19m
     15445000; *                        ; AM                  ;       5000; 19m
     15460000; *                        ; AM                  ;       5000; 19m
+    15470000; *                        ; AM                  ;       5000; 19m
     15480000; *                        ; AM                  ;       5000; 19m
     15490000; *                        ; AM                  ;       5000; 19m
     15520000; *                        ; AM                  ;       5000; 19m
     15540000; *                        ; AM                  ;       5000; 19m
+    15550000; *                        ; AM                  ;       5000; 19m
     15565000; *                        ; AM                  ;       5000; 19m
     15570000; *                        ; AM                  ;       5000; 19m
+    15590000; *                        ; AM                  ;       5000; 19m
     15620000; *                        ; AM                  ;       5000; 19m
     15630000; *                        ; AM                  ;       5000; 19m
     15640000; *                        ; AM                  ;       5000; 19m
     15660000; *                        ; AM                  ;       5000; 19m
+    15670000; *                        ; AM                  ;       5000; Untagged
     15690000; *                        ; AM                  ;       5000; 19m
+    15715000; *                        ; AM                  ;       5000; Untagged
     15740000; *                        ; AM                  ;       5000; 19m
     15750000; *                        ; AM                  ;       5000; 19m
     15760000; *                        ; AM                  ;       5000; 19m
@@ -540,7 +553,9 @@ DVB                 ; #f57900
     15785000; *                        ; AM                  ;       5000; 19m
     15800000; *                        ; AM                  ;       5000; 19m
     15830000; E                        ; AM                  ;       5000; 19m
+    16100000; *                        ; AM                  ;       5000; AM
     16105000; *                        ; AM                  ;       5000; AM
+    16600000; *                        ; AM                  ;       5000; AM
     16890000; *                        ; AM                  ;       5000; AM
     17480000; S                        ; AM                  ;       5000; 16m
     17485000; *                        ; AM                  ;       5000; 16m
@@ -555,6 +570,7 @@ DVB                 ; #f57900
     17600000; *                        ; AM                  ;       5000; 16m
     17605000; *                        ; AM                  ;       5000; 16m
     17615000; *                        ; AM                  ;       5000; 16m
+    17625000; *                        ; AM                  ;       5000; 16m
     17640000; *                        ; AM                  ;       5000; 16m
     17650000; *                        ; AM                  ;       5000; 16m
     17660000; *                        ; AM                  ;       5000; 16m
@@ -585,12 +601,14 @@ DVB                 ; #f57900
     17890000; *                        ; AM                  ;       5000; 16m
     17900000; E                        ; AM                  ;       5000; 16m
     18068000; S                        ; Narrow FM           ;      10000; HAM17m
+    18100000; PSK31                    ; AM                  ;      10000; HAM17m
     18168000; E                        ; Narrow FM           ;      10000; HAM17m
     18900000; S                        ; AM                  ;       5000; 15m
     18970000; *                        ; AM                  ;       5000; 15m
     19020000; E                        ; AM                  ;       5000; 15m
     20000000; *                        ; AM                  ;       5000; WWV Time
     21000000; S                        ; Narrow FM           ;      10000; HAM15m
+    21080000; PSK31                    ; AM                  ;      10000; HAM15m
     21450000; S                        ; AM                  ;       5000; 13m
     21450000; E                        ; Narrow FM           ;      10000; HAM15m
     21505000; *                        ; AM                  ;       5000; 13m
@@ -598,6 +616,7 @@ DVB                 ; #f57900
     21695000; *                        ; AM                  ;       5000; 13m
     21850000; E                        ; AM                  ;       5000; 13m
     24890000; S                        ; Narrow FM           ;      10000; HAM12m
+    24920000; PSK31                    ; AM                  ;      10000; HAM12m
     24990000; E                        ; Narrow FM           ;      10000; HAM12m
     25000000; *                        ; AM                  ;       5000; WWV Time
     25670000; S                        ; AM                  ;       5000; 11m
@@ -606,11 +625,13 @@ DVB                 ; #f57900
     27120000; RC                       ; Demod Off           ;     326000; ISM
     27283000; E                        ; Demod Off           ;          0; ISM
     28000000; S                        ; Narrow FM           ;      10000; HAM10m
+    28120000; PSK31                    ; AM                  ;      10000; HAM10m
     29700000; E                        ; Narrow FM           ;      10000; HAM10m
     38686000; RC Car                   ; Demod Off           ;     240000; RC
     40660000; S                        ; Demod Off           ;          0; ISM
     40700000; E                        ; Demod Off           ;          0; ISM
     50000000; S                        ; Narrow FM           ;      10000; HAM6m
+    50290000; PSK31                    ; AM                  ;      10000; HAM6m
     54000000; E                        ; Narrow FM           ;      10000; HAM6m
     70000000; S                        ; Narrow FM           ;      10000; HAM4m
     70500000; E                        ; Narrow FM           ;      10000; HAM4m
