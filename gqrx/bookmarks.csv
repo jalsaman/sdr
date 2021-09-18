@@ -1,64 +1,64 @@
 # Tag name          ;  color
-GPS                 ; #ce5c00
-25m                 ; #edd400
-HAM10m              ; #729fcf
-FM                  ; #00ff00
-HAM2200m            ; #729fcf
-HAM17m              ; #729fcf
-ADSB                ; #75507b
-HAM40m              ; #729fcf
-90m                 ; #c17d11
-WalkiTalki_VHF      ; #8ae234
-ISM                 ; #edd400
-HAM30m              ; #729fcf
-WWV Time            ; #4e9a06
-60m                 ; #ce5c00
-HAM80m              ; #729fcf
-ULF                 ; #3465a4
-120m                ; #73d216
-HAM2m               ; #729fcf
-DVB                 ; #f57900
-HAM70cm             ; #729fcf
-HAM160m             ; #729fcf
-Airband             ; #ce5c00
-RC                  ; #729fcf
-HAM630m             ; #729fcf
-Marine              ; #c07010
-19m                 ; #c4a000
-Tetra               ; #14a08c
-31m                 ; #75507b
-41m                 ; #8ae234
-AM                  ; #ff5a5a
-HAM12m              ; #729fcf
-11m                 ; #ad7fa8
-HAM20m              ; #729fcf
-13m                 ; #204a87
 SLF                 ; #8f5902
-HAM4m               ; #729fcf
-GLONASS             ; #c17d11
-22m                 ; #ad7fa8
-LF                  ; #8ae234
-HAM33cm             ; #729fcf
-ELF                 ; #ef2929
-15m                 ; #edd400
-IRNSS               ; #a08c14
-SAT                 ; #73d216
-HAM1.25m            ; #729fcf
-75m                 ; #204a87
-WalkiTalki_UHF      ; #8ae234
-Galileo             ; #8f5902
-49m                 ; #fcaf3e
-VLF                 ; #c0c0c0
-CW                  ; #00ff00
-HAM6m               ; #729fcf
-NOAA                ; #cc0000
-HAM60m              ; #729fcf
-Untagged            ; #888a85
-HAM23cm             ; #729fcf
-MW                  ; #0056e6
-16m                 ; #4e9a06
-HAM15m              ; #729fcf
+ADSB                ; #75507b
+FM                  ; #00ff00
+Airband             ; #ce5c00
 HAM13cm             ; #729fcf
+Marine              ; #c07010
+HAM160m             ; #729fcf
+22m                 ; #ad7fa8
+90m                 ; #c17d11
+RC                  ; #729fcf
+IRNSS               ; #a08c14
+HAM60m              ; #729fcf
+HAM10m              ; #729fcf
+41m                 ; #8ae234
+WalkiTalki_VHF      ; #8ae234
+Untagged            ; #888a85
+15m                 ; #edd400
+MW                  ; #0056e6
+HAM30m              ; #729fcf
+HAM20m              ; #729fcf
+CW                  ; #00ff00
+HAM40m              ; #729fcf
+25m                 ; #edd400
+SAT                 ; #73d216
+Tetra               ; #14a08c
+ISM                 ; #edd400
+120m                ; #73d216
+HAM70cm             ; #729fcf
+HAM15m              ; #729fcf
+60m                 ; #ce5c00
+NOAA                ; #cc0000
+Galileo             ; #8f5902
+WWV Time            ; #4e9a06
+13m                 ; #204a87
+HAM4m               ; #729fcf
+HAM2m               ; #729fcf
+ELF                 ; #ef2929
+11m                 ; #ad7fa8
+AM                  ; #ff5a5a
+HAM630m             ; #729fcf
+GLONASS             ; #c17d11
+ULF                 ; #3465a4
+HAM17m              ; #729fcf
+49m                 ; #fcaf3e
+HAM33cm             ; #729fcf
+HAM2200m            ; #729fcf
+HAM80m              ; #729fcf
+WalkiTalki_UHF      ; #8ae234
+HAM12m              ; #729fcf
+75m                 ; #204a87
+16m                 ; #4e9a06
+HAM6m               ; #729fcf
+GPS                 ; #ce5c00
+DVB                 ; #f57900
+VLF                 ; #c0c0c0
+HAM1.25m            ; #729fcf
+19m                 ; #c4a000
+LF                  ; #8ae234
+31m                 ; #75507b
+HAM23cm             ; #729fcf
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
            3; S                        ; AM                  ;          0; ELF
@@ -222,6 +222,8 @@ HAM13cm             ; #729fcf
      4450000; *                        ; AM                  ;      10000; AM
      4750000; S                        ; AM                  ;       5000; 60m
      4765000; *                        ; AM                  ;      10000; 60m
+     4800000; *                        ; AM                  ;       5000; 60m
+     4810000; *                        ; AM                  ;       5000; 60m
      4820000; *                        ; AM                  ;       5000; 60m
      4905000; *                        ; AM                  ;       5000; 60m
      4920000; *                        ; AM                  ;       5000; 60m
@@ -250,12 +252,19 @@ HAM13cm             ; #729fcf
      6020000; *                        ; AM                  ;       5000; 49m
      6025000; *                        ; AM                  ;       5000; 49m
      6030000; *                        ; AM                  ;       5000; 49m
+     6040000; *                        ; AM                  ;       5000; 49m
+     6050000; *                        ; AM                  ;       5000; 49m
      6060000; *                        ; AM                  ;       5000; 49m
+     6065000; *                        ; AM                  ;       5000; 49m
+     6075000; *                        ; AM                  ;       5000; 49m
      6080000; *                        ; AM                  ;       5000; 49m
      6090000; *                        ; AM                  ;       5000; 49m
+     6095000; *                        ; AM                  ;       5000; 49m
      6100000; *                        ; AM                  ;       5000; 49m
      6110000; *                        ; AM                  ;       5000; 49m
      6120000; *                        ; AM                  ;       5000; 49m
+     6125000; *                        ; AM                  ;       5000; 49m
+     6130000; *                        ; AM                  ;       5000; 49m
      6145000; *                        ; AM                  ;       5000; 49m
      6165000; *                        ; AM                  ;       5000; 49m
      6170000; *                        ; AM                  ;       5000; 49m
@@ -515,6 +524,7 @@ HAM13cm             ; #729fcf
     15235000; *                        ; AM                  ;       5000; 19m
     15260000; *                        ; AM                  ;       5000; 19m
     15275000; *                        ; AM                  ;       5000; 19m
+    15285000; *                        ; AM                  ;       5000; 19m
     15295000; *                        ; AM                  ;       5000; 19m
     15300000; *                        ; AM                  ;       5000; 19m
     15310000; *                        ; AM                  ;       5000; 19m
