@@ -1,4 +1,6 @@
 #!/bin/sh
 
-# Copy bookmarks file to config folder of GQRX (overwrite exisiting one)
+# Copy bookmarks and bandplan files to config folder of GQRX (overwrite exisiting one)
 cp bookmarks.csv ~/.config/gqrx/.
+cp bandplan.csv ~/.config/gqrx/.
+

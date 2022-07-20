@@ -1,64 +1,64 @@
 # Tag name          ;  color
-SLF                 ; #8f5902
-ADSB                ; #75507b
-FM                  ; #00ff00
-Airband             ; #ce5c00
-HAM13cm             ; #729fcf
-Marine              ; #c07010
-HAM160m             ; #729fcf
-22m                 ; #ad7fa8
-90m                 ; #c17d11
-RC                  ; #729fcf
-IRNSS               ; #a08c14
-HAM60m              ; #729fcf
-HAM10m              ; #729fcf
-41m                 ; #8ae234
-WalkiTalki_VHF      ; #8ae234
-Untagged            ; #888a85
-15m                 ; #edd400
-MW                  ; #0056e6
-HAM30m              ; #729fcf
-HAM20m              ; #729fcf
-CW                  ; #00ff00
-HAM40m              ; #729fcf
-25m                 ; #edd400
-SAT                 ; #73d216
-Tetra               ; #14a08c
-ISM                 ; #edd400
-120m                ; #73d216
-HAM70cm             ; #729fcf
-HAM15m              ; #729fcf
-60m                 ; #ce5c00
-NOAA                ; #cc0000
-Galileo             ; #8f5902
-WWV Time            ; #4e9a06
-13m                 ; #204a87
-HAM4m               ; #729fcf
-HAM2m               ; #729fcf
+GPS                 ; #ce5c00
 ELF                 ; #ef2929
-11m                 ; #ad7fa8
 AM                  ; #ff5a5a
-HAM630m             ; #729fcf
+90m                 ; #c17d11
+31m                 ; #75507b
+HAM15m              ; #729fcf
+Marine              ; #c07010
+WalkiTalki_VHF      ; #8ae234
+120m                ; #73d216
+HAM1.25m            ; #729fcf
 GLONASS             ; #c17d11
-ULF                 ; #3465a4
-HAM17m              ; #729fcf
-49m                 ; #fcaf3e
-HAM33cm             ; #729fcf
+HAM20m              ; #729fcf
 HAM2200m            ; #729fcf
 HAM80m              ; #729fcf
-WalkiTalki_UHF      ; #8ae234
+ULF                 ; #3465a4
+15m                 ; #edd400
+49m                 ; #fcaf3e
+HAM60m              ; #729fcf
+RC                  ; #729fcf
+22m                 ; #ad7fa8
 HAM12m              ; #729fcf
-75m                 ; #204a87
+MW                  ; #0056e6
 16m                 ; #4e9a06
-HAM6m               ; #729fcf
-GPS                 ; #ce5c00
-DVB                 ; #f57900
+Airband             ; #ce5c00
+HAM40m              ; #729fcf
 VLF                 ; #c0c0c0
-HAM1.25m            ; #729fcf
-19m                 ; #c4a000
+HAM2m               ; #729fcf
+SLF                 ; #8f5902
+75m                 ; #204a87
+HAM6m               ; #729fcf
+DVB                 ; #f57900
+ADSB                ; #75507b
+HAM33cm             ; #729fcf
+ISM                 ; #edd400
+HAM13cm             ; #729fcf
+Galileo             ; #8f5902
+FM                  ; #00ff00
+HAM17m              ; #729fcf
+WalkiTalki_UHF      ; #8ae234
+Tetra               ; #14a08c
+41m                 ; #8ae234
+HAM160m             ; #729fcf
+NOAA                ; #cc0000
 LF                  ; #8ae234
-31m                 ; #75507b
+HAM10m              ; #729fcf
+11m                 ; #ad7fa8
+13m                 ; #204a87
+HAM4m               ; #729fcf
+Untagged            ; #888a85
+IRNSS               ; #a08c14
 HAM23cm             ; #729fcf
+60m                 ; #ce5c00
+HAM630m             ; #729fcf
+SAT                 ; #73d216
+25m                 ; #edd400
+19m                 ; #c4a000
+CW                  ; #00ff00
+HAM30m              ; #729fcf
+WWV Time            ; #4e9a06
+HAM70cm             ; #729fcf
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
            3; S                        ; AM                  ;          0; ELF
@@ -692,7 +692,7 @@ HAM23cm             ; #729fcf
     91900000; *                        ; WFM (stereo)        ;     200000; FM
     92000000; Dubai92                  ; WFM (stereo)        ;     200000; FM
     92100000; *                        ; WFM (stereo)        ;     200000; FM
-    92200000; *                        ; WFM (stereo)        ;     200000; FM
+    92200000; Khushi                   ; WFM (stereo)        ;     200000; FM
     92300000; *                        ; WFM (stereo)        ;     200000; FM
     92400000; *                        ; WFM (stereo)        ;     200000; FM
     92500000; *                        ; WFM (stereo)        ;     200000; FM
@@ -754,7 +754,7 @@ HAM23cm             ; #729fcf
     98100000; *                        ; WFM (stereo)        ;     200000; FM
     98200000; *                        ; WFM (stereo)        ;     200000; FM
     98300000; *                        ; WFM (stereo)        ;     200000; FM
-    98400000; FM                       ; WFM (stereo)        ;     200000; FM
+    98400000; AD Radio                 ; WFM (stereo)        ;     200000; FM
     98500000; *                        ; WFM (stereo)        ;     200000; FM
     98600000; *                        ; WFM (stereo)        ;     200000; FM
     98700000; *                        ; WFM (stereo)        ;     200000; FM
@@ -763,7 +763,7 @@ HAM23cm             ; #729fcf
     99000000; DXB Arabiya              ; WFM (stereo)        ;     200000; FM
     99100000; *                        ; WFM (stereo)        ;     200000; FM
     99200000; *                        ; WFM (stereo)        ;     200000; FM
-    99300000; *                        ; WFM (stereo)        ;     200000; FM
+    99300000; Radio 2                  ; WFM (stereo)        ;     200000; FM
     99400000; *                        ; WFM (stereo)        ;     200000; FM
     99500000; *                        ; WFM (stereo)        ;     200000; FM
     99600000; DXB Club FM              ; WFM (stereo)        ;     200000; FM
@@ -832,7 +832,7 @@ HAM23cm             ; #729fcf
    105900000; *                        ; WFM (stereo)        ;     200000; FM
    106000000; *                        ; WFM (stereo)        ;     200000; FM
    106100000; *                        ; WFM (stereo)        ;     200000; FM
-   106200000; UAQ BigFM                ; WFM (stereo)        ;     200000; FM
+   106200000; UAQ Bigq062              ; WFM (stereo)        ;     200000; FM
    106300000; *                        ; WFM (stereo)        ;     200000; FM
    106400000; *                        ; WFM (stereo)        ;     200000; FM
    106500000; UAQ Radio Gilli          ; WFM (stereo)        ;     200000; FM
